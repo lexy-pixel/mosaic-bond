@@ -1,0 +1,90 @@
+Retrieved 2026-11-01 from https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+
+
+
+利用許諾 - BodyParts3D | LSDB Archive
+
+      [
+Terms of service
+]
+
+  [
+
+Japanese
+
+  |
+    English
+  ]
+
+search
+
+Home
+
+About Archive
+
+Update History
+
+Data List
+
+Contact us
+
+  BodyParts3D
+
+    About This Database
+
+Database Description
+
+Download
+
+License
+
+Update History of This Database
+
+  License
+
+License to Use This Database
+
+Last updated : 2025/02/27
+
+You may use this database in compliance with the terms and conditions of the license described below. The license specifies the license terms regarding the use of this database and the requirements you must follow in using this database.
+
+ The license for this database is specified in the 
+Creative Commons Attribution 4.0 International.
+ If you use data from this database, please be sure attribute this database as follows: 
+"BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International".
+ The summary of the Creative Commons Attribution 4.0 International is found 
+here
+.
+ With regard to this database, you are licensed to:
+
+freely access part or whole of this database, and acquire data;
+
+freely redistribute part or whole of the data from this database; and
+
+freely create and distribute database and other derivative works based on part or whole of the data from this database,
+
+under the license, as long as you comply with the following conditions:
+
+You must attribute this database in the manner specified by the author or licensor when distributing part or whole of this database or any adapted material.
+
+You need to contact the Licensor shown below to request a license for use of this database or any part thereof not licensed under the license.
+
+Database Center for Life Science
+ Research Organization of Information and Systems
+ E-mail : 
+
+        Japan Science and Technology Agency 
+ Department for Information Infrastructure
+
+Office of NBDC Program
+
+5-3, Science Plaza 7F,
+
+Yonbancho, Chiyoda-ku,
+
+Tokyo 102-8666 Japan
+
+Tel. 03-5214-8491
+
+Fax. 03-5214-8470
+

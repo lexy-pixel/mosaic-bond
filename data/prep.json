@@ -1,0 +1,3872 @@
+{
+ "methods": {
+  "asis": "As listed",
+  "raw": "Raw",
+  "boiled": "Boiled",
+  "steamed": "Steamed",
+  "microwaved": "Microwaved",
+  "baked": "Baked / roasted",
+  "sauteed": "Sautéed / stir-fried",
+  "deepfried": "Deep-fried",
+  "grilled": "Grilled / broiled",
+  "canned": "Canned",
+  "frozen": "Cooked from frozen",
+  "soaked": "Soaked",
+  "sprouted": "Sprouted",
+  "fermented": "Fermented",
+  "unpasteurized": "Raw (unpasteurized)",
+  "undercooked": "Raw or undercooked"
+ },
+ "prep": {
+  "168462": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 168463,
+    "desc": "Spinach, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,GREENS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,GREENS,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 169286,
+    "desc": "Spinach, canned, regular pack, drained solids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 169288,
+    "desc": "Spinach, frozen, chopped or leaf, cooked, boiled, drained, without salt"
+   }
+  ],
+  "168421": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169238,
+    "desc": "Kale, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,GREENS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,GREENS,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 169240,
+    "desc": "Kale, frozen, cooked, boiled, drained, without salt"
+   }
+  ],
+  "170379": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169967,
+    "desc": "Broccoli, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 170380,
+    "desc": "Broccoli, frozen, spears, cooked, boiled, drained, without salt"
+   }
+  ],
+  "170393": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 170394,
+    "desc": "Carrots, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,SAUTEED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 170396,
+    "desc": "Carrots, canned, regular pack, drained solids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 169984,
+    "desc": "Carrots, frozen, cooked, boiled, drained, without salt"
+   }
+  ],
+  "168483": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "170093": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "170457": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "TOMATOES,BOILED/BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 95.0,
+     "b1": 95.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "TOMATOES,BOILED/BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 95.0,
+     "b1": 95.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "TOMATOES,FRIED/BROILED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 95.0,
+     "b1": 95.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "grilled",
+    "mode": "rf",
+    "code": "TOMATOES,FRIED/BROILED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 95.0,
+     "b1": 95.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 170052,
+    "desc": "Tomatoes, red, ripe, canned, stewed"
+   }
+  ],
+  "169247": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "VEG,GREENS,BOILED,WATER COVER DRAIN",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 85.0,
+     "k": 85.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 55.0,
+     "b1": 80.0,
+     "b2": 90.0,
+     "b3": 85.0,
+     "b6": 85.0,
+     "b9": 60.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,GREENS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,GREENS,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,GREENS,COOKED FROM FROZEN,DRAIN",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 60.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 55.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   }
+  ],
+  "169975": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169976,
+    "desc": "Cabbage, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169986": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 170397,
+    "desc": "Cauliflower, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 170399,
+    "desc": "Cauliflower, frozen, cooked, boiled, drained, without salt"
+   }
+  ],
+  "168389": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 168390,
+    "desc": "Asparagus, cooked, boiled, drained"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 169207,
+    "desc": "Asparagus, canned, drained solids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 169209,
+    "desc": "Asparagus, frozen, cooked, boiled, drained, without salt"
+   }
+  ],
+  "170108": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 170110,
+    "desc": "Peppers, sweet, red, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "entry",
+    "fdcId": 168550,
+    "desc": "Peppers, sweet, red, sauteed"
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 168546,
+    "desc": "Peppers, sweet, red, canned, solids and liquids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 168548,
+    "desc": "Peppers, sweet, red, frozen, chopped, boiled, drained, without salt"
+   }
+  ],
+  "170427": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 170428,
+    "desc": "Peppers, sweet, green, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "entry",
+    "fdcId": 170024,
+    "desc": "Peppers, sweet, green, sauteed"
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 170429,
+    "desc": "Peppers, sweet, green, canned, solids and liquids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 170023,
+    "desc": "Peppers, sweet, green, frozen, chopped, boiled, drained, without salt"
+   }
+  ],
+  "170000": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 170001,
+    "desc": "Onions, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "entry",
+    "fdcId": 170004,
+    "desc": "Onions, yellow, sauteed"
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 170003,
+    "desc": "Onions, canned, solids and liquids"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 170413,
+    "desc": "Onions, frozen, whole, cooked, boiled, drained, without salt"
+   }
+  ],
+  "169230": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 65.0,
+     "b1": 80.0,
+     "b2": 90.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 65.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,SAUTEED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,CKD FROM FRZN,DRAINED",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "168409": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "VEG,OTHER,BLD,WATER COVER,DRAINED",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 75.0,
+     "b1": 80.0,
+     "b2": 90.0,
+     "b3": 85.0,
+     "b6": 85.0,
+     "b9": 65.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169988": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169989,
+    "desc": "Celery, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169251": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169252,
+    "desc": "Mushrooms, white, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "entry",
+    "fdcId": 169402,
+    "desc": "Mushrooms, white, microwaved"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "entry",
+    "fdcId": 169253,
+    "desc": "Mushrooms, white, stir-fried"
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169998": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169999,
+    "desc": "Corn, sweet, yellow, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 169215,
+    "desc": "Corn, sweet, yellow, canned, cream style, regular pack"
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 168399,
+    "desc": "Corn, sweet, yellow, frozen, kernels cut off cob, boiled, drained, without salt"
+   }
+  ],
+  "169145": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169146,
+    "desc": "Beets, cooked, boiled, drained"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,SAUTEED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 169966,
+    "desc": "Beets, canned, drained solids"
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,CKD FROM FRZN,DRAINED",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169228": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169229,
+    "desc": "Eggplant, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 90.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,OTHER,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,OTHER,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "deepfried",
+    "mode": "rf",
+    "code": "VEG,OTHER,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 90.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,OTHER,CKD FROM FRZN(BLD,DRAIND)",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "173735": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "173757": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "172421": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "173740": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   },
+   {
+    "id": "undercooked",
+    "mode": "asis"
+   }
+  ],
+  "175200": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "173746": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170567": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170187": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170162": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170569": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170184": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170182": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170554": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "169414": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170556": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170562": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170150": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "172430": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "169705": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "173904": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "169704": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "168917": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "172688": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "174925": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "175036": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "174899": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "deepfried",
+    "mode": "asis"
+   },
+   {
+    "id": "baked",
+    "mode": "asis"
+   }
+  ],
+  "170285": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170686": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "171287": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 173424,
+    "desc": "Egg, whole, cooked, hard-boiled"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "EGGS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 80.0,
+     "b1": 80.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 80.0,
+     "b12": 80.0,
+     "vitA": 100.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "entry",
+    "fdcId": 173423,
+    "desc": "Egg, whole, cooked, fried"
+   }
+  ],
+  "171265": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "unpasteurized",
+    "mode": "asis"
+   }
+  ],
+  "171267": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "unpasteurized",
+    "mode": "asis"
+   }
+  ],
+  "171269": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "unpasteurized",
+    "mode": "asis"
+   }
+  ],
+  "173806": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "169387": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "VEG,GREENS,BOILED,WATER COVER DRAIN",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 85.0,
+     "k": 85.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 55.0,
+     "b1": 80.0,
+     "b2": 90.0,
+     "b3": 85.0,
+     "b6": 85.0,
+     "b9": 60.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,GREENS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,GREENS,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,GREENS,COOKED FROM FROZEN,DRAIN",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 60.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 55.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   }
+  ],
+  "169276": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 168452,
+    "desc": "Radishes, oriental, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,SAUTEED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,CKD FROM FRZN,DRAINED",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "169256": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "entry",
+    "fdcId": 169257,
+    "desc": "Mustard greens, cooked, boiled, drained, without salt"
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,GREENS,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 75.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,GREENS,STIR FRY",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 85.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 85.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "frozen",
+    "mode": "entry",
+    "fdcId": 169259,
+    "desc": "Mustard greens, frozen, cooked, boiled, drained, without salt"
+   }
+  ],
+  "169231": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BLD,DRAIND,WTR COVER",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 65.0,
+     "b1": 80.0,
+     "b2": 90.0,
+     "b3": 90.0,
+     "b6": 90.0,
+     "b9": 65.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "steamed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,STEAMED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   },
+   {
+    "id": "microwaved",
+    "mode": "none"
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,BAKED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 80.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 95.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,SAUTEED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 100.0,
+     "mg": 100.0,
+     "p": 100.0,
+     "k": 100.0,
+     "na": 100.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 75.0,
+     "b1": 85.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 85.0
+    }
+   },
+   {
+    "id": "canned",
+    "mode": "entry",
+    "fdcId": 169765,
+    "desc": "Ginger root, pickled, canned, with artificial sweetener"
+   },
+   {
+    "id": "frozen",
+    "mode": "rf",
+    "code": "VEG,ROOTS,ETC,CKD FROM FRZN,DRAINED",
+    "rf": {
+     "ca": 95.0,
+     "fe": 95.0,
+     "mg": 95.0,
+     "p": 90.0,
+     "k": 90.0,
+     "na": 95.0,
+     "zn": 95.0,
+     "cu": 95.0,
+     "vitC": 70.0,
+     "b1": 90.0,
+     "b2": 95.0,
+     "b3": 95.0,
+     "b6": 95.0,
+     "b9": 70.0,
+     "choline": 100.0,
+     "b12": 100.0,
+     "vitA": 90.0
+    }
+   }
+  ],
+  "168892": [
+   {
+    "id": "asis",
+    "mode": "asis"
+   },
+   {
+    "id": "soaked",
+    "mode": "asis"
+   },
+   {
+    "id": "sprouted",
+    "mode": "asis"
+   },
+   {
+    "id": "fermented",
+    "mode": "asis"
+   }
+  ],
+  "170809": [
+   {
+    "id": "raw",
+    "mode": "asis"
+   },
+   {
+    "id": "boiled",
+    "mode": "rf",
+    "code": "BEEF,ROAST,SIMMERED,WO/DRIPPINGS",
+    "rf": {
+     "ca": 80.0,
+     "fe": 100.0,
+     "mg": 65.0,
+     "p": 65.0,
+     "k": 55.0,
+     "na": 55.0,
+     "zn": 100.0,
+     "cu": 95.0,
+     "vitC": 80.0,
+     "b1": 45.0,
+     "b2": 85.0,
+     "b3": 55.0,
+     "b6": 35.0,
+     "b9": 65.0,
+     "choline": 90.0,
+     "b12": 60.0,
+     "vitA": 75.0
+    }
+   },
+   {
+    "id": "baked",
+    "mode": "rf",
+    "code": "BEEF,ROASTED",
+    "rf": {
+     "ca": 90.0,
+     "fe": 100.0,
+     "mg": 85.0,
+     "p": 85.0,
+     "k": 80.0,
+     "na": 85.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 80.0,
+     "b1": 55.0,
+     "b2": 95.0,
+     "b3": 75.0,
+     "b6": 50.0,
+     "b9": 95.0,
+     "choline": 90.0,
+     "b12": 70.0,
+     "vitA": 75.0
+    }
+   },
+   {
+    "id": "sauteed",
+    "mode": "rf",
+    "code": "BEEF,FRIED",
+    "rf": {
+     "ca": 100.0,
+     "fe": 95.0,
+     "mg": 85.0,
+     "p": 90.0,
+     "k": 85.0,
+     "na": 85.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 80.0,
+     "b1": 70.0,
+     "b2": 90.0,
+     "b3": 80.0,
+     "b6": 60.0,
+     "b9": 85.0,
+     "choline": 90.0,
+     "b12": 80.0,
+     "vitA": 75.0
+    }
+   },
+   {
+    "id": "grilled",
+    "mode": "rf",
+    "code": "BEEF,BROILED CUT",
+    "rf": {
+     "ca": 100.0,
+     "fe": 95.0,
+     "mg": 85.0,
+     "p": 90.0,
+     "k": 85.0,
+     "na": 85.0,
+     "zn": 100.0,
+     "cu": 100.0,
+     "vitC": 80.0,
+     "b1": 70.0,
+     "b2": 90.0,
+     "b3": 80.0,
+     "b6": 60.0,
+     "b9": 85.0,
+     "choline": 90.0,
+     "b12": 80.0,
+     "vitA": 75.0
+    }
+   }
+  ]
+ },
+ "effects": [
+  {
+   "id": "vitc-heat",
+   "kind": "bio",
+   "foods": ".",
+   "preps": [
+    "boiled",
+    "steamed",
+    "microwaved",
+    "baked",
+    "sauteed",
+    "deepfried",
+    "grilled",
+    "canned",
+    "frozen"
+   ],
+   "title": "Vitamin C is heat- and water-sensitive",
+   "evidence": "The vitamin C content of food may be reduced by prolonged storage and by cooking because ascorbic acid is water soluble and is destroyed by heat [ 6 , 8 ].",
+   "cites": [
+    "ods-vitC"
+   ],
+   "parts": [
+    "immune"
+   ],
+   "nutrient": "vitC"
+  },
+  {
+   "id": "vitc-steam",
+   "kind": "bio",
+   "foods": ".",
+   "preps": [
+    "steamed",
+    "microwaved"
+   ],
+   "title": "Steaming/microwaving may lessen vitamin C loss",
+   "evidence": "Steaming or microwaving may lessen cooking losses.",
+   "cites": [
+    "ods-vitC"
+   ],
+   "parts": [
+    "immune"
+   ],
+   "nutrient": "vitC"
+  },
+  {
+   "id": "b1-heat",
+   "kind": "bio",
+   "foods": ".",
+   "preps": [
+    "boiled",
+    "steamed",
+    "microwaved",
+    "baked",
+    "sauteed",
+    "deepfried",
+    "grilled",
+    "canned",
+    "frozen"
+   ],
+   "title": "Thiamin is lost into discarded cooking water",
+   "evidence": "Because thiamin dissolves in water, a significant amount of the vitamin is lost when cooking water is thrown out [ 3 ].",
+   "cites": [
+    "ods-b1"
+   ],
+   "parts": [
+    "nerves"
+   ],
+   "nutrient": "b1"
+  },
+  {
+   "id": "bcar",
+   "kind": "bio",
+   "foods": "^(Carrots|Spinach|Kale|Collards|Sweet potato|Squash)",
+   "preps": [
+    "boiled",
+    "steamed",
+    "microwaved",
+    "baked",
+    "sauteed",
+    "deepfried",
+    "grilled",
+    "canned",
+    "frozen"
+   ],
+   "title": "Heat can raise beta-carotene bioavailability",
+   "evidence": "Cooking and heat treatment can increase the bioavailability of beta-carotene from foods [ 19 ].",
+   "cites": [
+    "ods-vitA"
+   ],
+   "parts": [
+    "eyes"
+   ],
+   "nutrient": "vitA"
+  },
+  {
+   "id": "bcar2",
+   "kind": "bio",
+   "foods": "^(Carrots|Spinach)",
+   "preps": [
+    "boiled",
+    "steamed",
+    "microwaved",
+    "baked",
+    "sauteed",
+    "deepfried",
+    "grilled",
+    "canned",
+    "frozen"
+   ],
+   "title": "Processed carrots/spinach: more beta-carotene absorbed",
+   "evidence": "Daily consumption of processed carrots and spinach over a 4-wk period produced an increase in plasma beta-carotene concentration that averaged three times that associated with consumption of the same amount of beta-carotene from these vegetables in the raw form (P = 0.09).",
+   "cites": [
+    "pmid-9567003"
+   ],
+   "parts": [
+    "eyes"
+   ],
+   "nutrient": "vitA"
+  },
+  {
+   "id": "lyco",
+   "kind": "bio",
+   "foods": "^Tomatoes",
+   "preps": [
+    "boiled",
+    "steamed",
+    "microwaved",
+    "baked",
+    "sauteed",
+    "deepfried",
+    "grilled",
+    "canned",
+    "frozen"
+   ],
+   "title": "Cooked tomato products: more lycopene absorbed",
+   "evidence": "Thus, in humans, the bioavailability of lycopene is greater from tomato paste than from fresh tomatoes.",
+   "cites": [
+    "pmid-9209178"
+   ],
+   "parts": [],
+   "nutrient": null
+  },
+  {
+   "id": "oxal",
+   "kind": "bio",
+   "foods": "^(Spinach|Collards|Kale)",
+   "preps": [
+    "boiled",
+    "steamed"
+   ],
+   "title": "Boiling lowers oxalate (which binds calcium)",
+   "evidence": "Boiling markedly reduced soluble oxalate content by 30-87% and was more effective than steaming (5-53%) and baking (used only for potatoes, no oxalate loss).",
+   "cites": [
+    "pmid-15826055"
+   ],
+   "parts": [
+    "bones"
+   ],
+   "nutrient": "ca"
+  },
+  {
+   "id": "oxal-ca",
+   "kind": "bio",
+   "foods": "^(Spinach|Collards)",
+   "preps": [
+    "raw",
+    "boiled",
+    "steamed",
+    "asis"
+   ],
+   "title": "Oxalate lowers calcium absorption",
+   "evidence": "Certain compounds in plants (e.g., oxalic acid, phytic acid) can decrease calcium absorption by forming indigestible salts with calcium [ 3 ].",
+   "cites": [
+    "ods-ca"
+   ],
+   "parts": [
+    "bones"
+   ],
+   "nutrient": "ca"
+  },
+  {
+   "id": "phyt",
+   "kind": "bio",
+   "foods": "^(Beans|Chickpeas|Lentils|Nuts|Seeds|Peanuts|Oats|Cereals, oats|Rice, brown|Quinoa|Barley|Buckwheat|Wheat germ|Bread, whole-wheat)",
+   "preps": [
+    "soaked",
+    "sprouted",
+    "fermented"
+   ],
+   "title": "Soaking, sprouting, fermenting reduce phytate",
+   "evidence": "These include genetic improvement as well as several pre-treatment methods such as fermentation, soaking, germination and enzymatic treatment of grains with phytase enzyme.",
+   "cites": [
+    "pmid-25694676"
+   ],
+   "parts": [
+    "blood",
+    "immune"
+   ],
+   "nutrient": "fe"
+  },
+  {
+   "id": "phyt-zn",
+   "kind": "bio",
+   "foods": "^(Beans|Chickpeas|Lentils|Nuts|Seeds|Peanuts|Oats|Cereals, oats|Rice, brown|Quinoa|Barley|Buckwheat|Wheat germ|Bread, whole-wheat)",
+   "preps": [
+    "asis",
+    "soaked",
+    "sprouted",
+    "fermented"
+   ],
+   "title": "Phytate binds zinc",
+   "evidence": "Phytates, the storage form of phosphorus in plants, bind some minerals such as zinc in the intestine and form an insoluble complex that inhibits zinc absorption [ 1-3 , 8 ].",
+   "cites": [
+    "ods-zn"
+   ],
+   "parts": [
+    "immune"
+   ],
+   "nutrient": "zn"
+  },
+  {
+   "id": "phyt-fe",
+   "kind": "bio",
+   "foods": "^(Beans|Chickpeas|Lentils|Oats|Cereals, oats|Rice, brown|Quinoa|Barley|Buckwheat|Wheat germ|Bread, whole-wheat)",
+   "preps": [
+    "asis",
+    "soaked",
+    "sprouted",
+    "fermented"
+   ],
+   "title": "Phytate reduces nonheme iron absorption",
+   "evidence": "In addition to ascorbic acid, meat, poultry, and seafood can enhance nonheme iron absorption, whereas phytate (which is present in grains and beans) and certain polyphenols in some nonanimal foods (e.g., cereals, legumes) have the opposite effect [ 4 ].",
+   "cites": [
+    "ods-fe"
+   ],
+   "parts": [
+    "blood"
+   ],
+   "nutrient": "fe"
+  },
+  {
+   "id": "kbean",
+   "kind": "safety",
+   "foods": "^Beans, kidney",
+   "preps": [
+    "undercooked"
+   ],
+   "title": "Raw/undercooked kidney beans: phytohaemagglutinin",
+   "evidence": "If you eat them raw or under‐cooked, they can cause you to have extreme nausea, severe vomiting, and diarrhea.",
+   "cites": [
+    "fda-badbug"
+   ],
+   "parts": [
+    "stomach",
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "kbean2",
+   "kind": "safety",
+   "foods": "^Beans, kidney",
+   "preps": [
+    "undercooked",
+    "asis"
+   ],
+   "title": "Don’t use slow cookers for kidney beans",
+   "evidence": "Slow cookers don’t get hot enough to destroy the toxin in kidney beans.",
+   "cites": [
+    "fda-badbug"
+   ],
+   "parts": [
+    "stomach",
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "sprout",
+   "kind": "safety",
+   "foods": "^(Beans|Chickpeas|Lentils|Seeds|Peanuts|Quinoa|Buckwheat)",
+   "preps": [
+    "sprouted"
+   ],
+   "title": "Raw sprouts can carry bacteria",
+   "evidence": "Furthermore, like any fresh produce that is consumed raw or lightly cooked, sprouts (such as alfalfa or mung bean) that are served raw or lightly cooked may contain bacteria that can cause foodborne illness.",
+   "cites": [
+    "fda-produce"
+   ],
+   "parts": [
+    "gut",
+    "immune"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "egg",
+   "kind": "safety",
+   "foods": "^Egg",
+   "preps": [
+    "raw",
+    "asis"
+   ],
+   "title": "Raw eggs: Salmonella",
+   "evidence": "Fresh eggs, even those with clean, uncracked shells, may contain bacteria called Salmonella that can cause foodborne illness, often called “food poisoning.",
+   "cites": [
+    "fda-eggs"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "egg160",
+   "kind": "safety",
+   "foods": "^Egg",
+   "preps": [
+    "raw",
+    "asis",
+    "boiled",
+    "baked",
+    "sauteed"
+   ],
+   "title": "Egg dishes: cook to 160 °F",
+   "evidence": "Casseroles and other dishes containing eggs should be cooked to 160° F.",
+   "cites": [
+    "fda-eggs"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "rawmilk",
+   "kind": "safety",
+   "foods": "^Milk, ",
+   "preps": [
+    "unpasteurized"
+   ],
+   "title": "Raw milk outbreaks",
+   "evidence": "According to the Centers for Disease Control and Prevention (CDC), from 1998 through 2018, there were 202 outbreaks linked to drinking raw milk These outbreaks caused 2,645 illnesses and 228 hospitalizations.",
+   "cites": [
+    "fda-rawmilk"
+   ],
+   "parts": [
+    "gut",
+    "immune"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "rawmilk-preg",
+   "kind": "safety",
+   "foods": "^Milk, ",
+   "preps": [
+    "unpasteurized"
+   ],
+   "title": "Raw milk and pregnancy (Listeria)",
+   "evidence": "The Dangers of Listeria and Pregnancy Pregnant women run a serious risk of becoming ill from the germ Listeria , which is often found in raw milk and can cause miscarriage, or illness, or death of the newborn baby.",
+   "cites": [
+    "fda-rawmilk"
+   ],
+   "parts": [
+    "reproductive"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "acry",
+   "kind": "safety",
+   "foods": "^(Potatoes|Sweet potato|Bread|Tortillas|Bagels|Fast foods, potato)",
+   "preps": [
+    "deepfried",
+    "baked",
+    "asis"
+   ],
+   "title": "Acrylamide forms in high-heat cooking of starchy foods",
+   "evidence": "Food storage and preparation methods Comparing frying, roasting, and baking potatoes, frying causes the highest acrylamide formation.",
+   "cites": [
+    "fda-acrydiet"
+   ],
+   "parts": [],
+   "nutrient": null
+  },
+  {
+   "id": "acry2",
+   "kind": "safety",
+   "foods": "^(Potatoes|Sweet potato|Fast foods, potato)",
+   "preps": [
+    "deepfried",
+    "baked"
+   ],
+   "title": "Soaking potato slices reduces acrylamide",
+   "evidence": "Soaking raw potato slices in water for 15-30 minutes before frying or roasting helps reduce acrylamide formation during cooking.",
+   "cites": [
+    "fda-acrydiet"
+   ],
+   "parts": [],
+   "nutrient": null
+  },
+  {
+   "id": "acry3",
+   "kind": "safety",
+   "foods": "^(Potatoes|Sweet potato|Bread|Tortillas|Bagels|Fast foods, potato)",
+   "preps": [
+    "deepfried",
+    "baked",
+    "asis"
+   ],
+   "title": "Acrylamide: animal studies at very high doses",
+   "evidence": "Acrylamide caused cancer in animals in studies where animals were exposed to acrylamide at very high doses.",
+   "cites": [
+    "fda-acryqa"
+   ],
+   "parts": [],
+   "nutrient": null
+  },
+  {
+   "id": "t-beef",
+   "kind": "safety",
+   "foods": "^(?!.*\\bground\\b)(Beef|Lamb|Pork, fresh)",
+   "preps": [
+    "asis",
+    "grilled",
+    "baked",
+    "sauteed",
+    "boiled",
+    "raw"
+   ],
+   "title": "Cook to a safe internal temperature",
+   "evidence": "Safe minimum internal temperature — Beef, Pork, Veal, and Lamb (chops, roasts, steaks): 145 o F with a 3 minute rest time.",
+   "cites": [
+    "fda-safehand"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "t-ground",
+   "kind": "safety",
+   "foods": "^(Beef, ground|Lamb, ground|Pork, fresh, ground|Sausage|Fast foods, hamburger)",
+   "preps": [
+    "asis",
+    "baked",
+    "boiled",
+    "grilled",
+    "raw",
+    "sauteed"
+   ],
+   "title": "Cook to a safe internal temperature",
+   "evidence": "Safe minimum internal temperature — Ground Meat: 160 o F.",
+   "cites": [
+    "fda-safehand"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "t-poultry",
+   "kind": "safety",
+   "foods": "^(Chicken|Turkey|Duck)",
+   "preps": [
+    "asis"
+   ],
+   "title": "Cook to a safe internal temperature",
+   "evidence": "Safe minimum internal temperature — Poultry (ground, parts, whole, and stuffing): 165 o F.",
+   "cites": [
+    "fda-safehand"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "t-fish",
+   "kind": "safety",
+   "foods": "^Fish, (salmon|cod|tilapia|trout|herring|mackerel)",
+   "preps": [
+    "asis"
+   ],
+   "title": "Cook to a safe internal temperature",
+   "evidence": "Safe minimum internal temperature — Fin Fish: 145 o F or flesh is opaque & separates easily with fork.",
+   "cites": [
+    "fda-safehand"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  },
+  {
+   "id": "t-shell",
+   "kind": "safety",
+   "foods": "^Mollusks",
+   "preps": [
+    "asis"
+   ],
+   "title": "Cook to a safe internal temperature",
+   "evidence": "Safe minimum internal temperature — Clams, Oysters, and Mussels: Shells open during cooking.",
+   "cites": [
+    "fda-safehand"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "nutrient": null
+  }
+ ],
+ "note": "Retention-factor adjustments assume the logged weight is the raw (as-purchased) weight; actual SR Legacy cooked entries use cooked weight."
+}

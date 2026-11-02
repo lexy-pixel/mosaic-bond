@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.nal.usda.gov https://world.openfoodfacts.org; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#f4f6f8">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Mosaic Bond">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="stylesheet" href="styles.css">
+<title>Mosaic Bond</title>
+</head>
+<body>
+<div id="scan"><canvas id="gl"></canvas>
+  <div id="hudtop"><div class="brand">Mosaic<b>Bond</b></div><div id="overall"></div></div>
+  <div id="legend3d"><span class="lg nut">nutrients</span><span class="lg med">meds</span><span class="lg cond">conditions</span><span class="lg sym">symptoms</span></div>
+  <div id="viewctl"></div><div id="sysleg" class="hidden"></div>
+  <div id="ulbar"></div>
+  <div id="layers"></div>
+  <div id="panel" class="hidden"></div>
+</div>
+<main id="pages"></main>
+<nav id="tabs"></nav>
+<div id="pop" class="hidden"></div>
+<div id="modal" class="hidden"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

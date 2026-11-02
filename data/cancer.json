@@ -1,0 +1,426 @@
+{
+ "meaning": "The classification indicates the strength of the evidence that a substance or agent can cause cancer. However, the classification does not indicate the level of risk associated with a given level or circumstance of exposure.",
+ "meaning2": "The IARC classifications describe the strength of the scientific evidence about an agent being a cause of cancer, rather than assessing the level of risk.",
+ "groups": {
+  "1": "Carcinogenic to humans",
+  "2A": "Probably carcinogenic to humans",
+  "2B": "Possibly carcinogenic to humans",
+  "3": "Not classifiable"
+ },
+ "foods": [
+  {
+   "id": "processed-meat",
+   "agent": "Processed meat (consumption of)",
+   "group": "1",
+   "sites": [
+    "colorectum"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "match": "(?i)\\b(bacon|ham\\b|frankfurter|sausage|salami|pepperoni|bologna|liverwurst|jerky|cured)",
+   "evidence": "In the case of processed meat, this classification is based on sufficient evidence from epidemiological studies that eating processed meat causes colorectal cancer.",
+   "abs": "An analysis of data from 10 studies estimated that every 50 gram portion of processed meat eaten daily increases the risk of colorectal cancer by about 18%.",
+   "abs2": "According to the most recent estimates by the Global Burden of Disease Project, an independent academic research organization, about 34 000 cancer deaths per year worldwide are attributable to diets high in processed meat.",
+   "wcrf": "convincing",
+   "wcrfq": "There is convincing evidence that consumption of processed meat is a cause of colorectal cancer .",
+   "cites": [
+    "iarc-list",
+    "iarc-qa114",
+    "iarc-pr240",
+    "iarc-sites",
+    "wcrf-meat"
+   ]
+  },
+  {
+   "id": "red-meat",
+   "agent": "Red meat (consumption of)",
+   "group": "2A",
+   "sites": [
+    "colorectum (limited evidence)"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "match": "(?i)^(beef|pork, fresh|lamb|veal|goat)|hamburger",
+   "evidence": "In the case of red meat, the classification is based on limited evidence from epidemiological studies showing positive associations between eating red meat and developing colorectal cancer as well as strong mechanistic evidence.",
+   "abs": "However, if the association of red meat and colorectal cancer were proven to be causal, data from the same studies suggest that the risk of colorectal cancer could increase by 17% for every 100 gram portion of red meat eaten daily.",
+   "wcrf": "probable",
+   "wcrfq": "Consumption of red meat is probably a cause of colorectal cancer .",
+   "cites": [
+    "iarc-list",
+    "iarc-qa114",
+    "iarc-pr240",
+    "wcrf-meat"
+   ]
+  },
+  {
+   "id": "alcohol",
+   "agent": "Alcoholic beverages",
+   "group": "1",
+   "sites": [
+    "mouth & throat",
+    "larynx",
+    "oesophagus",
+    "liver",
+    "colorectum",
+    "breast"
+   ],
+   "parts": [
+    "gut",
+    "liver",
+    "stomach",
+    "lungs",
+    "reproductive"
+   ],
+   "match": "(?i)alcoholic beverage|\\bbeer\\b|\\bwine\\b|liquor",
+   "evidence": "The International Agency for Research on Cancer (IARC) classified alcohol as a Group 1 carcinogen (cancer-causing substance) in 1987 due to sufficient evidence that it causes cancers of the oral cavity , pharynx , larynx , esophagus , and liver in people.",
+   "abs": "For example, women who have just one drink per day have a higher risk of breast cancer than those who have less than one drink a week, and risk is increased even more in heavy drinkers and binge drinkers ( 3 - 7 ).",
+   "wcrf": "strong (stomach: probable)",
+   "wcrfq": "There is strong evidence that consuming alcohol INCREASES the risk of the following cancers: mouth, pharynx and larynx oesophageal (squamous cell carcinoma) breast (postmenopausal) liver colorectum There is probable evidence that consuming alcohol INCREASES the risk of stomach cancer breast cancer (pre-menopause) There is also probable evidence that consumption of alcoholic drinks helps protect against kidney cancer.",
+   "cites": [
+    "iarc-list",
+    "iarc-sites",
+    "nci-alcohol",
+    "wcrf-alcohol"
+   ]
+  },
+  {
+   "id": "aflatoxins",
+   "agent": "Aflatoxins",
+   "group": "1",
+   "sites": [
+    "liver"
+   ],
+   "parts": [
+    "liver"
+   ],
+   "match": "(?i)peanut|\\bcorn\\b|maize",
+   "info": true,
+   "evidence": "Exposure to aflatoxins is associated with an increased risk of liver cancer .",
+   "note": "Aflatoxins are a family of toxins produced by certain fungi that are found on agricultural crops such as maize (corn), peanuts, cottonseed, and tree nuts.",
+   "note2": "Food and Drug Administration (FDA) tests foods that may contain aflatoxins, such as peanuts and peanut butter.",
+   "cites": [
+    "iarc-list",
+    "iarc-sites",
+    "nci-afla"
+   ]
+  },
+  {
+   "id": "salted-fish",
+   "agent": "Salted fish, Chinese-style",
+   "group": "1",
+   "sites": [
+    "nasopharynx"
+   ],
+   "parts": [
+    "lungs"
+   ],
+   "match": "(?i)salted.*fish|fish.*salted",
+   "wcrfq": "there is strong evidence that consuming Cantonese style salted fish increases the risk of nasopharyngeal cancer.",
+   "wcrf": "strong",
+   "cites": [
+    "iarc-list",
+    "iarc-sites",
+    "wcrf-meat"
+   ]
+  },
+  {
+   "id": "hot-bev",
+   "agent": "Very hot beverages (above 65 \u00b0C)",
+   "group": "2A",
+   "sites": [
+    "oesophagus (limited evidence)"
+   ],
+   "parts": [
+    "gut"
+   ],
+   "match": "(?i)coffee, brewed|tea, (black|green)",
+   "info": true,
+   "evidence": "Drinking very hot beverages was classified as probably carcinogenic to humans (Group 2A).",
+   "note": "2 \u201cVery hot\u201d refers to any beverages consumed at a temperature above 65 \u00b0C.",
+   "cites": [
+    "iarc-list",
+    "iarc-sites",
+    "iarc-pr244"
+   ]
+  },
+  {
+   "id": "pickled-veg",
+   "agent": "Pickled vegetables (traditional Asian)",
+   "group": "2B",
+   "sites": [
+    "nasopharynx, oesophagus (limited evidence)"
+   ],
+   "parts": [
+    "gut",
+    "lungs"
+   ],
+   "match": null,
+   "note": "Western-style cucumber dill pickles in this app are not this IARC agent and are not flagged.",
+   "cites": [
+    "iarc-list",
+    "iarc-sites"
+   ]
+  },
+  {
+   "id": "aloe",
+   "agent": "Aloe vera, whole-leaf extract",
+   "group": "2B",
+   "sites": [],
+   "parts": [],
+   "match": null,
+   "note": "Not a food in this app. IARC lists no cancer site with evidence in humans for it.",
+   "cites": [
+    "iarc-list"
+   ]
+  }
+ ],
+ "prep": [
+  {
+   "id": "acrylamide",
+   "agent": "Acrylamide (formed in heated starchy foods)",
+   "group": "2A",
+   "preps": [
+    "deepfried",
+    "baked",
+    "sauteed"
+   ],
+   "match": "(?i)potato|bread|toast|cracker|cereal|cookie|french fried|coffee",
+   "evidence": "The National Toxicology Program\u2019s Report on Carcinogens considers acrylamide to be reasonably anticipated to be a human carcinogen , based on studies in laboratory animals given acrylamide in drinking water.",
+   "note": "The major food sources of acrylamide are French fries and potato chips; crackers, bread, and cookies; breakfast cereals; canned black olives; prune juice; and coffee.",
+   "tip": "Decreasing cooking time to avoid heavy crisping or browning, blanching potatoes before frying, not storing potatoes in a refrigerator, and post-drying (drying in a hot air oven after frying) have been shown to decrease the acrylamide content of some foods ( 7 , 8 ).",
+   "cites": [
+    "iarc-list",
+    "nci-acryl"
+   ]
+  },
+  {
+   "id": "hca-pah",
+   "agent": "HCAs & PAHs (meat cooked at high temperature)",
+   "group": null,
+   "preps": [
+    "grilled",
+    "deepfried",
+    "sauteed"
+   ],
+   "match": "(?i)^(beef|pork|lamb|chicken|fish|turkey)|hamburger|sausage|bacon",
+   "evidence": "Heterocyclic amines (HCAs) and polycyclic aromatic hydrocarbons (PAHs) are chemicals formed when muscle meat, including beef, pork, fish, or poultry, is cooked using high-temperature methods, such as pan frying or grilling directly over an open flame ( 1 ).",
+   "note": "In laboratory experiments, HCAs and PAHs have been found to be mutagenic\u2014that is, they cause changes in DNA that may increase the risk of cancer.",
+   "obs": "Researchers found that high consumption of well-done, fried, or barbecued meats was associated with increased risks of colorectal ( 19 \u2013 21 ), pancreatic ( 21 \u2013 23 ), and prostate ( 24 , 25 ) cancer.",
+   "tip": "Even though no specific guidelines for HCA/PAH consumption exist, concerned individuals can reduce their exposure by using several cooking methods: Avoiding direct exposure of meat to an open flame or a hot metal surface and avoiding prolonged cooking times (especially at high temperatures) can help reduce HCA and PAH formation ( 29 ).",
+   "cites": [
+    "nci-cooked"
+   ]
+  }
+ ],
+ "meds": [
+  {
+   "id": "ethinyl_estradiol",
+   "name": "Combined oral contraceptive (ethinyl estradiol + progestin)",
+   "inList": true,
+   "iarc": "1",
+   "iarcAgent": "Estrogen\u2013progestogen oral contraceptives (combined)",
+   "sites": [
+    "breast",
+    "cervix",
+    "liver"
+   ],
+   "parts": [
+    "reproductive",
+    "liver"
+   ],
+   "label": [
+    "Studies have shown an increased risk of developing hepatocellular carcinoma in long-term (>8 years) COC users.",
+    "The attributable risk of liver cancers in COC users is less than one case per million users.",
+    "However, some studies report a small increase in the risk of breast cancer among current or recent users (<6 months since last use) and current users with longer duration of COC use .",
+    "Cervical Cancer Some studies suggest that COC are associated with an increase in the risk of cervical cancer or intraepithelial neoplasia."
+   ],
+   "abs": "The attributable risk of liver cancers in COC users is less than one case per million users.",
+   "iarcNote": "IARC also notes evidence suggesting lack of carcinogenicity (an inverse association) for the endometrium and ovary.",
+   "cites": [
+    "dm-00657f4e-9df8-4f58-91a0-eff5a467f988",
+    "iarc-list",
+    "iarc-sites"
+   ]
+  },
+  {
+   "id": "methotrexate",
+   "name": "Methotrexate",
+   "inList": true,
+   "iarc": "3",
+   "iarcAgent": "Methotrexate (Group 3: not classifiable)",
+   "sites": [
+    "skin (with later cyclosporine in psoriasis)",
+    "lymphoma / other secondary malignancies"
+   ],
+   "parts": [
+    "immune",
+    "skin"
+   ],
+   "label": [
+    "5.13 Secondary Malignancies Secondary malignancies can occur with methotrexate .",
+    "The risk of cutaneous malignancies is further increased when cyclosporine is administered to patients with psoriasis who received prior methotrexate."
+   ],
+   "cites": [
+    "dm-04a95db9-a124-4b97-bd71-1c37a6b3b0c8",
+    "iarc-list"
+   ]
+  },
+  {
+   "id": "tamoxifen",
+   "name": "Tamoxifen",
+   "inList": true,
+   "iarc": "1",
+   "iarcAgent": "Tamoxifen",
+   "sites": [
+    "endometrium (uterus)",
+    "liver"
+   ],
+   "parts": [
+    "reproductive",
+    "liver"
+   ],
+   "label": [
+    "WARNING: UTERINE MALIGNANCIES and THROMBOEMBOLIC EVENTS Serious and life-threatening events from the use of SOLTAMOX include uterine malignancies, stroke, and pulmonary embolism .",
+    "For most patients already diagnosed with breast cancer, the benefits of tamoxifen outweigh its risks.",
+    "5 WARNINGS AND PRECAUTIONS Uterine malignancies: Promptly evaluate abnormal vaginal bleeding in a woman with current or past tamoxifen use."
+   ],
+   "abs": "Incidence rates per 1000 women-years for these events were estimated from the National Surgical Adjuvant Breast and Bowel Project (NSABP) P-1 trial in women at high risk for breast cancer: Endometrial adenocarcinoma: 2.20 for tamoxifen vs. 0.71 for placebo Uterine sarcoma: 0.17 for tamoxifen vs. 0.04 for placebo",
+   "iarcNote": "IARC also notes evidence suggesting lack of carcinogenicity for tamoxifen and cancer of the contralateral breast (it reduces that risk).",
+   "cites": [
+    "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02",
+    "iarc-list",
+    "iarc-sites"
+   ]
+  },
+  {
+   "id": "estradiol",
+   "name": "Estrogen-only menopausal therapy (estradiol)",
+   "inList": true,
+   "iarc": "1",
+   "iarcAgent": "Estrogen therapy, postmenopausal",
+   "sites": [
+    "endometrium (uterus)",
+    "breast"
+   ],
+   "parts": [
+    "reproductive"
+   ],
+   "label": [
+    "BOXED WARNING ESTROGENS INCREASE THE RISK OF ENDOMETRIAL CANCER Close clinical surveillance of all women taking estrogens is important."
+   ],
+   "cites": [
+    "dm-01789bad-4be4-ae22-e063-6294a90af392",
+    "iarc-list",
+    "iarc-sites"
+   ]
+  },
+  {
+   "id": "adalimumab",
+   "name": "TNF blockers (adalimumab)",
+   "inList": true,
+   "iarc": null,
+   "sites": [
+    "lymphoma",
+    "skin (non-melanoma)"
+   ],
+   "parts": [
+    "immune",
+    "skin"
+   ],
+   "label": [
+    "MALIGNANCY Lymphoma and other malignancies, some fatal, have been reported in children and adolescent patients treated with TNF blockers including adalimumab products .",
+    "Patients with RA and other chronic inflammatory diseases, particularly those with highly active disease and/or chronic exposure to immunosuppressant therapies, may be at a higher risk (up to several fold) than the general population for the development of lymphoma, even in the absence of TNF blockers."
+   ],
+   "abs": "In the controlled portions of 39 global adalimumab clinical trials in adult patients with RA, PsA, AS, CD, UC, Ps, HS, and UV, 2 lymphomas occurred among 7973 adalimumab-treated patients versus 1 among 4848 control-treated patients.",
+   "cites": [
+    "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+   ]
+  },
+  {
+   "id": "pioglitazone",
+   "name": "Pioglitazone",
+   "inList": true,
+   "iarc": "2A",
+   "iarcAgent": "Pioglitazone",
+   "sites": [
+    "bladder"
+   ],
+   "parts": [
+    "bladder"
+   ],
+   "label": [
+    "(5.3) Bladder cancer: May increase the risk of bladder cancer.",
+    "During the 13 years of both PROactive and observational follow-up, the occurrence of bladder cancer did not differ between patients randomized to pioglitazone or placebo (HR =1; [95% CI: 0.59 to 1.72])."
+   ],
+   "abs": "In addition, during the three year PROactive clinical trial, 14 patients out of 2605 (0.54%) randomized to pioglitazone and 5 out of 2633 (0.19%) randomized to placebo were diagnosed with bladder cancer.",
+   "cites": [
+    "dm-0331400c-b163-4856-bfb0-965470247cb3",
+    "iarc-list"
+   ]
+  },
+  {
+   "id": "ranitidine",
+   "name": "Ranitidine (historical \u2014 withdrawn from the U.S. market in 2020)",
+   "inList": false,
+   "iarc": "2A",
+   "iarcAgent": "N-Nitrosodimethylamine (NDMA, the impurity)",
+   "sites": [],
+   "parts": [],
+   "historical": true,
+   "label": [
+    "Food and Drug Administration today announced it is requesting manufacturers withdraw all prescription and over-the-counter (OTC) ranitidine drugs from the market immediately.",
+    "The agency has determined that the impurity in some ranitidine products increases over time and when stored at higher than room temperatures and may result in consumer exposure to unacceptable levels of this impurity.",
+    "These low levels would not be expected to lead to an increase in the risk of cancer."
+   ],
+   "cites": [
+    "fda-ranit",
+    "iarc-list"
+   ]
+  },
+  {
+   "id": "infliximab",
+   "name": "TNF blockers (infliximab)",
+   "iarc": null,
+   "sites": [
+    "lymphoma"
+   ],
+   "parts": [
+    "immune"
+   ],
+   "label": [
+    "(5.1) Lymphoma and other malignancies, some fatal, have been reported in children and adolescent patients treated with tumor necrosis factor (TNF) blockers, including infliximab products.",
+    "(5.2) Postmarketing cases of fatal hepatosplenic T-cell lymphoma (HSTCL) have been reported in patients treated with TNF blockers including infliximab products."
+   ],
+   "abs": "",
+   "cites": [
+    "dm-93a193ab-9f96-4da6-aa7c-31212e81879a"
+   ],
+   "inList": true
+  },
+  {
+   "id": "etanercept",
+   "name": "TNF blockers (etanercept)",
+   "iarc": null,
+   "sites": [
+    "lymphoma"
+   ],
+   "parts": [
+    "immune"
+   ],
+   "label": [
+    "( 5.1 ) MALIGNANCIES Lymphoma and other malignancies, some fatal, have been reported in children and adolescent patients treated with TNF-blockers, including Enbrel."
+   ],
+   "abs": "",
+   "cites": [
+    "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+   ],
+   "inList": true
+  }
+ ],
+ "medNote": "Benefits usually outweigh the risks for the approved use; do not stop or change any medication without talking to your prescriber.",
+ "wcrfNote": "WCRF/AICR grades how strong the evidence is (convincing, probable, limited). A grade is not the size of the risk.",
+ "disclaimer": "These flags give hazard and evidence context only. They are not a personal risk estimate and not a diagnosis.",
+ "drop": []
+}

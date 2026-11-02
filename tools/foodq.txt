@@ -1,0 +1,207 @@
+bananas, raw
+apples, raw, with skin
+oranges, raw, all commercial
+strawberries, raw
+blueberries, raw
+grapes, red or green
+watermelon, raw
+cantaloupe, raw
+pineapple, raw, all
+mangos, raw
+kiwifruit, green, raw
+avocados, raw, all
+peaches, yellow, raw
+pears, raw
+cherries, sweet, raw
+raspberries, raw
+grapefruit, raw, pink
+lemon juice, raw
+raisins, seedless
+dates, medjool
+prunes, uncooked
+papayas, raw
+pomegranates, raw
+spinach, raw
+spinach, cooked, boiled, drained, without salt
+kale, raw
+broccoli, raw
+broccoli, cooked, boiled, drained, without salt
+carrots, raw
+sweet potato, cooked, baked in skin, flesh, without salt
+potatoes, baked, flesh and skin, without salt
+tomatoes, red, ripe, raw, year round
+lettuce, cos or romaine, raw
+cabbage, raw
+cauliflower, raw
+brussels sprouts, cooked
+asparagus, raw
+peppers, sweet, red, raw
+peppers, sweet, green, raw
+onions, raw
+garlic, raw
+cucumber, with peel, raw
+celery, raw
+mushrooms, white, raw
+zucchini
+peas, green, frozen, cooked
+corn, sweet, yellow, raw
+beets, raw
+collards, cooked
+swiss chard, raw
+squash, winter, butternut, cooked
+edamame, frozen, prepared
+green beans
+eggplant, raw
+seaweed, kelp, raw
+seaweed, spirulina, dried
+beans, black, mature seeds, cooked, boiled, without salt
+chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt
+lentils, mature seeds, cooked, boiled, without salt
+beans, kidney, all types, mature seeds, cooked, boiled, without salt
+beans, pinto, mature seeds, cooked, boiled, without salt
+beans, navy, mature seeds, cooked, boiled, without salt
+tofu, raw, firm, prepared with calcium sulfate
+soymilk, original and vanilla, unfortified
+hummus, commercial
+peanut butter, smooth style, without salt
+nuts, almonds
+nuts, walnuts, english
+nuts, cashew nuts, raw
+nuts, brazilnuts, dried, unblanched
+nuts, pistachio nuts, raw
+nuts, pecans
+seeds, chia seeds, dried
+seeds, flaxseed
+seeds, pumpkin and squash seed kernels, dried
+seeds, sunflower seed kernels, dried
+seeds, sesame seeds, whole, dried
+peanuts, all types, raw
+oats
+cereals, oats, regular and quick, not fortified, dry
+rice, brown, long-grain, cooked
+rice, white, long-grain, regular, enriched, cooked
+quinoa, cooked
+bread, whole-wheat, commercially prepared
+bread, white, commercially prepared
+pasta, cooked, enriched, without added salt
+spaghetti, whole-wheat, cooked
+tortillas, ready-to-bake or -fry, corn
+bagels, plain, enriched
+barley, pearled, cooked
+buckwheat groats, roasted, cooked
+couscous, cooked
+cereals ready-to-eat, general mills, cheerios
+egg, whole, raw, fresh
+egg, whole, cooked, hard-boiled
+egg, white, raw, fresh
+milk, whole, 3.25% milkfat, with added vitamin d
+milk, reduced fat, fluid, 2% milkfat, with added vitamin a and vitamin d
+milk, nonfat, fluid, with added vitamin a and vitamin d
+yogurt, greek, plain, nonfat
+yogurt, plain, whole milk
+cheese, cheddar
+cheese, mozzarella, whole milk
+cheese, parmesan, hard
+cheese, cottage, lowfat, 2% milkfat
+cheese, swiss
+butter, salted
+cream, fluid, heavy whipping
+kefir, lowfat, plain
+ice creams, vanilla
+chicken, broilers or fryers, breast, meat only, cooked, roasted
+chicken, broilers or fryers, thigh, meat only, cooked, roasted
+turkey, whole, meat only, cooked, roasted
+beef, ground, 85% lean meat / 15% fat, patty, cooked, broiled
+beef, top sirloin, steak, separable lean only, trimmed to 1/8" fat, choice, cooked, broiled
+beef, variety meats and by-products, liver, cooked, pan-fried
+chicken, liver, all classes, cooked, simmered
+pork, fresh, loin, tenderloin, separable lean only, cooked, roasted
+pork, cured, bacon, cooked, pan-fried
+pork, cured, ham, boneless, extra lean (approximately 5% fat), roasted
+lamb, ground, cooked, broiled
+fish, salmon, atlantic, farmed, cooked, dry heat
+fish, salmon, sockeye, cooked, dry heat
+fish, tuna, light, canned in water, drained solids
+fish, sardine, atlantic, canned in oil, drained solids with bone
+fish, cod, atlantic, cooked, dry heat
+fish, mackerel, atlantic, cooked, dry heat
+fish, tilapia, cooked, dry heat
+fish, trout, rainbow, farmed, cooked, dry heat
+fish, herring, atlantic, cooked, dry heat
+crustaceans, shrimp, cooked
+mollusks, oyster, eastern, wild, cooked, moist heat
+mollusks, clam, mixed species, cooked, moist heat
+mollusks, mussel, blue, cooked, moist heat
+crustaceans, crab, alaska king, cooked, moist heat
+fish oil, cod liver
+oil, olive, salad or cooking
+oil, canola
+oil, coconut
+oil, soybean, salad or cooking
+chocolate, dark, 70-85% cacao solids
+cocoa, dry powder, unsweetened
+honey
+sugars, granulated
+maple syrup
+jams and preserves
+beverages, coffee, brewed, prepared with tap water
+beverages, tea, black, brewed, prepared with tap water
+beverages, tea, green, brewed, regular
+orange juice, raw
+beverages, carbonated, cola, regular
+alcoholic beverage, beer, regular, all
+alcoholic beverage, wine, table, red
+beverages, almond milk, unsweetened, shelf stable
+water, bottled, generic
+salt, table
+soy sauce made from soy (tamari)
+ketchup
+mustard, prepared, yellow
+mayonnaise, regular
+salsa, ready-to-serve
+pizza, cheese topping, regular crust, frozen, cooked
+fast foods, hamburger; single, regular patty; plain
+fast foods, potato, french fried in vegetable oil
+potato chips, plain, salted
+popcorn, air-popped
+crackers, saltines
+cookies, chocolate chip, commercially prepared, regular, higher fat
+doughnuts, cake-type, plain
+pancakes, plain, prepared from recipe
+soup, chicken noodle, canned, prepared with equal volume water
+soup, tomato, canned, condensed
+frankfurter, beef, unheated
+sausage, italian, pork, cooked
+yeast extract spread
+nutritional yeast
+molasses
+miso
+tempeh
+sauerkraut, canned, solids and liquids
+pickles, cucumber, dill or kosher dill
+olives, ripe, canned (small-extra large)
+coconut milk, raw (liquid expressed from grated meat and water)
+granola, homemade
+peanuts, all types, dry-roasted, without salt
+apricots, dried, sulfured, uncooked
+figs, dried, uncooked
+cranberries, raw
+bok choy
+arugula, raw
+radishes, raw
+artichokes, (globe or french), cooked, boiled, drained, without salt
+turnip greens, cooked
+mustard greens, raw
+parsley, fresh
+basil, fresh
+ginger root, raw
+spices, turmeric, ground
+spices, cinnamon, ground
+wheat germ, crude
+bran, wheat
+liver sausage, liverwurst, pork
+beef, chuck
+venison
+duck, domesticated, meat only, cooked, roasted
+egg, yolk, raw, fresh
+whey protein

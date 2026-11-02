@@ -1,0 +1,2959 @@
+{
+ "meds": [
+  {
+   "id": "adalimumab",
+   "name": "Adalimumab (TNF blocker)",
+   "brand": "IDACIO",
+   "label": "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc",
+   "parts": [
+    {
+     "part": "immune",
+     "evidence": "WARNING: SERIOUS INFECTIONS and MALIGNANCY SERIOUS INFECTIONS Patients treated with adalimumab products including IDACIO are at increased risk for developing serious infections that may lead to hospitalization or death .",
+     "cites": [
+      "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+     ]
+    },
+    {
+     "part": "bones",
+     "evidence": "1 INDICATIONS AND USAGE IDACIO is a tumor necrosis factor (TNF) blocker indicated for: \u2022 Rheumatoid Arthritis (RA) ( 1.1 ): reducing signs and symptoms, inducing major clinical response, inhibiting the progression of structural damage, and improving physical function in adult patients with moderately to severely active RA .",
+     "cites": [
+      "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+     ]
+    },
+    {
+     "part": "gut",
+     "evidence": "The majority of reported TNF blocker cases have occurred in patients with Crohn's disease or ulcerative colitis and the majority were in adolescent and young adult males.",
+     "cites": [
+      "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "\u2022 Plaque Psoriasis (Ps) ( 1.7 ): treatment of adult patients with moderate to severe chronic plaque psoriasis who are candidates for systemic therapy or phototherapy, and when other systemic therapies are medically less appropriate.",
+     "cites": [
+      "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "vaccine",
+     "text": "Patients on IDACIO may receive concurrent vaccinations, except for live vaccines.",
+     "cites": [
+      "dm-08dbaffe-9d05-43cf-b24b-b44ade8685fc"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "alendronate",
+   "name": "Alendronate",
+   "brand": "FOSAMAX PLUS D",
+   "label": "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1",
+   "parts": [
+    {
+     "part": "bones",
+     "evidence": "1 INDICATIONS AND USAGE FOSAMAX PLUS D is a combination of a bisphosphonate and vitamin D indicated for: Treatment of osteoporosis in postmenopausal women ( 1.1 ) Treatment to increase bone mass in men with osteoporosis ( 1.2 ) Limitations of use : FOSAMAX PLUS D alone should not be used to treat vitamin D deficiency.",
+     "cites": [
+      "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "7 DRUG INTERACTIONS Calcium supplements/antacids or oral medications containing multivalent cations interfere with absorption of alendronate.",
+     "cites": [
+      "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Weight-bearing exercise should be considered along with the modification of certain behavioral factors, such as cigarette smoking and/or excessive alcohol consumption, if these factors exist.",
+     "cites": [
+      "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "Even dosing with orange juice or coffee has been shown to markedly reduce the absorption of alendronate [see Clinical Pharmacology (12.3) ] .",
+     "cites": [
+      "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Other beverages (including mineral water), food, and some medications are likely to reduce the absorption of alendronate [see Drug Interactions (7.1) ] .",
+     "cites": [
+      "dm-10307e7e-9a84-4aa1-8c5c-4b209cffe4d1"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "mg",
+     "title": "Bisphosphonates",
+     "text": "Magnesium-rich supplements or medications can decrease the absorption of oral bisphosphonates, such as alendronate (Fosamax), that are used to treat osteoporosis [ 61 ]. Taking magnesium-rich supplements or medications at least 2 hours before or after oral bisphosphonates can minimize this interaction [ 57 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "allopurinol",
+   "name": "Allopurinol",
+   "brand": "Allopurinol",
+   "label": "dm-005048dd-844f-468c-bf56-1a09727e3477",
+   "parts": [],
+   "interactions": [
+    {
+     "category": "alcohol",
+     "text": "Inform also that the central nervous system depressant effects of allopurinol tablets may be additive to those of alcohol and other CNS depressants.",
+     "cites": [
+      "dm-005048dd-844f-468c-bf56-1a09727e3477"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "amlodipine",
+   "name": "Amlodipine",
+   "brand": "Amlodipine Besylate",
+   "label": "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Amlodipine besylate tablets are calcium channel blocker and may be used alone or in combination with other antihypertensive and antianginal agents for the treatment of: \u2022Hypertension ( 1.1 ) \u043e Amlodipine besylate tablets are indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions. \u2022Coronary Artery Disease ( 1.2 ) \u043e Chronic Stable Angina \u043e Vasospastic Angina (Prinzmetal's or Variant Angina) \u043e Angiographically Documented Coronary Artery Disease in patients without heart failure or an ejection fraction < 40% 1.1 Hypertension Amlodipine besylate ta",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "1 INDICATIONS AND USAGE Amlodipine besylate tablets are calcium channel blocker and may be used alone or in combination with other antihypertensive and antianginal agents for the treatment of: \u2022Hypertension ( 1.1 ) \u043e Amlodipine besylate tablets are indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in black patients, and many antihypertensive drugs have additional approved indications and effects (e.g., on angina, heart failure, or diabetic kidney disease).",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Impact of other drugs on amlodipine: Co-administered cimetidine, magnesium-and aluminum hydroxide antacids, sildenafil, and grapefruit juice have no impact on the exposure to amlodipine.",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Within the physiologic pH range, amlodipine is an ionized compound (pKa=8.6), and its kinetic interaction with the calcium channel receptor is characterized by a gradual rate of association and dissociation with the receptor binding site, resulting in a gradual onset of effect.",
+     "cites": [
+      "dm-003dd1ec-16f8-4f96-b6a8-c4689d35892a"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "apixaban",
+   "name": "Apixaban",
+   "brand": "Apixaban",
+   "label": "dm-19a60552-374d-4b8b-a8ce-ceae252ea5ba",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Apixaban tablets are a factor Xa inhibitor indicated: to reduce the risk of stroke and systemic embolism in patients with nonvalvular atrial fibrillation.",
+     "cites": [
+      "dm-19a60552-374d-4b8b-a8ce-ceae252ea5ba"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "1 INDICATIONS AND USAGE Apixaban tablets are a factor Xa inhibitor indicated: to reduce the risk of stroke and systemic embolism in patients with nonvalvular atrial fibrillation.",
+     "cites": [
+      "dm-19a60552-374d-4b8b-a8ce-ceae252ea5ba"
+     ]
+    },
+    {
+     "part": "lungs",
+     "evidence": "(1.1) for the prophylaxis of deep vein thrombosis (DVT), which may lead to pulmonary embolism (PE), in patients who have undergone hip or knee replacement surgery.",
+     "cites": [
+      "dm-19a60552-374d-4b8b-a8ce-ceae252ea5ba"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "vitaminK",
+     "text": "Protamine sulfate and vitamin K are not expected to affect the anticoagulant activity of apixaban.",
+     "cites": [
+      "dm-19a60552-374d-4b8b-a8ce-ceae252ea5ba"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitE",
+     "title": "Anticoagulant and antiplatelet medications",
+     "text": "Vitamin E can inhibit platelet aggregation and antagonize vitamin K-dependent clotting factors. As a result, taking large doses of vitamin E with anticoagulant or antiplatelet medications, such as warfarin (Coumadin), can increase the risk of bleeding, especially in conjunction with low vitamin K intake.",
+     "cites": [
+      "ods-vitE"
+     ]
+    },
+    {
+     "nutrient": "vitK",
+     "title": "Warfarin (Coumadin) and similar anticoagulants",
+     "text": "Vitamin K can have a serious and potentially dangerous interaction with anticoagulants such as warfarin (Coumadin) as well as phenprocoumon, acenocoumarol, and tioclomarol, which are commonly used in some European countries [ 7 , 8 ]. These drugs antagonize the activity of vitamin K, leading to the depletion of vitamin K-dependent clotting factors.",
+     "cites": [
+      "ods-vitK"
+     ]
+    },
+    {
+     "nutrient": "omega3",
+     "title": "Warfarin (Coumadin) and similar anticoagulants",
+     "text": "Fish oil can have antiplatelet effects at high doses, although it appears to be less potent than aspirin [ 197 , 198 ]. Fish oil might prolong clotting times, as indicated by an elevated international normalized ratio (INR), when it is taken with warfarin [ 199 ], but most research indicates that doses of 3\u20136 g/day fish oil do not significantly affect the anticoagulant status of patients taking warfarin [ 200 ].",
+     "cites": [
+      "ods-omega3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "atorvastatin",
+   "name": "Atorvastatin",
+   "brand": "Amlodipine and Atorvastatin",
+   "label": "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "Amlodipine Hypertension Amlodipine is indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in black patients, and many antihypertensive drugs have additional approved indications and effects (e.g., on angina, heart failure, or diabetic kidney disease).",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "No drug interaction studies have been conducted with amlodipine and atorvastatin and other drugs, although studies have been conducted in the individual amlodipine and atorvastatin components, as described below: Amlodipine See full prescribing information for details regarding concomitant use of amlodipine and atorvastatin tablets with other drugs or grapefruit juice that increase the risk of myopathy and rhabdomyolysis (2.5, 7.3 ).",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Consider the risk/benefit of use of atorvastatin 80 mg in patients with recent hemorrhagic stroke. 12 CLINICAL PHARMACOLOGY 12.1 Mechanism of Action Amlodipine and atorvastatin tablets are a combination of two drugs, a dihydropyridine calcium channel blocker (amlodipine) and an HMG-CoA reductase inhibitor (atorvastatin).",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Patients who consume substantial quantities of alcohol and/or have a history of liver disease may be at increased risk for hepatic injury [see Use in Specific Populations ( 8.7 )].",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Important Dosage Information Take amlod ipine and atorvastatin tablets orally once daily at any time of the day, with or without food.",
+     "cites": [
+      "dm-043c4742-081d-4bc4-bf27-dad92bb2dfbc"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitC",
+     "title": "3-Hydroxy-3-methylglutaryl coenzyme A reductase inhibitors (statins)",
+     "text": "Vitamin C, in combination with other antioxidants, may attenuate the increase in high-density lipoprotein levels that result from taking combination niacin/simvastatin (Zocor) therapy [ 96 , 97 ]. It is not known whether this interaction occurs with other lipid-altering regimens [ 54 ].",
+     "cites": [
+      "ods-vitC"
+     ]
+    },
+    {
+     "nutrient": "vitD",
+     "title": "Statins",
+     "text": "Statin medications reduce cholesterol synthesis. Because endogenous vitamin D is derived from cholesterol, statins may also reduce vitamin D synthesis [ 170 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    },
+    {
+     "nutrient": "vitE",
+     "title": "Simvastatin and niacin",
+     "text": "Some people take vitamin E supplements with other antioxidants, such as vitamin C, selenium, and beta-carotene. This collection of antioxidant ingredients blunted the rise in high-density lipoprotein (HDL) cholesterol levels among people who were treated with a combination of simvastatin (brand name Zocor) and niacin [ 64 , 65 ].",
+     "cites": [
+      "ods-vitE"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "carbamazepine",
+   "name": "Carbamazepine",
+   "brand": "Carbamazepine",
+   "label": "dm-0ccee1ed-3d7c-452b-9519-c1ddb92893df",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "INDICATIONS AND USAGE Epilepsy Carbamazepine extended-release capsules are indicated for use as an anticonvulsant drug.",
+     "cites": [
+      "dm-0ccee1ed-3d7c-452b-9519-c1ddb92893df"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Agents that are CYP3A4 inhibitors that have been found, or are expected, to increase plasma levels of carbamazepine extended-release capsules include, for example, the following: Acetazolamide, aprepitant, azole antifungals (e.g., ketoconazole, itraconazole, fluconazole, voriconazole), cimetidine, ciprofloxacin, clarithromycin, dalfopristin, danazol, dantrolene, delavirdine, diltiazem, erythromycin, fluoxetine, fluvoxamine, grapefruit juice, ibuprofen, isoniazid, loratadine, macrolides, nefazodo",
+     "cites": [
+      "dm-0ccee1ed-3d7c-452b-9519-c1ddb92893df"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "CNS depressants include: alcohol, opioid analgesics, benzodiazepines, tricyclic antidepressants, sedative/hypnotics, anticonvulsants, antipsychotics, antihistamines, anticholinergics, alpha and beta blockers, general anesthetics, muscle relaxants, and illicit CNS depressants.",
+     "cites": [
+      "dm-0ccee1ed-3d7c-452b-9519-c1ddb92893df"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Carbamazepine extended-release capsules may be taken with or without food.",
+     "cites": [
+      "dm-0ccee1ed-3d7c-452b-9519-c1ddb92893df"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b6",
+     "title": "Antiepileptic medications",
+     "text": "Some antiepileptic drugs, including valproic acid (Depakene, Stavzor), carbamazepine (Carbatrol, Epitol, Tegretol, and others), and phenytoin (Dilantin) increase the catabolism rate of vitamin B6 vitamers, resulting in low plasma PLP concentrations and hyperhomocysteinemia [ 36 , 37 ]. High homocysteine levels in antiepileptic drug users might increase the risk of epileptic seizures and systemic vascular events, including stroke, and reduce the ability to control seizures in patients with epilepsy.",
+     "cites": [
+      "ods-b6"
+     ]
+    },
+    {
+     "nutrient": "b7",
+     "title": "Anticonvulsants",
+     "text": "In a study in 264 people with epilepsy, anticonvulsant treatment for at least 1 year was associated with significantly lower serum biotin levels than in control group patients [ 39 ]. The anticonvulsants used included carbamazepine (Tegretol, Carbatrol, Epitol, Equetro), primidone (Mysoline), phenytoin (Dilantin, Phenytek), and phenobarbital (Luminal, Solfoton) as well as combinations of these medications.",
+     "cites": [
+      "ods-b7"
+     ]
+    },
+    {
+     "nutrient": "b9",
+     "title": "Antiepileptic medications",
+     "text": "Antiepileptic medications, such as phenytoin (Dilantin), carbamazepine (Carbatrol, Tegretol, Equetro, Epitol), and valproate (Depacon), are used to treat epilepsy, psychiatric diseases, and other medical conditions. These medications can reduce serum folate levels [ 169 ].",
+     "cites": [
+      "ods-b9"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ciprofloxacin",
+   "name": "Ciprofloxacin",
+   "brand": "ciprofloxacin",
+   "label": "dm-0c355077-7361-41d0-9e82-eb31beaf5daa",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "Therefore this indication is based on an efficacy study conducted in animals only [ see Clinical Studies (14.3) ] . 1.9 Chronic Bacterial Prostatitis Ciprofloxacin is indicated in adult patients for treatment of chronic bacterial prostatitis caused by Escherichia coli or Proteus mirabilis . 1.10 Lower Respiratory Tract Infections Ciprofloxacin is indicated in adult patients for treatment of lower ",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "Therefore this indication is based on an efficacy study conducted in animals only [ see Clinical Studies (14.3) ] . 1.9 Chronic Bacterial Prostatitis Ciprofloxacin is indicated in adult patients for treatment of chronic bacterial prostatitis caused by Escherichia coli or Proteus mirabilis . 1.10 Lower Respiratory Tract Infections Ciprofloxacin is indicated in adult patients for treatment of lower ",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    },
+    {
+     "part": "bladder",
+     "evidence": "Complicated Urinary Tract Infection and Pyelonephritis in Pediatric Patients Ciprofloxacin is indicated in pediatric patients aged one to 17 years of age for treatment of complicated urinary tract infections (cUTI) and pyelonephritis due to Escherichia coli [see Use in Specific Populations (8.4) ].",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Monitor serum creatinine ( 7 ) Multivalent cation-containing products including antacids, metal cations or didanosine Decreased ciprofloxacin absorption.",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "Duloxetine Avoid Use Five-fold increase in duloxetine exposure If unavoidable, monitor for duloxetine toxicity Caffeine/Xanthine Derivatives Use with caution Reduced clearance resulting in elevated levels and prolongation of serum half-life Ciprofloxacin inhibits the formation of paraxanthine after caffeine administration (or pentoxifylline containing products).",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Administration Instructions Inform patients that ciprofloxacin tablets may be taken with or without food.",
+     "cites": [
+      "dm-0c355077-7361-41d0-9e82-eb31beaf5daa"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "ca",
+     "title": "Quinolone antibiotics",
+     "text": "Simultaneous use of calcium supplements and quinolone antibiotics\u2014such as ciprofloxacin (Cipro), gemifloxacin (Factive), and moxifloxacin (Avelox)\u2014can reduce the absorption of quinolones [ 109 , 110 ]. Taking the antibiotic 2 hours before or 2 hours after calcium supplements prevents this effect [ 109 ].",
+     "cites": [
+      "ods-ca"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Antibiotics",
+     "text": "Magnesium can form insoluble complexes with tetracyclines, such as demeclocycline (Declomycin) and doxycycline (Vibramycin), and with quinolone antibiotics, such as ciprofloxacin (Cipro) and levofloxacin (Levaquin). These antibiotics should be taken at least 2 hours before or 4 to 6 hours after a magnesium-containing supplement [ 57 , 62 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "clopidogrel",
+   "name": "Clopidogrel",
+   "brand": "Clopidogrel Bisulfate",
+   "label": "dm-03bec9ad-cd22-44d3-9b82-2796157de1d1",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Clopidogrel tablets are P2Y 12 platelet inhibitor indicated for: \u25cf Acute coronary syndrome \u2013 For patients with non\u2013ST-segment elevation ACS (unstable angina [UA]/non\u2013ST-elevation myocardial infarction [NSTEMI]), clopidogrel tablets have been shown to reduce the rate of myocardial infarction (MI) and stroke.",
+     "cites": [
+      "dm-03bec9ad-cd22-44d3-9b82-2796157de1d1"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "1 INDICATIONS AND USAGE Clopidogrel tablets are P2Y 12 platelet inhibitor indicated for: \u25cf Acute coronary syndrome \u2013 For patients with non\u2013ST-segment elevation ACS (unstable angina [UA]/non\u2013ST-elevation myocardial infarction [NSTEMI]), clopidogrel tablets have been shown to reduce the rate of myocardial infarction (MI) and stroke.",
+     "cites": [
+      "dm-03bec9ad-cd22-44d3-9b82-2796157de1d1"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "1 INDICATIONS AND USAGE Clopidogrel tablets are P2Y 12 platelet inhibitor indicated for: \u25cf Acute coronary syndrome \u2013 For patients with non\u2013ST-segment elevation ACS (unstable angina [UA]/non\u2013ST-elevation myocardial infarction [NSTEMI]), clopidogrel tablets have been shown to reduce the rate of myocardial infarction (MI) and stroke.",
+     "cites": [
+      "dm-03bec9ad-cd22-44d3-9b82-2796157de1d1"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "food",
+     "text": "If concomitant use cannot be avoided, initiate repaglinide at 0.5 mg before each meal and do not exceed a total daily dose of 4 mg.",
+     "cites": [
+      "dm-03bec9ad-cd22-44d3-9b82-2796157de1d1"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitE",
+     "title": "Anticoagulant and antiplatelet medications",
+     "text": "Vitamin E can inhibit platelet aggregation and antagonize vitamin K-dependent clotting factors. As a result, taking large doses of vitamin E with anticoagulant or antiplatelet medications, such as warfarin (Coumadin), can increase the risk of bleeding, especially in conjunction with low vitamin K intake.",
+     "cites": [
+      "ods-vitE"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "digoxin",
+   "name": "Digoxin",
+   "brand": "Digoxin",
+   "label": "dm-1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Digoxin is a cardiac glycoside indicated in adults for the treatment of mild to moderate heart failure and for the control of resting ventricular rate in patients with chronic atrial fibrillation.",
+     "cites": [
+      "dm-1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Digoxin Concentrations Decreased Acarbose, Activated Charcoal, Albuterol, Antacids, certain cancer chemotherapy or radiation therapy, Cholestyramine, Colestipol, Exenatide, Kaolin-pectin, Meals High in Bran, Metoclopramide, Miglitol, Neomycin, Penicillamine, Phenytoin, Rifampin, St.",
+     "cites": [
+      "dm-1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Most notably, it is commonly seen in alcoholics and in patients with diabetes mellitus or hypercalcemia.",
+     "cites": [
+      "dm-1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "When taken with meals high in bran fiber, however, the amount absorbed from an oral dose may be reduced.",
+     "cites": [
+      "dm-1b7e5c6e-e052-41b0-a4ce-05dfe62faaaf"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "doxycycline",
+   "name": "Doxycycline",
+   "brand": "DOXYCYCLINE HYCLATE",
+   "label": "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "Respiratory tract infections caused by Mycoplasma pneumoniae .",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "part": "gut",
+     "evidence": "In acute intestinal amebiasis, doxycycline may be a useful adjunct to amebicides.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "INDICATIONS AND USAGE To reduce the development of drug-resistant bacteria and maintain effectiveness of doxycycline and other antibacterial drugs, doxycycline should be used only to treat or prevent infections that are proven or strongly suspected to be caused by susceptible bacteria.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "part": "bladder",
+     "evidence": "Respiratory tract and urinary tract infections caused by Klebsiella species.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "part": "reproductive",
+     "evidence": "Campylobacter fetus infections caused by Campylobacter fetus .",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "In severe acne, doxycycline may be useful adjunctive therapy.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Absorption of tetracyclines is impaired by antacids containing aluminum, calcium, or magnesium, and iron-containing preparations.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "However, the absorption of doxycycline is not markedly influenced by simultaneous ingestion of food or milk.",
+     "cites": [
+      "dm-0106a3d3-db4d-f6ee-e063-6294a90a25e9"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "mg",
+     "title": "Antibiotics",
+     "text": "Magnesium can form insoluble complexes with tetracyclines, such as demeclocycline (Declomycin) and doxycycline (Vibramycin), and with quinolone antibiotics, such as ciprofloxacin (Cipro) and levofloxacin (Levaquin). These antibiotics should be taken at least 2 hours before or 4 to 6 hours after a magnesium-containing supplement [ 57 , 62 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "enalapril",
+   "name": "Enalapril",
+   "brand": "Enalapril Maleate",
+   "label": "dm-074fe718-88d8-365c-e063-6394a90a299d",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Heart Failure Enalapril maleate is indicated for the treatment of symptomatic congestive heart failure, usually in combination with diuretics and digitalis.",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "INDICATIONS AND USAGE Hypertension Enalapril maleate is indicated for the treatment of hypertension.",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "In using enalapril maleate consideration should be given to the fact that another angiotensin-converting enzyme inhibitor, captopril, has caused agranulocytosis, particularly in patients with renal impairment or collagen vascular disease, and that available data are insufficient to show that enalapril maleate does not have a similar risk (see WARNINGS, Neutropenia/Agranulocytosis ).",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "In using enalapril maleate consideration should be given to the fact that another angiotensin-converting enzyme inhibitor, captopril, has caused agranulocytosis, particularly in patients with renal impairment or collagen vascular disease, and that available data are insufficient to show that enalapril maleate does not have a similar risk (see WARNINGS, Neutropenia/Agranulocytosis ).",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Potassium-sparing diuretics (e.g., spironolactone, triamterene, or amiloride), potassium supplements, or potassium-containing salt substitutes may lead to significant increases in serum potassium.",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Enalapril absorption is not influenced by the presence of food in the gastrointestinal tract.",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "The possibility of hypotensive effects with enalapril can be minimized by either discontinuing the diuretic or increasing the salt intake prior to initiation of treatment with enalapril.",
+     "cites": [
+      "dm-074fe718-88d8-365c-e063-6394a90a299d"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "k",
+     "title": "Angiotensin converting enzyme inhibitors and angiotensin receptor blockers",
+     "text": "ACE inhibitors, such as benazepril (Lotensin), and angiotensin receptor blockers (ARBs) such as losartan (Cozaar), are used to treat hypertension and heart failure, slow progression of kidney disease in patients with chronic kidney disease and type 2 diabetes, and decrease morbidity and mortality after myocardial infarction [ 75-77 ]. These medications reduce urinary potassium excretion, which can lead to hyperkalemia.",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "iodine",
+     "title": "Angiotensin-converting enzyme inhibitors",
+     "text": "Angiotensin-converting enzyme (ACE) inhibitors, such as benazepril (Lotensin), lisinopril (Prinivil and Zestril), and fosinopril (Monopril), are used primarily to treat high blood pressure. Taking potassium iodide with ACE inhibitors can increase the risk of hyperkalemia (elevated blood levels of potassium) [ 89 ].",
+     "cites": [
+      "ods-iodine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "estradiol",
+   "name": "Estradiol (estrogen-only HRT)",
+   "brand": "Estradiol",
+   "label": "dm-01789bad-4be4-ae22-e063-6294a90af392",
+   "parts": [
+    {
+     "part": "reproductive",
+     "evidence": "BOXED WARNING ESTROGENS INCREASE THE RISK OF ENDOMETRIAL CANCER Close clinical surveillance of all women taking estrogens is important.",
+     "cites": [
+      "dm-01789bad-4be4-ae22-e063-6294a90af392"
+     ]
+    },
+    {
+     "part": "bones",
+     "evidence": "When prescribing solely for the prevention of postmenopausal osteoporosis, therapy should only be considered for women at significant risk of osteoporosis and for whom non-estrogen medications are not considered to be appropriate (See CLINICAL PHARMACOLOGY, CLINICAL STUDIES).",
+     "cites": [
+      "dm-01789bad-4be4-ae22-e063-6294a90af392"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Inhibitors of CYP3A4 such as erythromycin, clarithromycin, ketoconazole, itraconazole, ritonavir and grapefruit juice may increase plasma concentrations of estrogens and may result in side effects.",
+     "cites": [
+      "dm-01789bad-4be4-ae22-e063-6294a90af392"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "etanercept",
+   "name": "Etanercept (TNF blocker)",
+   "brand": "ENBREL",
+   "label": "dm-a002b40c-097d-47a5-957f-7a7b1807af7f",
+   "parts": [
+    {
+     "part": "immune",
+     "evidence": "WARNING: SERIOUS INFECTIONS and MALIGNANCIES WARNING: SERIOUS INFECTIONS and MALIGNANCIES See full prescribing information for complete boxed warning.",
+     "cites": [
+      "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+     ]
+    },
+    {
+     "part": "bones",
+     "evidence": "2.3 Recommended Dosage in Adult Patients with Rheumatoid Arthritis, Ankylosing Spondylitis, Psoriatic Arthritis, and Plaque Psoriasis Enbrel is administered by subcutaneous injection (Table 1).",
+     "cites": [
+      "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "1.5 Plaque Psoriasis Enbrel is indicated for the treatment of patients 4 years or older with chronic moderate to severe plaque psoriasis (PsO) who are candidates for systemic therapy or phototherapy.",
+     "cites": [
+      "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "vaccine",
+     "text": "Patients receiving Enbrel may receive concurrent vaccinations, except for live vaccines.",
+     "cites": [
+      "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Physicians should use caution when using Enbrel in patients with moderate to severe alcoholic hepatitis.",
+     "cites": [
+      "dm-a002b40c-097d-47a5-957f-7a7b1807af7f"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "ethinyl_estradiol",
+   "name": "Ethinyl Estradiol",
+   "brand": "Iclevia",
+   "label": "dm-00657f4e-9df8-4f58-91a0-eff5a467f988",
+   "parts": [
+    {
+     "part": "reproductive",
+     "evidence": "1 INDICATIONS AND USAGE Iclevia TM (levonorgestrel and ethinyl estradiol tablets) is indicated for use by females of reproductive potential to prevent pregnancy.",
+     "cites": [
+      "dm-00657f4e-9df8-4f58-91a0-eff5a467f988"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "CYP3A4 inhibitors such as itraconazole, voriconazole, fluconazole, grapefruit juice, or ketoconazole may increase systemic exposure of estrogen and/or progestin component of COCs.",
+     "cites": [
+      "dm-00657f4e-9df8-4f58-91a0-eff5a467f988"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Lactation Iclevia may reduce breast milk production.",
+     "cites": [
+      "dm-00657f4e-9df8-4f58-91a0-eff5a467f988"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Table 7: Mean\u00b1SD Pharmacokinetic Parameters Under Fasting Conditions in Healthy Women Following 10 Days Administration of One Tablet of Levonorgestrel and Ethinyl Estradiol Tablets (n=44) Analyte AUC 0-24 C max C min C avg a T max a C avg = AUC 0-24/24 Levonorgestrel 54.6 \u00b1 16.5 ng*hr/mL 5.0 \u00b1 1.5 ng/mL 1.6 \u00b1 0.5 ng/mL 2.3 \u00b1 0.7 ng/mL 1.4 \u00b1 0.7 hours Ethinyl estradiol 935.5 \u00b1 346.9 pg*hr/mL 106.1 \u00b1 41.2 pg/mL 18.5 \u00b1 9.4 pg/mL 38.9 \u00b1 14.4 pg/mL 1.6 \u00b1 0.6 hours Food Effect The effect of food on th",
+     "cites": [
+      "dm-00657f4e-9df8-4f58-91a0-eff5a467f988"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "famotidine",
+   "name": "Famotidine",
+   "brand": "Famotidine",
+   "label": "dm-03503cd5-bd8e-4bff-b90d-1a71c5225b91",
+   "parts": [
+    {
+     "part": "stomach",
+     "evidence": "1 INDICATIONS AND USAGE Famotidine tablets are indicated in adult and pediatric patients 40 kg and greater for the treatment of: active duodenal ulcer (DU). active gastric ulcer (GU). symptomatic nonerosive gastroesophageal reflux disease (GERD). erosive esophagitis due to GERD, diagnosed by biopsy.",
+     "cites": [
+      "dm-03503cd5-bd8e-4bff-b90d-1a71c5225b91"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Famotidine tablets may be given with antacids. 5 WARNINGS AND PRECAUTIONS Central Nervous System (CNS) Adverse Reactions: Elderly patients and patients with renal impairment at increased risk; reduce the dosage.",
+     "cites": [
+      "dm-03503cd5-bd8e-4bff-b90d-1a71c5225b91"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Famotidine tablets may be taken with or without food.",
+     "cites": [
+      "dm-03503cd5-bd8e-4bff-b90d-1a71c5225b91"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b12",
+     "title": "Gastric acid inhibitors",
+     "text": "Gastric acid inhibitors include proton pump inhibitors, such as omeprazole (Prilosec) and lansoprazole (Prevacid), and histamine 2-receptor antagonists, such as cimetidine (Tagamet) and ranitidine (Zantac). These drugs are used to treat gastroesophageal reflux disease and peptic ulcer disease.",
+     "cites": [
+      "ods-b12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "felodipine",
+   "name": "Felodipine",
+   "brand": "Felodipine",
+   "label": "dm-063e633b-03ca-46e2-b6a0-8a300fccee93",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "INDICATIONS AND USAGE Felodipine extended-release tablets, USP are indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise and limited sodium intake.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in black patients, and many antihypertensive drugs have additional approved indications and effects (e.g., on angina, heart failure or diabetic kidney disease).",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Coadministration of CYP3A4 inhibitors (e.g., ketoconazole, itraconazole, erythromycin, grapefruit juice, cimetidine) with felodipine may lead to several-fold increases in the plasma levels of felodipine, either due to an increase in bioavailability or due to a decrease in metabolism.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "It reversibly competes with nitrendipine and/or other calcium channel blockers for dihydropyridine binding sites, blocks voltage-dependent Ca++ currents in vascular smooth muscle and cultured rabbit atrial cells, and blocks potassium-induced contracture of the rat portal vein.",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Interaction with Food See CLINICAL PHARMACOLOGY: Pharmacokinetics and Metabolism .",
+     "cites": [
+      "dm-063e633b-03ca-46e2-b6a0-8a300fccee93"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "fluoxetine",
+   "name": "Fluoxetine",
+   "brand": "Fluoxetine",
+   "label": "dm-023cef65-c9c2-4d70-af66-198fb1b57714",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "1 INDICATIONS AND USAGE Fluoxetine is indicated for the treatment of: Acute and maintenance treatment of Major Depressive Disorder [see Clinical Studies (14.1) ] .",
+     "cites": [
+      "dm-023cef65-c9c2-4d70-af66-198fb1b57714"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "alcohol",
+     "text": "Use of Concomitant Medications Patients should be advised to inform their healthcare provider if they are taking, or plan to take, any prescription medication, including Symbyax, Sarafem, or over-the-counter drugs, including herbal supplements or alcohol.",
+     "cites": [
+      "dm-023cef65-c9c2-4d70-af66-198fb1b57714"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Food does not appear to affect the systemic bioavailability of fluoxetine, although it may delay its absorption by 1 to 2 hours, which is probably not clinically significant.",
+     "cites": [
+      "dm-023cef65-c9c2-4d70-af66-198fb1b57714"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "furosemide",
+   "name": "Furosemide",
+   "brand": "Furosemide",
+   "label": "dm-020bc039-9e99-4895-96f8-0c6a556d3e67",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "INDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatment of edema associated with congestive heart failure, cirrhosis of the liver, and renal disease, including the nephrotic syndrome.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "Hypertension Oral furosemide may be used in adults for the treatment of hypertension alone or in combination with other antihypertensive agents.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    },
+    {
+     "part": "liver",
+     "evidence": "INDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatment of edema associated with congestive heart failure, cirrhosis of the liver, and renal disease, including the nephrotic syndrome.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "INDICATIONS AND USAGE Edema Furosemide tablets are indicated in adults and pediatric patients for the treatment of edema associated with congestive heart failure, cirrhosis of the liver, and renal disease, including the nephrotic syndrome.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Potassium supplements and/or dietary measures may be needed to control or avoid hypokalemia.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "As with any effective diuretic, electrolyte depletion may occur during furosemide therapy, especially in patients receiving higher doses and a restricted salt intake.",
+     "cites": [
+      "dm-020bc039-9e99-4895-96f8-0c6a556d3e67"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitD",
+     "title": "Thiazide diuretics",
+     "text": "Thiazide diuretics (e.g., Hygroton, Lozol, and Microzide) decrease urinary calcium excretion. The combination of these diuretics with vitamin D supplements (which increase intestinal calcium absorption) might lead to hypercalcemia, especially among older adults and individuals with compromised renal function or hyperparathyroidism [ 170 , 178 , 179 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    },
+    {
+     "nutrient": "b1",
+     "title": "Furosemide",
+     "text": "Furosemide (Lasix) is a loop diuretic used to treat edema and hypertension by increasing urinary output. Research has linked the use of furosemide to decreases in thiamin concentrations, possibly to deficient levels, as a result of urinary thiamin loss [ 49 , 58 , 59 ].",
+     "cites": [
+      "ods-b1"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Diuretics",
+     "text": "Chronic treatment with loop diuretics, such as furosemide (Lasix) and bumetanide (Bumex), and thiazide diuretics, such as hydrochlorothiazide (Aquazide H) and ethacrynic acid (Edecrin), can increase the loss of magnesium in urine and lead to magnesium depletion [ 63 ]. In contrast, potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce magnesium excretion [ 63 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    },
+    {
+     "nutrient": "k",
+     "title": "Potassium-sparing diuretics",
+     "text": "Potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce the excretion of potassium in the urine and can cause hyperkalemia [ 77 , 78 ]. Experts recommend monitoring potassium status in people taking these medications, especially if they have impaired kidney function or other risk factors for hyperkalemia [ 78 ].",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "k",
+     "title": "Loop and thiazide diuretics",
+     "text": "Treatment with loop diuretics, such as furosemide (Lasix) and bumetanide (Bumex), and thiazide diuretics, such as chlorothiazide (Diuril) and metolazone (Zaroxolyn), increases urinary potassium excretion and can lead to hypokalemia [ 77 , 78 ]. Experts recommend monitoring potassium status in people taking these medications and initiating potassium supplementation if warranted [ 77 ].",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "zn",
+     "title": "Diuretics",
+     "text": "Thiazide diuretics, such as chlorthalidone (e.g., Hygroton, Thalitone) and hydrochlorothiazide (e.g., Esidrix, HydroDIURIL), increase zinc excretion in the urine. This increased excretion, in turn, decreases serum zinc concentrations [ 106 ].",
+     "cites": [
+      "ods-zn"
+     ]
+    },
+    {
+     "nutrient": "iodine",
+     "title": "Potassium-sparing diuretics",
+     "text": "Taking potassium iodide with potassium-sparing diuretics, such as spironolactone (Aldactone) and amiloride (Midamor), can increase the risk of hyperkalemia [ 89 ].",
+     "cites": [
+      "ods-iodine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hydrochlorothiazide",
+   "name": "Hydrochlorothiazide",
+   "brand": "Lisinopril and Hydrochlorothiazide",
+   "label": "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "INDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets USP are indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in black patients, and many antihypertensive drugs have additional approved indications and effects (eg., on angina, heart failure, or diabetic kidney disease).",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "In using lisinopril and hydrochlorothiazide tablets USP, consideration should be given to the fact that an angiotensin converting enzyme inhibitor, captopril, has caused agranulocytosis, particularly in patients with renal impairment or collagen vascular disease, and that available data are insufficient to show that lisinopril does not have a similar risk.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Use of lisinopril with potassium-sparing diuretics (e.g., spironolactone, eplerenone, triamterene, or amiloride), potassium supplements, or potassium-containing salt substitutes may lead to significant increases in serum potassium.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Thiazides may decrease urinary calcium excretion.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Alcohol, barbiturates, or narcotics - potentiation of orthostatic hypotension may occur.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Lisinopril absorption is not influenced by the presence of food in the gastrointestinal tract.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "The possibility of hypotensive effects with lisinopril can be minimized by either discontinuing the diuretic or increasing the salt intake prior to initiation of treatment with lisinopril.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitD",
+     "title": "Thiazide diuretics",
+     "text": "Thiazide diuretics (e.g., Hygroton, Lozol, and Microzide) decrease urinary calcium excretion. The combination of these diuretics with vitamin D supplements (which increase intestinal calcium absorption) might lead to hypercalcemia, especially among older adults and individuals with compromised renal function or hyperparathyroidism [ 170 , 178 , 179 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Diuretics",
+     "text": "Chronic treatment with loop diuretics, such as furosemide (Lasix) and bumetanide (Bumex), and thiazide diuretics, such as hydrochlorothiazide (Aquazide H) and ethacrynic acid (Edecrin), can increase the loss of magnesium in urine and lead to magnesium depletion [ 63 ]. In contrast, potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce magnesium excretion [ 63 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    },
+    {
+     "nutrient": "k",
+     "title": "Potassium-sparing diuretics",
+     "text": "Potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce the excretion of potassium in the urine and can cause hyperkalemia [ 77 , 78 ]. Experts recommend monitoring potassium status in people taking these medications, especially if they have impaired kidney function or other risk factors for hyperkalemia [ 78 ].",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "k",
+     "title": "Loop and thiazide diuretics",
+     "text": "Treatment with loop diuretics, such as furosemide (Lasix) and bumetanide (Bumex), and thiazide diuretics, such as chlorothiazide (Diuril) and metolazone (Zaroxolyn), increases urinary potassium excretion and can lead to hypokalemia [ 77 , 78 ]. Experts recommend monitoring potassium status in people taking these medications and initiating potassium supplementation if warranted [ 77 ].",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "zn",
+     "title": "Diuretics",
+     "text": "Thiazide diuretics, such as chlorthalidone (e.g., Hygroton, Thalitone) and hydrochlorothiazide (e.g., Esidrix, HydroDIURIL), increase zinc excretion in the urine. This increased excretion, in turn, decreases serum zinc concentrations [ 106 ].",
+     "cites": [
+      "ods-zn"
+     ]
+    },
+    {
+     "nutrient": "iodine",
+     "title": "Potassium-sparing diuretics",
+     "text": "Taking potassium iodide with potassium-sparing diuretics, such as spironolactone (Aldactone) and amiloride (Midamor), can increase the risk of hyperkalemia [ 89 ].",
+     "cites": [
+      "ods-iodine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "infliximab",
+   "name": "Infliximab (TNF blocker)",
+   "brand": "ZYMFENTRA",
+   "label": "dm-93a193ab-9f96-4da6-aa7c-31212e81879a",
+   "parts": [
+    {
+     "part": "immune",
+     "evidence": "WARNING: SERIOUS INFECTIONS and MALIGNANCY See full prescribing information for complete boxed warning Increased risk of serious infections leading to hospitalization or death, including tuberculosis (TB), bacterial sepsis, invasive fungal infections (such as hitoplasmosis) and infections due to ohter opportunistic pathogens.",
+     "cites": [
+      "dm-93a193ab-9f96-4da6-aa7c-31212e81879a"
+     ]
+    },
+    {
+     "part": "gut",
+     "evidence": "The majority of cases were reported in patients with Crohn's disease or ulcerative colitis, most of whom were adolescent or young adult males.",
+     "cites": [
+      "dm-93a193ab-9f96-4da6-aa7c-31212e81879a"
+     ]
+    },
+    {
+     "part": "liver",
+     "evidence": "5.4 Hepatotoxicity Hepatobiliary disorders, including acute liver failure, jaundice abnormal hepatic function, hepatic steatosis, hepatitis, hepatotoxicity, hyperbilirubinemia and non-alcoholic fatty liver, have been reported in postmarketing data in patients receiving infliximab products.",
+     "cites": [
+      "dm-93a193ab-9f96-4da6-aa7c-31212e81879a"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "vaccine",
+     "text": "Live vaccines or therapeutic infectious agents should not be given with ZYMFENTRA.",
+     "cites": [
+      "dm-93a193ab-9f96-4da6-aa7c-31212e81879a"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "isoniazid",
+   "name": "Isoniazid",
+   "brand": "Isoniazid",
+   "label": "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "Medically underserved low-income populations, including high-risk racial or ethnic minority populations, especially blacks, Hispanics and Native Americans.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "part": "lungs",
+     "evidence": "Candidates for preventive therapy who have fibrotic pulmonary lesions consistent with healed tuberculosis or who have pulmonary silicosis should have 12 months of isoniazid or 4 months of isoniazid and rifampin, concomitantly.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "part": "liver",
+     "evidence": "The risk of hepatitis must be weighed against the risk of tuberculosis in positive tuberculin reactors over the age of 35.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "INDICATIONS AND USAGE Isoniazid tablets, USP are recommended for all forms of tuberculosis in which organisms are susceptible.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "(Note: the criterion for a positive reaction to a skin test (in millimeters of induration) for each group is given in parenthesis): Persons with human immunodeficiency virus (HIV) infection (greater than or equal to 5 mm) and persons with risk factors for HIV infection whose HIV infection status is unknown but who are suspected of having HIV infection.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "tyramine",
+     "text": "Tyramine- and histamine-containing foods should be avoided in patients receiving isoniazid.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Concomitant administration of pyridoxine (B 6 ) is recommended in the malnourished and in those predisposed to neuropathy (e.g., alcoholics and diabetics).",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Drug Interactions Food Isoniazid should not be administered with food.",
+     "cites": [
+      "dm-03bf3bd5-64f9-4491-89fd-96c5c10d0129"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b3",
+     "title": "Isoniazid and pyrazinamide",
+     "text": "Isoniazid and pyrazinamide (together in Rifater), used to treat tuberculosis, are structural analogs of niacin and interrupt the production of niacin from tryptophan by competing with a vitamin B6-dependent enzyme required for this process [ 2 , 22 ]. In addition, isoniazid can interfere with niacin's conversion to NAD [ 43 ].",
+     "cites": [
+      "ods-b3"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "levodopa",
+   "name": "Levodopa",
+   "brand": "Carbidopa and Levodopa",
+   "label": "dm-043e58c6-092d-4637-90f1-9d36af143a24",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "INDICATIONS AND USAGE Carbidopa and levodopa extended-release tablets, USP are indicated in the treatment of Parkinson's disease, post-encephalitic parkinsonism, and symptomatic parkinsonism that may follow carbon monoxide intoxication or manganese intoxication.",
+     "cites": [
+      "dm-043e58c6-092d-4637-90f1-9d36af143a24"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Iron salts can form chelates with levodopa and carbidopa and consequently reduce the bioavailability of carbidopa and levodopa.",
+     "cites": [
+      "dm-043e58c6-092d-4637-90f1-9d36af143a24"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "The extent of availability and peak concentrations of levodopa after a single dose of carbidopa and levodopa extended-release tablets 50 mg/200 mg increased by about 50% and 25%, respectively, when administered with food.",
+     "cites": [
+      "dm-043e58c6-092d-4637-90f1-9d36af143a24"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "fe",
+     "title": "Levodopa",
+     "text": "Some evidence indicates that in healthy people, iron supplements reduce the absorption of levodopa (found in Sinemet and Stalevo), used to treat Parkinson\u2019s disease and restless leg syndrome, possibly through chelation [ 101-103 ]. In the United States, the labels for levodopa warn that iron-containing dietary supplements might reduce the amount of levodopa available to the body and, thus, diminish its clinical effectiveness [ 104 , 105 ].",
+     "cites": [
+      "ods-fe"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "levofloxacin",
+   "name": "Levofloxacin",
+   "brand": "Levofloxacin",
+   "label": "dm-070375be-3b67-4299-ae8f-4a7b157ac16f",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "Because fluoroquinolones, including levofloxacin tablets, have been associated with serious adverse reactions [see Warnings and Precautions ( 5.1 - 5.15 )] and for some patients ABECB is self-limiting, reserve levofloxacin tablets for treatment of ABECB in patients who have no alternative treatment options. 1.14 Acute Bacterial Sinusitis: 5-day and 10 to 14 day Treatment Regimens Levofloxacin tabl",
+     "cites": [
+      "dm-070375be-3b67-4299-ae8f-4a7b157ac16f"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "Because fluoroquinolones, including levofloxacin tablets, have been associated with serious adverse reactions [see Warnings and Precautions ( 5.1 - 5.15 )] and for some patients ABECB is self-limiting, reserve levofloxacin tablets for treatment of ABECB in patients who have no alternative treatment options. 1.14 Acute Bacterial Sinusitis: 5-day and 10 to 14 day Treatment Regimens Levofloxacin tabl",
+     "cites": [
+      "dm-070375be-3b67-4299-ae8f-4a7b157ac16f"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "7 DRUG INTERACTIONS Interacting Drug Interaction Multivalent cation-containing products including antacids, metal cations or didanosine Absorption of levofloxacin is decreased when the tablets are taken within 2 hours of these products.",
+     "cites": [
+      "dm-070375be-3b67-4299-ae8f-4a7b157ac16f"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Administration with Food, Fluids, and Concomitant Medications Patients should be informed that levofloxacin tablets may be taken with or without food.",
+     "cites": [
+      "dm-070375be-3b67-4299-ae8f-4a7b157ac16f"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "ca",
+     "title": "Quinolone antibiotics",
+     "text": "Simultaneous use of calcium supplements and quinolone antibiotics\u2014such as ciprofloxacin (Cipro), gemifloxacin (Factive), and moxifloxacin (Avelox)\u2014can reduce the absorption of quinolones [ 109 , 110 ]. Taking the antibiotic 2 hours before or 2 hours after calcium supplements prevents this effect [ 109 ].",
+     "cites": [
+      "ods-ca"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Antibiotics",
+     "text": "Magnesium can form insoluble complexes with tetracyclines, such as demeclocycline (Declomycin) and doxycycline (Vibramycin), and with quinolone antibiotics, such as ciprofloxacin (Cipro) and levofloxacin (Levaquin). These antibiotics should be taken at least 2 hours before or 4 to 6 hours after a magnesium-containing supplement [ 57 , 62 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "levothyroxine",
+   "name": "Levothyroxine",
+   "brand": "Levothyroxine sodium",
+   "label": "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7",
+   "parts": [
+    {
+     "part": "thyroid",
+     "evidence": "1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, including neonates, as a replacement therapy in primary (thyroidal), secondary (pituitary), and tertiary (hypothalamic) congenital or acquired hypothyroidism.",
+     "cites": [
+      "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7"
+     ]
+    },
+    {
+     "part": "glands",
+     "evidence": "1 INDICATIONS AND USAGE Hypothyroidism Levothyroxine sodium tablets are indicated in adult and pediatric patients, including neonates, as a replacement therapy in primary (thyroidal), secondary (pituitary), and tertiary (hypothalamic) congenital or acquired hypothyroidism.",
+     "cites": [
+      "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Grapefruit juice may delay the absorption of levothyroxine and reduce its bioavailability. 7.10 Drug-Laboratory Test Interactions Thyroxine-binding Globulin (TBG) Consider changes in TBG concentration when interpreting T4 and T3 values.",
+     "cites": [
+      "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Drug or Drug Class Effect Phosphate Binders (e.g., calcium carbonate, ferrous sulfate, sevelamer, lanthanum) Phosphate binders may bind to levothyroxine.",
+     "cites": [
+      "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Closely monitor TSH levels in such patients. 7.9 Drug-Food Interactions Consumption of certain foods may affect levothyroxine sodium absorption thereby necessitating adjustments in dosing [see Dosage and Administration (2.1) ] .",
+     "cites": [
+      "dm-008de8fd-150f-4022-8ccb-c8bfa94875c7"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "ca",
+     "title": "Levothyroxine",
+     "text": "Calcium carbonate supplements can interfere with the absorption of levothyroxine (Synthroid, Levoxyl, and others), a thyroid hormone used to treat hypothyroidism and thyroid cancer [ 104-106 ]. The FDA-approved label for this medication instructs patients who are taking calcium carbonate supplements to avoid taking levothyroxine within 4 hours of taking the supplement [ 107 ].",
+     "cites": [
+      "ods-ca"
+     ]
+    },
+    {
+     "nutrient": "fe",
+     "title": "Levothyroxine",
+     "text": "Levothyroxine (Levothroid, Levoxyl, Synthroid, Tirosint, and Unithroid) is used to treat hypothyroidism, goiter, and thyroid cancer. The simultaneous ingestion of iron and levothyroxine can result in clinically significant reductions in levothyroxine efficacy in some patients [ 106 ].",
+     "cites": [
+      "ods-fe"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "linezolid",
+   "name": "Linezolid",
+   "brand": "Linezolid",
+   "label": "dm-16007ca5-7956-4414-af38-406a6623400e",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "1 INDICATIONS AND USAGE Linezolid for Oral Suspension is an oxazolidinone-class antibacterial indicated in adults and children for the treatment of the following infections caused by susceptible Gram-positive bacteria: Nosocomial pneumonia ( 1.1 ); Community-acquired pneumonia ( 1. 2); Complicated skin and skin structure infections, including diabetic foot infections, without concomitant osteomyel",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "1 INDICATIONS AND USAGE Linezolid for Oral Suspension is an oxazolidinone-class antibacterial indicated in adults and children for the treatment of the following infections caused by susceptible Gram-positive bacteria: Nosocomial pneumonia ( 1.1 ); Community-acquired pneumonia ( 1. 2); Complicated skin and skin structure infections, including diabetic foot infections, without concomitant osteomyel",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "1 INDICATIONS AND USAGE Linezolid for Oral Suspension is an oxazolidinone-class antibacterial indicated in adults and children for the treatment of the following infections caused by susceptible Gram-positive bacteria: Nosocomial pneumonia ( 1.1 ); Community-acquired pneumonia ( 1. 2); Complicated skin and skin structure infections, including diabetic foot infections, without concomitant osteomyel",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "1 INDICATIONS AND USAGE Linezolid for Oral Suspension is an oxazolidinone-class antibacterial indicated in adults and children for the treatment of the following infections caused by susceptible Gram-positive bacteria: Nosocomial pneumonia ( 1.1 ); Community-acquired pneumonia ( 1. 2); Complicated skin and skin structure infections, including diabetic foot infections, without concomitant osteomyel",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "tyramine",
+     "text": "Potential Interactions Producing Elevation of Blood Pressure \u2022 Advise patients to inform their physician if they have a history of hypertension. \u2022 Advise patients to avoid large quantities of foods or beverages with high tyramine content while taking linezolid.",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "( 4.2 , 5.3 , 5.6 , 7 , 12.3 ) 7.1 Monoamine Oxidase Inhibitors Linezolid is a reversible, nonselective inhibitor of monoamine oxidase [see Contraindications ( 4.2 ) and Clinical Pharmacology ( 12.3 )]. 7.2 Adrenergic and Serotonergic Agents Linezolid has the potential for interaction with adrenergic and serotonergic agents [see Warnings and Precautions ( 5.3 , 5.6 ) and Clinical Pharmacology ( 12.3 )] . 17 PATIENT COUNSELING INFORMATION Important Administration Instructions Advise patients that",
+     "cites": [
+      "dm-16007ca5-7956-4414-af38-406a6623400e"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "lisinopril",
+   "name": "Lisinopril",
+   "brand": "Lisinopril and Hydrochlorothiazide",
+   "label": "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure lowers the risk of fatal and non-fatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "INDICATIONS AND USAGE Lisinopril and hydrochlorothiazide tablets USP are indicated for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in black patients, and many antihypertensive drugs have additional approved indications and effects (eg., on angina, heart failure, or diabetic kidney disease).",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "In using lisinopril and hydrochlorothiazide tablets USP, consideration should be given to the fact that an angiotensin converting enzyme inhibitor, captopril, has caused agranulocytosis, particularly in patients with renal impairment or collagen vascular disease, and that available data are insufficient to show that lisinopril does not have a similar risk.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Use of lisinopril with potassium-sparing diuretics (e.g., spironolactone, eplerenone, triamterene, or amiloride), potassium supplements, or potassium-containing salt substitutes may lead to significant increases in serum potassium.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Thiazides may decrease urinary calcium excretion.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Alcohol, barbiturates, or narcotics - potentiation of orthostatic hypotension may occur.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Lisinopril absorption is not influenced by the presence of food in the gastrointestinal tract.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "The possibility of hypotensive effects with lisinopril can be minimized by either discontinuing the diuretic or increasing the salt intake prior to initiation of treatment with lisinopril.",
+     "cites": [
+      "dm-00f67e1a-6999-4295-9c9f-fcb1ce9711b8"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "k",
+     "title": "Angiotensin converting enzyme inhibitors and angiotensin receptor blockers",
+     "text": "ACE inhibitors, such as benazepril (Lotensin), and angiotensin receptor blockers (ARBs) such as losartan (Cozaar), are used to treat hypertension and heart failure, slow progression of kidney disease in patients with chronic kidney disease and type 2 diabetes, and decrease morbidity and mortality after myocardial infarction [ 75-77 ]. These medications reduce urinary potassium excretion, which can lead to hyperkalemia.",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "iodine",
+     "title": "Angiotensin-converting enzyme inhibitors",
+     "text": "Angiotensin-converting enzyme (ACE) inhibitors, such as benazepril (Lotensin), lisinopril (Prinivil and Zestril), and fosinopril (Monopril), are used primarily to treat high blood pressure. Taking potassium iodide with ACE inhibitors can increase the risk of hyperkalemia (elevated blood levels of potassium) [ 89 ].",
+     "cites": [
+      "ods-iodine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "lithium",
+   "name": "Lithium",
+   "brand": "lithium carbonate",
+   "label": "dm-01c4facd-ed79-4078-ba33-2044de372d0f",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "1 INDICATIONS AND USAGE Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment of bipolar I disorder: \u2022 Treatment of acute manic and mixed episodes in patients 7 years and older [see Clinical Studies ( 14 )] \u2022 Maintenance treatment in patients 7 years and older [see Clinical Studies ( 14 )] Lithium is a mood-stabilizing agent indicated as monotherapy for the treatment of bi",
+     "cites": [
+      "dm-01c4facd-ed79-4078-ba33-2044de372d0f"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "alcohol",
+     "text": "Occurrence is more common among patients with alcoholism, undernutrition, or other chronic debilitating illness.",
+     "cites": [
+      "dm-01c4facd-ed79-4078-ba33-2044de372d0f"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "These adverse reactions may subside with continued treatment, concomitant administration with food, or temporary reduction or cessation of dosage.",
+     "cites": [
+      "dm-01c4facd-ed79-4078-ba33-2044de372d0f"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "Lithium-Induced Polyuria: Counsel patients on the adverse reactions related to lithium-induced polyuria, when to seek medical attention, and the importance of maintaining normal diet with salt and staying hydrated [see Warnings and Precautions ( 5.2 )] .",
+     "cites": [
+      "dm-01c4facd-ed79-4078-ba33-2044de372d0f"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "ca",
+     "title": "Lithium",
+     "text": "Long-term use of lithium (Eskalith, Lithobid), a treatment for bipolar disorder, can lead to hypercalcemia, and use of both lithium and calcium supplements could increase this risk [ 108 ].",
+     "cites": [
+      "ods-ca"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "losartan",
+   "name": "Losartan",
+   "brand": "Losartan Potassium and Hydrochlorothiazide",
+   "label": "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "1 INDICATIONS AND USAGE Losartan potassium and hydrochlorothiazide tablets are a combination of losartan, an angiotensin II receptor blocker (ARB) and hydrochlorothiazide, a diuretic indicated for: Treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Some antihypertensive drugs have smaller blood pressure effects (as monotherapy) in Black patients, and many antihypertensive drugs have additional approved indications and effects (e.g., on angina, heart failure, or diabetic kidney disease).",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Potassium Supplements: Advise patients not to use potassium supplements or salt substitutes containing potassium without consulting their healthcare provider [see Drug Interactions ( 7.1 )] .",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Hydrochlorothiazide decreases urinary calcium excretion and may cause elevations of serum calcium.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Drug Interactions Hydrochlorothiazide Alcohol, barbiturates, or narcotics \u2014 potentiation of orthostatic hypotension may occur.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "A meal slows absorption of losartan and decreases its C max but has only minor effects on losartan AUC or on the AUC of the metabolite (~10% decrease).",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "For further blood pressure reduction add other antihypertensives [see Clinical Studies ( 14 )] . 5 WARNINGS AND PRECAUTIONS Hypotension: Correct volume or salt depletion prior to administration of losartan potassium and hydrochlorothiazide tablets.",
+     "cites": [
+      "dm-03c0ec8d-9daf-43e8-8a4e-a2ddc3573ca7"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "k",
+     "title": "Angiotensin converting enzyme inhibitors and angiotensin receptor blockers",
+     "text": "ACE inhibitors, such as benazepril (Lotensin), and angiotensin receptor blockers (ARBs) such as losartan (Cozaar), are used to treat hypertension and heart failure, slow progression of kidney disease in patients with chronic kidney disease and type 2 diabetes, and decrease morbidity and mortality after myocardial infarction [ 75-77 ]. These medications reduce urinary potassium excretion, which can lead to hyperkalemia.",
+     "cites": [
+      "ods-k"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "metformin",
+   "name": "Metformin",
+   "brand": "ZITUVIMET",
+   "label": "dm-0098dec4-f0e5-45d5-8aa4-5d0faf9ab142",
+   "parts": [
+    {
+     "part": "pancreas",
+     "evidence": "1 INDICATIONS AND USAGE ZITUVIMET is a combination of sitagliptin, a dipeptidyl peptidase-4 (DPP-4) inhibitor, and metformin hydrochloride (HCl), a biguanide, indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus.",
+     "cites": [
+      "dm-0098dec4-f0e5-45d5-8aa4-5d0faf9ab142"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Certain individuals (those with inadequate vitamin B 12 or calcium intake or absorption) appear to be predisposed to developing subnormal vitamin B 12 levels.",
+     "cites": [
+      "dm-0098dec4-f0e5-45d5-8aa4-5d0faf9ab142"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Alcohol Clinical Impact: Alcohol is known to potentiate the effect of metformin on lactate metabolism.",
+     "cites": [
+      "dm-0098dec4-f0e5-45d5-8aa4-5d0faf9ab142"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Incretin hormones, including glucagon-like peptide-1 (GLP-1) and glucose-dependent insulinotropic polypeptide (GIP), are released by the intestine throughout the day, and levels are increased in response to a meal.",
+     "cites": [
+      "dm-0098dec4-f0e5-45d5-8aa4-5d0faf9ab142"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b12",
+     "title": "Metformin",
+     "text": "Metformin, an antihyperglycemic agent used as first-line treatment for prediabetes and diabetes, might reduce the absorption of vitamin B12 and significantly reduce serum vitamin B12 concentrations [ 103 ].",
+     "cites": [
+      "ods-b12"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "methotrexate",
+   "name": "Methotrexate",
+   "brand": "METHOTREXATE",
+   "label": "dm-04a95db9-a124-4b97-bd71-1c37a6b3b0c8",
+   "parts": [],
+   "interactions": [
+    {
+     "category": "alcohol",
+     "text": "The risk of hepatotoxicity is increased with heavy alcohol consumption.",
+     "cites": [
+      "dm-04a95db9-a124-4b97-bd71-1c37a6b3b0c8"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Effect of Food Food has been shown to delay absorption and reduce peak concentration.",
+     "cites": [
+      "dm-04a95db9-a124-4b97-bd71-1c37a6b3b0c8"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b9",
+     "title": "Methotrexate",
+     "text": "Methotrexate (Rheumatrex, Trexall), used to treat cancer and autoimmune diseases, is a folate antagonist. Patients taking methotrexate for cancer should consult their oncologist before taking folate supplements because the supplements could interfere with methotrexate\u2019s anticancer effects [ 166 ].",
+     "cites": [
+      "ods-b9"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "nifedipine",
+   "name": "Nifedipine",
+   "brand": "Nifedipine",
+   "label": "dm-0b4e9bbc-4c16-4611-9ea2-903852804227",
+   "parts": [
+    {
+     "part": "vessels",
+     "evidence": "INDICATIONS AND USAGE Nifedipine extended-release tablets are indicated for the treatment of hypertension.",
+     "cites": [
+      "dm-0b4e9bbc-4c16-4611-9ea2-903852804227"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "CYP3A Inhibitors CYP3A inhibitors such as ketoconazole, fluconazole, itraconazole, clarithromycin, erythromycin (Azithromycin, although structurally related to the class of macrolide antibiotic is void of clinically relevant CYP3A4 inhibition), grapefruit, nefazodone, fluoxetine, saquinavir, indinavir, nelfinavir, and ritonavir may result in increased exposure to nifedipine when co-administered.",
+     "cites": [
+      "dm-0b4e9bbc-4c16-4611-9ea2-903852804227"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Nifedipine, like other calcium channel blockers, decreases platelet aggregation in vitro .",
+     "cites": [
+      "dm-0b4e9bbc-4c16-4611-9ea2-903852804227"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Information for Patients Nifedipine extended-release tablets are an extended-release tablet and should be swallowed whole and taken on an empty stomach.",
+     "cites": [
+      "dm-0b4e9bbc-4c16-4611-9ea2-903852804227"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "omeprazole",
+   "name": "Omeprazole",
+   "brand": "Omeprazole",
+   "label": "dm-0344268f-d8e6-48d5-b1e1-f750ed1d8a52",
+   "parts": [
+    {
+     "part": "stomach",
+     "evidence": "Some patients may require an additional four weeks of therapy. 1.2 Helicobacter pylori Eradication to Reduce the Risk of Duodenal Ulcer Recurrence Eradication of H. pylori has been shown to reduce the risk of duodenal ulcer recurrence.",
+     "cites": [
+      "dm-0344268f-d8e6-48d5-b1e1-f750ed1d8a52"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "Triple Therapy Omeprazole delayed-release capsules in combination with clarithromycin and amoxicillin, are indicated for treatment of patients with H. pylori infection and duodenal ulcer disease (active or up to 1-year history) to eradicate H. pylori in adults.",
+     "cites": [
+      "dm-0344268f-d8e6-48d5-b1e1-f750ed1d8a52"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Drugs Dependent on Gastric pH for Absorption (e.g., iron salts, erlotinib, dasatinib, nilotinib, mycophenolate mofetil, ketoconazole/itraconazole) Clinical Impact: Omeprazole can reduce the absorption of other drugs due to its effect on reducing intragastric acidity.",
+     "cites": [
+      "dm-0344268f-d8e6-48d5-b1e1-f750ed1d8a52"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "No effect on gastric emptying of the solid and liquid components of a test meal was demonstrated after a single dose of omeprazole 90 mg.",
+     "cites": [
+      "dm-0344268f-d8e6-48d5-b1e1-f750ed1d8a52"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b12",
+     "title": "Gastric acid inhibitors",
+     "text": "Gastric acid inhibitors include proton pump inhibitors, such as omeprazole (Prilosec) and lansoprazole (Prevacid), and histamine 2-receptor antagonists, such as cimetidine (Tagamet) and ranitidine (Zantac). These drugs are used to treat gastroesophageal reflux disease and peptic ulcer disease.",
+     "cites": [
+      "ods-b12"
+     ]
+    },
+    {
+     "nutrient": "fe",
+     "title": "Proton pump inhibitors",
+     "text": "Gastric acid plays an important role in the absorption of nonheme iron from the diet. Because proton pump inhibitors, such as lansoprazole (Prevacid) and omeprazole (Prilosec), reduce the acidity of stomach contents, they can reduce iron absorption [ 3 ].",
+     "cites": [
+      "ods-fe"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Proton pump inhibitors",
+     "text": "Prescription proton pump inhibitor (PPI) drugs, such as esomeprazole magnesium (Nexium) and lansoprazole (Prevacid), can cause hypomagnesemia when taken for prolonged periods (typically more than a year) [ 64 ]. In the cases that FDA reviewed, magnesium supplements often raised the low serum magnesium levels caused by PPIs.",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pantoprazole",
+   "name": "Pantoprazole",
+   "brand": "Pantoprazole Sodium",
+   "label": "dm-03dea010-4bae-43ab-893e-9bbddb58062d",
+   "parts": [
+    {
+     "part": "stomach",
+     "evidence": "Safety of treatment beyond 8 weeks in pediatric patients has not been established. 1.2 Maintenance of Healing of Erosive Esophagitis Pantoprazole sodium is indicated for maintenance of healing of EE and reduction in relapse rates of daytime and nighttime heartburn symptoms in adult patients with GERD.",
+     "cites": [
+      "dm-03dea010-4bae-43ab-893e-9bbddb58062d"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Drugs Dependent on Gastric pH for Absorption (e.g., iron salts, erlotinib, dasatinib, nilotinib, mycophenolate mofetil, ketoconazole/itraconazole) Clinical Impact: Pantoprazole can reduce the absorption of other drugs due to its effect on reducing intragastric acidity.",
+     "cites": [
+      "dm-03dea010-4bae-43ab-893e-9bbddb58062d"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "In other in vivo studies, digoxin, ethanol, glyburide, antipyrine, caffeine, metronidazole, and amoxicillin had no clinically relevant interactions with pantoprazole.",
+     "cites": [
+      "dm-03dea010-4bae-43ab-893e-9bbddb58062d"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Swallow pantoprazole sodium delayed-release tablets whole, with or without food in the stomach.",
+     "cites": [
+      "dm-03dea010-4bae-43ab-893e-9bbddb58062d"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b12",
+     "title": "Gastric acid inhibitors",
+     "text": "Gastric acid inhibitors include proton pump inhibitors, such as omeprazole (Prilosec) and lansoprazole (Prevacid), and histamine 2-receptor antagonists, such as cimetidine (Tagamet) and ranitidine (Zantac). These drugs are used to treat gastroesophageal reflux disease and peptic ulcer disease.",
+     "cites": [
+      "ods-b12"
+     ]
+    },
+    {
+     "nutrient": "fe",
+     "title": "Proton pump inhibitors",
+     "text": "Gastric acid plays an important role in the absorption of nonheme iron from the diet. Because proton pump inhibitors, such as lansoprazole (Prevacid) and omeprazole (Prilosec), reduce the acidity of stomach contents, they can reduce iron absorption [ 3 ].",
+     "cites": [
+      "ods-fe"
+     ]
+    },
+    {
+     "nutrient": "mg",
+     "title": "Proton pump inhibitors",
+     "text": "Prescription proton pump inhibitor (PPI) drugs, such as esomeprazole magnesium (Nexium) and lansoprazole (Prevacid), can cause hypomagnesemia when taken for prolonged periods (typically more than a year) [ 64 ]. In the cases that FDA reviewed, magnesium supplements often raised the low serum magnesium levels caused by PPIs.",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "phenelzine",
+   "name": "Phenelzine",
+   "brand": "phenelzine sulfate",
+   "label": "dm-fa041652-fdde-4794-a8d2-279dd309e075",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "INDICATIONS AND USAGE Phenelzine sulfate has been found to be effective in depressed patients clinically characterized as \"atypical,\" \"nonendogenous,\" or \"neurotic.\" These patients often have mixed anxiety and depression and phobic or hypochondriacal features.",
+     "cites": [
+      "dm-fa041652-fdde-4794-a8d2-279dd309e075"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "tyramine",
+     "text": "Hypertensive crises during phenelzine sulfate therapy may also be caused by the ingestion of foods with a high concentration of tyramine or dopamine.",
+     "cites": [
+      "dm-fa041652-fdde-4794-a8d2-279dd309e075"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Phenelzine sulfate should not be used in combination with dextromethorphan or with CNS depressants such as alcohol and certain narcotics.",
+     "cites": [
+      "dm-fa041652-fdde-4794-a8d2-279dd309e075"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "Excessive amounts of caffeine and chocolate may also cause hypertensive reactions.",
+     "cites": [
+      "dm-fa041652-fdde-4794-a8d2-279dd309e075"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "phenytoin",
+   "name": "Phenytoin",
+   "brand": "Phenytoin",
+   "label": "dm-093fd736-5971-47af-b4ef-08c1696cebe8",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "1 INDICATIONS AND USAGE Phenytoin oral suspension is indicated for the treatment of tonic-clonic (grand mal) and psychomotor (temporal lobe) seizures.",
+     "cites": [
+      "dm-093fd736-5971-47af-b4ef-08c1696cebe8"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "vitaminK",
+     "text": "A potentially life-threatening bleeding disorder related to decreased levels of vitamin K-dependent clotting factors may occur in newborns exposed to phenytoin in utero .",
+     "cites": [
+      "dm-093fd736-5971-47af-b4ef-08c1696cebe8"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "Phenytoin when given with the combination of fosamprenavir and ritonavir may increase the concentration of amprenavir Calcium channel blockers Nifedipine, nimodipine, nisoldipine, verapamil Other Albendazole (decreases active metabolite), chlorpropamide, clozapine, cyclosporine, digoxin, disopyramide, folic acid, methadone, mexiletine, praziquantel, quetiapine 7.3 Hyperammonemia with Concomitant Use of Valproate Concomitant administration of phenytoin and valproate has been associated with an in",
+     "cites": [
+      "dm-093fd736-5971-47af-b4ef-08c1696cebe8"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Calcium carbonate, aluminum hydroxide, magnesium hydroxide Prevention or Management: Phenytoin and antacids should not be taken at the same time of day Antineoplastic agents (usually in combination) Bleomycin, carboplatin, cisplatin, doxorubicin, methotrexate Antiviral agents Fosamprenavir, nelfinavir, ritonavir Antiepileptic drugs Carbamazepine, vigabatrin Other Chronic alcohol abuse, diazepam, diazoxide, folic acid, reserpine, rifampin, St.",
+     "cites": [
+      "dm-093fd736-5971-47af-b4ef-08c1696cebe8"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "DILANTIN extended capsules and parenteral DILANTIN are formulated with the sodium salt of phenytoin.",
+     "cites": [
+      "dm-093fd736-5971-47af-b4ef-08c1696cebe8"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b6",
+     "title": "Antiepileptic medications",
+     "text": "Some antiepileptic drugs, including valproic acid (Depakene, Stavzor), carbamazepine (Carbatrol, Epitol, Tegretol, and others), and phenytoin (Dilantin) increase the catabolism rate of vitamin B6 vitamers, resulting in low plasma PLP concentrations and hyperhomocysteinemia [ 36 , 37 ]. High homocysteine levels in antiepileptic drug users might increase the risk of epileptic seizures and systemic vascular events, including stroke, and reduce the ability to control seizures in patients with epilepsy.",
+     "cites": [
+      "ods-b6"
+     ]
+    },
+    {
+     "nutrient": "b7",
+     "title": "Anticonvulsants",
+     "text": "In a study in 264 people with epilepsy, anticonvulsant treatment for at least 1 year was associated with significantly lower serum biotin levels than in control group patients [ 39 ]. The anticonvulsants used included carbamazepine (Tegretol, Carbatrol, Epitol, Equetro), primidone (Mysoline), phenytoin (Dilantin, Phenytek), and phenobarbital (Luminal, Solfoton) as well as combinations of these medications.",
+     "cites": [
+      "ods-b7"
+     ]
+    },
+    {
+     "nutrient": "b9",
+     "title": "Antiepileptic medications",
+     "text": "Antiepileptic medications, such as phenytoin (Dilantin), carbamazepine (Carbatrol, Tegretol, Equetro, Epitol), and valproate (Depacon), are used to treat epilepsy, psychiatric diseases, and other medical conditions. These medications can reduce serum folate levels [ 169 ].",
+     "cites": [
+      "ods-b9"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pioglitazone",
+   "name": "Pioglitazone",
+   "brand": "PIOGLITAZONE HYDROCHLORIDE",
+   "label": "dm-0331400c-b163-4856-bfb0-965470247cb3",
+   "parts": [
+    {
+     "part": "pancreas",
+     "evidence": "1 INDICATIONS AND USAGE Monotherapy and Combination Therapy Pioglitazone tablets are indicated as an adjunct to diet and exercise to improve glycemic control in adults with type 2 diabetes mellitus in multiple clinical settings .",
+     "cites": [
+      "dm-0331400c-b163-4856-bfb0-965470247cb3"
+     ]
+    },
+    {
+     "part": "heart",
+     "evidence": "WARNING: CONGESTIVE HEART FAILURE Thiazolidinediones, including pioglitazone , cause or exacerbate congestive heart failure in some patients .",
+     "cites": [
+      "dm-0331400c-b163-4856-bfb0-965470247cb3"
+     ]
+    },
+    {
+     "part": "bladder",
+     "evidence": "(5.3) Bladder cancer: May increase the risk of bladder cancer.",
+     "cites": [
+      "dm-0331400c-b163-4856-bfb0-965470247cb3"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "food",
+     "text": "( 5.3 ) 2.1 Recommendations for All Patients Pioglitazone tablets should be taken once daily and can be taken without regard to meals.",
+     "cites": [
+      "dm-0331400c-b163-4856-bfb0-965470247cb3"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "prednisone",
+   "name": "Prednisone",
+   "brand": "Prednisone",
+   "label": "dm-0062fcc7-aa08-4990-9d33-d798725907f1",
+   "parts": [
+    {
+     "part": "nerves",
+     "evidence": "Trichinosis with neurologic or myocardial involvement",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "eyes",
+     "evidence": "Ophthalmic Diseases Severe acute and chronic allergic and inflammatory processes involving the eye and its adnexa such as: Allergic corneal marginal ulcers Herpes zoster ophthalmicus Anterior segment inflammation Diffuse posterior uveitis and choroiditis Sympathetic ophthalmia Allergic conjunctivitis Keratitis Chorioretinitis Optic neuritis Iritis and iridocyclitis 7.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "heart",
+     "evidence": "Trichinosis with neurologic or myocardial involvement",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Hematologic Disorders Idiopathic thrombocytopenic purpura in adults Secondary thrombocytopenia in adults Acquired (autoimmune) hemolytic anemia Erythroblastopenia (RBC anemia) Congenital (erythroid) hypoplastic anemia 9.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "lungs",
+     "evidence": "Allergic States Control of severe or incapacitating allergic conditions intractable to adequate trials of conventional treatment: Seasonal or perennial allergic rhinitis Bronchial asthma Contact dermatitis Atopic dermatitis Serum sickness Drug hypersensitivity reactions 6.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "stomach",
+     "evidence": "Ophthalmic Diseases Severe acute and chronic allergic and inflammatory processes involving the eye and its adnexa such as: Allergic corneal marginal ulcers Herpes zoster ophthalmicus Anterior segment inflammation Diffuse posterior uveitis and choroiditis Sympathetic ophthalmia Allergic conjunctivitis Keratitis Chorioretinitis Optic neuritis Iritis and iridocyclitis 7.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "gut",
+     "evidence": "Gastrointestinal Diseases To tide the patient over a critical period of the disease in: Ulcerative colitis Regional enteritis 12.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "Rheumatic Disorders As adjunctive therapy for short-term administration (to tide the patient over an acute episode or exacerbation) in: Psoriatic arthritis Rheumatoid arthritis, including juvenile rheumatoid arthritis (selected cases may require low-dose maintenance therapy) Ankylosing spondylitis Acute and subacute bursitis Acute nonspecific tenosynovitis Acute gouty arthritis Post-traumatic oste",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "thyroid",
+     "evidence": "Endocrine Disorders Primary or secondary adrenocortical insufficiency (hydrocortisone or cortisone is the first choice; synthetic analogs may be used in conjunction with mineralocorticoids where applicable; in infancy mineralocorticoid supplementation is of particular importance) Congenital adrenal hyperplasia Hypercalcemia associated with cancer Nonsuppurative thyroiditis 2.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "Endocrine Disorders Primary or secondary adrenocortical insufficiency (hydrocortisone or cortisone is the first choice; synthetic analogs may be used in conjunction with mineralocorticoids where applicable; in infancy mineralocorticoid supplementation is of particular importance) Congenital adrenal hyperplasia Hypercalcemia associated with cancer Nonsuppurative thyroiditis 2.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "glands",
+     "evidence": "Endocrine Disorders Primary or secondary adrenocortical insufficiency (hydrocortisone or cortisone is the first choice; synthetic analogs may be used in conjunction with mineralocorticoids where applicable; in infancy mineralocorticoid supplementation is of particular importance) Congenital adrenal hyperplasia Hypercalcemia associated with cancer Nonsuppurative thyroiditis 2.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "Rheumatic Disorders As adjunctive therapy for short-term administration (to tide the patient over an acute episode or exacerbation) in: Psoriatic arthritis Rheumatoid arthritis, including juvenile rheumatoid arthritis (selected cases may require low-dose maintenance therapy) Ankylosing spondylitis Acute and subacute bursitis Acute nonspecific tenosynovitis Acute gouty arthritis Post-traumatic oste",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Dietary salt restriction and potassium supplementation may be necessary.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "category": "minerals",
+     "text": "DOSAGE AND ADMINISTRATION Gastric irritation may be reduced if taken before, during, or immediately after meals or with food or milk.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Lifestyle modification to reduce the risk of osteoporosis (e.g., cigarette smoking cessation, limitation of alcohol consumption, participation in weight-bearing exercise for 30-60 minutes daily) should be encouraged.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "Dietary salt restriction may be advisable in patients.",
+     "cites": [
+      "dm-0062fcc7-aa08-4990-9d33-d798725907f1"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitD",
+     "title": "Steroids",
+     "text": "Corticosteroid medications, such as prednisone (Deltasone, Rayos, and Sterapred), are often prescribed to reduce inflammation. These medications can reduce calcium absorption and impair vitamin D metabolism [ 174-176 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "risedronate",
+   "name": "Risedronate",
+   "brand": "Risedronate Sodium",
+   "label": "dm-81702f21-3117-49ce-8e9b-2aa2648ba7c3",
+   "parts": [
+    {
+     "part": "bones",
+     "evidence": "1 INDICATIONS AND USAGE Risedronate sodium tablets, USP are a bisphosphonate indicated for: Treatment and prevention of postmenopausal osteoporosis ( 1.1 ) Treatment to increase bone mass in men with osteoporosis ( 1.2 ) \u2022 Treatment and prevention of glucocorticoid-induced osteoporosis ( 1.3 ) \u2022 Treatment of Paget's disease ( 1.4 ) Limitations of Use Optimal duration of use has not been determined",
+     "cites": [
+      "dm-81702f21-3117-49ce-8e9b-2aa2648ba7c3"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Calcium, antacids, or oral medications containing divalent cations interfere with the absorption of risedronate sodium ( 7.1 ) 7.1 Calcium Supplements/Antacids Co-administration of risedronate sodium tablets and calcium, antacids, or oral medications containing divalent cations will interfere with the absorption of risedronate sodium tablets. 7.2 Hormone Replacement Therapy One study of about 500 early postmenopausal women has been conducted to date in which treatment with risedronate sodium tab",
+     "cites": [
+      "dm-81702f21-3117-49ce-8e9b-2aa2648ba7c3"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Weight-bearing exercise should be considered along with the modification of certain behavioral factors, such as excessive cigarette smoking, and/or alcohol consumption, if these factors exist.",
+     "cites": [
+      "dm-81702f21-3117-49ce-8e9b-2aa2648ba7c3"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "No data are available on more than 1 course of retreatment. 2.6 Important Administration Instructions Instruct patients to do the following: \u2022 Take risedronate sodium tablets at least 30 minutes before the first food or drink of the day other than water, and before taking any oral medication or supplementation, including calcium, antacids, or vitamins to maximize absorption and clinical benefit, [ see Drug Interactions ( 7.1 ) ].",
+     "cites": [
+      "dm-81702f21-3117-49ce-8e9b-2aa2648ba7c3"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "mg",
+     "title": "Bisphosphonates",
+     "text": "Magnesium-rich supplements or medications can decrease the absorption of oral bisphosphonates, such as alendronate (Fosamax), that are used to treat osteoporosis [ 61 ]. Taking magnesium-rich supplements or medications at least 2 hours before or after oral bisphosphonates can minimize this interaction [ 57 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rosuvastatin",
+   "name": "Rosuvastatin",
+   "brand": "Rosuvastatin Calcium",
+   "label": "dm-02797697-300a-43db-92cf-9b78f08626be",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Rosuvastatin tablets is indicated: To reduce the risk major adverse cardiovascular (CV) events (CV death, nonfatal myocardial infarction, nonfatal stroke, or an arterial revascularization procedure) in adults without established coronary heart disease who are at increased risk of CV disease based on age, high-sensitivity C-reactive protein (hsCRP) \u22652 mg/L, and at least one ",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "1 INDICATIONS AND USAGE Rosuvastatin tablets is indicated: To reduce the risk major adverse cardiovascular (CV) events (CV death, nonfatal myocardial infarction, nonfatal stroke, or an arterial revascularization procedure) in adults without established coronary heart disease who are at increased risk of CV disease based on age, high-sensitivity C-reactive protein (hsCRP) \u22652 mg/L, and at least one ",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "1 INDICATIONS AND USAGE Rosuvastatin tablets is indicated: To reduce the risk major adverse cardiovascular (CV) events (CV death, nonfatal myocardial infarction, nonfatal stroke, or an arterial revascularization procedure) in adults without established coronary heart disease who are at increased risk of CV disease based on age, high-sensitivity C-reactive protein (hsCRP) \u22652 mg/L, and at least one ",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "( 7.1 ) Aluminum and Magnesium Hydroxide Combination Antacids : Administer rosuvastatin at least 2 hours before the antacid.",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Before you take rosuvastatin tablets, tell your healthcare provider about all of your medical conditions, including if you: \u2022 have unexplained muscle aches or weakness. \u2022 have or have had kidney problems. \u2022 have or have had liver problems. \u2022 drink more than 2 glasses of alcohol daily. \u2022 have thyroid problems. \u2022 are of Asian descent. \u2022 are pregnant or think you may be pregnant, or are planning to become pregnant.",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Swallow the tablet whole. \u2022 Rosuvastatin tablets can be taken at any time of day, with or without food. \u2022 Do not change your dose or stop rosuvastatin tablets without talking to your healthcare provider, even if you are feeling well. \u2022 Your healthcare provider may do blood tests to check your cholesterol levels before and during your treatment with rosuvastatin tablets.",
+     "cites": [
+      "dm-02797697-300a-43db-92cf-9b78f08626be"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitC",
+     "title": "3-Hydroxy-3-methylglutaryl coenzyme A reductase inhibitors (statins)",
+     "text": "Vitamin C, in combination with other antioxidants, may attenuate the increase in high-density lipoprotein levels that result from taking combination niacin/simvastatin (Zocor) therapy [ 96 , 97 ]. It is not known whether this interaction occurs with other lipid-altering regimens [ 54 ].",
+     "cites": [
+      "ods-vitC"
+     ]
+    },
+    {
+     "nutrient": "vitD",
+     "title": "Statins",
+     "text": "Statin medications reduce cholesterol synthesis. Because endogenous vitamin D is derived from cholesterol, statins may also reduce vitamin D synthesis [ 170 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    },
+    {
+     "nutrient": "vitE",
+     "title": "Simvastatin and niacin",
+     "text": "Some people take vitamin E supplements with other antioxidants, such as vitamin C, selenium, and beta-carotene. This collection of antioxidant ingredients blunted the rise in high-density lipoprotein (HDL) cholesterol levels among people who were treated with a combination of simvastatin (brand name Zocor) and niacin [ 64 , 65 ].",
+     "cites": [
+      "ods-vitE"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "sertraline",
+   "name": "Sertraline",
+   "brand": "Sertraline Hydrochloride",
+   "label": "dm-00179766-980b-44b0-99d3-1fee2bb27e37",
+   "parts": [
+    {
+     "part": "muscles",
+     "evidence": "Physical symptoms associated with PMDD include breast tenderness, headache, joint and muscle pain, bloating and weight gain.",
+     "cites": [
+      "dm-00179766-980b-44b0-99d3-1fee2bb27e37"
+     ]
+    },
+    {
+     "part": "brain",
+     "evidence": "INDICATIONS AND USAGE Major Depressive Disorder \u2013 Sertraline hydrochloride is indicated for the treatment of major depressive disorder in adults.",
+     "cites": [
+      "dm-00179766-980b-44b0-99d3-1fee2bb27e37"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "alcohol",
+     "text": "Alcohol \u2013Although Sertraline hydrochloride did not potentiate the cognitive and psychomotor effects of alcohol in experiments with normal subjects, the concomitant use of sertraline hydrochloride and alcohol is not recommended.",
+     "cites": [
+      "dm-00179766-980b-44b0-99d3-1fee2bb27e37"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "The effects of food on the bioavailability of the sertraline tablet and oral concentrate were studied in subjects administered a single dose with and without food.",
+     "cites": [
+      "dm-00179766-980b-44b0-99d3-1fee2bb27e37"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "simvastatin",
+   "name": "Simvastatin",
+   "brand": "Ezetimibe and Simvastatin",
+   "label": "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2",
+   "parts": [
+    {
+     "part": "blood",
+     "evidence": "1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component of multiple risk factor intervention in individuals at significantly increased risk for atherosclerotic vascular disease due to hypercholesterolemia.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "1 INDICATIONS AND USAGE Therapy with lipid-altering agents should be only one component of multiple risk factor intervention in individuals at significantly increased risk for atherosclerotic vascular disease due to hypercholesterolemia.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "The risk of myopathy, including rhabdomyolysis, occurring with use of ezetimibe and simvastatin tablets is increased when taking certain types of medication or consuming grapefruit juice.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Note that ALT may emanate from muscle, therefore ALT rising with CK may indicate myopathy [see Warnings and Precautions (5.1)]. ezetimibe and simvastatin tablet should be used with caution in patients who consume substantial quantities of alcohol and/or have a past history of liver disease.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "Cytochrome P450: Ezetimibe had no significant effect on a series of probe drugs (caffeine, dextromethorphan, tolbutamide, and IV midazolam) known to be metabolized by cytochrome P450 (1A2, 2D6, 2C8/9 and 3A4) in a \u201ccocktail\u201d study of twelve healthy adult males.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Ezetimibe and simvastatin tablets should be taken as a single daily dose in the evening, with or without food.",
+     "cites": [
+      "dm-023ca87a-1b04-8c17-dc4f-e2758b0771e2"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitC",
+     "title": "3-Hydroxy-3-methylglutaryl coenzyme A reductase inhibitors (statins)",
+     "text": "Vitamin C, in combination with other antioxidants, may attenuate the increase in high-density lipoprotein levels that result from taking combination niacin/simvastatin (Zocor) therapy [ 96 , 97 ]. It is not known whether this interaction occurs with other lipid-altering regimens [ 54 ].",
+     "cites": [
+      "ods-vitC"
+     ]
+    },
+    {
+     "nutrient": "vitD",
+     "title": "Statins",
+     "text": "Statin medications reduce cholesterol synthesis. Because endogenous vitamin D is derived from cholesterol, statins may also reduce vitamin D synthesis [ 170 ].",
+     "cites": [
+      "ods-vitD"
+     ]
+    },
+    {
+     "nutrient": "vitE",
+     "title": "Simvastatin and niacin",
+     "text": "Some people take vitamin E supplements with other antioxidants, such as vitamin C, selenium, and beta-carotene. This collection of antioxidant ingredients blunted the rise in high-density lipoprotein (HDL) cholesterol levels among people who were treated with a combination of simvastatin (brand name Zocor) and niacin [ 64 , 65 ].",
+     "cites": [
+      "ods-vitE"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "spironolactone",
+   "name": "Spironolactone",
+   "brand": "SPIRONOLACTONE",
+   "label": "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "1 INDICATIONS AND USAGE Spironolactone tablets are an aldosterone antagonist indicated for: The treatment of NYHA Class III-IV heart failure and reduced ejection fraction to increase survival, manage edema, and to reduce the need for hospitalization for heart failure ( 1.1 ).",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "Lowering blood pressure reduces the risk of fatal and nonfatal cardiovascular events, primarily strokes and myocardial infarctions ( 1.2 ).",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "vessels",
+     "evidence": "Use as an add-on therapy for the treatment of hypertension, to lower blood pressure.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "liver",
+     "evidence": "These considerations may guide selection of therapy. 1.3 Edema Associated with Hepatic Cirrhosis or Nephrotic Syndrome Spironolactone tablets are indicated for the management of edema in the following settings: Cirrhosis of the liver when edema is not responsive to fluid and sodium restriction.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "pancreas",
+     "evidence": "Control of high blood pressure should be part of comprehensive cardiovascular risk management, including, as appropriate, lipid control, diabetes management, antithrombotic therapy, smoking cessation, exercise, and limited sodium intake.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "kidneys",
+     "evidence": "1 INDICATIONS AND USAGE Spironolactone tablets are an aldosterone antagonist indicated for: The treatment of NYHA Class III-IV heart failure and reduced ejection fraction to increase survival, manage edema, and to reduce the need for hospitalization for heart failure ( 1.1 ).",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "part": "glands",
+     "evidence": "Treatment of primary hyperaldosternism for: ( 1.4 ) \u2022 Short-term preoperative treatment \u2022 Long-term maintenance for patients with discrete aldosterone-producing adrenal adenomas who are not candidates for surgery and patients with bilateral micro or macronodular adrenal hyperplasia 1.1 Heart Failure Spironolactone tablets are indicated for treatment of NYHA Class III-IV heart failure and reduced e",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "potassium",
+     "text": "Mitotane: Avoid concomitant use of spironolactone tablets and mitotane ( 7.8 ). 7.1 Drugs and Supplements Increasing Serum Potassium Concomitant administration of spironolactone tablets with potassium supplementation or drugs that can increase potassium may lead to severe hyperkalemia.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "In patients unsuitable for surgery use the lowest effective dosage determined for the individual patient ( 2.5 ). 2.1 General Considerations Spironolactone tablets can be taken with or without food, but should be taken consistently with respect to food [ see Clinical Pharmacology (12.3) ] . 2.2 Treatment of Heart Failure In patients with serum potassium \u22645 mEq/L and eGFR >50 mL/min/1.73 m\u00b2, initiate treatment at 25 mg once daily.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    },
+    {
+     "category": "sodium",
+     "text": "Spironolactone reduces mitotane plasma levels [ see Clinical Pharmacology (12.3) ] . 17 PATIENT COUNSELING INFORMATION Patients who receive spironolactone tablets should be advised to avoid potassium supplements and foods containing high levels of potassium, including salt substitutes.",
+     "cites": [
+      "dm-0cc23419-e6d5-4036-8011-dc1d2455e0cb"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "mg",
+     "title": "Diuretics",
+     "text": "Chronic treatment with loop diuretics, such as furosemide (Lasix) and bumetanide (Bumex), and thiazide diuretics, such as hydrochlorothiazide (Aquazide H) and ethacrynic acid (Edecrin), can increase the loss of magnesium in urine and lead to magnesium depletion [ 63 ]. In contrast, potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce magnesium excretion [ 63 ].",
+     "cites": [
+      "ods-mg"
+     ]
+    },
+    {
+     "nutrient": "k",
+     "title": "Potassium-sparing diuretics",
+     "text": "Potassium-sparing diuretics, such as amiloride (Midamor) and spironolactone (Aldactone), reduce the excretion of potassium in the urine and can cause hyperkalemia [ 77 , 78 ]. Experts recommend monitoring potassium status in people taking these medications, especially if they have impaired kidney function or other risk factors for hyperkalemia [ 78 ].",
+     "cites": [
+      "ods-k"
+     ]
+    },
+    {
+     "nutrient": "iodine",
+     "title": "Potassium-sparing diuretics",
+     "text": "Taking potassium iodide with potassium-sparing diuretics, such as spironolactone (Aldactone) and amiloride (Midamor), can increase the risk of hyperkalemia [ 89 ].",
+     "cites": [
+      "ods-iodine"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tamoxifen",
+   "name": "Tamoxifen",
+   "brand": "SOLTAMOX",
+   "label": "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02",
+   "parts": [
+    {
+     "part": "reproductive",
+     "evidence": "WARNING: UTERINE MALIGNANCIES and THROMBOEMBOLIC EVENTS Serious and life-threatening events from the use of SOLTAMOX include uterine malignancies, stroke, and pulmonary embolism .",
+     "cites": [
+      "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "WARNING: UTERINE MALIGNANCIES and THROMBOEMBOLIC EVENTS Serious and life-threatening events from the use of SOLTAMOX include uterine malignancies, stroke, and pulmonary embolism .",
+     "cites": [
+      "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02"
+     ]
+    },
+    {
+     "part": "liver",
+     "evidence": "( 5.3 , 8.1 , 8.3 ) Effects on the liver: Liver cancer and liver abnormalities, some fatal, have occurred.",
+     "cites": [
+      "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "food",
+     "text": "There was no difference in bioavailability (C max and AUC) of SOLTAMOX oral solution between fed and fasting states, and therefore SOLTAMOX can be given without regard to meals.",
+     "cites": [
+      "dm-1e6ff055-590c-41e6-9530-1fdf04cdbd02"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "tetracycline",
+   "name": "Tetracycline",
+   "brand": "Tetracycline Hydrochloride",
+   "label": "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "Tetracycline is indicated in the treatment of infections caused by susceptible strains of the designated organisms in the conditions listed below: Upper respiratory tract infections caused by Streptococcus pyogenes , Streptococcus pneumoniae and Hemophilus influenzae .",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "part": "gut",
+     "evidence": "As adjunctive therapy in intestinal amebiasis caused by Entamoeba histolytica .",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "part": "immune",
+     "evidence": "INDICATIONS AND USAGE To reduce the development of drug-resistant bacteria and maintain the effectiveness of tetracycline hydrochloride and other antibacterial drugs, tetracycline hydrochloride should be used only to treat infections that are proven or strongly suspected to be caused by susceptible bacteria.",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "part": "bladder",
+     "evidence": "Urinary tract infections caused by susceptible strains of Escherichia coli, Klebsiella, etc.",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "part": "reproductive",
+     "evidence": "Infections due to Campylobacter fetus.",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "part": "skin",
+     "evidence": "Skin and soft tissue infections caused by Streptococcus pyogenes, Staphylococcus aureaus .",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Absorption of tetracyclines is impaired by antacids containing aluminum, calcium or magnesium and preparations containing iron, zinc, or sodium bicarbonate.",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Food and some dairy products also interfere with absorption.",
+     "cites": [
+      "dm-00acf413-c5d2-4a54-9d0d-56266cbc9edc"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "zn",
+     "title": "Antibiotics",
+     "text": "Both quinolone antibiotics (such as Cipro) and tetracycline antibiotics (such as Achromycin and Sumycin) might interact with zinc in the gastrointestinal tract, which could inhibit the absorption of both zinc and the antibiotic if they are taken at the same time [ 103 , 104 ]. Taking the antibiotic at least 2 hours before or 4 to 6 hours after the zinc supplement minimizes this interaction [ 103 ].",
+     "cites": [
+      "ods-zn"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "theophylline",
+   "name": "Theophylline",
+   "brand": "Theophylline (Anhydrous)",
+   "label": "dm-04f1d1da-ce61-45b3-acf4-903cc81d16da",
+   "parts": [
+    {
+     "part": "lungs",
+     "evidence": "INDICATIONS AND USAGE Theophylline is indicated for the treatment of the symptoms and reversible airflow obstruction associated with chronic asthma and other chronic lung diseases, e.g., emphysema and chronic bronchitis.",
+     "cites": [
+      "dm-04f1d1da-ce61-45b3-acf4-903cc81d16da"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "minerals",
+     "text": "Other manifestations of theophylline toxicity include increases in serum calcium, creatine kinase, myoglobin and leukocyte count, decreases in serum phosphate and magnesium, acute myocardial infarction, and urinary retention in men with obstructive uropathy.",
+     "cites": [
+      "dm-04f1d1da-ce61-45b3-acf4-903cc81d16da"
+     ]
+    },
+    {
+     "category": "caffeine",
+     "text": "Transient caffeine-like adverse effects and excessive serum concentrations in slow metabolizers can be avoided in most patients by starting with a sufficiently low dose and slowly increasing the dose, if judged to be clinically indicated , in small increments (See Table V ).",
+     "cites": [
+      "dm-04f1d1da-ce61-45b3-acf4-903cc81d16da"
+     ]
+    },
+    {
+     "category": "food",
+     "text": "Patients should be advised that if they choose to take Theophylline (Anhydrous) Extended-Release Tablets with food it should be taken consistently with food and if they take it in a fasted condition it should routinely be taken fasted.",
+     "cites": [
+      "dm-04f1d1da-ce61-45b3-acf4-903cc81d16da"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "b6",
+     "title": "Theophylline",
+     "text": "Theophylline (Aquaphyllin, Elixophyllin, Theolair, Truxophyllin, and many others) can prevent or treat shortness of breath, wheezing, and other breathing problems caused by asthma, chronic bronchitis, emphysema, and other lung diseases. Patients treated with theophylline often have low plasma PLP concentrations, which could contribute to the neurological and central nervous system side effects associated with theophylline, including seizures [ 9 , 33 ].",
+     "cites": [
+      "ods-b6"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tranylcypromine",
+   "name": "Tranylcypromine",
+   "brand": "Tranylcypromine Sulfate",
+   "label": "dm-6a0b609b-0625-4c26-91a1-59ee3ece3ddf",
+   "parts": [
+    {
+     "part": "brain",
+     "evidence": "1 INDICATIONS & USAGE Tranylcypromine sulfate tablets are indicated for the treatment of major depressive disorder (MDD) in adult patients who have not responded adequately to other antidepressants.",
+     "cites": [
+      "dm-6a0b609b-0625-4c26-91a1-59ee3ece3ddf"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "tyramine",
+     "text": "As a result of this inhibition, large amounts of tyramine may enter the systemic circulation and precipitate a sudden elevation in blood pressure or hypertensive crisis [see Warnings and Precautions (5.2)].",
+     "cites": [
+      "dm-6a0b609b-0625-4c26-91a1-59ee3ece3ddf"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Concomitant use of alcohol with tranylcypromine sulfate tabletsis not recommended.",
+     "cites": [
+      "dm-6a0b609b-0625-4c26-91a1-59ee3ece3ddf"
+     ]
+    }
+   ],
+   "odsInteractions": []
+  },
+  {
+   "id": "warfarin",
+   "name": "Warfarin",
+   "brand": "Warfarin Sodium",
+   "label": "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95",
+   "parts": [
+    {
+     "part": "heart",
+     "evidence": "Prophylaxis and treatment of thromboembolic complications associated with atrial fibrillation (AF) and/or cardiac valve replacement.",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    },
+    {
+     "part": "blood",
+     "evidence": "1 INDICATIONS AND USAGE Warfarin sodium tablets are indicated for: Prophylaxis and treatment of venous thrombosis and its extension, pulmonary embolism (PE).",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    },
+    {
+     "part": "lungs",
+     "evidence": "1 INDICATIONS AND USAGE Warfarin sodium tablets are indicated for: Prophylaxis and treatment of venous thrombosis and its extension, pulmonary embolism (PE).",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    }
+   ],
+   "interactions": [
+    {
+     "category": "grapefruit",
+     "text": "Some botanicals and foods can interact with warfarin sodium through CYP450 interactions (e.g., echinacea, grapefruit juice, ginkgo, goldenseal, St.",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    },
+    {
+     "category": "vitaminK",
+     "text": "Pharmacodynamic mechanisms for drug interactions with warfarin sodium are synergism (impaired hemostasis, reduced clotting factor synthesis), competitive antagonism (vitamin K), and alteration of the physiologic control loop for vitamin K metabolism (hereditary resistance).",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    },
+    {
+     "category": "alcohol",
+     "text": "Warfarin is stereoselectively metabolized by hepatic cytochrome P-450 (CYP450) microsomal enzymes to inactive hydroxylated metabolites (predominant route) and by reductases to reduced metabolites (warfarin alcohols) with minimal anticoagulant activity.",
+     "cites": [
+      "dm-0cbce382-9c88-4f58-ae0f-532a841e8f95"
+     ]
+    }
+   ],
+   "odsInteractions": [
+    {
+     "nutrient": "vitE",
+     "title": "Anticoagulant and antiplatelet medications",
+     "text": "Vitamin E can inhibit platelet aggregation and antagonize vitamin K-dependent clotting factors. As a result, taking large doses of vitamin E with anticoagulant or antiplatelet medications, such as warfarin (Coumadin), can increase the risk of bleeding, especially in conjunction with low vitamin K intake.",
+     "cites": [
+      "ods-vitE"
+     ]
+    },
+    {
+     "nutrient": "vitK",
+     "title": "Warfarin (Coumadin) and similar anticoagulants",
+     "text": "Vitamin K can have a serious and potentially dangerous interaction with anticoagulants such as warfarin (Coumadin) as well as phenprocoumon, acenocoumarol, and tioclomarol, which are commonly used in some European countries [ 7 , 8 ]. These drugs antagonize the activity of vitamin K, leading to the depletion of vitamin K-dependent clotting factors.",
+     "cites": [
+      "ods-vitK"
+     ]
+    },
+    {
+     "nutrient": "vitK",
+     "title": "Orlistat",
+     "text": "Orlistat is a weight-loss drug that is available as both an over-the-counter (Alli) and prescription (Xenical) medication. It reduces the body's absorption of dietary fat and in doing so, it can also reduce the absorption of fat-soluble vitamins, such as vitamin K.",
+     "cites": [
+      "ods-vitK"
+     ]
+    },
+    {
+     "nutrient": "omega3",
+     "title": "Warfarin (Coumadin) and similar anticoagulants",
+     "text": "Fish oil can have antiplatelet effects at high doses, although it appears to be less potent than aspirin [ 197 , 198 ]. Fish oil might prolong clotting times, as indicated by an elevated international normalized ratio (INR), when it is taken with warfarin [ 199 ], but most research indicates that doses of 3\u20136 g/day fish oil do not significantly affect the anticoagulant status of patients taking warfarin [ 200 ].",
+     "cites": [
+      "ods-omega3"
+     ]
+    }
+   ]
+  }
+ ],
+ "grapefruitNote": {
+  "text": "Food and Drug Administration has required that some prescription and over-the-counter drugs generally taken by mouth include warnings against drinking grapefruit juice or eating grapefruit while taking the drug.",
+  "cites": [
+   "fda-grapefruit"
+  ]
+ }
+}

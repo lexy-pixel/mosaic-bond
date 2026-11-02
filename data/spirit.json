@@ -1,0 +1,179 @@
+{
+"findings": [
+{
+"practices": [
+"worship",
+"mass"
+],
+"title": "Religious service attendance and mortality (women, cohort)",
+"evidence": "attending a religious service more than once per week was associated with 33% lower all-cause mortality compared with women who had never attended religious services (hazard ratio, 0.",
+"cites": [
+"pmid-27183175"
+],
+"parts": [
+"heart",
+"vessels"
+],
+"design": "Observational cohort"
+},
+{
+"practices": [
+"worship",
+"mass"
+],
+"title": "Religious service attendance and depression (women, cohort)",
+"evidence": "women who had most frequent and recent religious service attendance had the lowest risk of developing depression (odds ratio [OR] = 0.71, 95 % confidence interval [CI] 0.",
+"cites": [
+"pmid-27393076"
+],
+"parts": [
+"brain",
+"glands"
+],
+"design": "Observational cohort"
+},
+{
+"practices": [
+"meditation",
+"prayer",
+"rosary",
+"examen",
+"adoration",
+"loh"
+],
+"title": "Meditation programs and psychological stress (meta-analysis of trials)",
+"evidence": "meditation programs can result in small to moderate reductions of multiple negative dimensions of psychological stress.",
+"cites": [
+"pmid-24395196"
+],
+"parts": [
+"brain",
+"glands"
+],
+"design": "Meta-analysis of RCTs"
+},
+{
+"practices": [
+"meditation"
+],
+"title": "Meditation/mindfulness and anxiety, depression (NIH summary)",
+"evidence": "The analysis included more than 12,000 participants, and the researchers found that for treating anxiety and depression, mindfulness-based approaches were better than no treatment at all, and they worked as well as the evidence-based therapies.",
+"cites": [
+"nccih-med"
+],
+"parts": [
+"brain",
+"nerves"
+],
+"design": "Evidence summary"
+},
+{
+"practices": [
+"meditation"
+],
+"title": "Meditation and blood pressure (NIH summary)",
+"evidence": " According to a 2017 statement from the American Heart Association, the practice of meditation may have a possible benefit, but its specific effects on blood pressure have not been determined.",
+"cites": [
+"nccih-med"
+],
+"parts": [
+"heart",
+"vessels"
+],
+"design": "Evidence summary"
+},
+{
+"practices": [
+"prayer",
+"worship",
+"reading",
+"service",
+"reflect",
+"mass",
+"rosary",
+"confession"
+],
+"title": "Religion/spirituality and health: research review (scope)",
+"evidence": "followed by a review of relationships between R/S and heart disease, hypertension, cerebrovascular disease, Alzheimer's disease and dementia, immune functions, endocrine functions, cancer, overall mortality, physical disability, pain, and somatic symptoms.",
+"cites": [
+"pmid-23762764"
+],
+"parts": [
+"heart",
+"glands",
+"immune"
+],
+"design": "Narrative review"
+}
+],
+"practices": [
+[
+"prayer",
+"Prayer"
+],
+[
+"meditation",
+"Meditation / contemplation"
+],
+[
+"gratitude",
+"Gratitude"
+],
+[
+"reading",
+"Scripture / spiritual reading"
+],
+[
+"worship",
+"Worship / service attendance"
+],
+[
+"nature",
+"Time in nature"
+],
+[
+"service",
+"Community / service"
+],
+[
+"rest",
+"Rest / sabbath"
+],
+[
+"reflect",
+"Forgiveness / reflection"
+]
+],
+"traditions": {
+"catholic": {
+"name": "Catholic",
+"practices": [
+[
+"mass",
+"Mass"
+],
+[
+"rosary",
+"Rosary"
+],
+[
+"loh",
+"Liturgy of the Hours"
+],
+[
+"examen",
+"Examen"
+],
+[
+"adoration",
+"Adoration"
+],
+[
+"confession",
+"Confession"
+]
+]
+}
+},
+"note": "These findings are mostly observational associations (people who do a practice vs. people who do not), which cannot show cause and effect; trial evidence exists mainly for meditation programs, with small to moderate effects. Mosaic Bond makes no claims about supernatural effects and does not score faith. Practice tracking here is neutral and private."
+}

@@ -1,0 +1,153 @@
+{
+ "items": [
+  {
+   "name": "BodyParts3D (anatomical meshes)",
+   "attribution": "BodyParts3D, \u00a9 The Database Center for Life Science licensed under CC Attribution 4.0 International",
+   "license": "CC BY 4.0 (current license page, checked 2026-11-01). The downloaded OBJ files (BP3D 4.0, partof + isa sets) carry an older header: \u201cBodyParts3D, (c) The Database Center for Life Science licensed under CC Attribution-Share Alike 2.1 Japan\u201d. To be safe, the derived model file (models/body.glb) is also offered under CC BY-SA 2.1 JP.",
+   "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+   "note": "v18: BodyParts3D supplies the brain (30k triangles), the skin shell and the kidney cortex directly; all other internal anatomy comes from Z-Anatomy, which is itself derived from BodyParts3D."
+  },
+  {
+   "name": "Z-Anatomy (internal anatomy: bones, muscles, nerves, vessels, organs)",
+   "attribution": "\"BodyParts3D - The Database Center for Life Science - CC-BY-SA 2.1 Japan\" and \"Z-Anatomy - The open source atlas of anatomy - CC-BY-SA 4.0\"",
+   "license": "CC BY-SA 4.0 (models), as stated in the Z-Anatomy README; the template License.txt also requires the BodyParts3D CC BY-SA 2.1 JP credit and share-alike. models/body.glb and models/body_lo.glb are therefore distributed under CC BY-SA 4.0.",
+   "url": "https://github.com/LluisV/Z-Anatomy",
+   "note": "Modified: grouped by body system, aligned to the BodyParts3D frame (ICP, scale 0.9925), decimated per object, meshopt-compressed. Excluded for licence reasons: inner ear (CC BY-NC-SA), kidney (CC BY-NC), Brainder and white-matter brain (no licence stated). Fascia, bursae and inner spinal-cord tracts were also left out."
+  },
+  {
+   "name": "Cranial Nerves and Foramina (included in Z-Anatomy)",
+   "attribution": "Cranial Nerves and Foramina - by University of Dundee, CAHID - CC-BY 4.0",
+   "license": "CC BY 4.0",
+   "url": "https://github.com/LluisV/Z-Anatomy",
+   "note": "Credited as listed in the Z-Anatomy template License.txt."
+  },
+  {
+   "name": "HuBMAP HRA 3D Reference Organ Set for Female v1.10 (female reproductive organs)",
+   "attribution": "Browne, Kristen, and Heidi Schlehlein. 2026. 3D Reference Organ Set for Female, v1.10. https://doi.org/10.48539/HBM637.DWBM.744. Created using data from the Visible Human Dataset (National Library of Medicine).",
+   "license": "CC BY 4.0",
+   "url": "https://lod.humanatlas.io/ref-organ/united-female/v1.10",
+   "note": "Used: uterus (body, fundus, lower segment), cervix, vagina, fallopian tubes, ovaries and their ligaments, plus the uterine arteries and veins. Aligned to the male pelvis by similarity ICP (scale 0.845), so organ size and position are approximate. The female pelvis is not used because the set has ilium, sacrum and coccyx only, with no pubis or ischium."
+  },
+  {
+   "name": "three.js r160 (incl. GLTFLoader, BufferGeometryUtils)",
+   "attribution": "Copyright \u00a9 2010-2023 three.js authors",
+   "license": "MIT",
+   "url": "https://github.com/mrdoob/three.js/blob/r160/LICENSE",
+   "note": null
+  },
+  {
+   "name": "meshoptimizer decoder (meshopt_decoder.module.js)",
+   "attribution": "Copyright (c) 2016-2023 Arseny Kapoulkine",
+   "license": "MIT",
+   "url": "https://github.com/zeux/meshoptimizer/blob/master/LICENSE.md",
+   "note": "Uses WebAssembly; CSP adds 'wasm-unsafe-eval' to script-src for this decoder only."
+  }
+ ],
+ "stats": {
+  "muscles": [
+   500,
+   1865294,
+   149374
+  ],
+  "glands": [
+   17,
+   18068,
+   2985
+  ],
+  "immune": [
+   163,
+   127682,
+   12984
+  ],
+  "lungs": [
+   36,
+   135696,
+   15946
+  ],
+  "nerves": [
+   268,
+   1257056,
+   71689
+  ],
+  "vessels": [
+   428,
+   2494992,
+   50546
+  ],
+  "blood": [
+   230,
+   1233984,
+   36226
+  ],
+  "pancreas": [
+   3,
+   72422,
+   4266
+  ],
+  "bones": [
+   633,
+   969406,
+   105046
+  ],
+  "eyes": [
+   30,
+   170850,
+   5321
+  ],
+  "heart": [
+   18,
+   114792,
+   13976
+  ],
+  "gut": [
+   13,
+   129618,
+   15987
+  ],
+  "liver": [
+   3,
+   15008,
+   6997
+  ],
+  "reproductive": [
+   14,
+   19523,
+   16400
+  ],
+  "teeth": [
+   52,
+   93548,
+   6964
+  ],
+  "thyroid": [
+   5,
+   3112,
+   3112
+  ],
+  "stomach": [
+   2,
+   25788,
+   4996
+  ],
+  "bladder": [
+   2,
+   5916,
+   2998
+  ],
+  "brain": [
+   0,
+   0,
+   30000
+  ],
+  "kidneys": [
+   0,
+   0,
+   8996
+  ],
+  "skin": [
+   0,
+   0,
+   29999
+  ]
+ }
+}

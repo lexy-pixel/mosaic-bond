@@ -1,0 +1,170 @@
+{
+"phases": [
+{
+"id": "menstrual",
+"name": "Menstrual",
+"parts": [
+"reproductive"
+],
+"evidence": "In teens, the menstrual cycle can range from 21 to 45 days, but for most women, it is 21 to 35 days. 3 Day 1 The first day of bleeding is considered the first day of the menstrual cycle. Menstruation occurs between menarche (pronounced muh-NAHR-kee ), a girl's first period, and menopause , when menstrual cycles end. 1 The average menstruation time in normally menstruating women is about 5 days. 2 In the United States, most girls start menstruating shortly after 12 years of age. 3 What is the menstrual cycle?",
+"cites": [
+"nichd-mens"
+]
+},
+{
+"id": "follicular",
+"name": "Follicular",
+"parts": [
+"reproductive",
+"glands"
+],
+"evidence": "After bleeding ends, usually around day 5, levels of the hormone estrogen begin to rise. It triggers the growth of eggs in the ovaries and gets the eggs ready for ovulation.",
+"cites": [
+"nichd-mens",
+"ml-fsh"
+]
+},
+{
+"id": "ovulatory",
+"name": "Ovulatory",
+"parts": [
+"reproductive",
+"glands"
+],
+"evidence": "LH levels quickly rise just before ovulation. Ovulation can occur anywhere between 10 and 21 days after the first day of a woman's menstrual cycle.",
+"cites": [
+"ml-lh",
+"nichd-mens"
+]
+},
+{
+"id": "luteal",
+"name": "Luteal",
+"parts": [
+"reproductive",
+"glands"
+],
+"evidence": "In the second half, an ovary releases an egg and your progesterone levels begin to rise. If you don't become pregnant , your progesterone levels will fall.",
+"cites": [
+"ml-prog"
+]
+}
+],
+"normal": {
+"evidence": "The normal length of the menstrual cycle is typically between 21 and 35 days. They normally come every 21 to 45 days.",
+"cites": [
+"acog-aub",
+"acog-puberty"
+],
+"note": "The second range applies to teens in the first years after the first period."
+},
+"redflags": [
+{
+"id": "soak",
+"title": "Soaking a pad or tampon every hour for several hours",
+"evidence": "Bleeding that soaks through one or more tampons or pads every hour for several hours in a row.",
+"cites": [
+"acog-hmb"
+]
+},
+{
+"id": "emerg",
+"title": "Very heavy bleeding with chest pain, shortness of breath, or dizziness: emergency",
+"evidence": "If you are changing pads or tampons every hour for more than 2 hours in a row, and you also have chest pain, have shortness of breath, and are lightheaded or dizzy, seek emergency medical care right away.",
+"cites": [
+"acog-aub"
+]
+},
+{
+"id": "long",
+"title": "Bleeding longer than 7 days or large clots",
+"evidence": "Any of the following can be a sign of heavy menstrual bleeding: Bleeding that lasts more than 7 days. Menstrual flow with blood clots that are as big as a quarter or larger.",
+"cites": [
+"acog-hmb"
+]
+},
+{
+"id": "postmeno",
+"title": "Any bleeding after menopause",
+"evidence": "Vaginal bleeding that occurs between periods or after menopause can be caused by various problems.",
+"cites": [
+"ml-vagbleed"
+]
+},
+{
+"id": "pain",
+"title": "Severe pain",
+"evidence": "But for some women, the pain is so severe that it keeps them from doing their normal activities for several days a month.",
+"cites": [
+"acog-dys"
+]
+},
+{
+"id": "change",
+"title": "Missed periods or major changes",
+"evidence": "Talk with your health care provider if you notice major changes in your menstrual cycle , very heavy bleeding, or severe pain.",
+"cites": [
+"ml-mens"
+]
+}
+],
+"iron": [
+{
+"evidence": "Losses are greater in menstruating women because of blood loss.",
+"cites": [
+"ods-fe"
+]
+},
+{
+"evidence": "Women with heavy menstrual bleeding Women of reproductive age who have menorrhagia, or abnormally heavy bleeding during menstruation, have an increased risk of iron deficiency.",
+"cites": [
+"ods-fe"
+]
+},
+{
+"evidence": "Blood loss from heavy periods also can lead to a condition called iron-deficiency anemia .",
+"cites": [
+"acog-hmb"
+]
+}
+],
+"nutr": [
+{
+"k": "b6",
+"title": "Vitamin B6 and PMS",
+"tier": "limited evidence",
+"evidence": "Premenstrual syndrome Some evidence suggests that vitamin B6 supplements could reduce the symptoms of premenstrual syndrome (PMS), but conclusions are limited due to the poor quality of most studies. Although vitamin B6 shows promise for alleviating PMS symptoms, more research is needed before drawing firm conclusions.",
+"cites": [
+"ods-b6"
+]
+},
+{
+"k": "ca",
+"title": "Calcium and PMS",
+"tier": "professional guidance (ACOG patient FAQ; evidence grade not stated)",
+"evidence": "Taking 1,200 milligrams (mg) of calcium a day can help reduce the physical and mood symptoms that are part of PMS.",
+"cites": [
+"acog-pms"
+]
+},
+{
+"k": "mg",
+"title": "Magnesium and PMS",
+"tier": "professional guidance (ACOG patient FAQ; evidence grade not stated)",
+"evidence": "Taking magnesium supplements may help reduce water retention (\"bloating\"), breast tenderness, and mood symptoms.",
+"cites": [
+"acog-pms"
+]
+}
+],
+"notsourced": "Thiamin and omega-3 links to period pain are not shown: they are not stated in the ODS fact sheets or ACOG pages retrieved, and no systematic review was retrieved for this version.",
+"disclaimer": "Cycle-day, phase and next-period predictions are rough estimates from your own logged dates. They are NOT contraception and NOT fertility guidance, and they cannot detect pregnancy or a medical problem. Cycles vary.",
+"links": {
+"cond": "ida",
+"med": "ethinyl_estradiol",
+"medEv": "Birth control methods that contain estrogen and progestin , such as the pill, the patch, and the vaginal ring, can be used to treat painful periods.",
+"medCites": [
+"acog-dys"
+]
+}
+}

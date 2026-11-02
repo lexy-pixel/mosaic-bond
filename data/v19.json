@@ -1,0 +1,1181 @@
+{
+ "activity": {
+  "steps": {
+   "evidence": "Restricted cubic splines showed progressively decreasing risk of mortality among adults aged 60 years and older with increasing number of steps per day until 6000-8000 steps per day and among adults younger than 60 years until 8000-10 000 steps per day.",
+   "cites": [
+    "pmid-35247352"
+   ]
+  },
+  "stepsMore": {
+   "evidence": "Taking more steps per day was associated with a progressively lower risk of all-cause mortality, up to a level that varied by age.",
+   "cites": [
+    "pmid-35247352"
+   ]
+  },
+  "note": "Observational data: associations, not proof that steps cause the benefit. There is no single magic number; 10,000 is not a sourced threshold."
+ },
+ "sleep": {
+  "adult": {
+   "evidence": "Adults should sleep 7 or more hours per night on a regular basis to promote optimal health.",
+   "cites": [
+    "pmid-26039963"
+   ]
+  },
+  "adultMore": {
+   "evidence": "Sleeping more than 9 hours per night on a regular basis may be appropriate for young adults, individuals recovering from sleep debt, and individuals with illnesses.",
+   "cites": [
+    "pmid-26039963"
+   ]
+  },
+  "kids": [
+   {
+    "age": [
+     0.33,
+     1
+    ],
+    "lo": 12,
+    "hi": 16,
+    "ev": "Infants 4 months to 12 months should sleep 12 to 16 hours per 24 hours (including naps) on a regular basis to promote optimal health."
+   },
+   {
+    "age": [
+     1,
+     3
+    ],
+    "lo": 11,
+    "hi": 14,
+    "ev": "Children 1 to 2 years of age should sleep 11 to 14 hours per 24 hours (including naps) on a regular basis to promote optimal health."
+   },
+   {
+    "age": [
+     3,
+     6
+    ],
+    "lo": 10,
+    "hi": 13,
+    "ev": "Children 3 to 5 years of age should sleep 10 to 13 hours per 24 hours (including naps) on a regular basis to promote optimal health."
+   },
+   {
+    "age": [
+     6,
+     13
+    ],
+    "lo": 9,
+    "hi": 12,
+    "ev": "Children 6 to 12 years of age should sleep 9 to 12 hours per 24 hours on a regular basis to promote optimal health."
+   },
+   {
+    "age": [
+     13,
+     19
+    ],
+    "lo": 8,
+    "hi": 10,
+    "ev": "Teenagers 13 to 18 years of age should sleep 8 to 10 hours per 24 hours on a regular basis to promote optimal health."
+   }
+  ],
+  "kidsCites": [
+   "pmid-27250809"
+  ],
+  "nsf": {
+   "evidence": "For teenagers, 8 to 10 hours was considered appropriate, 7 to 9 hours for young adults and adults, and 7 to 8 hours of sleep for older adults.",
+   "cites": [
+    "pmid-29073412"
+   ]
+  },
+  "links": [
+   {
+    "id": "caffeine",
+    "title": "Caffeine",
+    "evidence": "caffeine taken 6 hours before bedtime has important disruptive effects on sleep and provides empirical support for sleep hygiene recommendations to refrain from substantial caffeine use for a minimum of 6 hours prior to bedtime.",
+    "cites": [
+     "pmid-24235903"
+    ]
+   },
+   {
+    "id": "alcohol",
+    "title": "Alcohol",
+    "evidence": "At all dosages, alcohol causes a reduction in sleep onset latency, a more consolidated first half sleep and an increase in sleep disruption in the second half of sleep.",
+    "cites": [
+     "pmid-23347102"
+    ]
+   },
+   {
+    "id": "magnesium",
+    "title": "Magnesium (weak evidence)",
+    "evidence": "All trials were at moderate-to-high risk of bias and outcomes were supported by low to very low quality of evidence.",
+    "cites": [
+     "pmid-33865376"
+    ]
+   }
+  ],
+  "hygiene": [
+   {
+    "evidence": "Go to bed and wake up at the same time every day.",
+    "cites": [
+     "nhlbi-sleephab"
+    ]
+   },
+   {
+    "evidence": "Avoid nicotine (for example, cigarettes) and caffeine (including caffeinated soda, coffee, tea, and chocolate). Nicotine and caffeine are stimulants, and both substances can interfere with sleep. The effects of caffeine can last up to 8 hours.",
+    "cites": [
+     "nhlbi-sleephab"
+    ]
+   },
+   {
+    "evidence": "Keep your bedroom quiet, cool, and dark (a dim night light is fine, if needed).",
+    "cites": [
+     "nhlbi-sleephab"
+    ]
+   }
+  ],
+  "shift": {
+   "evidence": "If you're a shift worker, you may find it helpful to: Take naps and raise the amount of time available for sleep; Keep the lights bright at work; Limit shift changes so your body clock can adjust; Limit caffeine use to the first part of your shift; Remove sound and light distractions in your bedroom during daytime sleep (for example, use light-blocking curtains). If you're still not able to fall asleep during the day or have problems adapting to a shift-work schedule, talk with your doctor about other options to help you sleep.",
+   "cites": [
+    "nhlbi-sleephab"
+   ]
+  },
+  "apnea": {
+   "evidence": "While asleep, you may have these symptoms of sleep apnea: Breathing that starts and stops; Frequent loud snoring; Gasping for air. … Daytime sleepiness and tiredness, which can lead to problems with learning, focusing, and reacting. … Talk to your healthcare provider about your symptoms. You may need a sleep study to help diagnose the condition.",
+   "cites": [
+    "nhlbi-apnea"
+   ]
+  },
+  "parts": [
+   "brain",
+   "nerves",
+   "glands",
+   "thyroid"
+  ]
+ },
+ "recovery": {
+  "freq": {
+   "evidence": "The recommendation for training frequency is 2-3 d x wk(-1) for novice training, 3-4 d x wk(-1) for intermediate training, and 4-5 d x wk(-1) for advanced training.",
+   "cites": [
+    "pmid-19204579"
+   ]
+  },
+  "doms": {
+   "evidence": "Subjects that experience contraction induced injury report on soreness that usually increases in intensity in the first 24 h after the activity, peaks from 24 to 72 h, and then subsides and disappears in a few days.",
+   "cites": [
+    "pmid-25352440"
+   ]
+  },
+  "ecc": {
+   "evidence": "Eccentric activities induce micro-injury at a greater frequency and severity than other types of muscle actions. The intensity and duration of exercise are also important factors in DOMS onset.",
+   "cites": [
+    "pmid-12617692"
+   ]
+  },
+  "protein": {
+   "evidence": "For building muscle mass and for maintaining muscle mass through a positive muscle protein balance, an overall daily protein intake in the range of 1.4-2.0 g protein/kg body weight/day (g/kg/d) is sufficient for most exercising individuals",
+   "cites": [
+    "pmid-28642676"
+   ]
+  },
+  "timing": {
+   "evidence": "The optimal time period during which to ingest protein is likely a matter of individual tolerance, since benefits are derived from pre- or post-workout ingestion; however, the anabolic effect of exercise is long-lasting (at least 24 h), but likely diminishes with increasing time post-exercise.",
+   "cites": [
+    "pmid-28642676"
+   ]
+  },
+  "fluid": {
+   "evidence": "Individual sweat rates can be estimated by measuring body weight before and after exercise. … After exercise, the goal is to replace any fluid electrolyte deficit.",
+   "cites": [
+    "pmid-17277604"
+   ]
+  },
+  "scoreNote": "This check-in is a simple, transparent summary of what you logged. It is not a validated score and not a measurement of your body."
+ },
+ "hydration": {
+  "ai": {
+   "evidence": "The AI for total water intake for young men and women (19 to 30 years) is 3.7 L (131 oz) and 2.7 L (95 oz)/day, respectively",
+   "cites": [
+    "nasem-water"
+   ]
+  },
+  "food": {
+   "evidence": "approximately 20 percent of water comes from food, and the remaining 80 percent comes from fluids.",
+   "cites": [
+    "nasem-water"
+   ]
+  },
+  "exercise": {
+   "evidence": "Because there is considerable variability in sweating rates and sweat electrolyte content between individuals, customized fluid replacement programs are recommended. Individual sweat rates can be estimated by measuring body weight before and after exercise.",
+   "cites": [
+    "pmid-17277604"
+   ]
+  },
+  "toxic": {
+   "evidence": "acute water toxicity has been reported due to rapid consumption of large quantities of fluids that greatly exceeded the kidney’s maximal excretion rate of approximately 0.7 to 1.0 L/hour.",
+   "cites": [
+    "nasem-water"
+   ]
+  },
+  "hypo": {
+   "evidence": "Water intoxication can lead to hyponatremia, which can be life threatening.",
+   "cites": [
+    "nasem-water"
+   ]
+  },
+  "exhypo": {
+   "evidence": "if excessive overconsumption occurs with prolonged stressful exercise, hyponatremia may develop.",
+   "cites": [
+    "nasem-water"
+   ]
+  },
+  "parts": [
+   "kidneys",
+   "bladder"
+  ]
+ },
+ "supplements": {
+  "fda": {
+   "evidence": "Under DSHEA, FDA does not have the authority to approve dietary supplements before they are marketed.",
+   "cites": [
+    "fda-suppqa"
+   ]
+  },
+  "seal": {
+   "evidence": "Several independent organizations offer quality testing and allow products that pass these tests to display a seal of quality assurance that indicates the product was properly manufactured, contains the ingredients listed on the label, and does not contain harmful levels of contaminants. These seals do not guarantee that a product is safe or effective. Organizations that offer quality testing include: ConsumerLab.com, NSF International, U.S. Pharmacopeia",
+   "cites": [
+    "ods-wyntk"
+   ]
+  },
+  "interact": {
+   "evidence": "Supplements can also interact with some medicines in ways that might cause problems.",
+   "cites": [
+    "ods-wyntk"
+   ]
+  },
+  "rules": [
+   {
+    "nutrient": "vitK",
+    "med": "warfarin",
+    "evidence": "Warfarin (Coumadin) and some other anticoagulant medications antagonize the activity of vitamin K and, in turn, prothrombin [ 8 ]. For this reason, individuals who are taking these anticoagulants need to maintain consistent vitamin K intakes.",
+    "cites": [
+     "ods-vitK"
+    ]
+   },
+   {
+    "nutrient": "ca",
+    "med": "levothyroxine",
+    "evidence": "Calcium carbonate supplements can interfere with the absorption of levothyroxine (Synthroid, Levoxyl, and others), a thyroid hormone used to treat hypothyroidism and thyroid cancer",
+    "cites": [
+     "ods-ca"
+    ]
+   },
+   {
+    "nutrient": "fe",
+    "med": "levothyroxine",
+    "evidence": "The simultaneous ingestion of iron and levothyroxine can result in clinically significant reductions in levothyroxine efficacy in some patients",
+    "cites": [
+     "ods-fe"
+    ]
+   },
+   {
+    "nutrient": "zn",
+    "med": "ciprofloxacin",
+    "evidence": "Both quinolone antibiotics (such as Cipro) and tetracycline antibiotics (such as Achromycin and Sumycin) might interact with zinc in the gastrointestinal tract, which could inhibit the absorption of both zinc and the antibiotic if they are taken at the same time",
+    "cites": [
+     "ods-zn"
+    ]
+   },
+   {
+    "nutrient": "zn",
+    "med": "tetracycline",
+    "evidence": "Both quinolone antibiotics (such as Cipro) and tetracycline antibiotics (such as Achromycin and Sumycin) might interact with zinc in the gastrointestinal tract, which could inhibit the absorption of both zinc and the antibiotic if they are taken at the same time",
+    "cites": [
+     "ods-zn"
+    ]
+   },
+   {
+    "herb": "sjw",
+    "med": "*",
+    "evidence": "St. John’s wort can interact in dangerous, sometimes life-threatening ways with a variety of medicines.",
+    "cites": [
+     "nccih-sjw"
+    ]
+   }
+  ]
+ },
+ "labs": {
+  "vary": {
+   "evidence": "You can't compare test results from different labs. If you're looking for trends in your test results over time, it's important to try to use the same lab for testing.",
+   "cites": [
+    "ml-labranges"
+   ]
+  },
+  "analytes": [
+   {
+    "id": "ferritin",
+    "name": "Ferritin",
+    "syn": [
+     "ferritin",
+     "ferritin, serum",
+     "serum ferritin",
+     "ferr"
+    ],
+    "units": {
+     "ng/mL": 1,
+     "µg/L": 1
+    },
+    "parts": [
+     "blood",
+     "liver"
+    ],
+    "nut": [
+     "fe"
+    ],
+    "cites": [
+     "ml-ferritin",
+     "ods-fe"
+    ]
+   },
+   {
+    "id": "hgb",
+    "name": "Hemoglobin",
+    "syn": [
+     "hemoglobin",
+     "haemoglobin",
+     "hgb",
+     "hb"
+    ],
+    "units": {
+     "g/dL": 1,
+     "g/L": 10,
+     "mmol/L": 0.6206
+    },
+    "parts": [
+     "blood"
+    ],
+    "nut": [
+     "fe",
+     "b12",
+     "b9"
+    ],
+    "cites": [
+     "ml-hgb"
+    ],
+    "ref": {
+     "kind": "low",
+     "lo": 12,
+     "unit": "g/dL",
+     "minAge": 10,
+     "evidence": "Hemoglobin concentrations lower than 11 g/deciliter (dL) in children under 10 years of age, or lower than 12 g/dL in individuals age 10 years or older, suggest IDA",
+     "cites": [
+      "ods-fe"
+     ]
+    }
+   },
+   {
+    "id": "vitd",
+    "name": "Vitamin D, 25-hydroxy",
+    "syn": [
+     "vitamin d, 25-hydroxy",
+     "25-hydroxyvitamin d",
+     "25-oh vitamin d",
+     "vit d 25-oh",
+     "vitamin d 25-oh",
+     "25(oh)d",
+     "vitamin d",
+     "vit d"
+    ],
+    "units": {
+     "ng/mL": 1,
+     "nmol/L": 2.496
+    },
+    "parts": [
+     "bones",
+     "immune"
+    ],
+    "nut": [
+     "vitD"
+    ],
+    "cites": [
+     "ml-vitd",
+     "ods-vitD"
+    ],
+    "ref": {
+     "kind": "band",
+     "bands": [
+      [
+       0,
+       12,
+       "Risk of deficiency (<12 ng/mL)"
+      ],
+      [
+       12,
+       20,
+       "Between deficiency-risk and sufficiency cut-offs"
+      ],
+      [
+       20,
+       50,
+       "Sufficient for most people (≥20 ng/mL)"
+      ],
+      [
+       50,
+       1000000000.0,
+       "Above 50 ng/mL: can be associated with adverse effects"
+      ]
+     ],
+     "unit": "ng/mL",
+     "evidence": "levels of 50 nmol/L (20 ng/mL) or more are sufficient for most people, and that the risk of deficiency increases at serum concentrations of less than 30 nmol/L (12 ng/mL). … serum concentrations greater than 125 nmol/L (50 ng/mL) can be associated with adverse effects",
+     "cites": [
+      "ods-vitD"
+     ]
+    }
+   },
+   {
+    "id": "b12",
+    "name": "Vitamin B12",
+    "syn": [
+     "vitamin b12",
+     "b12",
+     "cobalamin",
+     "vit b12"
+    ],
+    "units": {
+     "pg/mL": 1,
+     "pmol/L": 0.7378
+    },
+    "parts": [
+     "nerves",
+     "blood"
+    ],
+    "nut": [
+     "b12"
+    ],
+    "cites": [
+     "ml-b12",
+     "ods-b12"
+    ],
+    "ref": {
+     "kind": "low",
+     "lo": 200,
+     "unit": "pg/mL",
+     "evidence": "values lower than 200 or 250 pg/mL generally being considered subnormal",
+     "cites": [
+      "ods-b12"
+     ]
+    }
+   },
+   {
+    "id": "folate",
+    "name": "Folate, serum",
+    "syn": [
+     "folate",
+     "folate, serum",
+     "folic acid",
+     "serum folate"
+    ],
+    "units": {
+     "ng/mL": 1,
+     "nmol/L": 2.266
+    },
+    "parts": [
+     "blood"
+    ],
+    "nut": [
+     "b9"
+    ],
+    "cites": [
+     "ods-b9"
+    ],
+    "ref": {
+     "kind": "low",
+     "lo": 3,
+     "unit": "ng/mL",
+     "evidence": "Serum folate concentrations are commonly used to assess folate status; a value above 3 ng/mL indicates adequacy",
+     "cites": [
+      "ods-b9"
+     ]
+    }
+   },
+   {
+    "id": "mg",
+    "name": "Magnesium, serum",
+    "syn": [
+     "magnesium",
+     "mg",
+     "magnesium, serum",
+     "mag"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.4114,
+     "mEq/L": 0.8229
+    },
+    "parts": [
+     "muscles",
+     "nerves",
+     "heart"
+    ],
+    "nut": [
+     "mg"
+    ],
+    "cites": [
+     "ml-mg",
+     "ods-mg"
+    ]
+   },
+   {
+    "id": "tsh",
+    "name": "TSH",
+    "syn": [
+     "tsh",
+     "thyroid stimulating hormone",
+     "thyrotropin"
+    ],
+    "units": {
+     "mIU/L": 1,
+     "µIU/mL": 1,
+     "uIU/mL": 1
+    },
+    "parts": [
+     "thyroid",
+     "glands"
+    ],
+    "nut": [
+     "iodine"
+    ],
+    "cites": [
+     "ml-tsh"
+    ]
+   },
+   {
+    "id": "a1c",
+    "name": "Hemoglobin A1c",
+    "syn": [
+     "hemoglobin a1c",
+     "hba1c",
+     "a1c",
+     "glycohemoglobin",
+     "glycated hemoglobin"
+    ],
+    "units": {
+     "%": 1,
+     "mmol/mol": "ifcc"
+    },
+    "parts": [
+     "pancreas",
+     "blood"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-a1c",
+     "ada-dx"
+    ],
+    "ref": {
+     "kind": "band",
+     "bands": [
+      [
+       0,
+       5.7,
+       "Normal (<5.7%)"
+      ],
+      [
+       5.7,
+       6.5,
+       "Prediabetes range (5.7–6.4%)"
+      ],
+      [
+       6.5,
+       100,
+       "Diabetes range (≥6.5%) — diagnosis needs a clinician"
+      ]
+     ],
+     "unit": "%",
+     "evidence": "Result A1C Normal less than 5.7% Prediabetes 5.7% to 6.4% Diabetes 6.5% or higher",
+     "cites": [
+      "ada-dx"
+     ]
+    }
+   },
+   {
+    "id": "glu",
+    "name": "Glucose, fasting",
+    "syn": [
+     "glucose",
+     "glucose, fasting",
+     "fasting glucose",
+     "glu",
+     "fbg",
+     "glucose, serum"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.05551
+    },
+    "parts": [
+     "pancreas"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-glu",
+     "ada-dx"
+    ],
+    "ref": {
+     "kind": "band",
+     "bands": [
+      [
+       0,
+       100,
+       "Normal fasting (<100 mg/dL)"
+      ],
+      [
+       100,
+       126,
+       "Prediabetes range (100–125 mg/dL)"
+      ],
+      [
+       126,
+       1000000000.0,
+       "Diabetes range (≥126 mg/dL) — diagnosis needs a clinician"
+      ]
+     ],
+     "unit": "mg/dL",
+     "fasting": true,
+     "evidence": "Result Fasting Plasma Glucose (FPG) Normal less than 100 mg/dL Prediabetes 100 mg/dl … Diabetes is diagnosed at fasting blood glucose of greater than or equal to 126 mg/dl",
+     "cites": [
+      "ada-dx"
+     ]
+    }
+   },
+   {
+    "id": "tc",
+    "name": "Cholesterol, total",
+    "syn": [
+     "cholesterol, total",
+     "total cholesterol",
+     "cholesterol",
+     "chol"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.02586
+    },
+    "parts": [
+     "heart",
+     "vessels"
+    ],
+    "nut": [
+     "fiber"
+    ],
+    "cites": [
+     "ml-lipids"
+    ],
+    "ref": {
+     "kind": "high",
+     "hi": 200,
+     "unit": "mg/dL",
+     "minAge": 20,
+     "evidence": "Total Cholesterol Less than 200 mg/dL",
+     "cites": [
+      "ml-lipids"
+     ]
+    }
+   },
+   {
+    "id": "ldl",
+    "name": "LDL cholesterol",
+    "syn": [
+     "ldl",
+     "ldl cholesterol",
+     "ldl-c",
+     "ldl chol calc",
+     "ldl, calculated"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.02586
+    },
+    "parts": [
+     "heart",
+     "vessels"
+    ],
+    "nut": [
+     "fiber"
+    ],
+    "cites": [
+     "ml-lipids"
+    ],
+    "ref": {
+     "kind": "high",
+     "hi": 100,
+     "unit": "mg/dL",
+     "minAge": 20,
+     "evidence": "LDL Less than 100 mg/dL",
+     "cites": [
+      "ml-lipids"
+     ]
+    }
+   },
+   {
+    "id": "hdl",
+    "name": "HDL cholesterol",
+    "syn": [
+     "hdl",
+     "hdl cholesterol",
+     "hdl-c"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.02586
+    },
+    "parts": [
+     "heart",
+     "vessels"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-lipids"
+    ],
+    "ref": {
+     "kind": "low",
+     "lo": {
+      "M": 40,
+      "F": 50
+     },
+     "unit": "mg/dL",
+     "minAge": 20,
+     "evidence": "HDL Greater than or equal to 60 mg/dL is best. Levels less than 40 mg/dL are considered low. [men] … Levels less than 50 mg/dL are considered low. [women]",
+     "cites": [
+      "ml-lipids"
+     ]
+    }
+   },
+   {
+    "id": "tg",
+    "name": "Triglycerides",
+    "syn": [
+     "triglycerides",
+     "trig",
+     "tg",
+     "triglyceride"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.01129
+    },
+    "parts": [
+     "heart",
+     "vessels"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-lipids"
+    ]
+   },
+   {
+    "id": "na",
+    "name": "Sodium",
+    "syn": [
+     "sodium",
+     "na"
+    ],
+    "units": {
+     "mmol/L": 1,
+     "mEq/L": 1
+    },
+    "parts": [
+     "kidneys"
+    ],
+    "nut": [
+     "na"
+    ],
+    "cites": [
+     "ml-sodium",
+     "ml-cmp"
+    ],
+    "ref": {
+     "kind": "low",
+     "lo": 135,
+     "unit": "mmol/L",
+     "evidence": "Hyponatremia is defined by a serum sodium level of less than 135 mmol/L, but symptoms are usually not apparent unless the serum sodium level is less than 130 mmol/L.",
+     "cites": [
+      "nasem-water"
+     ]
+    }
+   },
+   {
+    "id": "k",
+    "name": "Potassium",
+    "syn": [
+     "potassium",
+     "k"
+    ],
+    "units": {
+     "mmol/L": 1,
+     "mEq/L": 1
+    },
+    "parts": [
+     "kidneys",
+     "heart"
+    ],
+    "nut": [
+     "k"
+    ],
+    "cites": [
+     "ml-potass",
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "cl",
+    "name": "Chloride",
+    "syn": [
+     "chloride",
+     "cl"
+    ],
+    "units": {
+     "mmol/L": 1,
+     "mEq/L": 1
+    },
+    "parts": [
+     "kidneys"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "co2",
+    "name": "CO2 (bicarbonate)",
+    "syn": [
+     "co2",
+     "carbon dioxide",
+     "bicarbonate",
+     "hco3",
+     "total co2"
+    ],
+    "units": {
+     "mmol/L": 1,
+     "mEq/L": 1
+    },
+    "parts": [
+     "kidneys",
+     "lungs"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "bun",
+    "name": "BUN",
+    "syn": [
+     "bun",
+     "urea nitrogen",
+     "blood urea nitrogen"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.357
+    },
+    "parts": [
+     "kidneys"
+    ],
+    "nut": [
+     "protein"
+    ],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "creat",
+    "name": "Creatinine",
+    "syn": [
+     "creatinine",
+     "creat",
+     "cr"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "µmol/L": 88.42,
+     "umol/L": 88.42
+    },
+    "parts": [
+     "kidneys"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "ca",
+    "name": "Calcium, serum",
+    "syn": [
+     "calcium",
+     "ca",
+     "calcium, serum"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "mmol/L": 0.2495
+    },
+    "parts": [
+     "bones"
+    ],
+    "nut": [
+     "ca",
+     "vitD"
+    ],
+    "cites": [
+     "ml-cmp",
+     "ods-ca"
+    ]
+   },
+   {
+    "id": "alb",
+    "name": "Albumin",
+    "syn": [
+     "albumin",
+     "alb"
+    ],
+    "units": {
+     "g/dL": 1,
+     "g/L": 10
+    },
+    "parts": [
+     "liver"
+    ],
+    "nut": [
+     "protein"
+    ],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "tp",
+    "name": "Protein, total",
+    "syn": [
+     "protein, total",
+     "total protein",
+     "tp"
+    ],
+    "units": {
+     "g/dL": 1,
+     "g/L": 10
+    },
+    "parts": [
+     "liver"
+    ],
+    "nut": [
+     "protein"
+    ],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "alt",
+    "name": "ALT",
+    "syn": [
+     "alt",
+     "sgpt",
+     "alanine aminotransferase"
+    ],
+    "units": {
+     "U/L": 1,
+     "IU/L": 1
+    },
+    "parts": [
+     "liver"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "ast",
+    "name": "AST",
+    "syn": [
+     "ast",
+     "sgot",
+     "aspartate aminotransferase"
+    ],
+    "units": {
+     "U/L": 1,
+     "IU/L": 1
+    },
+    "parts": [
+     "liver"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "alp",
+    "name": "Alkaline phosphatase",
+    "syn": [
+     "alkaline phosphatase",
+     "alk phos",
+     "alp"
+    ],
+    "units": {
+     "U/L": 1,
+     "IU/L": 1
+    },
+    "parts": [
+     "liver",
+     "bones"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   },
+   {
+    "id": "tbil",
+    "name": "Bilirubin, total",
+    "syn": [
+     "bilirubin, total",
+     "total bilirubin",
+     "bilirubin",
+     "tbil"
+    ],
+    "units": {
+     "mg/dL": 1,
+     "µmol/L": 17.1,
+     "umol/L": 17.1
+    },
+    "parts": [
+     "liver"
+    ],
+    "nut": [],
+    "cites": [
+     "ml-cmp"
+    ]
+   }
+  ],
+  "convNote": "Unit conversions use standard SI factors derived from molar mass (e.g. glucose 18.016 g/mol; cholesterol 386.65 g/mol). A1c % ↔ mmol/mol uses the IFCC–NGSP master equation (mmol/mol = 10.929 × (% − 2.15))."
+ },
+ "mood": {
+  "phq2": {
+   "stem": "Over the last 2 weeks, how often have you been bothered by the following problems?",
+   "items": [
+    "Little interest or pleasure in doing things",
+    "Feeling down, depressed, or hopeless"
+   ],
+   "cut": 3,
+   "evidence": "Likelihood ratio and receiver operator characteristic analysis identified a PHQ-2 score of 3 as the optimal cutpoint for screening purposes.",
+   "cites": [
+    "pmid-14583691",
+    "phq-site"
+   ]
+  },
+  "gad2": {
+   "stem": "Over the last 2 weeks, how often have you been bothered by the following problems?",
+   "items": [
+    "Feeling nervous, anxious or on edge",
+    "Not being able to stop or control worrying"
+   ],
+   "cut": 3,
+   "evidence": "Receiver-operating characteristic curve analysis showed that both the GAD-7 scale and its 2 core items (GAD-2) performed well",
+   "cites": [
+    "pmid-17339617",
+    "phq-site"
+   ]
+  },
+  "answers": [
+   "Not at all",
+   "Several days",
+   "More than half the days",
+   "Nearly every day"
+  ],
+  "attrib": "PHQ-2 and GAD-2 were developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute.",
+  "crisis": {
+   "evidence": "If you need emotional support, reach out to the national mental health hotline: 988.",
+   "cites": [
+    "lifeline-988"
+   ]
+  }
+ },
+ "caffeine": {
+  "fda": {
+   "evidence": "For most adults, the FDA has cited 400 milligrams a day — that's about two to three 12-fluid-ounce cups of coffee — as an amount not generally associated with negative effects. However, there is wide variation in both how sensitive people are to the effects of caffeine and how fast they eliminate it from the body.",
+   "cites": [
+    "fda-caffeine"
+   ]
+  },
+  "preg": {
+   "evidence": "Moderate caffeine consumption (less than 200 mg per day) does not appear to be a major contributing factor in miscarriage or preterm birth.",
+   "cites": [
+    "acog-caffeine"
+   ]
+  },
+  "half": {
+   "evidence": "Caffeine levels peak 30-120 minutes after oral intake and caffeine's half-life is 3-6 hours.",
+   "cites": [
+    "pmid-18094346"
+   ]
+  },
+  "vary": {
+   "evidence": "The pharmacokinetics of caffeine are highly variable among individuals due to a polymorphism at the level of the CYP1A2 isoform of cytochrome P450, which metabolizes 95% of the caffeine ingested.",
+   "cites": [
+    "pmid-29514871"
+   ]
+  },
+  "drinks": [
+   {
+    "id": "coffee",
+    "name": "Brewed coffee",
+    "fdc": 171881,
+    "mgPer100": 37,
+    "ml": 355
+   },
+   {
+    "id": "espresso",
+    "name": "Espresso shot",
+    "fdc": 171891,
+    "mgPer100": 212,
+    "ml": 30
+   },
+   {
+    "id": "blacktea",
+    "name": "Black tea",
+    "fdc": 173227,
+    "mgPer100": 20,
+    "ml": 240
+   },
+   {
+    "id": "greentea",
+    "name": "Green tea",
+    "fdc": 171917,
+    "mgPer100": 12,
+    "ml": 240
+   },
+   {
+    "id": "cola",
+    "name": "Cola",
+    "fdc": 174852,
+    "mgPer100": 9,
+    "ml": 355
+   },
+   {
+    "id": "energy",
+    "name": "Energy drink (Red Bull)",
+    "fdc": 173210,
+    "mgPer100": 29,
+    "ml": 250
+   }
+  ],
+  "drinksNote": "Caffeine per 100 g from USDA FoodData Central SR Legacy (mL counted as grams for water-like drinks). Real drinks vary by brand and brew.",
+  "std": {
+   "evidence": "one standard drink contains about 14 grams, or about 0.6 fluid ounces, of pure alcohol. That is the amount of alcohol in: A 12-ounce can of regular beer at 5% alcohol by volume A 5-ounce glass of wine at 12% alcohol by volume A 1.5-ounce shot glass of distilled spirits",
+   "cites": [
+    "niaaa-std"
+   ]
+  }
+ }
+}

@@ -1,0 +1,1106 @@
+{
+ "library": [
+  {
+   "id": "brisk-walking",
+   "name": "Brisk walking",
+   "type": "cardio",
+   "code": "17200",
+   "met": 4.8,
+   "compDesc": "Walking, 3.5 to 3.9 mph, level, brisk, firm surface, walking for exercise",
+   "primary": [
+    "quads",
+    "calves"
+   ],
+   "secondary": [
+    "glutes",
+    "hamstrings",
+    "shins"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "walking-moderate-pace",
+   "name": "Walking, moderate pace",
+   "type": "cardio",
+   "code": "17190",
+   "met": 3.8,
+   "compDesc": "Walking, 2.8 to 3.4 mph, level, moderate pace, firm surface",
+   "primary": [
+    "quads",
+    "calves"
+   ],
+   "secondary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "hiking",
+   "name": "Hiking",
+   "type": "cardio",
+   "code": "17082",
+   "met": 5.3,
+   "compDesc": "Hiking or walking at a normal pace through fields and hillsides, no load",
+   "primary": [
+    "quads",
+    "glutes",
+    "calves"
+   ],
+   "secondary": [
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "stair-climbing",
+   "name": "Stair climbing",
+   "type": "cardio",
+   "code": "17131",
+   "met": 6.8,
+   "compDesc": "Stair climbing, general",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "calves",
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "jogging",
+   "name": "Jogging",
+   "type": "cardio",
+   "code": "12020",
+   "met": 7.5,
+   "compDesc": "Jogging, general, self-selected pace",
+   "primary": [
+    "quads",
+    "calves",
+    "hamstrings"
+   ],
+   "secondary": [
+    "glutes",
+    "shins"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "running-mph",
+   "name": "Running, 6 mph",
+   "type": "cardio",
+   "code": "12050",
+   "met": 9.3,
+   "compDesc": "Running, 6-6.3 mph (10 min/mile)",
+   "primary": [
+    "quads",
+    "calves",
+    "hamstrings"
+   ],
+   "secondary": [
+    "glutes",
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "cycling-moderate",
+   "name": "Cycling, moderate",
+   "type": "cardio",
+   "code": "01016",
+   "met": 7.0,
+   "compDesc": "Bicycling, self-selected moderate pace",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "calves",
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "stationary-bike-w",
+   "name": "Stationary bike, 90-100 W",
+   "type": "cardio",
+   "code": "01220",
+   "met": 6.0,
+   "compDesc": "Bicycling, stationary, 90-100 watts,&nbsp; moderate to vigorous",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "calves"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "spin-class",
+   "name": "Spin class",
+   "type": "cardio",
+   "code": "01270",
+   "met": 9.0,
+   "compDesc": "Bicycling, stationary, RPM/Spin bike class",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "calves",
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "elliptical-moderate",
+   "name": "Elliptical, moderate",
+   "type": "cardio",
+   "code": "02048",
+   "met": 5.0,
+   "compDesc": "Elliptical trainer, moderate effort",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "shoulders",
+    "calves"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "rowing-machine-moderate",
+   "name": "Rowing machine, moderate",
+   "type": "cardio",
+   "code": "02071",
+   "met": 5.0,
+   "compDesc": "Rowing, stationary ergometer, general, &lt;100 watts,&nbsp; moderate effort",
+   "primary": [
+    "upperback",
+    "quads"
+   ],
+   "secondary": [
+    "biceps",
+    "lowback",
+    "glutes"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "jump-rope",
+   "name": "Jump rope",
+   "type": "cardio",
+   "code": "02068",
+   "met": 11.0,
+   "compDesc": "Rope skipping exercise, general",
+   "primary": [
+    "calves",
+    "shins"
+   ],
+   "secondary": [
+    "quads",
+    "shoulders"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "swimming-freestyle-slow",
+   "name": "Swimming, freestyle slow",
+   "type": "cardio",
+   "code": "18240",
+   "met": 5.8,
+   "compDesc": "Swimming laps, freestyle, slow, recreational",
+   "primary": [
+    "shoulders",
+    "upperback"
+   ],
+   "secondary": [
+    "triceps",
+    "abs",
+    "quads"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "water-aerobics",
+   "name": "Water aerobics",
+   "type": "cardio",
+   "code": "02120",
+   "met": 5.3,
+   "compDesc": "Water aerobics, water calisthenics, water exercise",
+   "primary": [
+    "quads",
+    "shoulders"
+   ],
+   "secondary": [
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "dance-aerobics-low-impact",
+   "name": "Dance aerobics, low impact",
+   "type": "cardio",
+   "code": "02005",
+   "met": 4.8,
+   "compDesc": "Aerobic dance, low impact, moderate effort",
+   "primary": [
+    "quads",
+    "calves"
+   ],
+   "secondary": [
+    "glutes",
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "zumba-class",
+   "name": "Zumba class",
+   "type": "cardio",
+   "code": "02310",
+   "met": 6.5,
+   "compDesc": "Zumba, group class",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "abs",
+    "calves"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "hiit-vigorous",
+   "name": "HIIT, vigorous",
+   "type": "cardio",
+   "code": "02214",
+   "met": 11.0,
+   "compDesc": "High intensity interval exercise,&nbsp; burpees, mountain climbers, squat jumps, Tabata, vigorous effort",
+   "primary": [
+    "quads",
+    "glutes",
+    "shoulders"
+   ],
+   "secondary": [
+    "abs",
+    "calves",
+    "chest"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "basketball-general",
+   "name": "Basketball, general",
+   "type": "cardio",
+   "code": "15055",
+   "met": 7.5,
+   "compDesc": "Basketball, general",
+   "primary": [
+    "quads",
+    "calves"
+   ],
+   "secondary": [
+    "shoulders",
+    "glutes"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "soccer-casual",
+   "name": "Soccer, casual",
+   "type": "cardio",
+   "code": "15610",
+   "met": 7.0,
+   "compDesc": "Soccer, casual, general (Taylor Code 540)",
+   "primary": [
+    "quads",
+    "hamstrings"
+   ],
+   "secondary": [
+    "calves",
+    "adductors"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "tennis-singles",
+   "name": "Tennis, singles",
+   "type": "cardio",
+   "code": "15690",
+   "met": 8.0,
+   "compDesc": "Tennis, singles (Taylor Code 420)",
+   "primary": [
+    "quads",
+    "shoulders"
+   ],
+   "secondary": [
+    "forearms",
+    "calves",
+    "obliques"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "push-ups",
+   "name": "Push-ups",
+   "type": "strength",
+   "code": "02022",
+   "met": 3.8,
+   "compDesc": "Calisthenics (e.g., pushups, sit ups, pull-ups, lunges), moderate effort",
+   "primary": [
+    "chest",
+    "triceps"
+   ],
+   "secondary": [
+    "shoulders",
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "pull-ups",
+   "name": "Pull-ups",
+   "type": "strength",
+   "code": "02022",
+   "met": 3.8,
+   "compDesc": "Calisthenics (e.g., pushups, sit ups, pull-ups, lunges), moderate effort",
+   "primary": [
+    "upperback",
+    "biceps"
+   ],
+   "secondary": [
+    "forearms",
+    "shoulders"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "lunges",
+   "name": "Lunges",
+   "type": "strength",
+   "code": "02022",
+   "met": 3.8,
+   "compDesc": "Calisthenics (e.g., pushups, sit ups, pull-ups, lunges), moderate effort",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "calves"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "bodyweight-squats",
+   "name": "Bodyweight squats",
+   "type": "strength",
+   "code": "02056",
+   "met": 3.0,
+   "compDesc": "Body weight resistance exercises (e.g., squat, lunge, push-up, crunch), general",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "lowback"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "crunches",
+   "name": "Crunches",
+   "type": "strength",
+   "code": "02024",
+   "met": 2.8,
+   "compDesc": "Calisthenics (e.g., curl ups, abdominal crunches, plank),&nbsp; light effort",
+   "primary": [
+    "abs"
+   ],
+   "secondary": [
+    "obliques"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "plank",
+   "name": "Plank",
+   "type": "strength",
+   "code": "02024",
+   "met": 2.8,
+   "compDesc": "Calisthenics (e.g., curl ups, abdominal crunches, plank),&nbsp; light effort",
+   "primary": [
+    "abs"
+   ],
+   "secondary": [
+    "shoulders",
+    "obliques",
+    "glutes"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "barbell-squat",
+   "name": "Barbell squat",
+   "type": "strength",
+   "code": "02052",
+   "met": 5.0,
+   "compDesc": "Resistance (weight) training, squats, deadlift, slow or explosive effort",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "lowback",
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "deadlift",
+   "name": "Deadlift",
+   "type": "strength",
+   "code": "02052",
+   "met": 5.0,
+   "compDesc": "Resistance (weight) training, squats, deadlift, slow or explosive effort",
+   "primary": [
+    "hamstrings",
+    "glutes",
+    "lowback"
+   ],
+   "secondary": [
+    "upperback",
+    "forearms",
+    "traps"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "bench-press",
+   "name": "Bench press",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "chest",
+    "triceps"
+   ],
+   "secondary": [
+    "shoulders"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "overhead-press",
+   "name": "Overhead press",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "shoulders",
+    "triceps"
+   ],
+   "secondary": [
+    "traps",
+    "abs"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "dumbbell-row",
+   "name": "Dumbbell row",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "upperback",
+    "biceps"
+   ],
+   "secondary": [
+    "shoulders",
+    "forearms"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "biceps-curl",
+   "name": "Biceps curl",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "biceps"
+   ],
+   "secondary": [
+    "forearms"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "triceps-extension",
+   "name": "Triceps extension",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "triceps"
+   ],
+   "secondary": [
+    "shoulders"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "calf-raises",
+   "name": "Calf raises",
+   "type": "strength",
+   "code": "02054",
+   "met": 3.5,
+   "compDesc": "Resistance (weight) training, multiple exercises, 8-15 reps at varied resistance",
+   "primary": [
+    "calves"
+   ],
+   "secondary": [],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "glute-bridge",
+   "name": "Glute bridge",
+   "type": "strength",
+   "code": "02056",
+   "met": 3.0,
+   "compDesc": "Body weight resistance exercises (e.g., squat, lunge, push-up, crunch), general",
+   "primary": [
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings",
+    "lowback"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "kettlebell-swings",
+   "name": "Kettlebell swings",
+   "type": "strength",
+   "code": "02058",
+   "met": 9.8,
+   "compDesc": "Kettlebell swings",
+   "primary": [
+    "glutes",
+    "hamstrings"
+   ],
+   "secondary": [
+    "lowback",
+    "shoulders",
+    "forearms"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "sit-to-stand",
+   "name": "Sit-to-stand",
+   "type": "strength",
+   "code": "02340",
+   "met": 2.8,
+   "compDesc": "Sit to stand exercise, 6-12 times/min",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "hamstrings"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "circuit-training-moderate",
+   "name": "Circuit training, moderate",
+   "type": "strength",
+   "code": "02035",
+   "met": 5.0,
+   "compDesc": "Circuit training, moderate effort",
+   "primary": [
+    "quads",
+    "chest",
+    "upperback"
+   ],
+   "secondary": [
+    "abs",
+    "shoulders"
+   ],
+   "joints": [],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "hamstring-stretch",
+   "name": "Hamstring stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "hamstrings"
+   ],
+   "secondary": [
+    "calves"
+   ],
+   "joints": [
+    "hip",
+    "knee"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "quadriceps-stretch",
+   "name": "Quadriceps stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "quads"
+   ],
+   "secondary": [
+    "adductors"
+   ],
+   "joints": [
+    "knee",
+    "hip"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "calf-stretch",
+   "name": "Calf stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "calves"
+   ],
+   "secondary": [],
+   "joints": [
+    "ankle"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "chest-doorway-stretch",
+   "name": "Chest/doorway stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "chest"
+   ],
+   "secondary": [
+    "shoulders"
+   ],
+   "joints": [
+    "shoulder"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "cross-body-shoulder-stretch",
+   "name": "Cross-body shoulder stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "shoulders"
+   ],
+   "secondary": [
+    "upperback"
+   ],
+   "joints": [
+    "shoulder"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "neck-side-stretch",
+   "name": "Neck side stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "traps"
+   ],
+   "secondary": [],
+   "joints": [
+    "neck"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "hip-flexor-adductor-stretch",
+   "name": "Hip flexor / adductor stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "adductors"
+   ],
+   "secondary": [
+    "quads"
+   ],
+   "joints": [
+    "hip"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "cat-cow-back-stretch",
+   "name": "Cat-cow / back stretch",
+   "type": "flexibility",
+   "code": "02101",
+   "met": 2.3,
+   "compDesc": "Stretching, mild",
+   "primary": [
+    "lowback"
+   ],
+   "secondary": [
+    "abs"
+   ],
+   "joints": [
+    "lowback"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "hatha-yoga",
+   "name": "Hatha yoga",
+   "type": "flexibility",
+   "code": "02150",
+   "met": 2.3,
+   "compDesc": "Yoga, Hatha",
+   "primary": [
+    "hamstrings",
+    "lowback"
+   ],
+   "secondary": [
+    "shoulders",
+    "abs",
+    "quads"
+   ],
+   "joints": [
+    "hip",
+    "shoulder",
+    "lowback"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "pilates-general",
+   "name": "Pilates, general",
+   "type": "flexibility",
+   "code": "02105",
+   "met": 2.8,
+   "compDesc": "Pilates, general",
+   "primary": [
+    "abs",
+    "obliques"
+   ],
+   "secondary": [
+    "glutes",
+    "lowback"
+   ],
+   "joints": [
+    "lowback"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "tai-chi-qi-gong",
+   "name": "Tai chi / qi gong",
+   "type": "balance",
+   "code": "15670",
+   "met": 3.3,
+   "compDesc": "Tai chi, qi gong, general",
+   "primary": [
+    "quads",
+    "glutes"
+   ],
+   "secondary": [
+    "calves",
+    "abs"
+   ],
+   "joints": [
+    "knee",
+    "ankle",
+    "hip"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "single-leg-stand",
+   "name": "Single-leg stand",
+   "type": "balance",
+   "code": "15670",
+   "met": 3.3,
+   "compDesc": "Tai chi, qi gong, general",
+   "primary": [
+    "glutes",
+    "calves"
+   ],
+   "secondary": [
+    "abs",
+    "shins"
+   ],
+   "joints": [
+    "ankle",
+    "hip"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  },
+  {
+   "id": "heel-to-toe-walk",
+   "name": "Heel-to-toe walk",
+   "type": "balance",
+   "code": "17152",
+   "met": 2.8,
+   "compDesc": "Walking, 2.0 to 2.4 mph, level, slow pace, firm surface",
+   "primary": [
+    "calves",
+    "shins"
+   ],
+   "secondary": [
+    "abs"
+   ],
+   "joints": [
+    "ankle"
+   ],
+   "cites": [
+    "pacomp-2024"
+   ]
+  }
+ ],
+ "guidelines": {
+  "adult": "For substantial health benefits, adults should do at least 150 minutes (2 hours and 30 minutes) to 300 minutes (5 hours) a week of moderate-intensity, or 75 minutes (1 hour and 15 minutes) to 150 minutes (2 hours and 30 minutes) a week of vigorous-intensity aerobic physical activity, or an equivalent combination of moderate- and vigorous-intensity aerobic activity.",
+  "strength": "Adults should also do muscle-strengthening activities of moderate or greater intensity and that involve all major muscle groups on 2 or more days a week, as these activities provide additional health benefits.",
+  "older": "In addition, the following key guidelines are just for older adults: • As part of their weekly physical activity, older adults should do multicomponent physical activity that includes balance training as well as aerobic and muscle-strengthening activities.",
+  "youth": "Children and adolescents ages 6 through 17 years should do 60 minutes (1 hour) or more of moderate-to-vigorous physical activity daily: • Aerobic: Most of the 60 minutes or more per day should be either moderate- or vigorousintensity aerobic physical activity and should include vigorous-intensity physical activity on at least 3 days a week.",
+  "youthS": "Muscle-strengthening: As part of their 60 minutes or more of daily physical activity, children and adolescents should include muscle-strengthening physical activity on at least 3 days a week.",
+  "pre": "Preschool-aged children (ages 3 through 5 years) should be physically active throughout the day to enhance growth and development.",
+  "mod": "Moderate-intensity activities expend 3.0 to 5.9 times the amount of energy expended at rest.",
+  "vig": "Vigorous-intensity activity requires 6.0 or more METs; examples include jogging, running, carrying heavy groceries or other loads upstairs, shoveling snow, or participating in a strenuous fitness class.",
+  "preg": "Women should do at least 150 minutes (2 hours and 30 minutes) of moderate-intensity aerobic activity a week during pregnancy and the postpartum period.",
+  "cites": [
+   "hhs-pag2"
+  ]
+ },
+ "nutrition": [
+  {
+   "id": "protein-need",
+   "title": "Protein needs for training",
+   "evidence": "For building muscle mass and for maintaining muscle mass through a positive muscle protein balance, an overall daily protein intake in the range of 1.4-2.0 g protein/kg body weight/day (g/kg/d) is sufficient for most exercising individuals, a value that falls in line within the Acceptable Macronutrient Distribution Range published by the Institute of Medicine for protein.",
+   "cites": [
+    "pmid-28642676"
+   ]
+  },
+  {
+   "id": "protein-timing",
+   "title": "Protein timing / dose",
+   "evidence": "General recommendations are 0.25 g of a high-quality protein per kg of body weight, or an absolute dose of 20-40 g. These protein doses should ideally be evenly distributed, every 3-4 h, across the day.",
+   "cites": [
+    "pmid-28642676"
+   ]
+  },
+  {
+   "id": "fluid",
+   "title": "Hydration",
+   "evidence": "The goal of drinking during exercise is to prevent excessive (>2% body weight loss from water deficit) dehydration and excessive changes in electrolyte balance to avert compromised performance. Individual sweat rates can be estimated by measuring body weight before and after exercise.",
+   "cites": [
+    "pmid-17277604"
+   ]
+  },
+  {
+   "id": "sweat",
+   "title": "Sweat sodium & potassium",
+   "evidence": "Because there is considerable variability in sweating rates and sweat electrolyte content between individuals, customized fluid replacement programs are recommended. During exercise, consuming beverages containing electrolytes and carbohydrates can provide benefits over water alone under certain circumstances.",
+   "cites": [
+    "pmid-17277604"
+   ],
+   "note": "Sweat electrolyte amounts vary by person and are not quantified in the cited abstract, so Mosaic Bond does not add an estimated sodium or potassium loss. Your logged sodium and potassium are shown for reference."
+  }
+ ],
+ "stretch": {
+  "evidence": "Crucial to maintaining joint range of movement, completing a series of flexibility exercises for each the major muscle-tendon groups (a total of 60 s per exercise) on ≥2 d·wk is recommended.",
+  "cites": [
+   "pmid-21694556"
+  ],
+  "note": "Static vs. dynamic stretching and per-hold times are not stated in the abstract of the ACSM position stand retrieved here. The abstract gives a total of 60 s per exercise on 2 or more days a week. Only that figure is shown."
+ },
+ "safety": {
+  "screen": "The roundtable proposed a new evidence-informed model for exercise preparticipation health screening on the basis of three factors: 1) the individual's current level of physical activity, 2) presence of signs or symptoms and/or known cardiovascular, metabolic, or renal disease, and 3) desired exercise intensity, as these variables have been identified as risk modulators of exercise-related cardiovascular events.",
+  "screenCites": [
+   "pmid-26473759"
+  ],
+  "chd": "Educating adults about and screening for signs and symptoms of CHD and gradual progression of exercise intensity and volume may reduce the risks of exercise.",
+  "chdCites": [
+   "pmid-21694556"
+  ],
+  "preg": "It’s still important to discuss exercise with your obstetrician–gynecologist (ob-gyn) during your early prenatal visits. Whether you’re a seasoned athlete or a beginner, watch for the following warning signs when you exercise. If you have any of them, stop and call your ob-gyn.",
+  "pregCites": [
+   "acog-expreg"
+  ]
+ },
+ "energy": "Estimated energy use = MET × body weight (kg) × hours. This is an estimate: Compendium METs are averages and individual energy use varies."
+}

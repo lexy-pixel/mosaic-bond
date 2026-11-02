@@ -1,0 +1,191 @@
+{
+"anti": [
+{
+"k": "vitC",
+"role": "Water-soluble antioxidant; regenerates vitamin E",
+"evidence": "Vitamin C is also an important physiological antioxidant [ 3 ] and has been shown to regenerate other antioxidants within the body, including alpha-tocopherol (vitamin E) [ 4 ].",
+"cites": [
+"ods-vitC"
+]
+},
+{
+"k": "vitE",
+"role": "Fat-soluble antioxidant in cell membranes",
+"evidence": "Vitamin E is a fat-soluble antioxidant that stops the production of ROS formed when fat undergoes oxidation.",
+"cites": [
+"ods-vitE"
+]
+},
+{
+"k": "se",
+"role": "Part of glutathione peroxidases (selenoproteins)",
+"evidence": "Selenium is a constituent of 25 selenoproteins, including thioredoxin reductases, glutathione peroxidases, and selenoprotein P [ 1 ].",
+"cites": [
+"ods-se"
+]
+},
+{
+"k": "zn",
+"role": "Cofactor for many enzymes (incl. copper-zinc SOD)",
+"evidence": "It is required for the catalytic activity of hundreds of enzymes, and it plays a role in enhancing immune function, protein and DNA synthesis, wound healing, and cell signaling and division [ 1-4 ].",
+"cites": [
+"ods-zn"
+]
+},
+{
+"k": "cu",
+"role": "Copper-containing superoxide dismutases",
+"evidence": "In addition, defense against oxidative damage depends mainly on the copper-containing superoxide dismutases [ 5 , 6 ].",
+"cites": [
+"ods-cu"
+]
+},
+{
+"k": "mn",
+"role": "Manganese superoxide dismutase cofactor",
+"evidence": "Manganese is a cofactor for many enzymes, including manganese superoxide dismutase, arginase, and pyruvate carboxylase [ 1 , 2 ].",
+"cites": [
+"ods-mn"
+]
+},
+{
+"k": "b2",
+"role": "FAD (from riboflavin) is needed by glutathione reductase",
+"evidence": "A stable and sensitive measure of riboflavin deficiency is the erythrocyte glutathione reductase activity coefficient (EGRAC), which is based on the ratio between this enzyme's in vitro activity in the presence of FAD to that without added FAD [ 1 , 6 , 7 ].",
+"cites": [
+"ods-b2"
+]
+}
+],
+"regen": [
+{
+"k": "b9",
+"role": "DNA synthesis & cell division",
+"evidence": "Another folate-dependent reaction, the methylation of deoxyuridylate to thymidylate in the formation of DNA, is required for proper cell division.",
+"cites": [
+"ods-b9"
+]
+},
+{
+"k": "b12",
+"role": "DNA synthesis, red blood cell formation",
+"evidence": "Vitamin B12 is required for the development, myelination, and function of the central nervous system; healthy red blood cell formation; and DNA synthesis [ 1 , 4 , 5 ].",
+"cites": [
+"ods-b12"
+]
+},
+{
+"k": "zn",
+"role": "Protein & DNA synthesis, wound healing, cell division",
+"evidence": "It is required for the catalytic activity of hundreds of enzymes, and it plays a role in enhancing immune function, protein and DNA synthesis, wound healing, and cell signaling and division [ 1-4 ].",
+"cites": [
+"ods-zn"
+]
+},
+{
+"k": "vitC",
+"role": "Collagen synthesis (connective tissue repair)",
+"evidence": "Vitamin C is required for the biosynthesis of collagen, L-carnitine, and certain neurotransmitters; vitamin C is also involved in protein metabolism [ 1 , 2 ].",
+"cites": [
+"ods-vitC"
+]
+},
+{
+"k": "protein",
+"role": "Repairing cells and making new ones",
+"evidence": "You need protein in your diet to help your body repair cells and make new ones.",
+"cites": [
+"ml-protein"
+]
+}
+],
+"caution": [
+{
+"id": "bcar-smoke",
+"title": "High-dose beta-carotene supplements in people who smoke (ATBC/CARET)",
+"evidence": "However, the ATBC trial found that supplementation with a large amount of beta-carotene (20 mg/day), with or without 50 mg/day vitamin E, for 5\u20138 years increased the risk of lung cancer and mortality (mainly from lung cancer and ischemic heart disease) in male smokers [ 70 ]. The CARET and ATBC study results suggest that large supplemental doses of beta-carotene with or without retinyl palmitate have detrimental effects in current or former smokers and workers exposed to asbestos.",
+"cites": [
+"ods-vitA"
+],
+"parts": [
+"lungs"
+]
+},
+{
+"id": "vitE-hs",
+"title": "High-dose vitamin E supplements",
+"evidence": "However, clinical trials have reported an increased risk of hemorrhagic stroke from high doses of vitamin E from supplements.",
+"cites": [
+"ods-vitE"
+],
+"parts": [
+"brain"
+]
+},
+{
+"id": "fe-high",
+"title": "High-dose iron supplements (UL 45 mg/day adults)",
+"evidence": "High doses of supplemental iron (45 mg/day or more) may cause gastrointestinal side effects, such as nausea and constipation [ 5 ].",
+"cites": [
+"ods-fe"
+],
+"parts": [
+"gut"
+]
+},
+{
+"id": "smoke-c",
+"title": "Smoking raises the vitamin C requirement by 35 mg/day",
+"evidence": "For this reason, the FNB concluded that people who smoke need 35 mg more vitamin C per day than people who do not smoke [ 8 ].",
+"cites": [
+"ods-vitC"
+],
+"parts": [
+"lungs"
+]
+}
+],
+"overlay": [
+{
+"part": "eyes",
+"why": "Age-related macular degeneration trials (AREDS/AREDS2) of antioxidant vitamins, zinc, copper and lutein/zeaxanthin",
+"evidence": "The results from large clinical trials indicate that taking dietary supplements that contain zinc, copper, and certain antioxidants (known as AREDS formulations) slows the progression of age-related macular degeneration among people who are at high risk of developing the advanced form of this condition.",
+"evidence2": "In a follow-up analysis of 3,882 of the participants 5 years after the end of AREDS2 (during which they took the AREDS2 formulation containing lutein and zeaxanthin instead of beta-carotene), the increased lung cancer risk persisted, with an 82% higher risk among participants who took the supplement containing beta-carotene during the 5-year AREDS2 trial [ 73 ].",
+"cites": [
+"ods-zn",
+"ods-vitA"
+]
+}
+],
+"notes": {
+"orac": {
+"evidence": "The data for antioxidant capacity of foods generated by in vitro (test-tube) methods cannot be extrapolated to in vivo (human) effects and the clinical trials to test benefits of dietary antioxidants have produced mixed results. For these reasons the ORAC table, previously available on this web site has been withdrawn.",
+"cites": [
+"usda-orac"
+]
+},
+"notmeasure": "This is NOT a measurement of oxidative stress or of antioxidant levels in your body. Oxidative stress can only be assessed with laboratory biomarkers. The score is simply how much of today\u2019s DRI target you logged for nutrients that NIH ODS describes as having antioxidant roles.",
+"fr": {
+"evidence": "Antioxidants protect cells from the damaging effects of free radicals, which are molecules that contain an unshared electron.",
+"evidence2": "The body forms ROS endogenously when it converts food to energy, and antioxidants might protect cells from the damaging effects of ROS.",
+"cites": [
+"ods-vitE"
+]
+}
+},
+"anti_extra": {
+"zn": {
+"evidence": "Reductions in erythrocyte copper-zinc superoxide dismutase, a marker of copper status, have been reported with even moderately high zinc intakes of approximately 60 mg/day for up to 10 weeks [ 3 ].",
+"cites": [
+"ods-cu"
+]
+}
+},
+"carotenoids": {
+"evidence": "Other carotenoids in food, such as lycopene, lutein, and zeaxanthin, are not converted into vitamin A and are referred to as non-provitamin A carotenoids; they might have other important activities not involving vitamin A formation [ 1 ].",
+"cites": [
+"ods-vitA"
+],
+"note": "The bundled USDA SR Legacy subset stores vitamin A as RAE only, so carotenoids are not scored."
+}
+}
