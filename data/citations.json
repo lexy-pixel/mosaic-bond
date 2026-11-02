@@ -3401,6 +3401,183 @@
    "date": "2024",
    "tier": 2,
    "tierRationale": "Authoritative U.S. government or professional-body guidance."
+  },
+  "nasem-macro": {
+   "id": "nasem-macro",
+   "retrieved": "2026-11-01",
+   "type": "Consensus report (DRI)",
+   "publisher": "National Academies Press",
+   "title": "Dietary Reference Intakes for Energy, Carbohydrate, Fiber, Fat, Fatty Acids, Cholesterol, Protein, and Amino Acids (Macronutrients)",
+   "url": "https://nap.nationalacademies.org/catalog/10490",
+   "date": "2005",
+   "tier": 1,
+   "tierRationale": "National Academies consensus DRI report (source of AMDRs, fiber AI of 14 g/1,000 kcal, protein RDA 0.8 g/kg and the 2005 EER equations)."
+  },
+  "pmid-29669742": {
+   "id": "pmid-29669742",
+   "retrieved": "2026-11-01",
+   "type": "Journal article",
+   "publisher": "PubMed",
+   "title": "Superoxide dismutases: Dual roles in controlling ROS damage and regulating ROS signaling. J Cell Biol",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/29669742/",
+   "pmid": "29669742",
+   "date": "2018",
+   "pubTypes": [
+    "Journal Article",
+    "Review"
+   ],
+   "doi": "10.1083/jcb.201708007",
+   "tier": 4,
+   "tierRationale": "PubMed type: Review (narrative/case/opinion)"
+  },
+  "pmid-33725585": {
+   "id": "pmid-33725585",
+   "retrieved": "2026-11-01",
+   "type": "Journal article",
+   "publisher": "PubMed",
+   "title": "Oral delivery of antioxidant enzymes for effective treatment of inflammatory disease. Biomaterials",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33725585/",
+   "pmid": "33725585",
+   "date": "2021-04",
+   "pubTypes": [
+    "Journal Article"
+   ],
+   "tier": 4,
+   "tierRationale": "Single preclinical (laboratory/animal) study; used only for its background statement on oral protein stability."
+  },
+  "cdc-heat": {
+   "id": "cdc-heat",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "CDC NIOSH",
+   "title": "Heat-related Illnesses",
+   "url": "https://www.cdc.gov/niosh/heat-stress/about/illnesses.html",
+   "date": "2026-03-03",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "cdc-cold": {
+   "id": "cdc-cold",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "CDC NIOSH",
+   "title": "Cold-related Illnesses in Workers",
+   "url": "https://www.cdc.gov/niosh/cold-stress/about/related-illness.html",
+   "date": "2026",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "cdc-coldwork": {
+   "id": "cdc-coldwork",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "CDC NIOSH",
+   "title": "Cold and Work: Types, Causes, Preparation",
+   "url": "https://www.cdc.gov/niosh/cold-stress/about/index.html",
+   "date": "2026-07-14",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "cdc-skin": {
+   "id": "cdc-skin",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "CDC",
+   "title": "Reducing Risk for Skin Cancer",
+   "url": "https://www.cdc.gov/skin-cancer/prevention/index.html",
+   "date": "2026-06-17",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "osha-ppe": {
+   "id": "osha-ppe",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "OSHA",
+   "title": "Personal Protective Equipment - Overview",
+   "url": "https://www.osha.gov/personal-protective-equipment",
+   "date": "",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "niosh-lead": {
+   "id": "niosh-lead",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "CDC NIOSH",
+   "title": "About Lead in the Workplace",
+   "url": "https://www.cdc.gov/niosh/lead/about/index.html",
+   "date": "2026-07-30",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "who-air": {
+   "id": "who-air",
+   "retrieved": "2026-11-01",
+   "type": "International guidance",
+   "publisher": "WHO",
+   "title": "Ambient (outdoor) air pollution - fact sheet",
+   "url": "https://www.who.int/news-room/fact-sheets/detail/ambient-(outdoor)-air-quality-and-health",
+   "date": "",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S./international government public-health guidance."
+  },
+  "cdc-altitude": {
+   "id": "cdc-altitude",
+   "retrieved": "2026-11-01",
+   "type": "Clinical guidance chapter",
+   "publisher": "CDC Yellow Book",
+   "title": "High-Altitude Travel and Altitude Illness",
+   "url": "https://www.cdc.gov/yellow-book/hcp/environmental-hazards-risks/high-altitude-travel-and-altitude-illness.html",
+   "date": "2025-04-23",
+   "tier": 2,
+   "tierRationale": "Government travel-medicine reference written by subject experts."
+  },
+  "hrsa-poison": {
+   "id": "hrsa-poison",
+   "retrieved": "2026-11-01",
+   "type": "Government service",
+   "publisher": "HRSA Poison Help",
+   "title": "Poison Help",
+   "url": "https://poisonhelp.hrsa.gov/",
+   "date": "",
+   "tier": 1,
+   "tierRationale": "Official U.S. Poison Help line information."
+  },
+  "pmid-40324552": {
+   "id": "pmid-40324552",
+   "retrieved": "2026-11-01",
+   "type": "Systematic review/meta-analysis",
+   "publisher": "Am J Med",
+   "title": "Myung SK, Park Y. Effects of Collagen Supplements on Skin Aging: A Systematic Review and Meta-Analysis of RCTs",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/40324552/",
+   "date": "2025-09",
+   "tier": 1,
+   "tierRationale": "Meta-analysis of 23 RCTs.",
+   "pmid": "40324552"
+  },
+  "pmid-42512652": {
+   "id": "pmid-42512652",
+   "retrieved": "2026-11-01",
+   "type": "Narrative review",
+   "publisher": "Healthcare (Basel)",
+   "title": "Rehabilitation Nutrition for Tendon and Ligament Injuries: From Collagen Remodeling to Return-to-Activity",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/42512652/",
+   "date": "2026",
+   "tier": 4,
+   "tierRationale": "Narrative review.",
+   "pmid": "42512652"
+  },
+  "fda-fish": {
+   "id": "fda-fish",
+   "retrieved": "2026-11-01",
+   "type": "Government guidance",
+   "publisher": "FDA/EPA",
+   "title": "Advice about Eating Fish",
+   "url": "https://www.fda.gov/food/consumers/advice-about-eating-fish",
+   "date": "2021-10",
+   "tier": 1,
+   "tierRationale": "Official FDA/EPA consumer guidance."
   }
  }
 }

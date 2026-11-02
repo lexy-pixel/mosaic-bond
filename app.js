@@ -3,7 +3,7 @@ import * as SC from './scan.js';
 import {install as install19} from './v19.js';
 const J=u=>fetch(u).then(r=>r.json());
 const [FOODS,NUT,BODY,MEDS,CONDS,CITS,SYMS,PREP,CELL,SPIR,CYC,EXD,CAN]=await Promise.all(['foods','nutrients','body','meds','conditions','citations','symptoms','prep','cell','spirit','cycle','exercise','cancer'].map(n=>J(`data/${n}.json`)));
-const MODEL=await J('data/model.json');const V19=await J('data/v19.json');const CIT=CITS.citations, N=NUT.nutrients, DRI=NUT.dri, PARTS=BODY.parts, SYS=BODY.systems;
+const MODEL=await J('data/model.json');const PL=await J('data/plain.json');const EXP=await J('data/exposures.json');const V19=await J('data/v19.json');const CIT=CITS.citations, N=NUT.nutrients, DRI=NUT.dri, PARTS=BODY.parts, SYS=BODY.systems;
 const EXL=new Map(EXD.library.map(x=>[x.id,x]));const FOOD=new Map(FOODS.foods.map(f=>[f.fdcId,f]));
 const NAME=k=>(N[k]&&N[k].name)||({fiber:'Fiber',na:'Sodium',protein:'Protein',alcohol:'Alcohol'})[k]||k;
 // ---------- storage (local only)
@@ -56,15 +56,17 @@ function h(tag,attrs,...kids){const e=document.createElement(tag);for(const[k,v]
   for(const c of kids.flat(9)){if(c==null||c===false)continue;e.append(c instanceof Node?c:document.createTextNode(String(c)))}return e}
 const rc=(el,...k)=>el.replaceChildren(...k.flat(9).filter(x=>x!=null&&x!==false));
 // ---------- citations
-const AGE=c=>{if(!c.date)return['u','date unknown'];const y=(Date.now()-new Date(c.date.length===4?c.date+'-07-01':c.date.length===7?c.date+'-15':c.date))/3.15576e10;
-  return y<=5?['g','≤5 y']:y<=10?['y','5–10 y']:y<=15?['o','10–15 y']:['r','>15 y']};
+const AGE=c=>{if(!c.date)return['u','date unknown',0,'?'];const y=(Date.now()-new Date(c.date.length===4?c.date+'-07-01':c.date.length===7?c.date+'-15':c.date))/3.15576e10,yr=c.date.slice(0,4);
+  return y<=5?['g','≤5 y',4,yr]:y<=10?['y','5–10 y',3,yr]:y<=15?['o','10–15 y',2,yr]:['r','>15 y',1,yr]};
+const meter=n=>h('span',{cls:'fm','aria-hidden':'true'},...[1,2,3,4].map(i=>h('i',{cls:i<=n?'f':''})));
+const TIERLBL={1:'strongest',2:'strong',3:'moderate',4:'limited'};
 const TIERICON={1:'◆',2:'▲',3:'●',4:'○'};
-function chip(id){const c=CIT[id];if(!c)return null;const[a]=AGE(c);
-  return h('span',{cls:'cite age-'+a,role:'button',tabindex:0,title:c.title,on:{click:e=>{e.stopPropagation();showCite(id)}}},h('span',{cls:'dot'}),h('span',{cls:'tier'},TIERICON[c.tier]+'T'+c.tier),' ',c.pmid?'PMID':c.publisher.split(' ')[0].replace(/[,(]/g,''))}
-const chips=ids=>(ids||[]).map(chip);
+function chip(id){const c=CIT[id];if(!c)return null;const[a,al,n,yr]=AGE(c);const src=c.pmid?'PMID':c.publisher.split(' ')[0].replace(/[,(]/g,'');
+  return h('span',{cls:'cite',role:'button',tabindex:0,title:c.title,'aria-label':'Source '+src+', evidence tier '+c.tier+' ('+TIERLBL[c.tier]+'), '+(c.date?'published '+yr+', '+al+' old':'date unknown')+'. Tap for details.',on:{click:e=>{e.stopPropagation();showCite(id)},keydown:e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showCite(id)}}}},h('span',{cls:'src'},src),h('span',{cls:'yr'},yr+' · ',h('span',{cls:'tier tr'+c.tier},'T'+c.tier)),meter(n))}
+const chips=ids=>{ids=(ids||[]).filter(i=>CIT[i]);if(ids.length<3)return ids.map(chip);const m=h('span',{cls:'cite multi',role:'button',tabindex:0,'aria-label':ids.length+' sources. Tap to show them.',on:{click:e=>{e.stopPropagation();m.replaceWith(...ids.map(chip))}}},ids.length+' sources ▾');return [m]};
 const pop=document.getElementById('pop');
 function showCite(id){const c=CIT[id],[a,al]=AGE(c);pop.replaceChildren(
-  h('div',{cls:'flex'},h('span',{cls:'cite age-'+a},h('span',{cls:'dot'}),'Age: '+al+(c.date?' ('+c.date+')':'')),h('span',{cls:'cite'},TIERICON[c.tier]+' Tier '+c.tier)),
+  h('div',{cls:'flex'},h('span',{cls:'cite'},h('span',{cls:'yr'},'Age: '+al+(c.date?' ('+c.date+')':''),meter(AGE(c)[2]))),h('span',{cls:'cite'},h('span',{cls:'tier tr'+c.tier},'Tier '+c.tier),' '+TIERLBL[c.tier]+' evidence')),
   h('h3',{},c.title),h('div',{},c.publisher,' · ',c.type),...(c.pmid?[h('div',{},'PMID: '+c.pmid)]:[]),...(c.doi?[h('div',{},'DOI: '+c.doi)]:[]),
   h('div',{},'Tier rationale: ',c.tierRationale),h('div',{},'Retrieved: '+c.retrieved),
   h('div',{},h('a',{href:c.url,target:'_blank',rel:'noopener noreferrer'},c.url)),h('button',{cls:'btn',on:{click:()=>pop.classList.add('hidden')}},'Close'));pop.classList.remove('hidden')}
@@ -120,7 +122,7 @@ const SYM=new Map(SYMS.symptoms.map(x=>[x.id,x]));
 const daysAgo=d=>(new Date(today())-new Date(d))/864e5;
 const activeSyms=()=>[...new Set(S.symptoms.filter(e=>daysAgo(e.date)<=7).map(e=>e.sym))].map(i=>SYM.get(i)).filter(Boolean);
 // ---------- system colors (atlas-style)
-const SYSHUE={skeletal:0xf3e2a6,muscular:0xff6a55,nervous:0xffe03a,cardio:0xff3030,respiratory:0x6fd6ff,digestive:0xff9530,immune:0x46e07a,endocrine:0xb06bff,urinary:0x5cc8a8,reproductive:0xff7fc0,integumentary:0xffc9a8};
+const SYSHUE={skeletal:0xf3e2a6,muscular:0xff6a55,nervous:0xffe03a,cardio:0xff3030,respiratory:0x6fd6ff,digestive:0xff9530,immune:0x46e07a,endocrine:0xb06bff,urinary:0x5cc8a8,reproductive:0xff7fc0,integumentary:0xffc9a8,connective:0xd9cbb0};
 const partHue=id=>id==='blood'?0x3a66ff:SYSHUE[PARTS[id].system];
 const SYSLBL={cardio:'Cardio (arteries red / veins blue)'};
 // ---------- 3D
@@ -133,15 +135,15 @@ function applyView(){const v=S.view;buildTabs();body.setStyle(v.style);body.setS
   scan.classList.toggle('real',v.style==='real');scan.classList.toggle('holo',v.style!=='real');
   const sl=h('input',{type:'range',min:0,max:1,step:.05,value:v.skin,'aria-label':'Skin opacity',on:{input:e=>{v.skin=+e.target.value;body.setSkin(v.skin);save()}}});
   const vp=h('div',{cls:'vpop'+(UI.vopen?'':' hidden')},h('button',{cls:'chip'+(v.style==='real'?' on':''),on:{click:()=>{v.style=v.style==='real'?'holo':'real';save();applyView()}}},v.style==='real'?'Style: Realistic':'Style: Holographic'),
-    h('button',{cls:'chip'+(v.bySys?' on':''),on:{click:()=>{v.bySys=!v.bySys;save();applyView()}}},'Color by system: '+(v.bySys?'ON':'OFF')),h('select',{'aria-label':'Overlay',on:{change:e=>{v.overlay=e.target.value||null;save();refresh3d()}}},h('option',{value:''},'Overlay: none'),h('option',{value:'anti',selected:v.overlay==='anti'},'Overlay: Antioxidant (eyes)'),h('option',{value:'ex',selected:v.overlay==='ex'},'Overlay: Exercise muscles'),h('option',{value:'rec',selected:v.overlay==='rec'},'Overlay: Muscle recovery (estimate)'),h('option',{value:'onc',selected:v.overlay==='onc'},'Overlay: Cancer-link sites'),cycOn()?h('option',{value:'cycle',selected:v.overlay==='cycle'},'Overlay: Cycle phase'):null,S.spirit.on?h('option',{value:'spirit',selected:v.overlay==='spirit'},'Overlay: Spiritual'):null),
+    h('button',{cls:'chip'+(v.bySys?' on':''),on:{click:()=>{v.bySys=!v.bySys;save();applyView()}}},'Color by system: '+(v.bySys?'ON':'OFF')),h('select',{'aria-label':'Overlay',on:{change:e=>{v.overlay=e.target.value||null;save();refresh3d()}}},h('option',{value:''},'Overlay: none'),h('option',{value:'anti',selected:v.overlay==='anti'},'Overlay: Antioxidant (eyes)'),h('option',{value:'ex',selected:v.overlay==='ex'},'Overlay: Exercise muscles'),h('option',{value:'rec',selected:v.overlay==='rec'},'Overlay: Muscle recovery (estimate)'),h('option',{value:'onc',selected:v.overlay==='onc'},'Overlay: Cancer-link sites'),h('option',{value:'exp',selected:v.overlay==='exp'},'Overlay: My exposures'),cycOn()?h('option',{value:'cycle',selected:v.overlay==='cycle'},'Overlay: Cycle phase'):null,S.spirit.on?h('option',{value:'spirit',selected:v.overlay==='spirit'},'Overlay: Spiritual'):null),
     v.style==='real'?h('label',{cls:'chip'},'Skin ',sl):null);
-  const pp=h('div',{cls:'vpop ppop'+(UI.popen?'':' hidden')},profile());
+  const pp=h('div',{cls:'vpop ppop'+(UI.popen?'':' hidden')},h('button',{cls:'chip',on:{click:()=>{UI.popen=false;applyView();go('me')}}},'Open My profile ›'),profile());
   rc(vc,h('div',{cls:'flex vrow'},h('button',{cls:'chip vbtn','aria-expanded':String(!!UI.popen),on:{click:()=>{UI.popen=!UI.popen;UI.vopen=false;UI.aopen=false;applyView()}}},'👤 '+S.profile.sex+' '+AGES[S.profile.age]+' ▾'),h('button',{cls:'chip vbtn','aria-expanded':String(!!UI.vopen),on:{click:()=>{UI.vopen=!UI.vopen;UI.aopen=false;UI.popen=false;applyView()}}},'⚙ View ▾')),vp,pp);
   document.getElementById('ulbar')?.querySelector('.alist')?.classList.toggle('hidden',!UI.aopen);
-  sysleg.classList.toggle('hidden',!v.bySys);
-  rc(sysleg,h('button',{cls:'slh','aria-expanded':String(!UI.lcol),on:{click:()=>{UI.lcol=!UI.lcol;applyView()}}},'Systems '+(UI.lcol?'▸':'▾')),...(UI.lcol?[]:[...Object.entries(SYS).map(([sid,nm])=>h('span',{cls:'sl'},h('i',{style:{background:'#'+SYSHUE[sid].toString(16).padStart(6,'0')}}),SYSLBL[sid]||nm.split(' ')[0])),h('span',{cls:'sl'},h('i',{style:{background:'#3a66ff'}}),'Veins'),S.spirit.on?h('span',{cls:'sl',role:'button',tabindex:0,on:{click:()=>go('spir')}},h('i',{style:{background:'#ffd76a'}}),'Spiritual'):null,h('span',{cls:'sub'},'Brightness = score')]))}
+  sysleg.classList.remove('hidden');
+  rc(sysleg,h('button',{cls:'slh','aria-expanded':String(!UI.lcol),on:{click:()=>{UI.lcol=!UI.lcol;applyView()}}},'Systems '+(UI.lcol?'▸':'▾')),...(UI.lcol?[]:[h('button',{cls:'sl slq',on:{click:()=>{S.hidden=[];save();refresh3d();applyView()}}},'All'),h('button',{cls:'sl slq',on:{click:()=>{S.hidden=Object.keys(SYS);save();refresh3d();applyView()}}},'None'),...Object.entries(SYS).map(([sid,nm])=>h('button',{cls:'sl slt'+(S.hidden.includes(sid)?' off':''),'aria-pressed':String(!S.hidden.includes(sid)),title:'Show/hide '+nm,on:{click:()=>{S.hidden=S.hidden.includes(sid)?S.hidden.filter(x=>x!==sid):[...S.hidden,sid];save();refresh3d();applyView()}}},h('i',{style:{background:'#'+SYSHUE[sid].toString(16).padStart(6,'0')}}),SYSLBL[sid]||nm.split(' ')[0])),h('span',{cls:'sl'},h('i',{style:{background:'#3a66ff'}}),'Veins'),S.spirit.on?h('span',{cls:'sl',role:'button',tabindex:0,on:{click:()=>go('spir')}},h('i',{style:{background:'#ffd76a'}}),'Spiritual'):null,h('span',{cls:'sub'},'Tap to show/hide'+(v.bySys?' · brightness = score':''))]))}
 function closePanel(){panel.classList.add('hidden');body.setSelected(null)}
-function refresh3d(){const t=totals(),p=pcts(t),ps=partScores(p);const OV=S.view.overlay==='spirit'&&!S.spirit.on?null:S.view.overlay;body.setScores(OV?ovScores(OV,p):ps);body.setExercise&&body.setExercise(OV==='ex'?(UI.exSel?EXL.get(UI.exSel):weekHeat().sel):null);body.setRecovery&&body.setRecovery(OV==='rec'&&X19.recLevels?X19.recLevels().lv:null);{const lg=document.getElementById('legend3d');const ol=lg.querySelector('.ovl');if(ol)ol.remove();const os=lg.querySelector('.scrub');if(os)os.remove();if(OV==='rec'&&X19.recScrub)lg.append(X19.recScrub());if(OV)lg.append(h('span',{cls:'lg ovl ov-'+OV},({rec:X19.recLegend?X19.recLegend():'',anti:'antioxidant overlay',spirit:'spiritual overlay',cycle:'cycle phase overlay',ex:'exercise: primary / secondary',onc:'cancer-link sites (dark red, hatched) — hazard info, not risk'})[OV]))}body.setStripe&&body.setStripe(OV==='onc'?new Set(ovParts('onc')):null);body.setHues(OV?ovHues(OV):S.view.bySys?Object.fromEntries(Object.keys(PARTS).map(i=>[i,partHue(i)])):null);
+function refresh3d(){const t=totals(),p=pcts(t),ps=partScores(p);const OV=S.view.overlay==='spirit'&&!S.spirit.on?null:S.view.overlay;body.setScores(OV?ovScores(OV,p):ps);body.setExercise&&body.setExercise(OV==='ex'?(UI.exSel?EXL.get(UI.exSel):weekHeat().sel):null);body.setRecovery&&body.setRecovery(OV==='rec'&&X19.recLevels?X19.recLevels().lv:null);{const lg=document.getElementById('legend3d');const ol=lg.querySelector('.ovl');if(ol)ol.remove();const os=lg.querySelector('.scrub');if(os)os.remove();if(OV==='rec'&&X19.recScrub)lg.append(X19.recScrub());if(OV)lg.append(h('span',{cls:'lg ovl ov-'+OV},({rec:X19.recLegend?X19.recLegend():'',anti:'antioxidant overlay',spirit:'spiritual overlay',cycle:'cycle phase overlay',ex:'exercise: primary / secondary',onc:'cancer links (black) — hazard info, not your risk',exp:'exposures — areas your selected exposures can affect (educational)'})[OV]))}body.setStripe&&body.setStripe(OV==='onc'?new Set(ovParts('onc')):null);body.setHues(OV?ovHues(OV):S.view.bySys?Object.fromEntries(Object.keys(PARTS).map(i=>[i,partHue(i)])):null);
   const vis=new Set(Object.keys(PARTS).filter(i=>!S.hidden.includes(PARTS[i].system)));body.setVisible(vis);
   const mp=new Set(medObjs().flatMap(m=>m.parts.map(x=>x.part))),cp=new Set(condObjs().flatMap(c=>c.parts.map(x=>x.part)));body.setFlags(mp,cp,new Set(activeSyms().flatMap(x=>x.parts)));
   const ov=Object.keys(SYS).reduce((a,s)=>a+sysScore(s,ps),0)/Object.keys(SYS).length;
@@ -177,12 +179,12 @@ const pages=document.getElementById('pages'),scan=document.getElementById('scan'
 const TABS=[['scan','Scan'],['ex','Exercise'],['cell','Cellular'],['spir','Spiritual'],['cyc','Cycle'],['onc','Cancer links'],['log','Food log'],['meds','Meds'],['conds','Conditions'],['symp','Symptoms'],['nutr','Nutrients'],['src','Sources'],['set','Settings']];
 const GROUPS=[['body','Body',['scan']],['food','Food',['log','nutr']],['health','Health',['meds','conds','symp','onc']],['track','Track',['ex','cyc','spir']],['more','More',['cell','src','set']]];
 const ICON={'body': '<circle cx="12" cy="4.5" r="2.2"/><path d="M12 7.5v7M7 9.5l5 1.5 5-1.5M9.5 21l2.5-6.5 2.5 6.5"/>', 'food': '<path d="M7 3v8M5 3v5a2 2 0 0 0 4 0V3M7 11v10M16 3c-2 1.5-2.5 4-2.5 7h3v11"/>', 'health': '<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M9 11h6M12 8v6"/>', 'track': '<path d="M3 12h4l2-5 4 10 2-5h6"/>', 'more': '<circle cx="5" cy="12" r="1.4"/><circle cx="12" cy="12" r="1.4"/><circle cx="19" cy="12" r="1.4"/>'};
-const grpOf=t=>GROUPS.find(g=>g[2].includes(t))||GROUPS[0];const TLAB=Object.fromEntries(TABS);
+const grpOf=t=>{const p=GROUPS.find(g=>g[0]===PREFG);return p&&p[2].includes(t)?p:GROUPS.find(g=>g[2].includes(t))||GROUPS[0]};const TLAB=Object.fromEntries(TABS);
 function navIcon(k){const NS='http://www.w3.org/2000/svg',sv=document.createElementNS(NS,'svg');sv.setAttribute('viewBox','0 0 24 24');sv.setAttribute('aria-hidden','true');const tmp=new DOMParser().parseFromString('<svg xmlns="'+NS+'">'+ICON[k]+'</svg>','image/svg+xml').documentElement;for(const c of [...tmp.childNodes])sv.appendChild(document.importNode(c,true));return sv}
 function segbar(t){const g=grpOf(t),it=g[2].filter(x=>x!=='cyc'||cycOn());if(it.length<2)return null;return h('div',{cls:'seg',role:'tablist'},...it.map(x=>h('button',{cls:x===t?'on':'','data-s':x,role:'tab',on:{click:()=>go(x)}},TLAB[x])))}
 const LAST={};
 let tab='scan';
-function go(t){if(t!=='log'&&t!=='nutr')DAY=0;if(GROUPS.some(g=>g[0]===t))t=LAST[t]||grpOf_first(t);tab=t;const G=grpOf(t);LAST[G[0]]=t;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===G[0]));pop.classList.add('hidden');
+var PREFG=null;function go(t){if(GROUPS.some(g=>g[0]===t))PREFG=t;if(t!=='log'&&t!=='nutr')DAY=0;if(GROUPS.some(g=>g[0]===t))t=LAST[t]||grpOf_first(t);tab=t;const G=grpOf(t);PREFG=G[0];LAST[G[0]]=t;document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===G[0]));pop.classList.add('hidden');
   if(t==='scan'){pages.classList.add('hidden');scan.classList.remove('hidden');body.pause(false);refresh3d()}else{scan.classList.add('hidden');pages.classList.remove('hidden');body.pause(true);rc(pages,...[segbar(t),...RENDER[t]()].filter(Boolean));pages.scrollTop=0}}
 function grpOf_first(k){const g=GROUPS.find(x=>x[0]===k);return g[2][0]}
 const cycOn=()=>S.profile.sex==='F'||S.cycle.show;
@@ -212,7 +214,7 @@ function canFlags(){const out=[],L=log();for(const it of L){const nm=(FOOD.get(i
 function ovParts(o){if(o==='onc'){const f=canFlags(),s=new Set(f.flatMap(x=>x.e.parts));return s.size?[...s]:[...new Set([...CAN.foods,...CAN.meds].flatMap(x=>x.parts))]}if(o==='ex'||o==='rec')return ['muscles'];if(o==='cycle')return ['reproductive','glands','thyroid'];return o==='anti'?CELL.overlay.map(x=>x.part):[...new Set(SPIR.findings.flatMap(f=>f.parts))]}
 function spirToday(){return S.spirit.logs[today()]||(S.spirit.logs[today()]={})}
 function ovScores(o,p){const s={},ps=ovParts(o);if(o==='onc'){for(const id in PARTS)s[id]=ps.includes(id)?70:4;return s}if(o==='ex'||o==='rec'){for(const id in PARTS)s[id]=id==='muscles'?28:id==='bones'?14:3;return s}if(o==='cycle'){const c=cycStat(),w={menstrual:[90,35],follicular:[55,75],ovulatory:[80,100],luteal:[60,85]}[c.phase]||[30,30];for(const id in PARTS)s[id]=id==='reproductive'?w[0]:ps.includes(id)?w[1]:4;return s}const v=o==='anti'?antiScore(p):Math.min(100,25*Object.values(spirToday()).filter(Boolean).length+20);for(const id in PARTS)s[id]=ps.includes(id)?v:4;return s}
-function ovHues(o){const ps=ovParts(o);if(o==='onc')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,ps.includes(i)?0x9b1b30:0x30384a]));if(o==='ex'||o==='rec')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,i==='muscles'?0x5a3a3a:0x30384a]));if(o==='cycle')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,i==='reproductive'?0xff5fa8:ps.includes(i)?0xb06bff:0x30384a]));return Object.fromEntries(Object.keys(PARTS).map(i=>[i,ps.includes(i)?(o==='anti'?0x6ff7ff:(i==='heart'||i==='vessels'?0xfff1c4:0xffd76a)):0x30384a]))}
+function ovHues(o){const ps=ovParts(o);if(o==='onc')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,ps.includes(i)?0x101010:0xb8bec8]));if(o==='ex'||o==='rec')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,i==='muscles'?0x5a3a3a:0x30384a]));if(o==='cycle')return Object.fromEntries(Object.keys(PARTS).map(i=>[i,i==='reproductive'?0xff5fa8:ps.includes(i)?0xb06bff:0x30384a]));return Object.fromEntries(Object.keys(PARTS).map(i=>[i,ps.includes(i)?(o==='anti'?0x6ff7ff:(i==='heart'||i==='vessels'?0xfff1c4:0xffd76a)):0x30384a]))}
 const SVGNS='http://www.w3.org/2000/svg';
 function sv(tag,at,...k){const e=document.createElementNS(SVGNS,tag);for(const[a,v]of Object.entries(at||{}))e.setAttribute(a,v);e.append(...k);return e}
 function cellSvg(sc){const g=(sc/100);
@@ -263,7 +265,7 @@ onc(){const F=canFlags(),G=CAN.groups;const grp=g=>g?h('span',{cls:'tag'},'IARC 
     h('div',{},chips(e.cites)));
   return [h('h2',{},'Cancer-link flags'),h('div',{cls:'sub'},CAN.disclaimer),
    h('div',{cls:'ev'},h('b',{},'What an IARC group means: '),'“'+CAN.meaning+'” ',CAN.meaning2?'“'+CAN.meaning2+'” ':'',chips(['iarc-qa','iarc-qa114'])),h('div',{cls:'sub'},CAN.wcrfNote),
-   h('div',{cls:'flex'},h('button',{cls:'chip'+(S.view.overlay==='onc'?' on':''),on:{click:()=>{S.view.overlay=S.view.overlay==='onc'?null:'onc';save();go('scan')}}},S.view.overlay==='onc'?'Hide cancer-site overlay':'Show cancer sites on body (dark red, hatched)')),
+   h('div',{cls:'flex'},h('button',{cls:'chip'+(S.view.overlay==='onc'?' on':''),on:{click:()=>{S.view.overlay=S.view.overlay==='onc'?null:'onc';save();go('scan')}}},S.view.overlay==='onc'?'Hide cancer-site overlay':'Show cancer sites on body (black)')),
    h('h3',{},'From today’s log and your meds ('+F.length+')'),...(F.length?F.map(x=>h('div',{},h('div',{cls:'sub'},x.kind==='med'?'Med in your list':x.kind==='prep'?'Preparation: '+x.nm.split(',').slice(0,2).join(',')+(x.pr&&x.pr!=='asis'?' ('+VB(x.pr)+')':''):'Logged food: '+x.nm.split(',').slice(0,2).join(',')),card(x.e,x.kind))):[h('div',{cls:'sub'},'Nothing flagged today.')]),
    h('h3',{},'Foods (reference)'),...CAN.foods.map(e=>card(e,'food')),h('h3',{},'Preparation methods'),...CAN.prep.map(e=>card(e,'prep')),
    h('h3',{},'Medicines (FDA label warnings; IARC where classified)'),h('div',{cls:'sub'},'Only meds in your list are flagged. The others are shown as reference. '+CAN.medNote),...CAN.meds.map(e=>card(e,'med'))]},
@@ -283,9 +285,9 @@ symp(){const groups=[...new Set(SYMS.symptoms.map(x=>x.group))];let cur=null;con
 log(){let q='';const res=h('div',{cls:'list results'}),cur=h('div',{cls:'list'}),snack=h('div',{cls:'snack hidden',role:'status'});let undoT=0;
    const short=(n,id)=>{if(id&&SHORTN[id])return SHORTN[id];const PR=id&&FOOD.get(id);if(PR&&PR.short)return PR.short.length>40?PR.short.slice(0,38)+'…':PR.short;const P=n.split(',').map(x=>x.trim());const skip=/^(raw|cooked|fresh|frozen|canned|all varieties|regular|commercial)$/i;let t=P[0];if(P[1]&&!skip.test(P[1]))t+=', '+P[1].toLowerCase();return t.length>34?t.slice(0,32)+'…':t};
    const fixT=x=>String(x).replace(/(\d)\s*o\s*F\b/g,'$1 °F').replace(/(\d)\s*o\s*C\b/g,'$1 °C');
-   const draw=()=>{const toks=q.toLowerCase().split(/\s+/).filter(Boolean);const r=toks.length?FOODS.foods.filter(f=>!f.variant&&toks.every(t=>f.name.toLowerCase().includes(t))).slice(0,30):[];
-     res.replaceChildren(...(toks.length&&!r.length?[h('div',{cls:'sub'},'No matching foods.')]:[]),...r.map(f=>{const sel=h('select',{'aria-label':'Portion'},h('option',{value:100},'100 g'),...f.portions.map(p=>h('option',{value:p.g},p.label+' ('+Math.round(p.g)+' g)')));const qty=h('input',{type:'number','aria-label':'Quantity',value:1,min:0.25,step:0.25,cls:'qty'});const PP=PREP.prep[f.fdcId];const ps=PP?h('select',{'aria-label':'Preparation',cls:'prepsel'},...PP.map(p=>h('option',{value:p.id},(p.id==='raw'||p.id==='asis'?'Prep: ':'')+MLBL(p.id)+(p.mode==='entry'?' (USDA entry)':p.mode==='rf'?' (USDA retention)':p.mode==='none'?' (no USDA data)':'')))):null;
-       return h('div',{cls:'res'},h('div',{cls:'fname'},short(f.name,f.fdcId)),h('div',{cls:'full'},f.name+' · FDC '+f.fdcId),h('div',{cls:'addrow'},qty,h('span',{cls:'sub'},'×'),sel),ps?h('div',{},ps):null,h('button',{cls:'btn primary',on:{click:()=>{const g=+sel.value*+qty.value;if(!(g>0))return;log().push({fdcId:f.fdcId,grams:g,label:sel.selectedOptions[0].textContent+' ×'+qty.value,prep:ps?ps.value:'asis'});save();drawCur()}}},'Add to log'))}));};
+   const draw=()=>{const toks=q.toLowerCase().split(/\s+/).filter(Boolean);const r=toks.length?[...Object.values(S.products).filter(f=>f.custom&&toks.every(t=>f.name.toLowerCase().includes(t))),...FOODS.foods].filter(f=>!f.variant&&toks.every(t=>f.name.toLowerCase().includes(t))).slice(0,30):[];
+     res.replaceChildren(...(toks.length&&!r.length?[h('div',{cls:'sub'},'No matching foods in the offline list.')]:[]),...r.map(f=>{const sel=h('select',{'aria-label':'Portion'},h('option',{value:100},'100 g'),...f.portions.map(p=>h('option',{value:p.g},p.label+' ('+Math.round(p.g)+' g)')));const qty=h('input',{type:'number','aria-label':'Quantity',value:1,min:0.25,step:0.25,cls:'qty'});const PP=PREP.prep[f.fdcId];const ps=PP?h('select',{'aria-label':'Preparation',cls:'prepsel'},...PP.map(p=>h('option',{value:p.id},(p.id==='raw'||p.id==='asis'?'Prep: ':'')+MLBL(p.id)+(p.mode==='entry'?' (USDA entry)':p.mode==='rf'?' (USDA retention)':p.mode==='none'?' (no USDA data)':'')))):null;
+       return h('div',{cls:'res'},h('div',{cls:'fname'},short(f.name,f.fdcId)),h('div',{cls:'full'},f.name+(f.custom?(String(f.fdcId).startsWith('custom')?' · your custom food':' · saved from online search'):' · FDC '+f.fdcId)),h('div',{cls:'addrow'},qty,h('span',{cls:'sub'},'×'),sel),ps?h('div',{},ps):null,h('button',{cls:'btn primary',on:{click:()=>{const g=+sel.value*+qty.value;if(!(g>0))return;log().push({fdcId:f.fdcId,grams:g,label:sel.selectedOptions[0].textContent+' ×'+qty.value,prep:ps?ps.value:'asis'});save();drawCur()}}},'Add to log'))}));};
    const NT=h('div');
    const drawCur=()=>{NT.replaceChildren(nutSummary());const L=log();cur.replaceChildren(...(L.length?[]:[h('div',{cls:'empty'},'Nothing logged for this day yet. Search above to add a food.')]),...L.map((it,i)=>{const{n,p}=itemNut(it);const dt=deltaTxt(it,4);const ef=effectsFor(it);const nm=FOOD.get(it.fdcId)?.name||'?',snm=short(nm,it.fdcId);
      const saf={},oth=[];for(const e of ef){if(e.kind==='safety'){const k=e.title;(saf[k]||(saf[k]={title:e.title,ev:[],cites:new Set(),parts:new Set()}));if(!saf[k].ev.includes(e.evidence))saf[k].ev.push(e.evidence);e.cites.forEach(c=>saf[k].cites.add(c));e.parts.forEach(x=>saf[k].parts.add(x))}else oth.push(e)}
@@ -301,8 +303,8 @@ log(){let q='';const res=h('div',{cls:'list results'}),cur=h('div',{cls:'list'})
    drawCur();
    const dd=dayDate(),lbl=(DAY===0?'Today, ':DAY===1?'Yesterday, ':'')+dd.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});
    const nav=h('div',{cls:'daynav'},h('button',{cls:'icon-btn','aria-label':'Previous day',on:{click:()=>{DAY++;go('log')}}},'‹'),h('div',{cls:'dlbl'},lbl),h('button',{cls:'icon-btn','aria-label':'Next day',disabled:DAY===0?true:null,on:{click:()=>{if(DAY>0){DAY--;go('log')}}}},'›'));
-   return[h('div',{cls:'ptitle'},'Food log'),nav,
-     h('div',{cls:'card addcard'},h('h3',{},'Add food'),h('input',{type:'search','aria-label':'Search foods',placeholder:'Search foods (e.g. salmon, spinach)',cls:'search',on:{input:e=>{q=e.target.value;draw()}}}),res,
+   return[h('div',{cls:'ptitle'},'Food log'),nav,macroMini(),
+     h('div',{cls:'card addcard'},h('h3',{},'Add food'),h('input',{type:'search','aria-label':'Search foods',placeholder:'Search foods (e.g. salmon, spinach)',cls:'search',on:{input:e=>{q=e.target.value;draw();const t=q.trim();if(t&&res.querySelectorAll('.res').length<3)res.append(onlineBox(t,()=>{drawCur()}))}}}),res,
        h('div',{cls:'flex scanrow'},h('button',{cls:'btn',on:{click:()=>openScanner(()=>go('log'),()=>document.querySelector('.addcard .search')?.focus())}},'▥ Scan barcode'),h('button',{cls:'btn ghost',on:{click:()=>X19.ocrFlow('nut')}},'📷 Read Nutrition Facts')),
        h('div',{cls:'sub'},'Search: USDA FoodData Central SR Legacy (public domain), bundled offline. Barcodes: optional online USDA Branded Foods lookup. ',chip('usda-fdc'))),
      h('h3',{},DAY===0?'Logged today':'Logged'),cur,
@@ -436,22 +438,31 @@ src(){let sort='tier',ft='all',fa='all';const box=h('div',{});
     h('h3',{},'Method'),h('div',{cls:'sub'},'Food values: USDA FoodData Central SR Legacy (per 100 g). Targets: National Academies DRIs (RDA, or AI where no RDA) for your sex/age band, with pregnancy values when selected; ULs flag intake above the Tolerable Upper Intake Level. Nutrient % is capped at 100. A body part’s score is the weighted average of capped % for nutrients linked to it; a system’s score is the average of its parts. Each nutrient→body-part link was made only when an NIH ODS Health Professional fact sheet sentence mentions that part; the sentence is quoted with its citations. Medication and condition data are quoted from FDA labels, NIH ODS, NIH institute and MedlinePlus pages; claims without a retrievable source were left out.'),
     h('h3',{},'Cooking & preparation method'),h('div',{cls:'sub'},'When a food is logged with a preparation, the app uses the actual USDA SR Legacy cooked entry if one exists (grams = cooked weight); otherwise it applies the USDA Table of Nutrient Retention Factors, Release 6 (2007) for that food group and method (grams = raw weight). Nutrients without a retention factor (e.g. vitamins D, E, K, selenium) are left unchanged. Bioavailability notes (beta-carotene, lycopene, oxalate, phytate, heat-labile vitamins) and food-safety notes (FDA) are shown only where a retrieved source sentence supports them. ',chip('usda-retn6')),
     h('h3',{},'Symptoms method'),h('div',{cls:'sub'},'Each symptom link is a sentence quoted from a retrieved source: NIH ODS fact-sheet “deficiency” and “health risks from excessive intake” sections, the “adverse reactions” section of FDA labels (openFDA/DailyMed), and MedlinePlus/NIDDK/NHLBI symptom pages. Links without a matching source sentence are dropped. Red-flag guidance cites MedlinePlus. Wording is “possibly associated with”; nothing here is a diagnosis.'),
-    h('h3',{},'Legend'),h('div',{cls:'sub'},'Age (publication/last-updated date from the source): ',...[['g','≤5 years'],['y','5–10'],['o','10–15'],['r','>15'],['u','unknown']].map(([a,l])=>h('span',{cls:'cite age-'+a},h('span',{cls:'dot'}),l))),
+    h('h3',{},'Legend'),h('div',{cls:'sub badgekey'},'Each small gray badge reads: source · year · tier (e.g. “NIH 2021 · T2”). Tap any badge for the full title, publisher, link, age and tier. 3 or more sources collapse into one “N sources” chip — tap to expand. The year is when the source was published or last updated; the 4 tiny bars show freshness (4 = ≤5 years, 3 = 5–10, 2 = 10–15, 1 = >15, ? = unknown). Tier T1–T4 is shown in blue-slate text: darker = stronger evidence. Badge colors never mean good or bad for your body — that is only the green coverage ring and red/amber body ramps.'),
+    h('div',{cls:'sub'},'Freshness: ',...[[4,'≤5 y'],[3,'5–10 y'],[2,'10–15 y'],[1,'>15 y'],[0,'unknown']].map(([n,l])=>h('span',{cls:'cite'},h('span',{cls:'yr'},n?'':'?',meter(n)),' '+l))),
+    h('div',{cls:'sub'},'Tier: ',...[1,2,3,4].map(t=>h('span',{cls:'cite'},h('span',{cls:'tier tr'+t},'T'+t),' '+TIERLBL[t]))),
     h('div',{cls:'sub'},'Reliability tier: ◆T1 official guidelines, FDA labeling, systematic reviews/meta-analyses · ▲T2 RCTs and authoritative government summaries (NIH ODS, MedlinePlus) · ●T3 observational/cohort studies · ○T4 case reports, narrative reviews, mechanistic/animal studies, expert opinion, or unclassified journal articles. PubMed tiers use PubMed publication types.'),
     h('div',{cls:'flex'},'Sort',s([['tier','by tier'],['age','by age']],v=>sort=v),'Tier',s([['all','all'],['1','T1'],['2','T2'],['3','T3'],['4','T4']],v=>ft=v),'Age',s([['all','all'],['g','≤5y'],['y','5–10'],['o','10–15'],['r','>15'],['u','unknown']],v=>fa=v)),box,
     h('h3',{},'Profile'),profile(),
-    h('h3',{},'Privacy'),h('div',{cls:'sub'},'Everything stays on this device (localStorage). No accounts, analytics, cookies or trackers. The only third-party calls are optional barcode lookups you turn on (USDA api.nal.usda.gov; Open Food Facts only when you tap it), which send just the barcode number; a Content-Security-Policy blocks all other origins.'),
+    h('h3',{},'Privacy'),h('div',{cls:'sub'},'Everything stays on this device (localStorage). No accounts, analytics, cookies or trackers. The only third-party calls are optional barcode lookups and online food searches you turn on (USDA api.nal.usda.gov; Open Food Facts only when you tap it), which send just the search text or barcode number; a Content-Security-Policy blocks all other origins.'),
     h('button',{cls:'btn danger',on:{click:()=>{if(confirm('Delete all your Mosaic Bond data from this device?')){localStorage.removeItem(KEY);location.reload()}}}},'Delete all my data'),
     h('h3',{},'3D model & software licenses'),...MODEL.items.map(x=>h('div',{cls:'item'},h('b',{},x.name),h('div',{cls:'sub'},x.attribution),h('div',{cls:'sub'},'License: '+x.license),h('a',{href:x.url,target:'_blank',rel:'noopener noreferrer'},x.url),x.note?h('div',{cls:'sub'},x.note):null))]}};
 function nutSummary(){const t=totals(),p=pcts(t);return h('div',{cls:'nsum'},...Object.keys(DRI).map(k=>{const over=ul(k)&&(t[k]||0)>ul(k);return h('div',{cls:'nrow'},h('div',{cls:'nl'},h('span',{},NAME(k)),h('span',{cls:'nv'},fmt(t[k]||0,k)+' · '+Math.round(p[k]||0)+'%'+(over?(/supplement/i.test(DRI[k].ulNote||'')?' (UL is for supplements only)':' ⚠ above UL'):''))),bar(p[k]||0))}))}
 function nutTable(){const t=totals(),p=pcts(t);return h('div',{},...Object.keys(DRI).map(k=>h('div',{},h('div',{cls:'row'},h('span',{},NAME(k)),h('span',{},fmt(t[k]||0,k)+' · '+Math.round(p[k]||0)+'%'+(ul(k)&&(t[k]||0)>ul(k)?(/supplement/i.test(DRI[k].ulNote||'')?' (UL is for supplements only)':' ⚠UL'):''))),bar(p[k]||0))))}
 function condLinksForMed(mid){return condObjs().flatMap(c=>c.medLinks.filter(l=>l.med===mid).map(l=>h('div',{cls:'alert'},'Linked to your condition '+c.name+': “'+l.evidence+'” ',chips(l.cites))))}
-function profile(){const pr=S.profile;const ch=()=>{save();applyProfile()};
+// v20: age (years) from date of birth -> DRI age band index
+function dobAge(d){if(!d||!/^\d{4}-\d{2}-\d{2}$/.test(d))return null;const b=new Date(d+'T12:00:00'),n=new Date();if(isNaN(b)||b>n)return null;let y=n.getFullYear()-b.getFullYear();if(n.getMonth()<b.getMonth()||(n.getMonth()===b.getMonth()&&n.getDate()<b.getDate()))y--;return y}
+const bandOf=y=>y<4?0:y<9?1:y<14?2:y<19?3:y<31?4:y<51?5:y<71?6:7;
+function syncDob(){const y=dobAge(S.profile.dob);if(y!=null)S.profile.age=bandOf(y);return y}
+function profile(){const pr=S.profile;const ch=()=>{save();applyProfile()};const ay=syncDob();
+  const nm=h('input',{type:'text',cls:'search','aria-label':'Name',placeholder:'Your name (optional)',maxlength:'40',autocomplete:'given-name',value:pr.name||'',style:{maxWidth:'220px'}});nm.addEventListener('change',()=>{pr.name=nm.value.trim().slice(0,40);save();buildTabs();if(tab==='me')go('me')});
+  const db=h('input',{type:'date','aria-label':'Date of birth',value:pr.dob||'',max:new Date().toISOString().slice(0,10)});db.addEventListener('change',()=>{pr.dob=db.value||'';syncDob();ch();applyView();if(tab==='me')go('me');else if(tab==='set')go('set')});
   const sel=(lbl,opts,val,f)=>h('label',{cls:'pf'},lbl,' ',h('select',{'aria-label':lbl,on:{change:e=>{f(e.target.value);ch()}}},...opts.map(([v,l])=>h('option',{value:v,selected:String(val)===String(v)},l))));
   const lb=pr.unit==='lb';const num=(lbl,val,f,st)=>h('label',{cls:'pf'},lbl,' ',h('input',{type:'number','aria-label':lbl,value:val,step:st,style:{width:'58px'},on:{change:e=>{const v=+e.target.value;if(v>0){f(v);ch()}}}}));
   const ft=Math.floor(pr.hcm/2.54/12),inch=Math.round(pr.hcm/2.54-ft*12);const b=bmi();
   return h('div',{cls:'prof'},
-    h('div',{cls:'flex'},sel('Sex',[['F','Female'],['M','Male']],pr.sex,v=>pr.sex=v),sel('Age',AGES.map((a,i)=>[i,a]),pr.age,v=>pr.age=+v),
+    h('div',{cls:'flex'},h('label',{cls:'pf'},'Name ',nm),h('label',{cls:'pf'},'Date of birth ',db),ay!=null?h('span',{cls:'sub'},'Age '+ay+(ay<1?' (infant DRIs are not covered; using 1–3)':'')):null),
+    h('div',{cls:'flex'},sel('Sex',[['F','Female'],['M','Male']],pr.sex,v=>pr.sex=v),ay!=null?h('span',{cls:'pf'},'Age group '+AGES[pr.age]+' (from date of birth)'):sel('Age',AGES.map((a,i)=>[i,a]),pr.age,v=>pr.age=+v),
       pr.sex==='F'&&pr.age>=3&&pr.age<=5?sel('Life stage',[['none','—'],['preg','Pregnant'],['lact','Lactating']],pr.life,v=>pr.life=v):null,pr.sex==='M'?h('label',{cls:'pf'},h('input',{type:'checkbox',checked:!!S.cycle.show,on:{change:e=>{S.cycle.show=e.target.checked;save();applyView()}}}),' Show Cycle tab'):null),
     h('div',{cls:'flex'},lb?[num('Height ft',ft,v=>pr.hcm=(v*12+inch)*2.54,1),num('in',inch,v=>pr.hcm=(ft*12+v)*2.54,1)]:num('Height cm',Math.round(pr.hcm),v=>pr.hcm=v,1),
       num(lb?'Weight lb':'Weight kg',lb?Math.round(pr.wkg*2.2046):Math.round(pr.wkg*10)/10,v=>pr.wkg=lb?v/2.2046:v,lb?1:.5),
@@ -460,7 +471,7 @@ function profile(){const pr=S.profile;const ch=()=>{save();applyProfile()};
     h('div',{cls:'sub'},'Protein: '+(proteinT()?Math.round(proteinT())+' g/day ('+(pr.age===3?'0.85':'0.8')+' g/kg × '+Math.round(pr.wkg)+' kg; RDA)':'no weight-based target shown for this age/life stage')+' ',chips(['ods-exercise'])),
     h('div',{cls:'sub'},'BMI '+b.toFixed(1)+(pr.age>=4?' · NHLBI adult category: “'+BMINAME(b)+'” ('+BMICAT(b)+')':' · for people under 20, BMI is read against age- and sex-specific growth-chart percentiles, which this app does not compute')+'. BMI is a screening number; it “doesn’t take into account your muscle mass, bone density, or body composition.” ',chips(['nhlbi-bmi'])),
     h('div',{cls:'sub'},'3D body: height, head-to-body ratio (age) and skin-shell girth (BMI) are a visual approximation. Internal anatomy is one adult male (Z-Anatomy/BodyParts3D) and is not age- or weight-specific. Female view: uterus, cervix, vagina, fallopian tubes and ovaries are real meshes from the Visible Human Female (HuBMAP HRA), scaled to fit; the pelvis stays male and breast shape is approximate.'))}
-function applyProfile(){const pr=S.profile;const REF=pr.sex==='M'?175:162;const HF=[.2,.167,.154,.139,.133,.133,.133,.133];
+function applyProfile(){syncDob();const pr=S.profile;const REF=pr.sex==='M'?175:162;const HF=[.2,.167,.154,.139,.133,.133,.133,.133];
   body.setMorph({sex:pr.sex,stature:Math.min(1.25,Math.max(.4,pr.hcm/REF*(pr.age<4?1:1))),headFrac:HF[pr.age],bmi:bmi()});
   applyView();if(typeof go==='function'&&tab)go(tab)}
 // ---------- first launch
@@ -471,13 +482,82 @@ const X19={};
 Object.assign(X19,{h,rc,chips,S,save,today,go,body,PARTS,EXL,EXD,DISC,NAME,fmt,ul,DRI,medObjs,MEDS,P,preg,CIT,V:V19,weekProg,cycOn,cycStat,FOOD,log,totals:()=>totals(),refresh:()=>refresh3d()});
 Object.assign(RENDER,install19(X19));
 TABS.push(['act','Activity'],['sleep','Sleep'],['rec','Recovery'],['hyd','Hydration'],['supp','Supplements'],['labs','Labs'],['mood','Mood'],['caf','Caffeine & alcohol'],['ah','Apple Health']);
-for(const t of TABS)TLAB[t[0]]=t[1];
-GROUPS.splice(0,GROUPS.length,['body','Body',['scan']],['food','Food',['log','nutr','hyd','caf','supp']],['health','Health',['labs','meds','conds','symp','onc']],['track','Track',['act','sleep','rec','ex','cyc','mood','spir']],['more','More',['cell','ah','src','set']]);
+TABS.push(['me','My profile'],['macro','Macros'],['learn','Learn']);for(const t of TABS)TLAB[t[0]]=t[1];
+GROUPS.splice(0,GROUPS.length,['body','Body',['scan']],['food','Food',['log','macro','nutr','hyd','caf','supp']],['health','Health',['labs','meds','conds','symp','onc']],['track','Track',['act','sleep','rec','labs','ex','cyc','mood','spir']],['more','More',['me','learn','cell','ah','src','set']]);
 buildTabs();
 go("scan");firstLaunch();X19.hashImport&&X19.hashImport();
 if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+// ---------- v20 plain language: "In plain words" lines (data/plain.json), tap-to-explain glossary, Learn section, SOD
+const plainOn=()=>S.view.plain!==false;
+const GL=PL.glossary,GKEYS=Object.keys(GL).sort((x,y)=>y.length-x.length);
+const GRE=new RegExp('(?<![\\w-])('+GKEYS.map(k=>k.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+(/^[A-Z0-9]+$/.test(k)?'':'(?:e?s)?')).join('|')+')(?![\\w-])','gi');
+const gkey=m=>{if(GL[m])return m;const l=m.toLowerCase();for(const k of GKEYS){if(/^[A-Z0-9]+$/.test(k)){if(m===k)return k;continue}if(l===k.toLowerCase()||l===k.toLowerCase()+'s'||l===k.toLowerCase()+'es')return k}return null};
+const PKEYS=Object.keys(PL.plain);
+function plainFor(q){q=q.trim();if(PL.plain[q])return[PL.plain[q]];return PKEYS.filter(k=>k.length>30&&q.includes(k)).map(k=>PL.plain[k])}
+function enhance(root){if(!root)return;
+  if(plainOn())for(const el of root.querySelectorAll('.ev,.sub,.warn,.disc')){if(el.dataset.pl)continue;el.dataset.pl=1;const cl=el.cloneNode(true);cl.querySelectorAll('.ev,.sub,.warn,.disc,.plain').forEach(c=>c.remove());const t=cl.textContent;const out=[];for(const m of t.matchAll(/“([^”]{20,})”/g))for(const p of plainFor(m[1]))if(!out.includes(p))out.push(p);
+    if(out.length)el.append(h('div',{cls:'plain'},h('b',{},'In plain words: '),out.join(' ')))}
+  const seen=new Set();const W=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||p.closest('button,a,input,select,textarea,option,svg,.gl,.cite,.chip,.ptitle,h2,label,#glpop,.nogl'))return NodeFilter.FILTER_REJECT;return n.nodeValue.length>1?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP}});
+  const nodes=[];while(W.nextNode())nodes.push(W.currentNode);
+  for(const n of nodes){const s=n.nodeValue;GRE.lastIndex=0;let m,last=0,frag=null;
+    while((m=GRE.exec(s))){const k=gkey(m[1]);if(!k||seen.has(k))continue;seen.add(k);frag=frag||document.createDocumentFragment();frag.append(s.slice(last,m.index),h('abbr',{cls:'gl',tabindex:0,role:'button','data-g':k,title:GL[k][0]},m[1]));last=m.index+m[1].length}
+    if(frag){frag.append(s.slice(last));n.replaceWith(frag)}}}
+const glpop=h('div',{id:'glpop',cls:'hidden',role:'dialog'});document.body.append(glpop);
+function showGl(el){const k=el.dataset.g,g=GL[k];if(!g)return;rc(glpop,h('b',{},g[0]+(g[0].toLowerCase()!==k.toLowerCase()?' ('+k+')':'')),h('div',{},g[1]),h('div',{cls:'flex'},h('button',{cls:'chip',on:{click:()=>{glpop.classList.add('hidden');UI.lq=k;go('learn')}}},'Glossary ›'),h('button',{cls:'chip',on:{click:()=>glpop.classList.add('hidden')}},'Close')));
+  glpop.classList.remove('hidden');const r=el.getBoundingClientRect(),W=innerWidth;glpop.style.left=Math.max(8,Math.min(W-288,r.left-20))+'px';const below=r.bottom+8,ph=glpop.offsetHeight;glpop.style.top=(below+ph>innerHeight-8?Math.max(8,r.top-ph-8):below)+'px'}
+document.addEventListener('click',e=>{const g=e.target.closest&&e.target.closest('abbr.gl');if(g){e.preventDefault();e.stopPropagation();showGl(g);return}if(!e.target.closest('#glpop'))glpop.classList.add('hidden')},true);
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&e.target.matches&&e.target.matches('abbr.gl'))showGl(e.target)});
+for(const id of['pages','panel']){const el=document.getElementById(id);if(!el)continue;let q=0;const mo=new MutationObserver(()=>{if(q)return;q=requestAnimationFrame(()=>{q=0;mo.disconnect();try{enhance(el)}finally{mo.observe(el,{childList:true,subtree:true})}})});mo.observe(el,{childList:true,subtree:true})}
+function sodCard(){const s=PL.sod,f=s.evidence.filter(e=>e.form);return h('div',{cls:'ev sodcard'},h('b',{},'SOD (superoxide dismutase) — an antioxidant enzyme your body makes'),
+  ...s.evidence.filter(e=>!e.form).slice(0,2).map(e=>h('div',{cls:'sub'},'“'+e.q+'” ',chips(e.cites))),
+  h('div',{cls:'sodforms'},...f.map(e=>h('div',{cls:'sodf'},h('b',{},e.form),h('div',{cls:'sub'},'“'+e.q+'” ',chips(e.cites))))),
+  h('div',{cls:'sub'},'Nutrient cofactors: ',...Object.entries(s.nutrients).map(([k,v])=>h('button',{cls:'chip',on:{click:()=>go('nutr')}},NAME(k)+' → '+v))),
+  h('div',{cls:'sub'},'“'+s.evidence[5].q+'” ',chips(s.evidence[5].cites)))}
+{const oc=RENDER.cell;RENDER.cell=function(){const out=oc.call(this);const i=out.findIndex(e=>e&&e.textContent&&e.textContent.startsWith('Carotenoids:'));out.splice(i<0?out.length-1:i,0,sodCard());return out}}
+{const on=RENDER.nutr;RENDER.nutr=function(){const out=on.call(this);for(const el of out){const b=el&&el.querySelector&&el.querySelector('.row b');if(!b)continue;const k=Object.keys(PL.sod.nutrients).find(k=>N[k]&&N[k].name===b.textContent);
+  if(k)el.append(h('div',{cls:'ev'},h('b',{},'Cofactor for SOD: '),'needed by '+PL.sod.nutrients[k]+', an antioxidant enzyme. “'+PL.sod.evidence[k==='mn'?3:2].q+'” ',chips(['pmid-29669742']),' ',h('button',{cls:'chip',on:{click:()=>go('cell')}},'SOD in Cellular ›')))}return out}}
+{const os=RENDER.set;RENDER.set=function(){const out=os.call(this);const i=out.findIndex(e=>e&&e.textContent==='Profile');out.splice(i<0?3:i,0,h('h3',{},'Reading help'),h('div',{cls:'flex'},...[['on','Show plain-language explanations'],['off','Hide']].map(([v,l])=>h('button',{cls:'chip'+((plainOn()?'on':'off')===v?' on':''),on:{click:()=>{S.view.plain=v==='on';save();go('set')}}},l))),h('div',{cls:'sub'},'Adds an “In plain words” line under quoted sources. Underlined terms can be tapped for a definition either way.'));return out}}
+RENDER.learn=()=>{const q=h('input',{type:'search',cls:'search nogl','aria-label':'Search Learn and glossary',placeholder:'Search terms and topics (e.g. ROS, UL, SOD)',value:UI.lq||''});const box=h('div',{});
+  const draw=()=>{const s=q.value.trim().toLowerCase();UI.lq=q.value;const L=PL.learn.filter(l=>!s||(l.title+' '+l.body.join(' ')).toLowerCase().includes(s));const G=Object.entries(GL).filter(([k,v])=>!s||(k+' '+v.join(' ')).toLowerCase().includes(s)).sort((x,y)=>x[0].localeCompare(y[0],undefined,{sensitivity:'base'}));
+    rc(box,h('h3',{},'Explainers'),...(L.length?L.map(l=>h('details',{cls:'card learn',open:!!s},h('summary',{},l.title),...l.body.map(p=>h('p',{},p)),l.cites.length?h('div',{cls:'sub'},'Sources: ',chips(l.cites)):null)):[h('div',{cls:'sub'},'No explainers match.')]),
+      h('h3',{},'Glossary A–Z ('+G.length+')'),...G.map(([k,v])=>h('div',{cls:'item gli nogl'},h('b',{},k),v[0].toLowerCase()!==k.toLowerCase()?h('span',{cls:'sub'},' — '+v[0]):null,h('div',{},v[1]))))};
+  q.addEventListener('input',draw);draw();return[h('div',{cls:'ptitle'},'Learn'),h('div',{cls:'sub nogl'},'Plain-language explainers and definitions for terms used in Mosaic Bond. Educational only, not medical advice.'),q,box,DISC()]};
+
+document.getElementById('resetv').addEventListener('click',()=>body.resetCam());
 window.__nb={openScanner,SC,FOOD,CIT,canFlags,CAN,weekProg,EXD,UI,cycStat,buildTabs,CELL,SPIR,S,save,go,openPart,openSystem,refresh3d,closePanel,applyView,applyProfile,tgt,proteinT,body,X19};
 
+// v20 Macros: totals from logged foods (USDA SR Legacy per-100 g values); targets from NASEM DRI (2005 macronutrient report) and DGA 2020-2025
+function macroT(){const t=totals(),pr=S.profile,y=dobAge(pr.dob),age=y!=null?y:[2,6,11,16,25,40,60,75][pr.age],adult=age>=19,ht=pr.hcm/100,wt=pr.wkg;
+  const eer=adult?Math.round(pr.sex==='M'?662-9.53*age+1.11*(15.91*wt+539.6*ht):354-6.91*age+1.12*(9.36*wt+726*ht)):null;
+  const kc=t.kcal||0,pk=(t.protein||0)*4,ck=(t.carb||0)*4,fk=(t.fat||0)*9,sum=pk+ck+fk;
+  return{t,eer,kc,sum,split:{protein:pk,carb:ck,fat:fk},prot:proteinT(),fiberT:Math.round(14*(eer||2000)/1000),adult}}
+const MC={protein:'#2f7d6d',carb:'#e2b44a',fat:'#d06a5a'};
+function ring(split,sum){const r=34,C=2*Math.PI*r;let off=0;const NS='http://www.w3.org/2000/svg',sv=document.createElementNS(NS,'svg');sv.setAttribute('viewBox','0 0 90 90');sv.setAttribute('width','96');sv.setAttribute('height','96');sv.setAttribute('role','img');sv.setAttribute('aria-label','Calories from protein, carbohydrate and fat');
+  const ci=(col,len)=>{const e=document.createElementNS(NS,'circle');for(const[k,v]of Object.entries({cx:45,cy:45,r,fill:'none',stroke:col,'stroke-width':12,'stroke-dasharray':len+' '+(C-len),'stroke-dashoffset':-off,transform:'rotate(-90 45 45)'}))e.setAttribute(k,v);sv.append(e);off+=len};
+  ci('#e6e9ee',sum?0:C);if(sum)for(const k of['protein','carb','fat'])ci(MC[k],C*split[k]/sum);return sv}
+function macroMini(){const m=macroT();const pc=k=>m.sum?Math.round(100*m.split[k]/m.sum)+'%':'—';
+  return h('div',{cls:'card macmini',role:'button',tabindex:0,on:{click:()=>go('macro')}},h('b',{},Math.round(m.kc)+' kcal'),m.eer?h('span',{cls:'sub'},' of ~'+m.eer+' est.'):null,
+   ...['protein','carb','fat'].map(k=>h('span',{cls:'mm'},h('i',{style:{background:MC[k]}}),({protein:'Protein ',carb:'Carbs ',fat:'Fat '})[k]+Math.round(m.t[k]||0)+' g · '+pc(k))),h('span',{cls:'sub'},'Macros ›'))}
+RENDER.macro=()=>{const m=macroT(),t=m.t,g=k=>t[k]||0,pc=k=>m.sum?Math.round(100*m.split[k]/m.sum):0;
+  const row=(lbl,val,unit,tgt,note,cites)=>h('div',{cls:'item'},h('div',{cls:'row'},h('b',{},lbl),h('span',{},(val==null?'—':Math.round(val*10)/10)+' '+unit+(tgt?' / '+tgt:''))),tgt&&typeof tgt==='string'?null:null,note?h('div',{cls:'sub'},note,' ',chips(cites||[])):chips(cites||[]));
+  const amdr=(k,lo,hi)=>{const p=pc(k);return m.sum?(p+'% of calories (AMDR '+lo+'–'+hi+'%'+(p<lo?', below range':p>hi?', above range':', within range')+')'):'AMDR '+lo+'–'+hi+'% of calories'};
+  return[h('div',{cls:'ptitle'},'Macros'),h('div',{cls:'disc'},'Today’s totals from your Food log. Estimates for general information, not medical advice.'),
+   h('div',{cls:'card flex macring'},ring(m.split,m.sum),h('div',{},h('div',{cls:'hello'},Math.round(m.kc)+' kcal'),
+     ...['protein','carb','fat'].map(k=>h('div',{cls:'mm'},h('i',{style:{background:MC[k]}}),({protein:'Protein',carb:'Carbohydrate',fat:'Fat'})[k]+' '+pc(k)+'%')))),
+   row('Calories',m.kc,'kcal',m.eer?'~'+m.eer+' kcal/day est.':null,m.eer?'Estimated Energy Requirement from the DRI EER equation for your age, sex, height and weight at a “low active” level. An estimate only; needs vary with activity and body composition.':'EER estimate is shown for ages 19+ (set your date of birth in My profile).',['nasem-macro']),
+   row('Protein',g('protein'),'g',m.prot?Math.round(m.prot)+' g RDA':null,'RDA 0.8 g per kg body weight for adults · '+amdr('protein',10,35),['nasem-macro','nasem-dri']),
+   row('Carbohydrate (total)',g('carb'),'g',null,amdr('carb',45,65),['nasem-macro']),
+   row('  Fiber',g('fiber'),'g',m.fiberT+' g AI','AI 14 g per 1,000 kcal'+(m.eer?' (from your EER)':' (at 2,000 kcal)'),['nasem-macro']),
+   row('  Total sugars',g('sugar'),'g',null,'USDA SR Legacy reports total sugars, not added sugars. Dietary Guidelines: keep added sugars under 10% of calories'+(m.eer?' (< '+Math.round(m.eer*.1/4)+' g/day at your EER)':'')+'.',['dga-2020','usda-fdc']),
+   row('Fat (total)',g('fat'),'g',null,amdr('fat',20,35),['nasem-macro']),
+   row('  Saturated fat',g('satfat'),'g',m.eer?'< '+Math.round(m.eer*.1/9)+' g':null,'Dietary Guidelines: under 10% of calories'+(m.kc?' · today '+Math.round(100*g('satfat')*9/m.kc)+'%':''),['dga-2020']),
+   row('  Trans fat',t.transfat,'g',null,'Not reported for every food in SR Legacy, so this can undercount.',['usda-fdc']),
+   h('div',{cls:'sub'},'Sodium, cholesterol and water appear under Nutrients and Hydration. Food values: USDA FoodData Central SR Legacy. ',chips(['usda-fdc'])),DISC()]};
+RENDER.me=()=>{const n=(S.profile.name||'').trim();return [h('div',{cls:'ptitle'},'My profile'),h('div',{cls:'hello'},n?'Hi, '+n+' 👋':'Hi there 👋'),
+ h('div',{cls:'sub'},'Your age group, height and weight set your nutrient targets, protein target, hydration and calorie-burn estimates, and the 3D body shape.'),profile(),
+ h('div',{cls:'sub'},'🔒 Your name, birth date, height and weight stay on this device only (localStorage). Nothing is uploaded.'),
+ h('div',{cls:'flex'},h('button',{cls:'chip',on:{click:()=>{if(confirm('Clear your name and date of birth from this device?')){delete S.profile.name;delete S.profile.dob;save();applyView();go('me')}}}},'Clear name & birth date'),
+  h('button',{cls:'btn danger',on:{click:()=>{if(confirm('Delete all your Mosaic Bond data from this device?')){localStorage.removeItem(KEY);location.reload()}}}},'Delete all my data')),DISC()]};
 RENDER.set=()=>{const th=S.view.theme==='dark'?'dark':'light';const seg=(cur,opts,f)=>h('div',{cls:'flex'},...opts.map(([v,l])=>h('button',{cls:'chip'+(cur===v?' on':''),on:{click:()=>{f(v);save();go('set')}}},l)));
  return [h('div',{cls:'ptitle'},'Settings'),h('h3',{},'Appearance'),seg(th,[['light','Light'],['dark','Dark']],v=>{S.view.theme=v;document.documentElement.dataset.theme=v}),
  h('h3',{},'3D body style'),seg(S.view.style,[['real','Realistic'],['holo','Holographic']],v=>{S.view.style=v;applyView()}),h('div',{cls:'sub'},'Color-by-system and skin opacity are in the View menu on the Body screen.'),
@@ -486,3 +566,107 @@ RENDER.set=()=>{const th=S.view.theme==='dark'?'dark':'light';const seg=(cur,opt
  h('div',{cls:'sub'},'When on, a scanned barcode number (only that, plus an API key) is sent to USDA FoodData Central (api.nal.usda.gov). The shared DEMO_KEY is heavily rate-limited; a free personal key from api.data.gov raises the limit. Open Food Facts is used only when you tap it after a miss. ',chip('usda-fdc')),
  (()=>{const k=h('input',{type:'text','aria-label':'api.data.gov key',placeholder:'Optional api.data.gov key (stored on this device)',value:S.lookup.key||'',cls:'search',autocomplete:'off'});k.addEventListener('change',()=>{S.lookup.key=k.value.trim();save()});return k})(),
  h('button',{cls:'btn danger',on:{click:()=>{if(confirm('Delete all your Mosaic Bond data from this device?')){localStorage.removeItem(KEY);location.reload()}}}},'Delete all my data'),DISC()]};
+
+/* v20: Exposures + Connective tissue */
+S.exp=Object.assign({on:{},d:{}},S.exp||{});
+const expOn=()=>EXP.exposures.filter(e=>S.exp.on[e.id]);
+{const a=ovParts,b=ovScores,c=ovHues;
+ ovParts=function(o){return o==='exp'?[...new Set(expOn().flatMap(e=>e.parts))]:a(o)};
+ ovScores=function(o,p){if(o!=='exp')return b(o,p);const ps=ovParts('exp'),s={};for(const id in PARTS)s[id]=ps.includes(id)?75:4;return s};
+ ovHues=function(o){if(o!=='exp')return c(o);const ps=ovParts('exp');return Object.fromEntries(Object.keys(PARTS).map(i=>[i,ps.includes(i)?0x2aa3a3:0xb8bec8]))}}
+const pq=(q,ci,pl)=>h('div',{cls:'ev'},'“'+q+'” ',chip(ci),pl?h('div',{cls:'plain'},h('b',{},'In plain words: '),pl):null);
+TABS.push(['exp','Exposures'],['conn','Connective tissue']);TLAB.exp='Exposures';TLAB.conn='Connective tissue';
+for(const g of GROUPS){if(g[0]==='track')g[2].push('exp');if(g[0]==='more')g[2].splice(3,0,'conn')}
+RENDER.exp=()=>{const out=[h('div',{cls:'ptitle'},'Exposures'),h('div',{cls:'sub'},'Turn on what applies to you. You’ll see sourced safety facts and the affected body areas. Educational only — not a diagnosis. Saved only on this device.')];
+ for(const f of EXP.flags.filter(f=>S.exp.on[f.for]))out.push(h('div',{cls:'warn redflag',role:'alert'},h('b',{},'🚨 '+f.t),h('div',{},'“'+f.q+'” ',chip(f.c)),h('div',{cls:'sub'},'If someone is unconscious, not breathing, or having a seizure, call 911. Poison Control: 1-800-222-1222.')));
+ for(const e of EXP.exposures){const on=!!S.exp.on[e.id],d=S.exp.d[e.id]||(S.exp.d[e.id]=[]);
+  out.push(h('div',{cls:'card expc'},h('label',{cls:'flex'},h('input',{type:'checkbox',checked:on,'aria-label':e.name,on:{change:ev=>{S.exp.on[e.id]=ev.target.checked;save();go('exp')}}}),h('b',{},' '+e.name)),
+   on?h('div',{cls:'flex'},...e.chips.map(k=>h('button',{cls:'chip'+(d.includes(k)?' on':''),'aria-pressed':String(d.includes(k)),on:{click:()=>{const i=d.indexOf(k);i<0?d.push(k):d.splice(i,1);save();go('exp')}}},k))):null,
+   ...(on?e.facts.filter(f=>!f[3]||f[3]==='lead'?(f[3]!=='lead'||d.includes('Metals / lead')||!d.length):(d.includes(f[3])||!d.length)).map(f=>pq(f[0],f[1],f[2])):[]),
+   on?h('div',{cls:'sub'},e.note):null)) }
+ out.push(h('div',{cls:'flex'},h('button',{cls:'chip'+(S.view.overlay==='exp'?' on':''),on:{click:()=>{S.view.overlay=S.view.overlay==='exp'?null:'exp';save();go('scan')}}},S.view.overlay==='exp'?'Hide exposures on body':'Show affected areas on body (teal)'),h('button',{cls:'chip',on:{click:()=>go('cell')}},'Oxidative stress & antioxidants (Cellular) ›')));
+ out.push(DISC());return out};
+RENDER.conn=()=>{const C=EXP.connective;return [h('div',{cls:'ptitle'},'Connective tissue'),
+ h('div',{cls:'sub'},'Tendons, ligaments, cartilage and fascia hold the body together. They are built mostly from collagen (strength) with elastin (stretch-and-recoil).'),
+ ...C.parts.map(x=>h('div',{},h('h3',{},x[0]),pq(x[1],x[2],x[3]))),
+ h('h3',{},'Nutrients that help build it'),...C.nutr.map(x=>h('div',{},h('button',{cls:'chip',on:{click:()=>go(x[0]==='protein'?'macro':'nutr')}},NAME(x[0])+' ›'),pq(x[1],x[2],x[3]))),
+ h('div',{cls:'sub'},'Manganese is not listed here because we did not find a reliable source tying it to connective tissue in this app’s citation set.'),
+ h('h3',{},'Collagen supplements'),pq(C.supp[0],C.supp[1],C.supp[2]),pq(C.supp2[0],C.supp2[1],'So far, collagen pills have limited, mixed evidence; protein from food plus vitamin C covers the building blocks.'),
+ h('h3',{},'Flexibility'),pq(C.flex[0],C.flex[1],C.flex[2]),
+ h('div',{cls:'flex'},h('button',{cls:'chip',on:{click:()=>go('ex')}},'Stretching & exercise ›'),h('button',{cls:'chip',on:{click:()=>go('rec')}},'Recovery ›'),h('button',{cls:'chip',on:{click:()=>openPart('skin')}},'Skin ›')),
+ h('div',{cls:'sub'},'3D body: there are no separate tendon, ligament or cartilage meshes in this model yet, so tapping the body can’t select them; this part highlights with the muscles and bones.'),DISC()]};
+{const op=openPart;openPart=function(id){if(id==='connective'){go('conn');return}op(id);if(id==='skin'||id==='muscles'||id==='bones'){panel.append(h('button',{cls:'chip',on:{click:()=>{closePanel();go('conn')}}},'Connective tissue (tendons, ligaments, cartilage) ›'))}}}
+{const om=RENDER.me;RENDER.me=function(){const o=om.call(this);o.splice(2,0,h('button',{cls:'chip',on:{click:()=>go('exp')}},'My exposures (sun, chemicals, environment) ›'));return o}}
+
+/* v20: Food ideas */
+TABS.push(['ideas','Food ideas']);TLAB.ideas='Food ideas';for(const g of GROUPS)if(g[0]==='food')g[2].splice(1,0,'ideas');
+const MICRO=Object.keys(N).filter(k=>k!=='omega3'&&k!=='choline');
+const PROC=/bacon|sausage|\bham\b|frankfurter|hot dog|salami|bologna|pepperoni|jerky|luncheon|cured/i,MERC=/king mackerel|marlin|orange roughy|shark|swordfish|tilefish|bigeye/i,TYR=/cheese|salami|sauerkraut|soy sauce|miso|tempeh|cured|aged/i;
+function servOf(f){const p=(f.portions||[]).find(x=>x.g>=20&&x.g<=300)||{label:'100 g',g:100};return p}
+function foodSafety(f,nk,amt){const w=[],meds=medObjs(),cat=c=>meds.filter(m=>m.interactions.some(i=>i.category===c));
+ const per=x=>(f.per100g[x]||0)*servOf(f).g/100;
+ if(per('vitK')>30)for(const m of cat('vitaminK'))w.push([m.name+': keep vitamin K intake steady — don’t suddenly add large amounts. Ask your prescriber/pharmacist.',m.interactions.find(i=>i.category==='vitaminK').cites]);
+ if(/grapefruit/i.test(f.name))for(const m of cat('grapefruit'))w.push([m.name+' label mentions grapefruit. Ask your pharmacist before eating it.',m.interactions.find(i=>i.category==='grapefruit').cites]);
+ if(per('k')>300){for(const m of cat('potassium'))w.push([m.name+' label mentions potassium. High-potassium foods may need limits — ask your clinician.',m.interactions.find(i=>i.category==='potassium').cites]);if(S.conds.some(c=>c==='ckd'||c==='dialysis'))w.push(['Kidney disease: potassium may need to be limited. Follow your care team’s plan.',['ods-k']])}
+ if(TYR.test(f.name))for(const m of cat('tyramine'))w.push([m.name+': aged/fermented foods can be high in tyramine. Follow your label’s food list.',m.interactions.find(i=>i.category==='tyramine').cites]);
+ return w}
+function ideaList(nk,n=6){const T=tgt(nk),U=ul(nk),t=totals(),preg=S.profile.pregnant||S.conds.includes('preg');const out=[];
+ for(const f of FOOD.values()){if(!f.per100g||!(f.per100g[nk]>0)||PROC.test(f.name)||(preg&&MERC.test(f.name)))continue;const sv=servOf(f),a=f.per100g[nk]*sv.g/100;
+  if(U&&!/supplement/i.test(DRI[nk].ulNote||'')&&(t[nk]||0)+a>U)continue;out.push({f,sv,a,pc:T?100*a/T:0})}
+ return out.sort((x,y)=>y.a-x.a).slice(0,n)}
+function ideaRow(nk,o){const{f,sv,a,pc}=o,pr=PREP.prep&&PREP.prep[f.fdcId],alt=pr&&pr.find(x=>x.id==='boiled'&&x.mode!=='none');let altTxt=null;
+ if(alt){try{const v=itemNut({fdcId:f.fdcId,grams:sv.g,prep:'boiled'}).n[nk];if(v!=null)altTxt=' · boiled: '+Math.round(100*v/tgt(nk))+'%'}catch(e){}}
+ const w=foodSafety(f,nk,a);
+ return h('div',{cls:'idea'},h('div',{cls:'flex'},h("b",{},f.name.split(",").slice(0,2).join(",")),h('span',{cls:'pill'},sv.label),h('span',{cls:'pill amberp'},Math.round(pc)+'% of target'+(alt?' (raw)':'')),altTxt?h('span',{cls:'sub'},altTxt):null,
+  h('button',{cls:'btn',on:{click:()=>{log().push({fdcId:f.fdcId,grams:sv.g,label:sv.label+' ×1',prep:'asis'});save();go('ideas')}}},'Log it'),chip('usda-fdc')),
+  ...w.map(x=>h('div',{cls:'warn'},'⚠ '+x[0]+' ',chips(x[1]))))}
+UI.ideaN=UI.ideaN||null;
+RENDER.ideas=()=>{const p=pcts(totals()),low=MICRO.filter(k=>tgt(k)&&(p[k]||0)<50).sort((a,b)=>(p[a]||0)-(p[b]||0));
+ const out=[h('div',{cls:'ptitle'},'Food ideas'),h('div',{cls:'plain'},h('b',{},'In plain words: '),'Foods that are naturally high in the vitamins and minerals you’re low on today. Amounts are for a typical serving from USDA FoodData Central.'),
+  h('h3',{},'You’re low today'),low.length?h('div',{cls:'sub'},'Under 50% of your daily target so far (based only on what you logged). Tap a nutrient to see where it acts on the body.'):h('div',{cls:'sub'},'Nothing is under 50% of target today. 🎉')];
+ for(const k of low.slice(0,6)){out.push(h('div',{cls:'lowcard'},h('div',{cls:'flex'},h('button',{cls:'chip lowchip',on:{click:()=>{body.setSelected(new Set(N[k].map.map(m=>m.part)));go('scan')}}},NAME(k)+' · '+Math.round(p[k]||0)+'% ›'),chip(N[k].map[0]?.odsCite||'ods-'+k)),...ideaList(k,3).map(o=>ideaRow(k,o))))}
+ const sel=h('select',{'aria-label':'Nutrient',on:{change:e=>{UI.ideaN=e.target.value;go('ideas')}}},...MICRO.map(k=>h('option',{value:k,selected:(UI.ideaN||low[0]||'mg')===k},NAME(k))));
+ const nk=UI.ideaN||low[0]||'mg';
+ out.push(h('h3',{},'Browse by nutrient'),sel,h('div',{cls:'sub'},'Top foods per typical serving. Food-source tables: ',chip(N[nk].map[0]?.odsCite||'ods-'+nk),' ',chip('usda-fdc')),...ideaList(nk,8).map(o=>ideaRow(nk,o)),
+  h('div',{cls:'sub'},'Left out on purpose: processed meats (IARC Group 1) ',chip('iarc-list'),(S.profile.pregnant||S.conds.includes('preg'))?[' and highest-mercury fish during pregnancy ',chip('fda-fish')]:'',', and any food that would push you over a tolerable upper limit.'),
+  h('div',{cls:'disc'},'Not medical advice. For supplements or a lab-confirmed deficiency, talk to your clinician. Interaction notes come from your logged medicines and conditions — ask your pharmacist.'));
+ return out};
+{const orf=refresh3d;refresh3d=function(){const r=orf.apply(this,arguments);try{let n=document.getElementById('nudge');if(!n){n=h('button',{id:'nudge',cls:'nudge',on:{click:()=>go('ideas')}});document.getElementById('legend3d').before(n)}const p=pcts(totals()),low=MICRO.filter(k=>tgt(k)&&(p[k]||0)<50).sort((a,b)=>(p[a]||0)-(p[b]||0));n.textContent=low.length?'Low on '+NAME(low[0]).toLowerCase()+' today — see food ideas ›':'';n.hidden=!(low.length&&log().length)}catch(e){}return r}}
+
+/* v20: collapsible notices */
+S.view.notes=S.view.notes||{};
+const URG=/911|988|222-1222|🚨|⚠|emergency|red flag|seek (immediate|emergency)/i;
+const nkey=t=>{let x=0;for(const c of t.slice(0,80))x=(x*31+c.charCodeAt(0))|0;return 'n'+(x>>>0).toString(36)};
+function noteify(root){for(const el of root.querySelectorAll('.disc:not([data-nt]),.warn:not([data-nt])')){el.dataset.nt=1;if(el.closest('#modal'))continue;
+  if(el.classList.contains('redflag')||(el.classList.contains('warn')&&URG.test(el.textContent)))continue;
+  const b=el.querySelector('b'),title=(b&&b.textContent.trim().replace(/[.:]\s*$/,''))||(el.classList.contains('disc')?'Educational only — not medical advice':'Note'),k=nkey(el.textContent);
+  const st=S.view.notes[k];let open=S.view.allOpen||st==='open'||!st;if(!st){S.view.notes[k]='seen';save()}
+  const bodyDiv=h('div',{cls:'nb'});bodyDiv.append(...el.childNodes);
+  const hd=h('button',{cls:'nh','aria-expanded':String(open)},h('span',{},'ⓘ '+title),h('span',{cls:'chev'},'▾'));
+  hd.addEventListener('click',e=>{e.stopPropagation();open=!open;S.view.notes[k]=open?'open':'closed';save();el.classList.toggle('closed',!open);hd.setAttribute('aria-expanded',String(open))});
+  el.classList.add('note');el.classList.toggle('closed',!open);el.append(hd,bodyDiv)}}
+for(const id of ['pages','panel']){const r=document.getElementById(id);noteify(r);new MutationObserver(()=>noteify(r)).observe(r,{childList:true,subtree:true})}
+{const os=RENDER.set;RENDER.set=function(){const o=os.apply(this,arguments);const row=h('label',{cls:'flex'},h('input',{type:'checkbox',checked:!!S.view.allOpen,on:{change:e=>{S.view.allOpen=e.target.checked;save();go('set')}}}),' Show all notices expanded');(Array.isArray(o)?o:[o]).splice(2,0,row);return o}}
+
+/* v20: online food search + custom foods */
+function onlineBox(q,done){const box=h('div',{cls:'onl'}),st=h('div',{cls:'sub',role:'status'});
+ const addP=p=>{const sv={g:100,label:'100 g'};S.products[p.fdcId]=Object.assign({portions:[]},p);FOOD.set(p.fdcId,S.products[p.fdcId]);CIT[p.cite.id]=p.cite;save()};
+ const row=p=>{const g=h('input',{type:'number',cls:'qty','aria-label':'Grams',value:100,min:1,step:1});return h('div',{cls:'res'},h('div',{cls:'fname'},p.name),h('div',{cls:'flex'},chip((CIT[p.cite.id]=p.cite).id),h('span',{cls:'sub'},p.dataType||'crowd-sourced'),h('span',{cls:'sub'},Object.keys(p.per100g).length+' nutrients')),
+   h('div',{cls:'addrow'},g,h('span',{cls:'sub'},'g'),h('button',{cls:'btn primary',on:{click:()=>{addP(p);log().push({fdcId:p.fdcId,grams:+g.value||100,label:(+g.value||100)+' g',prep:'asis'});save();box.replaceChildren(h('div',{cls:'sub'},'Logged and saved on this device as “'+p.name+'” — it works offline from now on.'));done&&done()}}},'Log it')))};
+ const off=async()=>{st.textContent='Searching Open Food Facts…';try{const r=await SC.offSearch(q);box.replaceChildren(h('div',{cls:'sub'},'Open Food Facts results — crowd-sourced, unverified (T4).'),...(r.length?r.map(row):[h('div',{cls:'sub'},'Nothing found there either. You can create a custom food below.')]),customBtn())}catch(e){st.textContent='Open Food Facts search failed (offline?).'}};
+ const run=async()=>{st.textContent='Searching USDA FoodData Central…';box.replaceChildren(st);try{const r=await SC.fdcSearch(q,S.lookup.key);if(!r.length)return off();box.replaceChildren(h('div',{cls:'sub'},'USDA results (Foundation, SR Legacy and Survey first, then Branded):'),...r.map(row),h('button',{cls:'btn ghost',on:{click:off}},'Not here? Try Open Food Facts (crowd-sourced)'),customBtn())}
+  catch(e){box.replaceChildren(st,h('button',{cls:'btn ghost',on:{click:off}},'Try Open Food Facts instead'),customBtn());st.textContent=e.message==='rate'?'USDA search limit reached (the shared DEMO_KEY allows only a few searches per hour). Add a free api.data.gov key in Settings, try later, or use Open Food Facts.':e.message==='key'?'The API key was rejected. Check it in Settings.':'Online search failed (offline?).'}};
+ const ask=()=>box.replaceChildren(h('div',{cls:'item'},h('b',{},'Search online?'),h('div',{cls:'sub'},'Sends only the search text “'+q+'” (plus a public API key) to USDA FoodData Central (api.nal.usda.gov); Open Food Facts only if you tap it. Nothing from your log or profile is sent. Uses the same setting as barcode lookup — you can turn it off in Settings.')),
+   h('div',{cls:'flex'},h('button',{cls:'btn primary',on:{click:()=>{S.lookup.fdc=true;save();run()}}},'Allow & search'),h('button',{cls:'btn',on:{click:()=>box.replaceChildren(customBtn())}},'Not now')));
+ box.append(h('div',{cls:'flex'},h('button',{cls:'btn',on:{click:()=>S.lookup.fdc?run():ask()}},'🔎 Search online for “'+q+'”'),customBtn()));return box}
+function customBtn(){return h('button',{cls:'btn ghost',on:{click:customFood}},'＋ Create custom food')}
+function customFood(){const m=document.getElementById('modal');const close=()=>{m.classList.add('hidden');m.replaceChildren()};
+ const F=[['kcal','Calories (kcal)'],['protein','Protein (g)'],['carb','Carbs (g)'],['fiber','Fiber (g)'],['sugar','Total sugars (g)'],['fat','Fat (g)'],['satfat','Saturated fat (g)'],['na','Sodium (mg)'],['k','Potassium (mg)'],['ca','Calcium (mg)'],['fe','Iron (mg)'],['vitC','Vitamin C (mg)'],['vitD','Vitamin D (µg)']];
+ const nm=h('input',{type:'text',cls:'search',maxlength:60,'aria-label':'Food name',placeholder:'Name (e.g. Butterhead lettuce from my Gardyn)'}),sg=h('input',{type:'number',cls:'qty','aria-label':'Serving grams',value:100,min:1});
+ const ins=Object.fromEntries(F.map(([k])=>[k,h('input',{type:'number',cls:'qty',min:0,step:'any','aria-label':k})]));
+ m.replaceChildren(h('div',{cls:'box'},h('div',{cls:'fhead'},h('h2',{},'Create custom food'),h('button',{cls:'icon-btn','aria-label':'Close',on:{click:close}},'✕')),nm,
+  h('div',{cls:'addrow'},h('span',{cls:'sub'},'Values are per serving of'),sg,h('span',{cls:'sub'},'g')),...F.map(([k,l])=>h('label',{cls:'addrow'},ins[k],h('span',{cls:'sub'},l))),
+  h('div',{cls:'flex'},h('button',{cls:'btn primary',on:{click:()=>{const n=nm.value.trim().slice(0,60);if(!n)return nm.focus();const g=+sg.value||100,per={};for(const[k]of F){const v=parseFloat(ins[k].value);if(!isNaN(v))per[k]=v*100/g}
+    const id='custom:'+Date.now();S.products[id]={fdcId:id,name:n,short:n,per100g:per,portions:[{label:'1 serving',g}],custom:true,cite:{id:'cust-'+id.slice(7),retrieved:new Date().toISOString().slice(0,10),type:'User-entered',publisher:'You (custom entry)',title:n+' — entered by you',url:'',date:new Date().toISOString().slice(0,10),tier:4,tierRationale:'Entered by the user; not verified.'}};FOOD.set(id,S.products[id]);CIT[S.products[id].cite.id]=S.products[id].cite;save();close();go('log')}}},'Save food'),
+   h('button',{cls:'btn ghost',on:{click:()=>{close();X19.ocrFlow('nut')}}},'📷 Fill from a Nutrition Facts photo')),
+  h('div',{cls:'sub'},'Saved only on this device. Custom foods are labeled T4 (unverified).')));m.classList.remove('hidden')}

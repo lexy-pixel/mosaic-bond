@@ -47,3 +47,18 @@ export async function startCamera(video,onCode,onStatus){const ZX=await loadZX()
       cx.clearRect(0,0,cv.width,cv.height)}
     t=setTimeout(tick,180)};
   const api={stop(){stop=true;clearTimeout(t);stream.getTracks().forEach(x=>x.stop());video.srcObject=null;cv.width=cv.height=0}};tick();return api}
+// ---- v20 text search (only the search text + API key is sent)
+const DTR={'Foundation':0,'SR Legacy':1,'Survey (FNDDS)':2,'Branded':3};
+export async function fdcSearch(q,key){const u='https://api.nal.usda.gov/fdc/v1/foods/search?api_key='+encodeURIComponent(key||'DEMO_KEY')+'&pageSize=25&dataType='+encodeURIComponent('Foundation,SR Legacy,Survey (FNDDS),Branded')+'&query='+encodeURIComponent(q);
+  const r=await fetch(u,{credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
+  if(r.status===429)throw new Error('rate');if(r.status===403)throw new Error('key');if(!r.ok)throw new Error('http '+r.status);
+  const d=await r.json();return (d.foods||[]).sort((a,b)=>(DTR[a.dataType]??9)-(DTR[b.dataType]??9)).slice(0,12).map(f=>{const per={};
+    for(const n of f.foodNutrients||[]){const k=NID[n.nutrientId];if(k&&n.value!=null){if(k==='kcal'&&String(n.unitName).toUpperCase()!=='KCAL')continue;per[k]=+n.value}if(n.nutrientId===1110&&per.vitD==null&&n.value!=null)per.vitD=+n.value/40}
+    const br=f.dataType==='Branded',name=br?title(f.description)+(f.brandOwner?' ('+f.brandOwner+')':''):f.description;
+    return {fdcId:'fdc:'+f.fdcId,name,short:name,per100g:per,dataType:f.dataType,custom:true,
+      cite:{id:'fdcs-'+f.fdcId,retrieved:new Date().toISOString().slice(0,10),type:br?'Branded food label data':'Government database',publisher:'USDA FoodData Central — '+f.dataType,title:name+' (FDC '+f.fdcId+')',url:'https://fdc.nal.usda.gov/food-details/'+f.fdcId+'/nutrients',date:f.publishedDate||null,tier:br?2:1,tierRationale:br?'Manufacturer-submitted label data published by USDA.':'USDA analyzed/compiled food composition data.'},src:'fdc'}})}
+export async function offSearch(q){const r=await fetch('https://world.openfoodfacts.org/cgi/search.pl?search_simple=1&json=1&page_size=10&fields=code,product_name,brands,nutriments,last_modified_t&search_terms='+encodeURIComponent(q),{credentials:'omit',cache:'no-store',referrerPolicy:'no-referrer'});
+  if(!r.ok)throw new Error('http '+r.status);const d=await r.json();return (d.products||[]).filter(p=>p.product_name).map(p=>{const n=p.nutriments||{},G=(k,m)=>n[k+'_100g']!=null?+n[k+'_100g']*m:undefined;
+    const per={kcal:n['energy-kcal_100g'],protein:G('proteins',1),fiber:G('fiber',1),na:G('sodium',1000),ca:G('calcium',1000),fe:G('iron',1000),k:G('potassium',1000),vitC:G('vitamin-c',1000),vitD:G('vitamin-d',1e6),mg:G('magnesium',1000),zn:G('zinc',1000)};for(const k in per)if(per[k]==null||isNaN(per[k]))delete per[k];
+    const name=p.product_name+(p.brands?' ('+String(p.brands).split(',')[0]+')':''),date=p.last_modified_t?new Date(p.last_modified_t*1000).toISOString().slice(0,10):null;
+    return {fdcId:'off:'+p.code,name,short:p.product_name,per100g:per,custom:true,cite:{id:'off-'+p.code,retrieved:new Date().toISOString().slice(0,10),type:'Crowd-sourced product data',publisher:'Open Food Facts contributors (crowd-sourced, ODbL)',title:name,url:'https://world.openfoodfacts.org/product/'+p.code,date,tier:4,tierRationale:'Crowd-sourced, unverified label transcription. Data © Open Food Facts contributors, ODbL.'},src:'off'}})}

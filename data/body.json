@@ -1,105 +1,110 @@
 {
-"systems": {
-"skeletal": "Skeletal",
-"muscular": "Muscular",
-"nervous": "Nervous",
-"cardio": "Cardiovascular / circulatory",
-"respiratory": "Respiratory",
-"digestive": "Digestive",
-"immune": "Immune / lymphatic",
-"endocrine": "Endocrine",
-"urinary": "Urinary / renal",
-"reproductive": "Reproductive",
-"integumentary": "Integumentary"
-},
-"parts": {
-"bones": {
-"system": "skeletal",
-"name": "Bones"
-},
-"teeth": {
-"system": "skeletal",
-"name": "Teeth"
-},
-"muscles": {
-"system": "muscular",
-"name": "Skeletal muscle"
-},
-"brain": {
-"system": "nervous",
-"name": "Brain"
-},
-"nerves": {
-"system": "nervous",
-"name": "Nerves & spinal cord"
-},
-"eyes": {
-"system": "nervous",
-"name": "Eyes"
-},
-"heart": {
-"system": "cardio",
-"name": "Heart"
-},
-"blood": {
-"system": "cardio",
-"name": "Blood"
-},
-"vessels": {
-"system": "cardio",
-"name": "Blood vessels"
-},
-"lungs": {
-"system": "respiratory",
-"name": "Lungs"
-},
-"liver": {
-"system": "digestive",
-"name": "Liver"
-},
-"stomach": {
-"system": "digestive",
-"name": "Stomach"
-},
-"gut": {
-"system": "digestive",
-"name": "Intestines"
-},
-"immune": {
-"system": "immune",
-"name": "Immune system"
-},
-"thyroid": {
-"system": "endocrine",
-"name": "Thyroid"
-},
-"pancreas": {
-"system": "endocrine",
-"name": "Pancreas (glucose)"
-},
-"kidneys": {
-"system": "urinary",
-"name": "Kidneys"
-},
-"bladder": {
-"system": "urinary",
-"name": "Bladder & urinary tract"
-},
-"glands": {
-"system": "endocrine",
-"name": "Adrenal & pituitary glands"
-},
-"reproductive": {
-"system": "reproductive",
-"name": "Reproductive organs"
-},
-"skin": {
-"system": "integumentary",
-"name": "Skin"
-},
-"hair": {
-"system": "integumentary",
-"name": "Hair & nails"
-}
-}
+ "systems": {
+  "skeletal": "Skeletal",
+  "muscular": "Muscular",
+  "nervous": "Nervous",
+  "cardio": "Cardiovascular / circulatory",
+  "respiratory": "Respiratory",
+  "digestive": "Digestive",
+  "immune": "Immune / lymphatic",
+  "endocrine": "Endocrine",
+  "urinary": "Urinary / renal",
+  "reproductive": "Reproductive",
+  "integumentary": "Integumentary",
+  "connective": "Connective tissue"
+ },
+ "parts": {
+  "bones": {
+   "system": "skeletal",
+   "name": "Bones"
+  },
+  "teeth": {
+   "system": "skeletal",
+   "name": "Teeth"
+  },
+  "muscles": {
+   "system": "muscular",
+   "name": "Skeletal muscle"
+  },
+  "brain": {
+   "system": "nervous",
+   "name": "Brain"
+  },
+  "nerves": {
+   "system": "nervous",
+   "name": "Nerves & spinal cord"
+  },
+  "eyes": {
+   "system": "nervous",
+   "name": "Eyes"
+  },
+  "heart": {
+   "system": "cardio",
+   "name": "Heart"
+  },
+  "blood": {
+   "system": "cardio",
+   "name": "Blood"
+  },
+  "vessels": {
+   "system": "cardio",
+   "name": "Blood vessels"
+  },
+  "lungs": {
+   "system": "respiratory",
+   "name": "Lungs"
+  },
+  "liver": {
+   "system": "digestive",
+   "name": "Liver"
+  },
+  "stomach": {
+   "system": "digestive",
+   "name": "Stomach"
+  },
+  "gut": {
+   "system": "digestive",
+   "name": "Intestines"
+  },
+  "immune": {
+   "system": "immune",
+   "name": "Immune system"
+  },
+  "thyroid": {
+   "system": "endocrine",
+   "name": "Thyroid"
+  },
+  "pancreas": {
+   "system": "endocrine",
+   "name": "Pancreas (glucose)"
+  },
+  "kidneys": {
+   "system": "urinary",
+   "name": "Kidneys"
+  },
+  "bladder": {
+   "system": "urinary",
+   "name": "Bladder & urinary tract"
+  },
+  "glands": {
+   "system": "endocrine",
+   "name": "Adrenal & pituitary glands"
+  },
+  "reproductive": {
+   "system": "reproductive",
+   "name": "Reproductive organs"
+  },
+  "skin": {
+   "system": "integumentary",
+   "name": "Skin"
+  },
+  "hair": {
+   "system": "integumentary",
+   "name": "Hair & nails"
+  },
+  "connective": {
+   "system": "connective",
+   "name": "Connective tissue"
+  }
+ }
 }

@@ -6,8 +6,7 @@ import {mergeVertices} from './vendor/BufferGeometryUtils.js';
 // Anatomical meshes: BodyParts3D (c) DBCLS — see ATTRIBUTION.md. One mesh per body-part id.
 const VS=`varying vec3 vN;varying vec3 vV;void main(){vec4 mv=modelViewMatrix*vec4(position,1.0);vN=normalize(normalMatrix*normal);vV=normalize(-mv.xyz);gl_Position=projectionMatrix*mv;}`;
 const FS=`uniform vec3 uColor;uniform float uOpacity;uniform float uRim;uniform vec3 uFlag;uniform float uFlagAmt;uniform float uStripe;varying vec3 vN;varying vec3 vV;
-void main(){float f=1.0-abs(dot(normalize(vN),normalize(vV)));float rim=pow(f,uRim);vec3 c=mix(uColor,uFlag,uFlagAmt*rim);if(uStripe>0.5&&mod(gl_FragCoord.x+gl_FragCoord.y,14.0)<6.0)c=vec3(0.10,0.0,0.02);
-float a=uOpacity*(0.25+1.6*rim)+uFlagAmt*rim*0.6;gl_FragColor=vec4(c*(0.55+1.2*rim),clamp(a,0.0,1.0));}`;
+void main(){float f=1.0-abs(dot(normalize(vN),normalize(vV)));float rim=pow(f,uRim);vec3 c=mix(uColor,uFlag,uFlagAmt*rim);float a=uOpacity*(0.25+1.6*rim)+uFlagAmt*rim*0.6;if(uStripe>0.5){gl_FragColor=vec4(mix(vec3(0.015),vec3(0.95),pow(f,2.5)),0.92);return;}gl_FragColor=vec4(c*(0.55+1.2*rim),clamp(a,0.0,1.0));}`;
 export function createBody(canvas,onPick,onStatus){
   const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance',preserveDrawingBuffer:true});
   renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x02080f);
@@ -103,7 +102,7 @@ export function createBody(canvas,onPick,onStatus){
     // ---- morph setup: original positions in root space + skeleton anchors for the skin shell
     root.updateMatrixWorld(true);const segs=[];const addL=(pts,k)=>{for(let i=0;i<pts.length-1;i++)segs.push({a:pts[i],b:pts[i+1],k,t0:i/(pts.length-1),t1:(i+1)/(pts.length-1)})};
     addL([new THREE.Vector3(0,GEO.top,0),new THREE.Vector3(0,GEO.yN,0)],'head');addL([new THREE.Vector3(0,GEO.yN,-.02),new THREE.Vector3(0,(GEO.yN+(-.05))/2,-.03),new THREE.Vector3(0,-.05,-.02)],'torso');
-    for(const L of LIMBS)addL(L.pts.slice(1),L.k);
+    for(const L of LIMBS){const p=L.pts.slice(1);if(L.k==='arm'&&p.length>1){const a=p[p.length-2],b=p[p.length-1];p.push(b.clone().addScaledVector(b.clone().sub(a).normalize(),.26))}addL(p,L.k)}// v20: arm chain continues through the hand so finger skin binds to the arm, not the thigh
     const ab=new THREE.Vector3(),ap=new THREE.Vector3(),cp=new THREE.Vector3();let foot=1e9;
     const seenG=new Set();for(const id in parts)for(const m of parts[id].meshes){if(seenG.has(m.geometry))m.geometry=m.geometry.clone();seenG.add(m.geometry);{const q=m.geometry.attributes.position;if(!(q.array instanceof Float32Array)||q.normalized||q.isInterleavedBufferAttribute){const f=new Float32Array(q.count*3);for(let i=0;i<q.count;i++){f[i*3]=q.getX(i);f[i*3+1]=q.getY(i);f[i*3+2]=q.getZ(i)}m.geometry.setAttribute('position',new THREE.BufferAttribute(f,3))}}const a=m.geometry.attributes.position;const M=m.matrixWorld.clone(),Mi=M.clone().invert();const p0=new Float32Array(a.count*3);const v=new THREE.Vector3();
       for(let i=0;i<a.count;i++){v.fromBufferAttribute(a,i).applyMatrix4(M);p0[i*3]=v.x;p0[i*3+1]=v.y;p0[i*3+2]=v.z;if(v.y<foot)foot=v.y}
@@ -113,15 +112,26 @@ export function createBody(canvas,onPick,onStatus){
           an[i*5+3]={head:0,torso:1,arm:2,leg:3}[bs.k];an[i*5+4]=bt}m.userData.mo.an=an}}
     GEO.foot=foot;
     res({ms:performance.now()-t0})},e=>onStatus&&onStatus(e.lengthComputable?Math.round(100*e.loaded/e.total):null),rej));
-  let spin=true,rotY=0,rotX=0.05,dist=4.2,vel=.003,drag=null,pinch=null,moved=0;const ptrs=new Map();
+  let spin=true,rotY=0,rotX=0.05,dist=4.2,vel=.003,drag=null,pinch=null,moved=0,panX=0,panY=0,lastTap=0;const ptrs=new Map();
+  // v20 camera: pan (two-finger / shift- or right-drag), zoom toward pinch/cursor point, clamped to body extents; double-tap resets
+  const halfH=()=>dist*(iso?1:FSC)*Math.tan(THREE.MathUtils.degToRad(20));
+  const clampPan=()=>{const S=GEO.scale||1,zf=Math.max(0,1-dist/4.2);const ly=1.25*S*Math.max(zf,.15),lx=.55*Math.max(zf,.1);panY=Math.max(-ly,Math.min(ly,panY));panX=Math.max(-lx,Math.min(lx,panX))};
+  const ndc=(x,y)=>{const r=canvas.getBoundingClientRect();return[(x-r.left)/r.width*2-1,-((y-r.top)/r.height*2-1),r]};
+  const zoomTo=(nd,cx,cy)=>{nd=Math.min(7,Math.max(0.6,nd));const[nx,ny]=ndc(cx,cy),h0=halfH();tdist=0;dist=nd;const dh=h0-halfH();panY+=ny*dh;panX+=nx*dh*cam.aspect;clampPan()};
+  const panBy=(dx,dy)=>{const r=canvas.getBoundingClientRect(),u=2*halfH()/Math.max(1,r.height);panX-=dx*u;panY+=dy*u;clampPan()};
+  function resetCam(){panX=panY=0;tdist=iso?tdist:4.2*Math.max(.55,GEO.scale||1)}
+  canvas.addEventListener('contextmenu',e=>e.preventDefault());
   canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});moved=0;vel=0;
-    if(ptrs.size===2){const [a,b]=[...ptrs.values()];pinch={d:Math.hypot(a.x-b.x,a.y-b.y),dist}}else drag={x:e.clientX,y:e.clientY}});
+    if(ptrs.size===2){const [a,b]=[...ptrs.values()];pinch={d:Math.hypot(a.x-b.x,a.y-b.y),mx:(a.x+b.x)/2,my:(a.y+b.y)/2};drag=null}else drag={x:e.clientX,y:e.clientY,pan:e.shiftKey||e.button===2||e.button===1}});
   canvas.addEventListener('pointermove',e=>{if(!ptrs.has(e.pointerId))return;ptrs.set(e.pointerId,{x:e.clientX,y:e.clientY});
-    if(pinch&&ptrs.size===2){const [a,b]=[...ptrs.values()];dist=Math.min(7,Math.max(0.8,pinch.dist*pinch.d/Math.max(20,Math.hypot(a.x-b.x,a.y-b.y))));moved=99;return}
-    if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;moved+=Math.abs(dx)+Math.abs(dy);rotY+=dx*.01;rotX=Math.max(-.8,Math.min(.8,rotX+dy*.006));vel=dx*.0015;drag={x:e.clientX,y:e.clientY}}});
-  const up=e=>{ptrs.delete(e.pointerId);if(ptrs.size<2)pinch=null;if(ptrs.size===0){if(moved<8)pick(e);drag=null}};
+    if(pinch&&ptrs.size===2){const [a,b]=[...ptrs.values()];const d=Math.max(20,Math.hypot(a.x-b.x,a.y-b.y)),mx=(a.x+b.x)/2,my=(a.y+b.y)/2;
+      panBy(mx-pinch.mx,my-pinch.my);zoomTo(dist*pinch.d/d,mx,my);pinch={d,mx,my};moved=99;return}
+    if(drag){const dx=e.clientX-drag.x,dy=e.clientY-drag.y;moved+=Math.abs(dx)+Math.abs(dy);
+      if(drag.pan||e.shiftKey){panBy(dx,dy);vel=0}else{rotY+=dx*.01;rotX=Math.max(-.8,Math.min(.8,rotX+dy*.006));vel=dx*.0015}drag={x:e.clientX,y:e.clientY,pan:drag.pan}}});
+  const up=e=>{ptrs.delete(e.pointerId);if(ptrs.size<2)pinch=null;if(ptrs.size===1){const[q]=[...ptrs.values()];drag={x:q.x,y:q.y,pan:false}}
+    if(ptrs.size===0){if(moved<8){const t=performance.now();if(t-lastTap<320){resetCam();lastTap=0}else{lastTap=t;pick(e)}}drag=null}};
   canvas.addEventListener('pointerup',up);canvas.addEventListener('pointercancel',up);
-  canvas.addEventListener('wheel',e=>{e.preventDefault();dist=Math.min(7,Math.max(0.8,dist*(1+e.deltaY*.001)))},{passive:false});
+  canvas.addEventListener('wheel',e=>{e.preventDefault();if(e.shiftKey&&!e.ctrlKey){panBy(-e.deltaX,-e.deltaY);return}zoomTo(dist*(1+e.deltaY*(e.ctrlKey?.01:.001)),e.clientX,e.clientY)},{passive:false});
   const ray=new THREE.Raycaster(),v2=new THREE.Vector2();
   let lastRegion=null;
   function pick(e){const r=canvas.getBoundingClientRect();v2.set((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1);ray.setFromCamera(v2,cam);
@@ -132,17 +142,17 @@ export function createBody(canvas,onPick,onStatus){
   let fy=0.15,tfy=0.15,tdist=0,iso=false;const FOFF=-0.01,FSC=1.22;let selected=null,T=performance.now(),running=true;
   function frame(t){if(!running)return;requestAnimationFrame(frame);resize();const k=(t-T)/1000;
     if(!drag)rotY+=vel;if(spin&&!drag&&Math.abs(vel)<.003)vel+=(.003-vel)*.02;
-    root.rotation.set(rotX,rotY,0);fy+=(tfy-fy)*.1;{const o=iso?0:FOFF;cam.position.set(0,fy+0.2+o,dist*(iso?1:FSC));cam.lookAt(0,fy+o,0)}if(tdist){dist+=(tdist-dist)*.1;if(Math.abs(tdist-dist)<.01)tdist=0}ring.position.y=-1.0+((k*.35)%1)*2.6;
+    root.rotation.set(rotX,rotY,0);fy+=(tfy-fy)*.1;{const o=iso?0:FOFF;cam.position.set(panX,fy+0.2+o+panY,dist*(iso?1:FSC));cam.lookAt(panX,fy+o+panY,0)}if(tdist){dist+=(tdist-dist)*.1;if(Math.abs(tdist-dist)<.01)tdist=0;clampPan()}ring.position.y=-1.0+((k*.35)%1)*2.6;
     const pul=.5+.5*Math.sin(k*4);
     for(const id in parts){const P=parts[id];const dim=selected&&selected.size&&!selected.has(id);const u0=ramp(P.score);
       const base={muscles:.35,vessels:.6,blood:.6,bones:.8}[id]||1;const thin={nerves:1,eyes:1,brain:.6}[id];let op=id==='skin'?.05:dim?.012:P.sel?(.35+.12*Math.sin(k*6)):base*(.05+P.score/100*.22);if(iso&&!dim&&id!=='skin')op=Math.max(op,thin?.55*thin+.1:.25);
       const big=/^(muscles|vessels|blood|bones|skin)$/.test(id);const fl=[];if(P.med)fl.push(0xffb300);if(P.cond)fl.push(0xff2fb4);if(P.sym)fl.push(0xa64dff);const fc=fl.length?fl[Math.floor(k*1.2)%fl.length]:0xffb300;
       let col=u0,op2=op;if(P.hue){col=P.hue.clone().multiplyScalar(.3+.85*Math.min(100,P.score)/100);if(!dim&&!P.sel)op2=id==='skin'?.05:Math.max(op,{muscles:.1,vessels:.16,blood:.16}[id]||.2)}
       if(style==='real'){const nat=P.hue||new THREE.Color(NAT[id]??0xcccccc);const em=new THREE.Color(0);let ei=0;
-        if(fl.length&&!dim){em.set(fc);ei=(big?.06:.12)+(big?.14:.25)*pul}else if(P.sel){em.set(0x00e5ff);ei=.18+.08*Math.sin(k*6)}else if(id!=='skin'){em.copy(u0);ei=.06+.06*Math.min(100,P.score)/100}
+        if(fl.length&&!dim){em.set(fc);ei=(big?.06:.12)+(big?.14:.25)*pul}else if(P.sel){em.set(0x00e5ff);ei=.18+.08*Math.sin(k*6)}else if(id!=='skin'){em.copy(u0);ei=.06+.06*Math.min(100,P.score)/100}if(P.stripe&&!dim){nat.set(0x101010);ei=0}
         for(const m of P.meshes){const r=m.material;r.color.copy(nat);r.emissive.copy(em);r.emissiveIntensity=ei;const o=id==='skin'?skinOp*(dim?.3:1):dim?.18:1;r.opacity=o;r.transparent=o<1;r.depthWrite=o>=1;m.visible=P.visible&&o>.01&&(!m.userData.sex||m.userData.sex===sex)}continue}
       for(const m of P.meshes){const u=m.material.uniforms;u.uColor.value.copy(col);u.uOpacity.value=op2;
-        u.uFlagAmt.value=fl.length&&!dim?(big?.35:1)*(.55+.45*pul):0;u.uFlag.value.set(fc);u.uStripe.value=P.stripe?1:0;m.visible=P.visible&&(!m.userData.sex||m.userData.sex===sex)}}
+        u.uFlagAmt.value=fl.length&&!dim?(big?.35:1)*(.55+.45*pul):0;u.uFlag.value.set(fc);u.uStripe.value=P.stripe?1:0;{const bl=P.stripe?THREE.NormalBlending:THREE.AdditiveBlending;if(m.material.blending!==bl){m.material.blending=bl;m.material.needsUpdate=true}}m.visible=P.visible&&(!m.userData.sex||m.userData.sex===sex)}}
     renderer.render(scene,cam)}
   requestAnimationFrame(frame);
   return{parts,ready,
@@ -150,17 +160,17 @@ export function createBody(canvas,onPick,onStatus){
       scene.environment=real?envTex:null;scene.background=real?bgTex:null;lights.visible=real;grid.visible=ring.visible=!real;renderer.toneMapping=real?THREE.AgXToneMapping:THREE.NoToneMapping;renderer.toneMappingExposure=real?.95:1;shadow.visible=real;renderer.outputColorSpace=THREE.SRGBColorSpace},
     // Visual approximation only: stature/head ratio (age), skin-shell girth (BMI), female surface shaping. Skeleton/organs keep adult-male anatomy.
     setMorph(o){sex=o.sex==='F'?'F':'M';const S=o.stature||1,hf=o.headFrac||.13,b=Math.max(-.35,Math.min(1.2,((o.bmi||22)-22)/16)),fem=sex==='F';
-      const top=GEO.top,yN=GEO.yN,ft=GEO.foot,H0=top-ft,h0=top-yN,L0=yN-ft;const hk=Math.max(.6,hf*S*H0/h0),bh=(S*H0-hk*h0)/L0,bw=Math.pow(S,.75);
+      const top=GEO.top,yN=GEO.yN,ft=GEO.foot,H0=top-ft,h0=top-yN,L0=yN-ft;const hk=Math.max(.6,Math.min(1.6,hf*S/.133)),bh=(S*H0-hk*h0)/L0,bw=Math.pow(S,.75);
       const sm=(x,a,b)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};const v=new THREE.Vector3();
       for(const id in parts)for(const m of parts[id].meshes){const mo=m.userData.mo;if(!mo)continue;const a=m.geometry.attributes.position,p0=mo.p0,an=mo.an;
         for(let i=0;i<a.count;i++){let x=p0[i*3],y=p0[i*3+1],z=p0[i*3+2];
-          if(an){const k=an[i*5+3],t=an[i*5+4];let g=k===1?1+.6*b:k===0?1+.06*b:k===2?1+.4*b*(1-.75*t):1+.45*b*(1-.7*t);
+          if(an){const k=an[i*5+3],t=an[i*5+4];let g=k===1?1+.6*b:k===0?1+.06*b:k===2?Math.max(1,1+.4*b*(1-.75*t)):Math.max(1,1+.45*b*(1-.7*t));
             if(fem){if(k===1||k===3)g*=1+.09*sm(y,-.32,-.05)*(1-sm(y,.08,.25));if(k===1)g*=1-.05*sm(y,.7,.85)}
             const ax=an[i*5],ay=an[i*5+1],az=an[i*5+2];x=ax+(x-ax)*g;z=az+(z-az)*(k===1?g*(1+.15*Math.max(0,b)*sm(y,-.1,.3)*(1-sm(y,.45,.7))):g);
-            if(fem){const pb=GEO.pub;if(pb&&id==='skin'&&y<pb.y+.03&&y>pb.y-.22){const w=1-sm(Math.abs(x),.06,.095),zc=.14-.9*Math.max(0,pb.y+.01-y),hy=1-sm(y,pb.y-.2,pb.y-.16)*0;if(w>0&&z>zc)z=zc+(z-zc)*(1-w)}
+            if(fem){if(id==='skin'&&y<.13&&y>-.09&&z>-.03){const w=1-sm(Math.abs(x),.045,.08),zc=-.012+.13*sm(y,-.05,.06);if(w>0&&z>zc)z=zc+(z-zc)*(1-w)}// v20: female surface over the BodyParts3D (male) external genitalia: smooth mons/perineum
               if(id==='skin'&&y>yN){const j=1-sm(y,yN+.07,yN+.15);x*=1-.07*j*sm(y,yN,yN+.04);z=z-.012*j*sm(y,yN,yN+.04)*Math.max(0,Math.sign(z))}}}
           if(fem&&(id==='skin'||id==='muscles'))for(const sg of[1,-1]){const c=GEO['br'+sg];if(!c)continue;const d2=((x-c.x)**2+(y-c.y+.05)**2*1.1)/(.09*.09);if(d2<6&&z>c.z-.12)z+=.065*Math.exp(-d2)}
-          if(fem&&id==='bladder'&&GEO.pub&&y<GEO.pub.y-.02&&z>.06){x=0;y=GEO.pub.y;z=GEO.pub.z}// hide male (penile) urethra
+          if(fem&&id!=='skin'&&!mo.an&&Math.abs(x)<.05&&y<.08&&y>-.09){const zc=-.022+.13*sm(y,-.05,.06);if(z>zc)z=zc}// v20: tuck male penile structures (urethra, vessels, nerves) under the female surface// hide male (penile) urethra
           if(y>yN){y=yN+(y-yN)*hk;x*=hk;z*=hk;y=ft+L0*bh+(y-yN)}else{y=ft+(y-ft)*bh;x*=bw;z*=bw}
           v.set(x,y,z).applyMatrix4(mo.Mi);a.setXYZ(i,v.x,v.y,v.z)}
         a.needsUpdate=true;if(id==='skin')m.geometry.computeVertexNormals();m.geometry.computeBoundingSphere();m.geometry.computeBoundingBox()}
@@ -199,6 +209,7 @@ export function createBody(canvas,onPick,onStatus){
     setStripe(set){for(const id in parts)parts[id].stripe=!!(set&&set.has(id))},
     setHues(map){for(const id in parts)parts[id].hue=map&&map[id]!=null?new THREE.Color(map[id]):null},
     setView(y,x){rotY=y;if(x!=null)rotX=x;vel=0;setTimeout(()=>{vel=.0},0)},
+    resetCam,setCam(o){if(o.dist!=null){dist=o.dist;tdist=0}panX=o.x||0;panY=o.y||0;clampPan()},
     setSpin(on){vel=on?.003:0;spin=on},
     pause(p){if(running===!p)return;running=!p;if(!p)requestAnimationFrame(frame)}};
 }

@@ -191,3 +191,61 @@ details.note{background:var(--bg)}details.note summary{color:var(--mute);font-we
 .steps{padding-left:20px;margin:4px 0}.card .big{font-size:22px;font-weight:650;margin:4px 0}
 .labform>div:empty,.labform>.warn:empty{display:none}
 #legend3d .ovl{white-space:normal;text-align:center;max-width:100%}
+/* v20: toggleable system chips, cancer-link swatch, reset-view button */
+#sysleg button.sl{background:var(--card);border:1px solid color-mix(in srgb,var(--acc) 45%,transparent);border-radius:999px;font:inherit;color:inherit;padding:3px 8px;min-height:28px;cursor:pointer}
+#sysleg button.sl.off{opacity:.45;text-decoration:line-through;border-style:dashed}
+#sysleg button.slq{color:var(--acc);font-weight:600}
+#legend3d .ov-onc::before{background:#101010!important;box-shadow:0 0 0 1.5px #fff,0 0 0 2.5px #888}
+#resetv{position:absolute;right:10px;top:calc(env(safe-area-inset-top) + 150px);z-index:3;width:36px;height:36px;border-radius:50%;border:0;background:var(--card);box-shadow:var(--sh);font-size:18px;color:var(--acc);cursor:pointer}
+.hello{font-size:20px;font-weight:650;margin:6px 0 4px}
+/* v20: sideways-scroll hint on section pill rows */
+.seg{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 28px),transparent);padding-left:10px;padding-right:32px;scroll-padding:0 32px}
+.macmini{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:center;padding:10px 12px;margin:6px 0;cursor:pointer}
+.mm{font-size:13px;white-space:nowrap}.mm i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:middle}
+.macring{align-items:center;gap:16px;padding:12px}
+.plain{margin-top:6px;padding:6px 9px;border-left:3px solid var(--acc);background:color-mix(in srgb,var(--acc) 8%,transparent);border-radius:6px;color:var(--ink);font-style:normal;font-size:13.5px;line-height:1.45}
+abbr.gl{text-decoration:underline dotted color-mix(in srgb,var(--acc) 80%,transparent);text-underline-offset:3px;cursor:help}
+#glpop{position:fixed;z-index:60;width:280px;background:var(--card);color:var(--ink);border-radius:12px;box-shadow:0 8px 28px rgba(0,0,0,.22);padding:12px;font-size:14px;line-height:1.45}#glpop .flex{margin-top:8px}
+details.learn{padding:10px 12px;margin:6px 0}details.learn summary{font-weight:600;cursor:pointer}details.learn p{margin:6px 0;line-height:1.5}
+.gli{padding:8px 0}.sodforms{display:grid;gap:6px;margin:6px 0}.sodf{padding:6px 8px;border:1px solid var(--line);border-radius:8px}
+/* v20 neutral citation badges */
+.cite{gap:5px;padding:2px 4px 2px 3px;background:var(--card);border-color:#c5ccd6;color:#2b3440}
+.cite .dot{display:none}
+.cite .tier{font-weight:700;font-size:10.5px;padding:1px 5px;border-radius:999px;color:#fff;letter-spacing:.2px}
+.tr1{background:#1e3a5f}.tr2{background:#3b5577}.tr3{background:#5d7390;color:#fff}.tr4{background:#e3e8ef;color:#2b3a4f!important;border:1px solid #9aa7b8}
+.cite .src{font-weight:600}
+.cite .yr{display:inline-flex;align-items:center;gap:4px;background:#eceff3;color:#3a4350;border-radius:999px;padding:1px 6px;font-size:10.5px;font-variant-numeric:tabular-nums}
+.fm{display:inline-flex;align-items:flex-end;gap:1px;height:9px}.fm i{display:block;width:2px;background:#c3c9d2;border-radius:1px}
+.fm i:nth-child(1){height:3px}.fm i:nth-child(2){height:5px}.fm i:nth-child(3){height:7px}.fm i:nth-child(4){height:9px}.fm i.f{background:#3a4350}
+[data-theme=dark] .cite{background:#1d232b;border-color:#3a4553;color:#dfe5ec}
+[data-theme=dark] .cite .yr{background:#2a323c;color:#d5dbe2}[data-theme=dark] .fm i{background:#4a5563}[data-theme=dark] .fm i.f{background:#e1e6ec}
+[data-theme=dark] .tr1{background:#9fb8d8;color:#0f1a28}[data-theme=dark] .tr2{background:#7d97b8;color:#0f1a28}[data-theme=dark] .tr3{background:#5a6f8a}[data-theme=dark] .tr4{background:#2a323c;color:#d5dbe2!important;border-color:#5a6676}
+.badgekey{max-width:60ch}
+.lg.ov-exp::before,#legend3d .ov-exp::before{background:#2aa3a3!important}
+.redflag{border-color:#d9534f;background:#fdecea}[data-theme=dark] .redflag{background:#3a1f1f}
+.expc{padding:10px 12px;margin:10px 0;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+.idea{padding:8px 0;border-bottom:1px solid var(--line)}.amberp{background:#fff3dc;border:1px solid #e8c77a;color:#6b4a00}
+.lowcard{border-left:4px solid #e0a63a;padding:6px 10px;margin:10px 0;background:var(--card);border-radius:8px}
+.lowchip{border-color:#e0a63a!important}
+.nudge{display:block;margin:6px auto;padding:8px 14px;border-radius:999px;border:1px solid #e0a63a;background:#fff8ea;color:#5c4100;font-weight:600}
+[data-theme=dark] .amberp,[data-theme=dark] .nudge{background:#3a2f17;color:#f1d79c}
+#nudge{position:absolute;left:12px;top:calc(env(safe-area-inset-top) + 112px);z-index:3;margin:0;font-size:12.5px;max-width:60%}#nudge[hidden]{display:none}
+/* v20b: low-emphasis superscript badges */
+.cite{position:relative;display:inline-flex;align-items:center;gap:3px;font-size:10.5px;font-weight:500;line-height:1;padding:1px 4px;margin:0 2px;min-height:0;border:1px solid transparent;border-color:#dde1e6;background:transparent;color:#5b6573;vertical-align:super;border-radius:6px}
+.cite::after{content:'';position:absolute;left:-4px;right:-4px;top:50%;height:34px;transform:translateY(-50%)}
+.cite:hover,.cite:focus-visible{border-color:#9aa5b1;color:#2b3440;outline:none}
+.cite .src{font-weight:600}
+.cite .yr{background:none;padding:0;color:#5b6573;font-size:10px;gap:0}
+.cite .tier{background:none!important;border:0!important;padding:0;font-size:10px;font-weight:700;letter-spacing:0}
+.cite .tr1{color:#1e3a5f!important}.cite .tr2{color:#34507a!important}.cite .tr3{color:#4f6582!important}.cite .tr4{color:#5f6e80!important}
+.fm{height:7px}.fm i{width:1.5px}.fm i:nth-child(1){height:2px}.fm i:nth-child(2){height:4px}.fm i:nth-child(3){height:5.5px}.fm i:nth-child(4){height:7px}.fm i.f{background:#5b6573}.fm i{background:#d3d8de}
+.cite.multi{font-style:normal;color:#5b6573}
+[data-theme=dark] .cite{background:transparent;border-color:#3a4553;color:#aab4c0}[data-theme=dark] .cite .yr{color:#aab4c0}
+[data-theme=dark] .cite .tr1{color:#c9d8ec!important}[data-theme=dark] .cite .tr2{color:#b0c3dc!important}[data-theme=dark] .cite .tr3{color:#9db0c8!important}[data-theme=dark] .cite .tr4{color:#8d9aab!important}
+[data-theme=dark] .fm i.f{background:#c4ccd6}
+#pop .cite,.badgekey+.sub .cite{vertical-align:middle}
+/* v20 collapsible notices */
+.note{background:var(--card)!important;border:1px solid var(--line)!important;color:var(--ink);padding:0!important;border-radius:10px;margin:8px 0}
+.note .nh{display:flex;justify-content:space-between;align-items:center;width:100%;min-height:36px;padding:6px 12px;background:none;border:0;color:var(--mute);font-size:13px;font-weight:600;text-align:left;cursor:pointer}
+.note .nb{padding:0 12px 10px;font-size:13px}.note.closed .nb{display:none}.note .chev{transition:transform .15s}.note.closed .chev{transform:rotate(-90deg)}
+.note .nb .plain{margin-top:6px}

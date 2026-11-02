@@ -1,0 +1,244 @@
+{
+ "exposures": [
+  {
+   "id": "sun",
+   "name": "Lots of sun",
+   "chips": [
+    "Outdoor work",
+    "Tanning",
+    "Sunburn history"
+   ],
+   "parts": [
+    "skin",
+    "eyes"
+   ],
+   "facts": [
+    [
+     "Most skin cancers are caused by too much exposure to ultraviolet (UV) rays. UV rays come from the sun and tanning beds. UV rays can damage skin cells.",
+     "cdc-skin",
+     "Too much UV from the sun or tanning beds damages skin cells and causes most skin cancers."
+    ],
+    [
+     "If the UV index is 3 or higher in your area, protect your skin from the sun in several ways: Stay in the shade. Wear clothing that covers your arms and legs. Wear a hat with a wide brim… Wear sunglasses that wrap around and block both UVA and UVB rays. Use a broad-spectrum sunscreen with a sun protection factor (SPF) of 15 or higher.",
+     "cdc-skin",
+     "When the UV index is 3+, use shade, covering clothes, a wide hat, UV-blocking sunglasses and SPF 15+ broad-spectrum sunscreen."
+    ],
+    [
+     "Any change in skin color after UV exposure (whether it is a tan or a burn) is a sign of injury, not health.",
+     "cdc-skin",
+     "A tan or a burn both mean the skin was hurt."
+    ],
+    [
+     "IARC classifies solar radiation in Group 1 (carcinogenic to humans). A Group 1 label is about strength of evidence that something can cause cancer, not how big the risk is.",
+     "iarc-list",
+     "Sunlight is a proven cause of cancer; the group says how sure scientists are, not how risky one day outside is."
+    ],
+    [
+     "It is also produced endogenously when ultraviolet (UV) rays from sunlight strike the skin and trigger vitamin D synthesis.",
+     "ods-vitD",
+     "Your skin makes vitamin D when sunlight hits it."
+    ]
+   ],
+   "note": "No food or supplement replaces sun protection. Heat and hydration: see “Harsh environments → Extreme heat”."
+  },
+  {
+   "id": "chem",
+   "name": "Around chemicals",
+   "chips": [
+    "Solvents",
+    "Cleaning chemicals",
+    "Pesticides",
+    "Metals / lead",
+    "Smoke / fumes",
+    "Lab reagents"
+   ],
+   "parts": [
+    "skin",
+    "lungs",
+    "liver",
+    "kidneys",
+    "brain",
+    "eyes",
+    "blood"
+   ],
+   "facts": [
+    [
+     "Personal protective equipment, commonly referred to as \"PPE\", is equipment worn to minimize exposure to hazards that cause serious workplace injuries and illnesses.",
+     "osha-ppe",
+     "PPE (gloves, goggles, respirators, lab coats) cuts down how much of a hazard reaches you."
+    ],
+    [
+     "When engineering, work practice, and administrative controls are not feasible or do not provide sufficient protection, employers must provide personal protective equipment to their workers and ensure its proper use.",
+     "osha-ppe",
+     "Employers must supply PPE and train you on it when other controls are not enough. Check the Safety Data Sheet for each reagent."
+    ],
+    [
+     "There is currently no known safe level of lead, and exposure to lead can cause health problems. The health effects of lead are the same whether lead particles are breathed-in, swallowed, or absorbed through your skin.",
+     "niosh-lead",
+     "No amount of lead is known to be safe, whether you breathe it, swallow it or absorb it through skin.",
+     "lead"
+    ],
+    [
+     "In adults, exposure to high levels of lead may cause: Anemia, Kidney damage, Neurologic and brain damage, Infertility in both men and women, Death",
+     "niosh-lead",
+     "High lead can harm blood, kidneys, brain and fertility.",
+     "lead"
+    ],
+    [
+     "If you work near lead, you can bring home lead dust on your clothes, shoes, and hair, among other things.",
+     "niosh-lead",
+     "Change and wash work clothes so lead dust doesn’t come home.",
+     "lead"
+    ]
+   ],
+   "note": "No “detox” product removes workplace chemicals; exposure control and medical follow-up do. Specific limits (OSHA PELs / NIOSH RELs) are listed on each chemical’s Safety Data Sheet."
+  },
+  {
+   "id": "env",
+   "name": "Harsh environments",
+   "chips": [
+    "Extreme heat",
+    "Extreme cold",
+    "High altitude",
+    "Dust / air pollution",
+    "Loud noise"
+   ],
+   "parts": [
+    "skin",
+    "heart",
+    "lungs",
+    "kidneys",
+    "muscles",
+    "brain"
+   ],
+   "facts": [
+    [
+     "Heat exhaustion is the body's response to an excessive loss of water and salt, usually through excessive sweating.",
+     "cdc-heat",
+     "Heat exhaustion happens when you sweat out too much water and salt.",
+     "Extreme heat"
+    ],
+    [
+     "Drink water and have a snack or a drink that replaces carbohydrates and electrolytes (such as sports drinks) every 15 to 20 minutes. Avoid salt tablets.",
+     "cdc-heat",
+     "For heat cramps: water plus a snack or sports drink every 15–20 minutes; skip salt tablets.",
+     "Extreme heat"
+    ],
+    [
+     "Frostbite is an injury to the body that is caused by freezing. Frostbite causes a loss of feeling and color in the affected areas. It most often affects the nose, ears, cheeks, chin, fingers, or toes.",
+     "cdc-cold",
+     "Frostbite is frozen tissue, usually nose, ears, cheeks, chin, fingers or toes.",
+     "Extreme cold"
+    ],
+    [
+     "Wear several layers of loose clothing for better insulation. … Make sure to protect the ears, face, hands, and feet.",
+     "cdc-coldwork",
+     "Wear loose layers and cover ears, face, hands and feet.",
+     "Extreme cold"
+    ],
+    [
+     "High-altitude environments expose travelers to cold, low humidity, increased ultraviolet radiation, and decreased air pressure, all of which can cause health problems. The biggest concern, however, is hypoxia…",
+     "cdc-altitude",
+     "Up high there is less oxygen, more UV, more cold and drier air. Go up gradually.",
+     "High altitude"
+    ],
+    [
+     "Avoid alcohol for the first 48 hours at high altitude.",
+     "cdc-altitude",
+     "Skip alcohol for the first 2 days up high.",
+     "High altitude"
+    ],
+    [
+     "…this mortality is due to exposure to fine particulate matter, which causes cardiovascular and respiratory disease, and cancers.",
+     "who-air",
+     "Tiny particles in polluted air harm the heart and lungs.",
+     "Dust / air pollution"
+    ]
+   ],
+   "note": "Not yet sourced here (so not shown): altitude and iron, altitude hydration targets, and noise/hearing protection."
+  }
+ ],
+ "flags": [
+  {
+   "t": "Heat stroke — call 911",
+   "q": "Symptoms of heat stroke include: Confusion, altered mental status, slurred speech; Loss of consciousness (coma); Hot, dry skin or profuse sweating; Seizures; Very high body temperature. … Call 911 for emergency medical care.",
+   "c": "cdc-heat",
+   "for": "env"
+  },
+  {
+   "t": "Hypothermia — get medical help now",
+   "q": "Early symptoms: Shivering, Fatigue, Loss of coordination, Confusion and disorientation. Late symptoms: No shivering, Blue skin, Dilated pupils, Slowed pulse and breathing, Loss of consciousness. … Alert the supervisor and request medical assistance.",
+   "c": "cdc-cold",
+   "for": "env"
+  },
+  {
+   "t": "Chemical swallowed, splashed or inhaled",
+   "q": "Poison Help is available 24/7 in over 100 languages. 1-800-222-1222",
+   "c": "hrsa-poison",
+   "for": "chem"
+  }
+ ],
+ "connective": {
+  "parts": [
+   [
+    "Tendons & ligaments",
+    "Tendons and ligaments are composed primarily of type I collagen (~70–80% dry weight), arranged in hierarchical fibrillar structures that provide tensile strength and stiffness",
+    "pmid-42512652",
+    "Tendons (muscle to bone) and ligaments (bone to bone) are mostly collagen fibers, which make them strong and stiff."
+   ],
+   [
+    "Collagen & connective tissue",
+    "Collagen is an essential component of connective tissue, which plays a vital role in wound healing.",
+    "ods-vitC",
+    "Collagen is a main building block of connective tissue and helps wounds heal."
+   ]
+  ],
+  "nutr": [
+   [
+    "vitC",
+    "Vitamin C is central to this strategy because it acts as a cofactor for prolyl and lysyl hydroxylase enzymes involved in collagen synthesis",
+    "pmid-42512652",
+    "Vitamin C is a helper for the enzymes that build collagen."
+   ],
+   [
+    "vitC",
+    "The lack of vitamin C impairs collagen synthesis, weakening connective tissues.",
+    "ods-vitC",
+    "Too little vitamin C (scurvy) weakens connective tissue."
+   ],
+   [
+    "cu",
+    "It is a cofactor for several enzymes (known as cuproenzymes) involved in energy production, iron metabolism, neuropeptide activation, connective tissue synthesis, and neurotransmitter synthesis",
+    "ods-cu",
+    "Copper helps enzymes that build connective tissue."
+   ],
+   [
+    "zn",
+    "It is required for the catalytic activity of hundreds of enzymes, and it plays a role in enhancing immune function, protein and DNA synthesis, wound healing, and cell signaling and division",
+    "ods-zn",
+    "Zinc helps make protein and heal wounds."
+   ],
+   [
+    "protein",
+    "For connective tissue repair, adequate protein also helps maintain the amino acid pool required for collagen production, particularly glycine, proline, and hydroxyproline",
+    "pmid-42512652",
+    "Enough protein supplies glycine and proline, the building blocks of collagen."
+   ]
+  ],
+  "supp": [
+   "In the subgroup meta-analysis by funding source, studies not receiving funding from pharmaceutical companies revealed no effect of collagen supplements for improving skin hydration, elasticity, and wrinkles, while those receiving funding from pharmaceutical companies did show significant effects.",
+   "pmid-40324552",
+   "Industry-funded studies found benefits; independent and high-quality studies did not."
+  ],
+  "supp2": [
+   "There is currently no clinical evidence to support the use of collagen supplements to prevent or treat skin aging.",
+   "pmid-40324552",
+   "Evidence for collagen pills is weak."
+  ],
+  "flex": [
+   "Stretching exercises are effective in increasing flexibility, and thereby can allow people to more easily do activities that require greater flexibility.",
+   "hhs-pag2",
+   "Flexibility comes from stretching, not from a food."
+  ]
+ }
+}
