@@ -130,3 +130,9 @@ Licences were checked on the official pages on 2026-11-01 (America/Indianapolis)
 - **tesseract.js-core** (`vendor/tess/core/*.wasm.js`, Tesseract OCR engine compiled to WebAssembly) — Apache License 2.0, © Google / Tesseract contributors. See `vendor/tess/core/LICENSE`.
 - **English trained data** `eng.traineddata` (tessdata_best, integerized, 4.0.0_best_int) — Apache License 2.0, tesseract-ocr/tessdata project.
 - **fflate** (`vendor/fflate.js`, streaming ZIP for Apple Health export.zip) — MIT License, © Arjun Barrett. See `vendor/FFLATE-LICENSE`.
+
+
+## v22 — Female skin surface (MakeHuman, CC0)
+- Source: MakeHuman 1.x assets, https://github.com/makehumancommunity/makehuman (`makehuman/data/3dobjs/base.obj`, targets `macrodetails/{caucasian,african,asian}-female-young.target` averaged, skinning weights `data/rigs/default_weights.mhw`). Assets licence: **CC0 1.0 Universal** (repo LICENSE.md, section C; each target file header states CC0, Sept 2020). No attribution is required; credit given anyway: Manuel Bastioni, Data Collection AB, Joel Palmius, Jonas Hauquier.
+- Processing (`tools/fit_female.py`, `tools/push_female.py`): body group only (no helpers/genital proxy), scaled to the skeleton's stature, torso remapped by height to the skeleton's hip/shoulder joints, limbs re-posed by linear-blend skinning to the Z-Anatomy shoulder/elbow/wrist/hip/knee/ankle joints, hands rotated palm-forward, torso widened only where the male ribcage/muscles required it, then pushed outward until every internal vertex (except the hidden male external genitalia, teeth and eyes) is inside the skin (generalized winding number test, 3 mm margin). Output: `models/skin_f.glb` (shown only in female view).
+- Rejected: Anny (Naver Labs) and SMPL-X (licence), Visible Human Female surface (pose and body habitus).

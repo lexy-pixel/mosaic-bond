@@ -14,7 +14,7 @@ export function createBody(canvas,onPick,onStatus){
   const root=new THREE.Group();scene.add(root);
   const grid=new THREE.PolarGridHelper(1.3,16,6,64,0x006b78,0x003a44);grid.position.y=-1.02;scene.add(grid);
   const ring=new THREE.Mesh(new THREE.TorusGeometry(1.0,0.005,6,96),new THREE.MeshBasicMaterial({color:0x00f0ff,transparent:true,opacity:.8}));ring.rotation.x=Math.PI/2;scene.add(ring);
-  let aura=null;const parts={},pickables=[];const LIMBS=[],GEO={};let style='real',skinOp=.35,sex='M',exOv=[],rcOv=[];const RG={};const exMat1=new THREE.MeshBasicMaterial({color:0xb6ff3a,transparent:true,opacity:.9,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,side:THREE.DoubleSide}),exMat2=new THREE.MeshBasicMaterial({color:0x3fae4a,transparent:true,opacity:.8,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,side:THREE.DoubleSide});
+  let aura=null;const auraU={value:0},glowOv=[];const parts={},pickables=[];const LIMBS=[],GEO={};let style='real',skinOp=.35,sex='M',exOv=[],rcOv=[];const RG={};const exMat1=new THREE.MeshBasicMaterial({color:0xb6ff3a,transparent:true,opacity:.9,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,side:THREE.DoubleSide}),exMat2=new THREE.MeshBasicMaterial({color:0x3fae4a,transparent:true,opacity:.8,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,side:THREE.DoubleSide});
   // Realistic mode: studio lights + procedural env map (no external HDR), gradient background.
   const lights=new THREE.Group();lights.add(new THREE.HemisphereLight(0xf4f6ff,0x3a3028,.7));
   for(const[c,i,x,y,z]of[[0xfff6ee,1.5,2,3,3],[0xdfe8ff,.5,-3,1.5,2],[0xffffff,.9,0,2.5,-3]]){const d=new THREE.DirectionalLight(c,i);d.position.set(x,y,z);lights.add(d)}
@@ -32,12 +32,12 @@ export function createBody(canvas,onPick,onStatus){
   const mat=(id)=>new THREE.ShaderMaterial({vertexShader:VS,fragmentShader:FS,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,side:id==='skin'?THREE.FrontSide:THREE.DoubleSide,
     uniforms:{uColor:{value:new THREE.Color(0x00f0ff)},uOpacity:{value:.2},uRim:{value:id==='skin'?3.0:(id==='nerves'||id==='eyes')?0.8:1.6},uFlag:{value:new THREE.Color(0xffb300)},uFlagAmt:{value:0},uStripe:{value:0}}});
   // Tissue colours chosen to match fresh/embalmed-neutral anatomical references (not decorative).
-  const NAT={connective:0xcfe0ee,bones:0xe8dcc0,teeth:0xf3ecd9,muscles:0x8a261c,brain:0xd9b0a4,nerves:0xeed77a,eyes:0xf1efe8,heart:0x8c2a22,blood:0x34508f,vessels:0xb02a22,lungs:0xd9a09a,liver:0x6a2519,stomach:0xd08a74,gut:0xd8a08a,immune:0x7c3e58,thyroid:0x9e4436,pancreas:0xdfb488,kidneys:0x7a2c22,bladder:0xd6b08c,glands:0xd8a456,reproductive:0xc98c7c,skin:0xe6b89c,hair:0x3a2a20};
+  const NAT={connective:0xb8d4f2,bones:0xe8dcc0,teeth:0xf3ecd9,muscles:0x8a261c,brain:0xd9b0a4,nerves:0xeed77a,eyes:0xf1efe8,heart:0x8c2a22,blood:0x34508f,vessels:0xb02a22,lungs:0xd9a09a,liver:0x6a2519,stomach:0xd08a74,gut:0xd8a08a,immune:0x7c3e58,thyroid:0x9e4436,pancreas:0xdfb488,kidneys:0x7a2c22,bladder:0xd6b08c,glands:0xd8a456,reproductive:0xc98c7c,skin:0xe6b89c,hair:0x3a2a20};
   // Per-tissue PBR: wet organs get a clearcoat, muscle a soft sheen, bone stays matte ivory.
   const TP={connective:{r:.28,cc:.6,ccr:.2,sh:.5,shc:0xe8f4ff},bones:{r:.62,cc:0},teeth:{r:.3,cc:.5},muscles:{r:.5,cc:.25,ccr:.45,sh:.12,shc:0xd06a5a},nerves:{r:.5,cc:.15},vessels:{r:.32,cc:.5},blood:{r:.32,cc:.5},skin:{r:.52,cc:.05,sh:.6,shc:0xffd9c6},hair:{r:.7,cc:0},eyes:{r:.15,cc:1}};
   const rmat=id=>{const t=TP[id]||{r:.36,cc:.45,ccr:.3};const m=new THREE.MeshPhysicalMaterial({color:NAT[id]??0xcccccc,roughness:t.r,metalness:0,clearcoat:t.cc,clearcoatRoughness:t.ccr??.35,sheen:t.sh||0,sheenColor:new THREE.Color(t.shc||0xffffff),sheenRoughness:.6,envMapIntensity:.85,
     transparent:id==='skin',opacity:id==='skin'?.35:1,depthWrite:id!=='skin',side:id==='skin'?THREE.FrontSide:THREE.DoubleSide});
-    if(id==='skin')m.onBeforeCompile=sh=>{sh.vertexShader=sh.vertexShader.replace('#include <begin_vertex>','vec3 transformed=vec3(position)+normal*(0.008/length(modelMatrix[0].xyz));');sh.fragmentShader=sh.fragmentShader.replace('#include <opaque_fragment>','float nbFr=pow(1.0-abs(dot(normalize(normal),normalize(vViewPosition))),2.2);diffuseColor.a=clamp(diffuseColor.a*(0.5+1.9*nbFr),0.0,1.0);\n#include <opaque_fragment>')};
+    if(id==='skin')m.onBeforeCompile=sh=>{sh.uniforms.uAur=auraU;sh.fragmentShader='uniform float uAur;\n'+sh.fragmentShader;sh.vertexShader=sh.vertexShader.replace('#include <begin_vertex>','vec3 transformed=vec3(position)+normal*(0.008/length(modelMatrix[0].xyz));');sh.fragmentShader=sh.fragmentShader.replace('#include <opaque_fragment>','float nbFr=pow(1.0-abs(dot(normalize(normal),normalize(vViewPosition))),2.2);float nbB=mix(0.5,1.06,smoothstep(0.55,0.97,diffuseColor.a));diffuseColor.a=clamp(diffuseColor.a*(nbB+1.9*nbFr),0.0,1.0);float nbG=pow(nbFr,0.9)*uAur;outgoingLight=mix(outgoingLight,vec3(0.91,0.66,0.18),clamp(nbG*1.5,0.0,0.92))+vec3(1.0,0.78,0.30)*nbG*0.25;diffuseColor.a=max(diffuseColor.a,clamp(nbG*1.2,0.0,0.9));\n#include <opaque_fragment>')};
     return m};
   function reg(id,mesh){mesh.userData.hm=mat(id);mesh.userData.rm=rmat(id);mesh.material=style==='real'?mesh.userData.rm:mesh.userData.hm;mesh.userData.part=id;mesh.renderOrder=id==='skin'?10:0;pickables.push(mesh);
     const P=parts[id]||(parts[id]={meshes:[],score:0,visible:true,sel:false,med:false,cond:false,sym:false,hue:null});P.meshes.push(mesh)}
@@ -46,10 +46,12 @@ export function createBody(canvas,onPick,onStatus){
   // v18: low-detail preview (~71k tris) shows while the full model loads; removed once the full model is ready
   let full=false,pv=null;loader.load('models/body_lo.glb',g=>{if(full)return;const m=g.scene;const box=new THREE.Box3().setFromObject(m);const sz=box.getSize(new THREE.Vector3()),c=box.getCenter(new THREE.Vector3());const s=2.55/sz.y;m.scale.setScalar(s);m.position.set(-c.x*s,-c.y*s+0.12,-c.z*s);
     m.traverse(o=>{if(o.isMesh){const id=o.name.replace(/_[MF]$/,''),sk=id==='skin';o.material=new THREE.MeshStandardMaterial({color:NAT[id]||0xc98c7c,roughness:.6,transparent:sk,opacity:sk?.25:1,depthWrite:!sk});if(/_[MF]$/.test(o.name))o.visible=false}});root.add(m);pv=m},undefined,()=>{});
-  const ready=new Promise((res,rej)=>loader.load('models/body.glb',g=>{
+  const ready=new Promise((res,rej)=>{const G=(g,g2)=>{
     full=true;if(pv){root.remove(pv);pv.traverse(o=>{if(o.isMesh){o.geometry.dispose();o.material.dispose()}});pv=null}
     const m=g.scene;const box=new THREE.Box3().setFromObject(m);const sz=box.getSize(new THREE.Vector3()),c=box.getCenter(new THREE.Vector3());
-    const s=2.55/sz.y;m.scale.setScalar(s);m.position.set(-c.x*s,-c.y*s+0.12,-c.z*s);root.add(m);shadow.position.set(0,(box.min.y-c.y)*s+0.115,0);
+    const s=2.55/sz.y;m.scale.setScalar(s);m.position.set(-c.x*s,-c.y*s+0.12,-c.z*s);// v22: female skin shell = MakeHuman (CC0) female base mesh fitted to this skeleton (tools/fit_female.py)
+    if(g2){let fm=null;g2.scene.traverse(o=>{if(o.isMesh&&!fm)fm=o});if(fm){fm.removeFromParent();fm.name='skin_F';m.add(fm)}}
+    root.add(m);shadow.position.set(0,(box.min.y-c.y)*s+0.115,0);
     m.traverse(o=>{if(o.isMesh){const sx=(o.name.match(/_([MF])$/)||(o.parent&&o.parent.name.match(/_([MF])$/))||[])[1];let id=o.name.replace(/_[MF]$/,'');let p=o;while(p&&!parts[id]&&!/^[a-z]+$/.test(id)){p=p.parent;id=p?p.name:id}
       {let g=o.geometry.clone();for(const k of Object.keys(g.attributes))if(k!=='position')g.deleteAttribute(k);g=mergeVertices(g,1e-5);g.computeVertexNormals();o.geometry.dispose();o.geometry=g}if(sx&&o.parent&&/_[MF]$/.test(o.parent.name))id=o.parent.name.replace(/_[MF]$/,'');reg(id,o);if(sx)o.userData.sex=sx}});
     // Thyroid gland is not in the BodyParts3D set: stylized placeholder at the neck.
@@ -110,8 +112,8 @@ export function createBody(canvas,onPick,onStatus){
       if(id==='skin'){const an=new Float32Array(a.count*5);for(let i=0;i<a.count;i++){v.set(p0[i*3],p0[i*3+1],p0[i*3+2]);let best=1e9,bs=null,bt=0;
           for(const S of segs){ab.subVectors(S.b,S.a);const t=Math.max(0,Math.min(1,ap.subVectors(v,S.a).dot(ab)/ab.lengthSq()));cp.copy(S.a).addScaledVector(ab,t);const d=cp.distanceToSquared(v);if(d<best){best=d;bs=S;bt=S.t0+(S.t1-S.t0)*t;an[i*5]=cp.x;an[i*5+1]=cp.y;an[i*5+2]=cp.z}}
           an[i*5+3]={head:0,torso:1,arm:2,leg:3}[bs.k];an[i*5+4]=bt}m.userData.mo.an=an}}
-    GEO.foot=foot;
-    res({ms:performance.now()-t0})},e=>onStatus&&onStatus(e.lengthComputable?Math.round(100*e.loaded/e.total):null),rej));
+    GEO.foot=foot;if(parts.skin&&parts.skin.meshes.some(x=>x.userData.sex==='F'))for(const x of parts.skin.meshes)if(!x.userData.sex)x.userData.sex='M';
+    res({ms:performance.now()-t0})};loader.load('models/body.glb',g=>loader.load('models/skin_f.glb',g2=>G(g,g2),undefined,()=>G(g,null)),e=>onStatus&&onStatus(e.lengthComputable?Math.round(100*e.loaded/e.total):null),rej)});
   let spin=true,rotY=0,rotX=0.05,dist=4.2,vel=.003,drag=null,pinch=null,moved=0,panX=0,panY=0,lastTap=0;const ptrs=new Map();
   // v20 camera: pan (two-finger / shift- or right-drag), zoom toward pinch/cursor point, clamped to body extents; double-tap resets
   const halfH=()=>dist*(iso?1:FSC)*Math.tan(THREE.MathUtils.degToRad(20));
@@ -150,7 +152,7 @@ export function createBody(canvas,onPick,onStatus){
       let col=u0,op2=op;if(P.hue){col=P.hue.clone().multiplyScalar(.3+.85*Math.min(100,P.score)/100);if(!dim&&!P.sel)op2=id==='skin'?.05:Math.max(op,{muscles:.1,vessels:.16,blood:.16}[id]||.2)}
       if(style==='real'){const nat=P.hue||new THREE.Color(NAT[id]??0xcccccc);const em=new THREE.Color(0);let ei=0;
         if(fl.length&&!dim){em.set(fc);ei=(big?.06:.12)+(big?.14:.25)*pul}else if(P.sel){em.set(0x00e5ff);ei=.18+.08*Math.sin(k*6)}else if(id!=='skin'){em.copy(u0);ei=.06+.06*Math.min(100,P.score)/100}if(P.stripe&&!dim){nat.set(0x101010);ei=0}
-        for(const m of P.meshes){const r=m.material;r.color.copy(nat);r.emissive.copy(em);r.emissiveIntensity=ei;const o=id==='skin'?skinOp*(dim?.3:1):dim?.18:1;r.opacity=o;r.transparent=o<1;r.depthWrite=o>=1;m.visible=P.visible&&o>.01&&(!m.userData.sex||m.userData.sex===sex)}continue}
+        for(const m of P.meshes){const r=m.material;r.color.copy(nat);r.emissive.copy(em);r.emissiveIntensity=ei;const o=id==='skin'?skinOp*(dim?.3:1):dim?.18:id==='connective'?.82:1;r.opacity=o;r.transparent=o<1;r.depthWrite=o>=1||id==='connective';if(id==='connective'&&!fl.length&&!P.sel&&!P.hue){r.emissive.set(0x5f95e0);r.emissiveIntensity=.28}m.visible=P.visible&&o>.01&&(!m.userData.sex||m.userData.sex===sex)}continue}
       for(const m of P.meshes){const u=m.material.uniforms;u.uColor.value.copy(col);u.uOpacity.value=op2;
         u.uFlagAmt.value=fl.length&&!dim?(big?.35:1)*(.55+.45*pul):0;u.uFlag.value.set(fc);u.uStripe.value=P.stripe?1:0;{const bl=P.stripe?THREE.NormalBlending:THREE.AdditiveBlending;if(m.material.blending!==bl){m.material.blending=bl;m.material.needsUpdate=true}}m.visible=P.visible&&(!m.userData.sex||m.userData.sex===sex)}}
     renderer.render(scene,cam)}
@@ -159,18 +161,18 @@ export function createBody(canvas,onPick,onStatus){
     setStyle(st){style=st;const real=st==='real';for(const id in parts)for(const m of parts[id].meshes)m.material=real?m.userData.rm:m.userData.hm;
       scene.environment=real?envTex:null;scene.background=real?bgTex:null;lights.visible=real;grid.visible=ring.visible=!real;renderer.toneMapping=real?THREE.AgXToneMapping:THREE.NoToneMapping;renderer.toneMappingExposure=real?.95:1;shadow.visible=real;renderer.outputColorSpace=THREE.SRGBColorSpace},
     // Visual approximation only: stature/head ratio (age), skin-shell girth (BMI), female surface shaping. Skeleton/organs keep adult-male anatomy.
-    setMorph(o){sex=o.sex==='F'?'F':'M';const S=o.stature||1,hf=o.headFrac||.13,b=Math.max(-.35,Math.min(1.2,((o.bmi||22)-22)/16)),fem=sex==='F';
+    setMorph(o){sex=o.sex==='F'?'F':'M';const S=o.stature||1,hf=o.headFrac||.13,b=Math.max(-.35,Math.min(1.2,((o.bmi||22)-22)/16)),fem0=sex==='F';
       const top=GEO.top,yN=GEO.yN,ft=GEO.foot,H0=top-ft,h0=top-yN,L0=yN-ft;const hk=Math.max(.6,Math.min(1.6,hf*S/.133)),bh=(S*H0-hk*h0)/L0,bw=Math.pow(S,.75);
       const sm=(x,a,b)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t)};const v=new THREE.Vector3();
-      for(const id in parts)for(const m of parts[id].meshes){const mo=m.userData.mo;if(!mo)continue;const a=m.geometry.attributes.position,p0=mo.p0,an=mo.an;
+      for(const id in parts)for(const m of parts[id].meshes){const mo=m.userData.mo;if(!mo)continue;const a=m.geometry.attributes.position,p0=mo.p0,an=mo.an,fs=m.userData.sex==='F'&&id==='skin',fem=fem0&&!fs&&id!=='skin';
         for(let i=0;i<a.count;i++){let x=p0[i*3],y=p0[i*3+1],z=p0[i*3+2];
-          if(an){const k=an[i*5+3],t=an[i*5+4];let g=k===1?1+.6*b:k===0?1+.06*b:k===2?Math.max(1,1+.4*b*(1-.75*t)):Math.max(1,1+.45*b*(1-.7*t));
+          if(an){const k=an[i*5+3],t=an[i*5+4];let g=k===1?Math.max(1,1+.6*b):k===0?Math.max(1,1+.06*b):k===2?Math.max(1,1+.4*b*(1-.75*t)):Math.max(1,1+.45*b*(1-.7*t));
             if(fem){if(k===1||k===3)g*=1+.09*sm(y,-.32,-.05)*(1-sm(y,.08,.25));if(k===1)g*=1-.05*sm(y,.7,.85)}
             const ax=an[i*5],ay=an[i*5+1],az=an[i*5+2];x=ax+(x-ax)*g;z=az+(z-az)*(k===1?g*(1+.15*Math.max(0,b)*sm(y,-.1,.3)*(1-sm(y,.45,.7))):g);
             if(fem){if(id==='skin'&&y<.13&&y>-.09&&z>-.03){const w=1-sm(Math.abs(x),.045,.08),zc=-.012+.13*sm(y,-.05,.06);if(w>0&&z>zc)z=zc+(z-zc)*(1-w)}// v20: female surface over the BodyParts3D (male) external genitalia: smooth mons/perineum
               if(id==='skin'&&y<-.04&&y>-.27&&z>-.06){const w2=1-sm(Math.abs(x),.03,.062);if(w2>0){const yt=-.055+(y+.055)*.12;y=y+(yt-y)*w2;z=z+((-.02)-z)*w2*sm(-y,.0,.06)*.0+(Math.min(z,-.012+.06*sm(y,-.09,.0))-z)*w2;x*=1-.35*w2}}// v21: fold the male scrotal skin up into a flat female perineum
               if(id==='skin'&&y>yN){const j=1-sm(y,yN+.07,yN+.15);x*=1-.07*j*sm(y,yN,yN+.04);z=z-.012*j*sm(y,yN,yN+.04)*Math.max(0,Math.sign(z))}}}
-          if(fem&&(id==='skin'||id==='muscles'))for(const sg of[1,-1]){const c=GEO['br'+sg];if(!c)continue;const d2=((x-c.x)**2+(y-c.y+.05)**2*1.1)/(.09*.09);if(d2<6&&z>c.z-.12)z+=.065*Math.exp(-d2)}
+          if(false)for(const sg of[1,-1]){const c=GEO['br'+sg];if(!c)continue;const d2=((x-c.x)**2+(y-c.y+.05)**2*1.1)/(.09*.09);if(d2<6&&z>c.z-.12)z+=.065*Math.exp(-d2)}
           if(fem&&id!=='skin'&&!mo.an&&Math.abs(x)<.075&&y<.1&&y>-.28){const zc=-.022+.13*sm(y,-.05,.06);if(z>zc)z=zc}// v20: tuck male penile structures (urethra, vessels, nerves) under the female surface// hide male (penile) urethra
           if(y>yN){y=yN+(y-yN)*hk;x*=hk;z*=hk;y=ft+L0*bh+(y-yN)}else{y=ft+(y-ft)*bh;x*=bw;z*=bw}
           v.set(x,y,z).applyMatrix4(mo.Mi);a.setXYZ(i,v.x,v.y,v.z)}
@@ -199,10 +201,13 @@ export function createBody(canvas,onPick,onStatus){
     exRegions(){return RG.names},
     setSkin(v){skinOp=v},
     _dbg(){return {parts,GEO}},
-    setAura(l){// v21: soft gold halo behind the body (reflects logged practices; decorative only)
-      if(!aura){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,'rgba(255,214,120,1)');g.addColorStop(.45,'rgba(255,196,80,.55)');g.addColorStop(1,'rgba(255,190,60,0)');x.fillStyle=g;x.fillRect(0,0,128,128);
-        aura=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),transparent:true,depthWrite:false,depthTest:false,blending:THREE.AdditiveBlending}));aura.renderOrder=-5;scene.add(aura)}
-      aura.visible=l!=null;if(l==null)return;aura.material.opacity=.18+.62*Math.max(0,Math.min(1,l));const S=GEO.scale||1;aura.scale.set(1.9*S,3.3*S,1);aura.position.set(0,(GEO.foot??-1.16)+1.3*S,-.6)},
+    setAura(l){// v22: gold fresnel rim on the skin + soft gold halo (decorative; scales with logged practices)
+      if(!aura){const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d'),g=x.createRadialGradient(128,128,8,128,128,128);g.addColorStop(0,'rgba(245,190,60,1)');g.addColorStop(.45,'rgba(236,180,58,.75)');g.addColorStop(.75,'rgba(232,184,74,.3)');g.addColorStop(1,'rgba(232,184,74,0)');x.fillStyle=g;x.fillRect(0,0,256,256);
+        const tx=new THREE.CanvasTexture(c);tx.colorSpace=THREE.SRGBColorSpace;aura=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,transparent:true,depthWrite:false,toneMapped:false}));aura.renderOrder=-5;scene.add(aura)}
+      aura.visible=l!=null;auraU.value=l==null?0:.5+.6*Math.max(0,Math.min(1,l));if(l==null)return;const L=Math.max(0,Math.min(1,l));aura.material.opacity=.5+.45*L;aura.material.blending=style==='real'?THREE.NormalBlending:THREE.AdditiveBlending;const S=GEO.scale||1;aura.scale.set(2.1*S,3.6*S,1);aura.position.set(0,(GEO.foot??-1.16)+1.3*S,-.7)},
+    // v22: x-ray glow so an organ (e.g. the intestines) reads through skin and muscle; amt 0..1, null = off
+    setGlow(id,col,amt){for(const o of glowOv){o.parent&&o.parent.remove(o);o.material.dispose()}glowOv.length=0;if(amt==null||!parts[id])return 0;
+      for(const m of parts[id].meshes){if(m.userData.sex&&m.userData.sex!==sex)continue;const mt=new THREE.MeshBasicMaterial({color:col,transparent:true,opacity:.35+.5*Math.max(0,Math.min(1,amt)),depthTest:false,depthWrite:false,toneMapped:false,side:THREE.FrontSide});const o=new THREE.Mesh(m.geometry,mt);o.renderOrder=30;o.raycast=()=>{};m.add(o);glowOv.push(o)}return glowOv.length},
     setScores(m){for(const id in parts)parts[id].score=m[id]||0},
     setVisible(ids){this._vis=ids;let n=0,N=0;for(const id in parts){parts[id].visible=ids.has(id);N++;if(ids.has(id))n++}
       iso=n>0&&n<N-1;if(!iso){tfy=0.15;tdist=4.2;return}
@@ -215,7 +220,7 @@ export function createBody(canvas,onPick,onStatus){
     setStripe(set){for(const id in parts)parts[id].stripe=!!(set&&set.has(id))},
     setHues(map){for(const id in parts)parts[id].hue=map&&map[id]!=null?new THREE.Color(map[id]):null},
     setView(y,x){rotY=y;if(x!=null)rotX=x;vel=0;setTimeout(()=>{vel=.0},0)},
-    resetCam,camState(){return{panX,panY,dist}},setCam(o){if(o.dist!=null){dist=o.dist;tdist=0}panX=o.x||0;panY=o.y||0;clampPan()},
+    resetCam,camState(){return{panX,panY,dist,fy}},setCam(o){if(o.dist!=null){dist=o.dist;tdist=0}panX=o.x||0;panY=o.y||0;clampPan()},
     setSpin(on){vel=on?.003:0;spin=on},
     pause(p){if(running===!p)return;running=!p;if(!p)requestAnimationFrame(frame)}};
 }

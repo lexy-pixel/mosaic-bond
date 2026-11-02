@@ -277,3 +277,4 @@ details.learn{padding:10px 12px;margin:6px 0}details.learn summary{font-weight:6
 .bkey td{white-space:nowrap}
 #ulbar .agrp{margin:2px 0 6px}#ulbar .agrp>summary{font-weight:700;font-size:13px;cursor:pointer;padding:4px 2px;list-style-position:inside}
 #ulbar .ahead{display:flex;justify-content:space-between;align-items:center;position:sticky;top:-10px;background:var(--card);z-index:1;padding-bottom:4px;font-weight:700}
+.lg.ovl.ov-gut::before{background:#1fa88a}
