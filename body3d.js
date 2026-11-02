@@ -14,7 +14,7 @@ export function createBody(canvas,onPick,onStatus){
   const root=new THREE.Group();scene.add(root);
   const grid=new THREE.PolarGridHelper(1.3,16,6,64,0x006b78,0x003a44);grid.position.y=-1.02;scene.add(grid);
   const ring=new THREE.Mesh(new THREE.TorusGeometry(1.0,0.005,6,96),new THREE.MeshBasicMaterial({color:0x00f0ff,transparent:true,opacity:.8}));ring.rotation.x=Math.PI/2;scene.add(ring);
-  const parts={},pickables=[];const LIMBS=[],GEO={};let style='real',skinOp=.35,sex='M',exOv=[],rcOv=[];const RG={};const exMat1=new THREE.MeshBasicMaterial({color:0xb6ff3a,transparent:true,opacity:.9,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,side:THREE.DoubleSide}),exMat2=new THREE.MeshBasicMaterial({color:0x3fae4a,transparent:true,opacity:.8,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,side:THREE.DoubleSide});
+  let aura=null;const parts={},pickables=[];const LIMBS=[],GEO={};let style='real',skinOp=.35,sex='M',exOv=[],rcOv=[];const RG={};const exMat1=new THREE.MeshBasicMaterial({color:0xb6ff3a,transparent:true,opacity:.9,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-2,side:THREE.DoubleSide}),exMat2=new THREE.MeshBasicMaterial({color:0x3fae4a,transparent:true,opacity:.8,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,side:THREE.DoubleSide});
   // Realistic mode: studio lights + procedural env map (no external HDR), gradient background.
   const lights=new THREE.Group();lights.add(new THREE.HemisphereLight(0xf4f6ff,0x3a3028,.7));
   for(const[c,i,x,y,z]of[[0xfff6ee,1.5,2,3,3],[0xdfe8ff,.5,-3,1.5,2],[0xffffff,.9,0,2.5,-3]]){const d=new THREE.DirectionalLight(c,i);d.position.set(x,y,z);lights.add(d)}
@@ -32,12 +32,12 @@ export function createBody(canvas,onPick,onStatus){
   const mat=(id)=>new THREE.ShaderMaterial({vertexShader:VS,fragmentShader:FS,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,side:id==='skin'?THREE.FrontSide:THREE.DoubleSide,
     uniforms:{uColor:{value:new THREE.Color(0x00f0ff)},uOpacity:{value:.2},uRim:{value:id==='skin'?3.0:(id==='nerves'||id==='eyes')?0.8:1.6},uFlag:{value:new THREE.Color(0xffb300)},uFlagAmt:{value:0},uStripe:{value:0}}});
   // Tissue colours chosen to match fresh/embalmed-neutral anatomical references (not decorative).
-  const NAT={bones:0xe8dcc0,teeth:0xf3ecd9,muscles:0x8a261c,brain:0xd9b0a4,nerves:0xeed77a,eyes:0xf1efe8,heart:0x8c2a22,blood:0x34508f,vessels:0xb02a22,lungs:0xd9a09a,liver:0x6a2519,stomach:0xd08a74,gut:0xd8a08a,immune:0x7c3e58,thyroid:0x9e4436,pancreas:0xdfb488,kidneys:0x7a2c22,bladder:0xd6b08c,glands:0xd8a456,reproductive:0xc98c7c,skin:0xe6b89c,hair:0x3a2a20};
+  const NAT={connective:0xcfe0ee,bones:0xe8dcc0,teeth:0xf3ecd9,muscles:0x8a261c,brain:0xd9b0a4,nerves:0xeed77a,eyes:0xf1efe8,heart:0x8c2a22,blood:0x34508f,vessels:0xb02a22,lungs:0xd9a09a,liver:0x6a2519,stomach:0xd08a74,gut:0xd8a08a,immune:0x7c3e58,thyroid:0x9e4436,pancreas:0xdfb488,kidneys:0x7a2c22,bladder:0xd6b08c,glands:0xd8a456,reproductive:0xc98c7c,skin:0xe6b89c,hair:0x3a2a20};
   // Per-tissue PBR: wet organs get a clearcoat, muscle a soft sheen, bone stays matte ivory.
-  const TP={bones:{r:.62,cc:0},teeth:{r:.3,cc:.5},muscles:{r:.5,cc:.25,ccr:.45,sh:.12,shc:0xd06a5a},nerves:{r:.5,cc:.15},vessels:{r:.32,cc:.5},blood:{r:.32,cc:.5},skin:{r:.52,cc:.05,sh:.6,shc:0xffd9c6},hair:{r:.7,cc:0},eyes:{r:.15,cc:1}};
+  const TP={connective:{r:.28,cc:.6,ccr:.2,sh:.5,shc:0xe8f4ff},bones:{r:.62,cc:0},teeth:{r:.3,cc:.5},muscles:{r:.5,cc:.25,ccr:.45,sh:.12,shc:0xd06a5a},nerves:{r:.5,cc:.15},vessels:{r:.32,cc:.5},blood:{r:.32,cc:.5},skin:{r:.52,cc:.05,sh:.6,shc:0xffd9c6},hair:{r:.7,cc:0},eyes:{r:.15,cc:1}};
   const rmat=id=>{const t=TP[id]||{r:.36,cc:.45,ccr:.3};const m=new THREE.MeshPhysicalMaterial({color:NAT[id]??0xcccccc,roughness:t.r,metalness:0,clearcoat:t.cc,clearcoatRoughness:t.ccr??.35,sheen:t.sh||0,sheenColor:new THREE.Color(t.shc||0xffffff),sheenRoughness:.6,envMapIntensity:.85,
     transparent:id==='skin',opacity:id==='skin'?.35:1,depthWrite:id!=='skin',side:id==='skin'?THREE.FrontSide:THREE.DoubleSide});
-    if(id==='skin')m.onBeforeCompile=sh=>{sh.fragmentShader=sh.fragmentShader.replace('#include <opaque_fragment>','float nbFr=pow(1.0-abs(dot(normalize(normal),normalize(vViewPosition))),2.2);diffuseColor.a=clamp(diffuseColor.a*(0.5+1.9*nbFr),0.0,1.0);\n#include <opaque_fragment>')};
+    if(id==='skin')m.onBeforeCompile=sh=>{sh.vertexShader=sh.vertexShader.replace('#include <begin_vertex>','vec3 transformed=vec3(position)+normal*(0.008/length(modelMatrix[0].xyz));');sh.fragmentShader=sh.fragmentShader.replace('#include <opaque_fragment>','float nbFr=pow(1.0-abs(dot(normalize(normal),normalize(vViewPosition))),2.2);diffuseColor.a=clamp(diffuseColor.a*(0.5+1.9*nbFr),0.0,1.0);\n#include <opaque_fragment>')};
     return m};
   function reg(id,mesh){mesh.userData.hm=mat(id);mesh.userData.rm=rmat(id);mesh.material=style==='real'?mesh.userData.rm:mesh.userData.hm;mesh.userData.part=id;mesh.renderOrder=id==='skin'?10:0;pickables.push(mesh);
     const P=parts[id]||(parts[id]={meshes:[],score:0,visible:true,sel:false,med:false,cond:false,sym:false,hue:null});P.meshes.push(mesh)}
@@ -115,7 +115,7 @@ export function createBody(canvas,onPick,onStatus){
   let spin=true,rotY=0,rotX=0.05,dist=4.2,vel=.003,drag=null,pinch=null,moved=0,panX=0,panY=0,lastTap=0;const ptrs=new Map();
   // v20 camera: pan (two-finger / shift- or right-drag), zoom toward pinch/cursor point, clamped to body extents; double-tap resets
   const halfH=()=>dist*(iso?1:FSC)*Math.tan(THREE.MathUtils.degToRad(20));
-  const clampPan=()=>{const S=GEO.scale||1,zf=Math.max(0,1-dist/4.2);const ly=1.25*S*Math.max(zf,.15),lx=.55*Math.max(zf,.1);panY=Math.max(-ly,Math.min(ly,panY));panX=Math.max(-lx,Math.min(lx,panX))};
+  const clampPan=()=>{const S=GEO.scale||1,ft=GEO.foot??-1.16,top=ft+((GEO.top??1.41)-ft)*S+.04,bot=ft-.03,o=iso?0:FOFF,c=fy+o,hh=halfH(),Hb=top-bot,e=Math.max(0,Math.min(hh*.35,Hb/2-.02));panY=Math.max(bot+e-c,Math.min(top-e-c,panY));const lx=Math.max(.05,.55-hh*cam.aspect*.4);panX=Math.max(-lx,Math.min(lx,panX))};// v21: clamp from body extents + visible half-height so skull top and soles can both be centered
   const ndc=(x,y)=>{const r=canvas.getBoundingClientRect();return[(x-r.left)/r.width*2-1,-((y-r.top)/r.height*2-1),r]};
   const zoomTo=(nd,cx,cy)=>{nd=Math.min(7,Math.max(0.6,nd));const[nx,ny]=ndc(cx,cy),h0=halfH();tdist=0;dist=nd;const dh=h0-halfH();panY+=ny*dh;panX+=nx*dh*cam.aspect;clampPan()};
   const panBy=(dx,dy)=>{const r=canvas.getBoundingClientRect(),u=2*halfH()/Math.max(1,r.height);panX-=dx*u;panY+=dy*u;clampPan()};
@@ -168,9 +168,10 @@ export function createBody(canvas,onPick,onStatus){
             if(fem){if(k===1||k===3)g*=1+.09*sm(y,-.32,-.05)*(1-sm(y,.08,.25));if(k===1)g*=1-.05*sm(y,.7,.85)}
             const ax=an[i*5],ay=an[i*5+1],az=an[i*5+2];x=ax+(x-ax)*g;z=az+(z-az)*(k===1?g*(1+.15*Math.max(0,b)*sm(y,-.1,.3)*(1-sm(y,.45,.7))):g);
             if(fem){if(id==='skin'&&y<.13&&y>-.09&&z>-.03){const w=1-sm(Math.abs(x),.045,.08),zc=-.012+.13*sm(y,-.05,.06);if(w>0&&z>zc)z=zc+(z-zc)*(1-w)}// v20: female surface over the BodyParts3D (male) external genitalia: smooth mons/perineum
+              if(id==='skin'&&y<-.04&&y>-.27&&z>-.06){const w2=1-sm(Math.abs(x),.03,.062);if(w2>0){const yt=-.055+(y+.055)*.12;y=y+(yt-y)*w2;z=z+((-.02)-z)*w2*sm(-y,.0,.06)*.0+(Math.min(z,-.012+.06*sm(y,-.09,.0))-z)*w2;x*=1-.35*w2}}// v21: fold the male scrotal skin up into a flat female perineum
               if(id==='skin'&&y>yN){const j=1-sm(y,yN+.07,yN+.15);x*=1-.07*j*sm(y,yN,yN+.04);z=z-.012*j*sm(y,yN,yN+.04)*Math.max(0,Math.sign(z))}}}
           if(fem&&(id==='skin'||id==='muscles'))for(const sg of[1,-1]){const c=GEO['br'+sg];if(!c)continue;const d2=((x-c.x)**2+(y-c.y+.05)**2*1.1)/(.09*.09);if(d2<6&&z>c.z-.12)z+=.065*Math.exp(-d2)}
-          if(fem&&id!=='skin'&&!mo.an&&Math.abs(x)<.05&&y<.08&&y>-.09){const zc=-.022+.13*sm(y,-.05,.06);if(z>zc)z=zc}// v20: tuck male penile structures (urethra, vessels, nerves) under the female surface// hide male (penile) urethra
+          if(fem&&id!=='skin'&&!mo.an&&Math.abs(x)<.075&&y<.1&&y>-.28){const zc=-.022+.13*sm(y,-.05,.06);if(z>zc)z=zc}// v20: tuck male penile structures (urethra, vessels, nerves) under the female surface// hide male (penile) urethra
           if(y>yN){y=yN+(y-yN)*hk;x*=hk;z*=hk;y=ft+L0*bh+(y-yN)}else{y=ft+(y-ft)*bh;x*=bw;z*=bw}
           v.set(x,y,z).applyMatrix4(mo.Mi);a.setXYZ(i,v.x,v.y,v.z)}
         a.needsUpdate=true;if(id==='skin')m.geometry.computeVertexNormals();m.geometry.computeBoundingSphere();m.geometry.computeBoundingBox()}
@@ -197,6 +198,11 @@ export function createBody(canvas,onPick,onStatus){
     sideCounts(){const c={};for(const m of parts.muscles?parts.muscles.meshes:[]){const mo=m.userData.mo;if(!mo||!mo.tg)continue;for(let i=0;i<mo.tg.length;i++){const r=RG.names[mo.tg[i]];if(!r)continue;const s=mo.p0[i*3]>=0?1:0;(c[r]=c[r]||[0,0])[s]++}}return c},
     exRegions(){return RG.names},
     setSkin(v){skinOp=v},
+    _dbg(){return {parts,GEO}},
+    setAura(l){// v21: soft gold halo behind the body (reflects logged practices; decorative only)
+      if(!aura){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d'),g=x.createRadialGradient(64,64,4,64,64,64);g.addColorStop(0,'rgba(255,214,120,1)');g.addColorStop(.45,'rgba(255,196,80,.55)');g.addColorStop(1,'rgba(255,190,60,0)');x.fillStyle=g;x.fillRect(0,0,128,128);
+        aura=new THREE.Sprite(new THREE.SpriteMaterial({map:new THREE.CanvasTexture(c),transparent:true,depthWrite:false,depthTest:false,blending:THREE.AdditiveBlending}));aura.renderOrder=-5;scene.add(aura)}
+      aura.visible=l!=null;if(l==null)return;aura.material.opacity=.18+.62*Math.max(0,Math.min(1,l));const S=GEO.scale||1;aura.scale.set(1.9*S,3.3*S,1);aura.position.set(0,(GEO.foot??-1.16)+1.3*S,-.6)},
     setScores(m){for(const id in parts)parts[id].score=m[id]||0},
     setVisible(ids){this._vis=ids;let n=0,N=0;for(const id in parts){parts[id].visible=ids.has(id);N++;if(ids.has(id))n++}
       iso=n>0&&n<N-1;if(!iso){tfy=0.15;tdist=4.2;return}
@@ -209,7 +215,7 @@ export function createBody(canvas,onPick,onStatus){
     setStripe(set){for(const id in parts)parts[id].stripe=!!(set&&set.has(id))},
     setHues(map){for(const id in parts)parts[id].hue=map&&map[id]!=null?new THREE.Color(map[id]):null},
     setView(y,x){rotY=y;if(x!=null)rotX=x;vel=0;setTimeout(()=>{vel=.0},0)},
-    resetCam,setCam(o){if(o.dist!=null){dist=o.dist;tdist=0}panX=o.x||0;panY=o.y||0;clampPan()},
+    resetCam,camState(){return{panX,panY,dist}},setCam(o){if(o.dist!=null){dist=o.dist;tdist=0}panX=o.x||0;panY=o.y||0;clampPan()},
     setSpin(on){vel=on?.003:0;spin=on},
     pause(p){if(running===!p)return;running=!p;if(!p)requestAnimationFrame(frame)}};
 }

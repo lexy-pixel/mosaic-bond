@@ -323,6 +323,22 @@
   "hypoxia": [
    "Hypoxia",
    "Not enough oxygen reaching the body’s tissues, for example at high altitude."
+  ],
+  "microbiome": [
+   "Microbiome",
+   "The community of microbes (bacteria, yeasts and others) that live in and on your body, plus their genes."
+  ],
+  "SCFA": [
+   "Short-chain fatty acids",
+   "Small fatty acids (such as butyrate, acetate and propionate) that gut bacteria make when they ferment fiber."
+  ],
+  "strain": [
+   "Strain",
+   "A specific type within a microbe species, named with a code (e.g. L. rhamnosus GG). Probiotic evidence applies to the exact strain tested."
+  ],
+  "CFU": [
+   "Colony-forming units",
+   "A count of live microbes in a probiotic dose. A bigger number does not by itself mean a better product."
   ]
  },
  "learn": [
@@ -410,6 +426,25 @@
    "cites": [
     "iarc-qa",
     "iarc-pr240"
+   ]
+  },
+  {
+   "id": "gut",
+   "title": "Gut health: pro-, pre-, post- and synbiotics",
+   "body": [
+    "Probiotics are live microbes with a shown benefit; prebiotics are mostly fibers your gut microbes feed on; postbiotics are inactivated microbes or their parts; synbiotics combine live microbes with their food (ISAPP definitions).",
+    "Fermented foods are made with microbes, but heating after fermenting (baking, pasteurizing) kills them.",
+    "The 2020 AGA guideline recommends probiotics for most digestive conditions only in research studies, with a few strain-specific exceptions. Evidence for supplements is strain-specific.",
+    "Fiber feeds gut microbes, which make short-chain fatty acids (SCFA). Add fiber slowly to avoid gas and bloating."
+   ],
+   "cites": [
+    "pmid-24912386",
+    "pmid-28611480",
+    "pmid-33948025",
+    "pmid-32826966",
+    "pmid-33398112",
+    "pmid-32531291",
+    "medline-fiber"
    ]
   }
  ],

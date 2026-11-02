@@ -3787,6 +3787,7 @@
    "title": "Cook to a safe internal temperature",
    "evidence": "Safe minimum internal temperature — Beef, Pork, Veal, and Lamb (chops, roasts, steaks): 145 o F with a 3 minute rest time.",
    "cites": [
+    "fsis-temps",
     "fda-safehand"
    ],
    "parts": [
@@ -3809,6 +3810,7 @@
    "title": "Cook to a safe internal temperature",
    "evidence": "Safe minimum internal temperature — Ground Meat: 160 o F.",
    "cites": [
+    "fsis-temps",
     "fda-safehand"
    ],
    "parts": [
@@ -3826,6 +3828,7 @@
    "title": "Cook to a safe internal temperature",
    "evidence": "Safe minimum internal temperature — Poultry (ground, parts, whole, and stuffing): 165 o F.",
    "cites": [
+    "fsis-temps",
     "fda-safehand"
    ],
    "parts": [
@@ -3843,6 +3846,7 @@
    "title": "Cook to a safe internal temperature",
    "evidence": "Safe minimum internal temperature — Fin Fish: 145 o F or flesh is opaque & separates easily with fork.",
    "cites": [
+    "fsis-temps",
     "fda-safehand"
    ],
    "parts": [
@@ -3860,6 +3864,7 @@
    "title": "Cook to a safe internal temperature",
    "evidence": "Safe minimum internal temperature — Clams, Oysters, and Mussels: Shells open during cooking.",
    "cites": [
+    "fsis-temps",
     "fda-safehand"
    ],
    "parts": [

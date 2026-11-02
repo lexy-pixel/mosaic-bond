@@ -1,0 +1,147 @@
+{
+ "defs": [
+  [
+   "Probiotics",
+   "live microorganisms which when administered in adequate amounts confer a health benefit on the host",
+   "pmid-24912386",
+   "Living microbes that, in a big enough dose, have been shown to help you."
+  ],
+  [
+   "Prebiotics",
+   "a substrate that is selectively utilized by host microorganisms conferring a health benefit",
+   "pmid-28611480",
+   "Food for your helpful gut microbes — mostly certain fibers — that has a shown health benefit."
+  ],
+  [
+   "Postbiotics",
+   "preparation of inanimate microorganisms and/or their components that confers a health benefit on the host",
+   "pmid-33948025",
+   "Non-living (inactivated) microbes or their parts that still have a shown benefit."
+  ],
+  [
+   "Synbiotics",
+   "a mixture comprising live microorganisms and substrate(s) selectively utilized by host microorganisms that confers a health benefit on the host",
+   "pmid-32826966",
+   "Live microbes plus their food, together in one product."
+  ],
+  [
+   "Fermented foods",
+   "foods made through desired microbial growth and enzymatic conversions of food components",
+   "pmid-33398112",
+   "Foods made by letting microbes work on them. Not all of them still contain live microbes."
+  ]
+ ],
+ "ferm": [
+  [
+   "yogurt",
+   "Yogurt (live & active cultures)"
+  ],
+  [
+   "kefir",
+   "Kefir"
+  ],
+  [
+   "kraut",
+   "Sauerkraut (refrigerated, unpasteurized)"
+  ],
+  [
+   "kimchi",
+   "Kimchi"
+  ],
+  [
+   "miso",
+   "Miso"
+  ],
+  [
+   "tempeh",
+   "Tempeh"
+  ],
+  [
+   "kombucha",
+   "Kombucha"
+  ]
+ ],
+ "pre": [
+  [
+   "onion",
+   "Onions"
+  ],
+  [
+   "garlic",
+   "Garlic"
+  ],
+  [
+   "leek",
+   "Leeks"
+  ],
+  [
+   "asparagus",
+   "Asparagus"
+  ],
+  [
+   "banana",
+   "Slightly green bananas"
+  ],
+  [
+   "oats",
+   "Oats"
+  ],
+  [
+   "barley",
+   "Barley"
+  ],
+  [
+   "legumes",
+   "Beans, lentils, chickpeas"
+  ],
+  [
+   "chicory",
+   "Chicory root / inulin"
+  ]
+ ],
+ "live": [
+  "Fermented foods, such as leavened breads, are baked after fermentation, effectively killing the fermentation microorganisms.",
+  "pmid-33398112",
+  "Some fermented foods are heated (baked, pasteurized, or made shelf-stable) after fermenting, which kills the microbes. Look for “live and active cultures” or a refrigerated, unpasteurized product if live microbes are what you want."
+ ],
+ "strain": [
+  "if a specific kind of Lactobacillus helps prevent an illness, that doesn’t necessarily mean that another kind of Lactobacillus or any of the Bifidobacterium probiotics would do the same thing.",
+  "nccih-probiotics",
+  "Evidence is strain-specific: results for one strain don’t carry over to others, even in the same family."
+ ],
+ "ev": [
+  [
+   "In symptomatic children and adults with irritable bowel syndrome, we recommend the use of probiotics only in the context of a clinical trial.",
+   "pmid-32531291",
+   "The main U.S. gut-doctors’ guideline (AGA, 2020) says that for IBS, Crohn’s, ulcerative colitis and C. difficile infection, probiotics belong in research studies, not routine treatment. It suggested specific strains only for a few uses (such as preventing C. difficile while on antibiotics, pouchitis, and preterm infants in hospital)."
+  ],
+  [
+   "in most instances, we still don’t know which probiotics are helpful and which are not.",
+   "nccih-probiotics",
+   "There’s a lot of research, but for most uses it isn’t clear which products help, at what dose, or for whom."
+  ],
+  [
+   "the high-fermented-food diet steadily increased microbiota diversity and decreased inflammatory markers.",
+   "pmid-34256014",
+   "In one 17-week randomized diet study in healthy adults (18 per group), the high-fermented-food diet raised gut-microbe variety and lowered some inflammation markers. It’s one small study — promising, not proof."
+  ]
+ ],
+ "safe": [
+  [
+   "The risk of harmful effects from probiotics is greater in people with severe illnesses or compromised immune systems.",
+   "nccih-probiotics",
+   "If you are immunocompromised or seriously ill, talk with your care team before taking probiotic supplements."
+  ],
+  [
+   "Cases of severe or fatal infections have been reported in premature infants who were given probiotics",
+   "nccih-probiotics",
+   "Premature babies should not be given probiotics except under their medical team’s care."
+  ],
+  [
+   "Eating a large amount of fiber in a short period of time can cause intestinal gas (flatulence), bloating, and abdominal cramps.",
+   "medline-fiber",
+   "Adding fiber or prebiotic foods quickly can cause gas and bloating. Increase slowly over a few weeks and drink fluids."
+  ]
+ ],
+ "abx": "We did not find a source in our citation set that sets a specific spacing between antibiotics and probiotics, so the app gives no timing advice — ask your pharmacist."
+}

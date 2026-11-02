@@ -1,6 +1,6 @@
 # Mosaic Bond: attribution & licenses
 
-(The app was formerly called NutriBody. Internal folder names, cache names and storage keys keep the old name so saved data is preserved.)
+(The app was formerly called Mosaic Bond. Internal folder names, cache names and storage keys keep the old name so saved data is preserved.)
 
 ## BodyParts3D (anatomical meshes)
 - Attribution: BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International

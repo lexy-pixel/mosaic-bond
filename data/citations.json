@@ -3578,6 +3578,134 @@
    "date": "2021-10",
    "tier": 1,
    "tierRationale": "Official FDA/EPA consumer guidance."
+  },
+  "pmid-24912386": {
+   "id": "pmid-24912386",
+   "retrieved": "2026-11-02",
+   "type": "Consensus statement",
+   "publisher": "Nat Rev Gastroenterol Hepatol",
+   "title": "Hill C, et al. ISAPP consensus statement on the scope and appropriate use of the term probiotic",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/24912386/",
+   "date": "2014-08",
+   "tier": 2,
+   "tierRationale": "International expert-panel consensus (definitions).",
+   "pmid": "24912386"
+  },
+  "pmid-28611480": {
+   "id": "pmid-28611480",
+   "retrieved": "2026-11-02",
+   "type": "Consensus statement",
+   "publisher": "Nat Rev Gastroenterol Hepatol",
+   "title": "Gibson GR, et al. ISAPP consensus statement on the definition and scope of prebiotics",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/28611480/",
+   "date": "2017-08",
+   "tier": 2,
+   "tierRationale": "International expert-panel consensus (definitions).",
+   "pmid": "28611480"
+  },
+  "pmid-33948025": {
+   "id": "pmid-33948025",
+   "retrieved": "2026-11-02",
+   "type": "Consensus statement",
+   "publisher": "Nat Rev Gastroenterol Hepatol",
+   "title": "Salminen S, et al. ISAPP consensus statement on the definition and scope of postbiotics",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33948025/",
+   "date": "2021-09",
+   "tier": 2,
+   "tierRationale": "International expert-panel consensus (definitions).",
+   "pmid": "33948025"
+  },
+  "pmid-32826966": {
+   "id": "pmid-32826966",
+   "retrieved": "2026-11-02",
+   "type": "Consensus statement",
+   "publisher": "Nat Rev Gastroenterol Hepatol",
+   "title": "Swanson KS, et al. ISAPP consensus statement on the definition and scope of synbiotics",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32826966/",
+   "date": "2020-11",
+   "tier": 2,
+   "tierRationale": "International expert-panel consensus (definitions).",
+   "pmid": "32826966"
+  },
+  "pmid-33398112": {
+   "id": "pmid-33398112",
+   "retrieved": "2026-11-02",
+   "type": "Consensus statement",
+   "publisher": "Nat Rev Gastroenterol Hepatol",
+   "title": "Marco ML, et al. ISAPP consensus statement on fermented foods",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/33398112/",
+   "date": "2021-03",
+   "tier": 2,
+   "tierRationale": "International expert-panel consensus.",
+   "pmid": "33398112"
+  },
+  "pmid-32531291": {
+   "id": "pmid-32531291",
+   "retrieved": "2026-11-02",
+   "type": "Clinical practice guideline",
+   "publisher": "Gastroenterology",
+   "title": "Su GL, et al. AGA Clinical Practice Guidelines on the Role of Probiotics in the Management of Gastrointestinal Disorders",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/32531291/",
+   "date": "2020-08",
+   "tier": 1,
+   "tierRationale": "Professional-society GRADE guideline.",
+   "pmid": "32531291"
+  },
+  "pmid-34256014": {
+   "id": "pmid-34256014",
+   "retrieved": "2026-11-02",
+   "type": "Randomized trial",
+   "publisher": "Cell",
+   "title": "Wastyk HC, ... Sonnenburg ED, Sonnenburg JL. Gut-microbiota-targeted diets modulate human immune status",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/34256014/",
+   "date": "2021-08",
+   "tier": 3,
+   "tierRationale": "Single 17-week randomized diet trial in 36 healthy adults; small, not replicated at scale.",
+   "pmid": "34256014"
+  },
+  "nccih-probiotics": {
+   "id": "nccih-probiotics",
+   "retrieved": "2026-11-02",
+   "type": "Government health information",
+   "publisher": "NIH NCCIH",
+   "title": "Probiotics: Usefulness and Safety",
+   "url": "https://www.nccih.nih.gov/health/probiotics-usefulness-and-safety",
+   "date": "2019-08",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S. government health information."
+  },
+  "medline-fiber": {
+   "id": "medline-fiber",
+   "retrieved": "2026-11-02",
+   "type": "Government health information",
+   "publisher": "MedlinePlus (NLM)",
+   "title": "Fiber",
+   "url": "https://medlineplus.gov/ency/article/002470.htm",
+   "date": "2026-09-15",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S. government health information."
+  },
+  "fsis-temps": {
+   "id": "fsis-temps",
+   "retrieved": "2026-11-02",
+   "type": "Government guidance",
+   "publisher": "USDA FSIS",
+   "title": "Safe Minimum Internal Temperature Chart",
+   "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart",
+   "date": "2025-04-14",
+   "tier": 1,
+   "tierRationale": "Authoritative U.S. government food-safety guidance."
+  },
+  "labcorp-si": {
+   "id": "labcorp-si",
+   "retrieved": "2026-11-02",
+   "type": "Laboratory reference table",
+   "publisher": "Labcorp",
+   "title": "SI Unit Conversion Table for Lab Results",
+   "url": "https://www.labcorp.com/test-menu/resources/si-unit-conversion-table",
+   "date": "",
+   "tier": 2,
+   "tierRationale": "National clinical laboratory reference table of standard conventional↔SI conversion factors."
   }
  }
 }
